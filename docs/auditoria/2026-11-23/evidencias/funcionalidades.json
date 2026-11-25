@@ -1,0 +1,207 @@
+{
+  "assessedAt": "2026-11-23T19:06:00.299Z",
+  "timezone": "America/Sao_Paulo",
+  "platform100Functional": false,
+  "productionReady": false,
+  "dependencies": {
+    "web": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "api": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    }
+  },
+  "scope": "Código e ambiente local deste repositório; não certifica sistemas externos.",
+  "prdV01toV24Available": false,
+  "canonicalMissing": [
+    "referencias/00_ARQUITETURA_GERAL.md",
+    "referencias/03_SEGURANCA_E_GOVERNANCA.md",
+    "referencias/venda-openapi.yaml"
+  ],
+  "capabilities": [
+    {
+      "feature": "Site público",
+      "status": "PARCIAL",
+      "reason": "Landing e navegação funcionam. Catálogo de planos/preços e documentos jurídicos não estão disponíveis."
+    },
+    {
+      "feature": "Login e sessão",
+      "status": "LOCAL_OK / EXTERNO_NAO_VALIDADO",
+      "reason": "Fluxo OIDC/PKCE/JWS, cookie HttpOnly/Secure/SameSite, CSRF e logout testados com IdP local assinado. Nenhum IdP externo foi validado."
+    },
+    {
+      "feature": "Cadastro e recuperação de acesso",
+      "status": "PARCIAL",
+      "reason": "Telas de encaminhamento ao provedor; sem confirmação de cadastro/reset em provedor real."
+    },
+    {
+      "feature": "Organizações e onboarding inicial",
+      "status": "LOCAL_OK",
+      "reason": "Criar, selecionar, consultar e atualizar nome/fuso; pt-BR/BRL; persistência PostgreSQL real. Não conclui ativação de canal ou assinatura."
+    },
+    {
+      "feature": "Tenancy e autorização",
+      "status": "LOCAL_OK",
+      "reason": "Roles owner/admin/manager/agent/viewer/billing, membership e RLS FORCE; provas de isolamento A/B, viewer 403, idempotência e revogação."
+    },
+    {
+      "feature": "Equipe",
+      "status": "PARCIAL",
+      "reason": "API gerencia memberships e UI consulta acessos. Sem convites por e-mail, nomes/e-mails ou gestão completa pela interface. Lista limitada a 100."
+    },
+    {
+      "feature": "Atendimento e conversas",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "UI de três colunas ativa, com filtros, compositor de rascunho e contexto. Sem API de conversas, fila operacional, histórico, envio, atribuição ou resolução."
+    },
+    {
+      "feature": "WhatsApp Business Platform oficial",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "Sem conexão Meta, canal verificado, templates, janela de envio, mensagens ou webhooks oficiais. Nenhuma mensagem real foi enviada."
+    },
+    {
+      "feature": "Contatos e CRM",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "Sem CRUD de contatos, busca, importação, segmentação, deduplicação ou histórico comercial."
+    },
+    {
+      "feature": "Vendas, funis e oportunidades",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "Sem domínio/CRUD de oportunidades, etapas, tarefas associadas ou valores comerciais confirmados."
+    },
+    {
+      "feature": "Tarefas",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "Sem backend de tarefas, responsáveis, prazos, conclusão ou lembretes operacionais."
+    },
+    {
+      "feature": "Automações",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "UI com modelos e wizard de três etapas, rascunho apenas em memória. Sem backend de publicação, avaliação de consentimento, agendamento, execução ou pausa de fluxos."
+    },
+    {
+      "feature": "Conhecimento, IA e RAG",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "Sem ingestão, base de conhecimento operacional ou inferência/assistência real."
+    },
+    {
+      "feature": "Relatórios e receita",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "Sem agregações comerciais, indicadores ou distinção operacional entre proposta/ganho/receita liquidada. Nenhum número comercial é inventado."
+    },
+    {
+      "feature": "Assinatura Mercado Pago",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "Somente fronteiras/ports. Sem checkout real, catálogo, entitlement, cancelamento, webhook, faturas ou reconciliação."
+    },
+    {
+      "feature": "Consentimento, privacidade e DSAR",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "Sem registro operacional por finalidade/canal, revogação ou atendimento DSAR. Termos/política aprovados e canais oficiais ausentes."
+    },
+    {
+      "feature": "Console administrativo interno",
+      "status": "NAO_IMPLEMENTADO",
+      "reason": "Existem referências visuais em sandbox; não há venda-admin/venda-admin-api funcional, identidade interna e MFA validados."
+    },
+    {
+      "feature": "Outbox/inbox",
+      "status": "PARCIAL",
+      "reason": "Persistência atômica e deduplicação testadas. Sem publisher, consumer de negócio, SQS/DLQ ou workers operacionais."
+    },
+    {
+      "feature": "Auditoria e observabilidade",
+      "status": "PARCIAL",
+      "reason": "Auditoria append-only e OTLP em collector de teste. Web Vitals local; sem collector RUM ou operação observada em produção."
+    },
+    {
+      "feature": "Acessibilidade e marca",
+      "status": "PARCIAL",
+      "reason": "Inter/tokens e testes automatizados/teclado locais. Sem certificação WCAG integral/tecnologia assistiva; SVG oficial e aprovação de arte pendentes."
+    },
+    {
+      "feature": "Implantação e operação",
+      "status": "NAO_VALIDADO",
+      "reason": "Sem evidência neste repositório de operação AWS produtiva, restore de backup/DR, WAF/HSTS, scanning CI e carga produtiva acordada."
+    }
+  ],
+  "directories": {
+    "venda-admin": false,
+    "venda-admin-api": false,
+    "venda-workers": false,
+    "infra": false,
+    "terraform": false,
+    ".github/workflows": false
+  },
+  "browser": {
+    "initialPassed": 123,
+    "initialFailed": [
+      {
+        "name": "falha de alteração preserva rascunho e não modifica o banco",
+        "status": "FAIL"
+      }
+    ],
+    "finalPassed": 124,
+    "finalFailed": []
+  },
+  "preview": {
+    "startedAt": "2026-11-23T18:52:12.578Z",
+    "url": "http://127.0.0.1:3400",
+    "organizationPath": "/app/o/d0cb0907-27c3-4c5c-84c5-31419e12aea4",
+    "mode": "DEMO_ONLY local; PostgreSQL real descartável; IdP de protocolo simulado; nenhum provedor externo ou pagamento",
+    "postgresVersion": "PostgreSQL 18.7 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+    "apiProbes": [
+      {
+        "endpoint": "/health",
+        "status": 200
+      },
+      {
+        "endpoint": "/ready",
+        "status": 200
+      },
+      {
+        "endpoint": "/v1/me",
+        "status": 200
+      },
+      {
+        "endpoint": "/v1/openapi.json",
+        "status": 200
+      },
+      {
+        "endpoint": "/v1/contacts",
+        "status": 404
+      },
+      {
+        "endpoint": "/v1/conversations",
+        "status": 404
+      },
+      {
+        "endpoint": "/v1/opportunities",
+        "status": 404
+      },
+      {
+        "endpoint": "/v1/workflows",
+        "status": 404
+      },
+      {
+        "endpoint": "/v1/knowledge",
+        "status": 404
+      },
+      {
+        "endpoint": "/v1/reports/overview",
+        "status": 404
+      }
+    ],
+    "productionDeployed": false
+  }
+}

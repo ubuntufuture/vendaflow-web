@@ -1,0 +1,35 @@
+{
+  "executedAt": "2026-11-23T18:47:34.615Z",
+  "results": [
+    {
+      "id": "venda-web-fundação--login",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--cadastro",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--recuperacao",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--identidade-indisponivel",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--estados",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    }
+  ]
+}

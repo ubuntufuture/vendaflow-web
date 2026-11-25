@@ -1,0 +1,50 @@
+{
+  "startedAt": "2026-11-23T18:52:12.578Z",
+  "url": "http://127.0.0.1:3400",
+  "organizationPath": "/app/o/d0cb0907-27c3-4c5c-84c5-31419e12aea4",
+  "mode": "DEMO_ONLY local; PostgreSQL real descartável; IdP de protocolo simulado; nenhum provedor externo ou pagamento",
+  "postgresVersion": "PostgreSQL 18.7 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+  "apiProbes": [
+    {
+      "endpoint": "/health",
+      "status": 200
+    },
+    {
+      "endpoint": "/ready",
+      "status": 200
+    },
+    {
+      "endpoint": "/v1/me",
+      "status": 200
+    },
+    {
+      "endpoint": "/v1/openapi.json",
+      "status": 200
+    },
+    {
+      "endpoint": "/v1/contacts",
+      "status": 404
+    },
+    {
+      "endpoint": "/v1/conversations",
+      "status": 404
+    },
+    {
+      "endpoint": "/v1/opportunities",
+      "status": 404
+    },
+    {
+      "endpoint": "/v1/workflows",
+      "status": 404
+    },
+    {
+      "endpoint": "/v1/knowledge",
+      "status": 404
+    },
+    {
+      "endpoint": "/v1/reports/overview",
+      "status": 404
+    }
+  ],
+  "productionDeployed": false
+}

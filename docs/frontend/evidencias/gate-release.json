@@ -1,0 +1,84 @@
+{
+  "executedAt": "2026-11-22T01:00:13.208Z",
+  "checks": [
+    {
+      "name": "Navegador, PostgreSQL real, OIDC assinado local, a11y e isolamento",
+      "status": "PASS"
+    },
+    {
+      "name": "16 testes unitários de segurança/validação/transporte",
+      "status": "PASS"
+    },
+    {
+      "name": "Regressão da UI: 20 testes passam",
+      "status": "PASS"
+    },
+    {
+      "name": "Build final: nove smoke checks de runtime/configuração",
+      "status": "PASS"
+    },
+    {
+      "name": "Storybook: cinco histórias renderizadas sem violações axe",
+      "status": "PASS"
+    },
+    {
+      "name": "Dependências sem vulnerabilidades conhecidas na consulta registrada",
+      "status": "PASS"
+    },
+    {
+      "name": "Instrumentação inicial tem amostras por rota e Web Vitals local",
+      "status": "PASS"
+    },
+    {
+      "name": "Lighthouse: 12 navegações desktop/mobile de público e auth",
+      "status": "PASS"
+    },
+    {
+      "name": "Budgets locais por rota: LCP p75 <=2500ms e CLS <=0,1",
+      "status": "PASS",
+      "detail": "Rede restrita pode falhar; não representa RUM."
+    },
+    {
+      "name": "Diff de repetibilidade executado",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem driver DB/API Nest na aplicação Next",
+      "status": "PASS"
+    },
+    {
+      "name": "Assets browser sem configuração privada, credenciais de backend ou DEMO_ONLY",
+      "status": "PASS"
+    },
+    {
+      "name": "Cliente gerado tem proveniência de OpenAPI registrada",
+      "status": "PASS"
+    },
+    {
+      "name": "Cliente regenerado coincide com o contrato candidato",
+      "status": "PASS"
+    },
+    {
+      "name": "Referências canônicas/PRD reconciliados",
+      "status": "FAIL",
+      "detail": "PRD, arquitetura, governança e venda-openapi.yaml ausentes."
+    },
+    {
+      "name": "OIDC externo, cadastro/reset, TLS e operações produtivas validados",
+      "status": "FAIL",
+      "detail": "Somente simulador OIDC local de protocolo e HTTP loopback confiável no teste."
+    },
+    {
+      "name": "Contratos comerciais, legais, canal e assinatura disponíveis",
+      "status": "FAIL",
+      "detail": "Indisponibilidade explícita; sem dados ou funcionalidades fictícios."
+    },
+    {
+      "name": "RUM de campo e auditoria assistiva concluídos",
+      "status": "FAIL",
+      "detail": "Não há collector, usuários de campo ou auditoria NVDA/VoiceOver."
+    }
+  ],
+  "stageComplete": false,
+  "productionDeployed": false
+}

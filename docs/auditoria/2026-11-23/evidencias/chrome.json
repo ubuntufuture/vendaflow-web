@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-11-23T17:59:31.364Z",
+  "browser": "Google Chrome — perfil Ubuntu Future",
+  "url": "http://127.0.0.1:3400/app/o/aee327b8-73bb-4523-b23a-c421091ec6fe",
+  "visibleChecks": [
+    "Landing com faixa DEMO_ONLY",
+    "Login pelo fluxo OIDC local assinado",
+    "Organização DEMO_ONLY — Revisão funcional disponível",
+    "Painel Primeiros passos e organização confirmada",
+    "Conversas com estado de serviço indisponível",
+    "Retorno ao painel, aba marcada para permanecer aberta"
+  ],
+  "screenshot": "chrome-plataforma.jpg",
+  "externalIdentityProvider": false,
+  "production": false
+}

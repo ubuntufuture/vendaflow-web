@@ -1,0 +1,417 @@
+{
+  "generatedAt": "2026-11-23T23:21:52.857Z",
+  "version": "0.2.0",
+  "paths": 31,
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/health",
+      "operationId": "health",
+      "security": []
+    },
+    {
+      "method": "GET",
+      "path": "/ready",
+      "operationId": "readiness",
+      "security": []
+    },
+    {
+      "method": "GET",
+      "path": "/v1/openapi.json",
+      "operationId": "openapi",
+      "security": []
+    },
+    {
+      "method": "GET",
+      "path": "/v1/auth/login",
+      "operationId": "login",
+      "security": []
+    },
+    {
+      "method": "GET",
+      "path": "/v1/auth/callback",
+      "operationId": "callback",
+      "security": []
+    },
+    {
+      "method": "POST",
+      "path": "/v1/auth/logout",
+      "operationId": "logout",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/me",
+      "operationId": "me",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/organizations",
+      "operationId": "listOrganizations",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/organizations",
+      "operationId": "createOrganization",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/organizations/{organizationId}",
+      "operationId": "getOrganization",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/organizations/{organizationId}",
+      "operationId": "updateOrganization",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/memberships",
+      "operationId": "listMemberships",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/organizations/{organizationId}/memberships",
+      "operationId": "createMembership",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/organizations/{organizationId}/memberships/{membershipId}",
+      "operationId": "updateMembership",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/contacts",
+      "operationId": "listContact",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/contacts",
+      "operationId": "createContact",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/contacts/{id}",
+      "operationId": "getContact",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/contacts/{id}",
+      "operationId": "updateContact",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/contacts/{id}/archive",
+      "operationId": "archiveContact",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/opportunities",
+      "operationId": "listOpportunity",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/opportunities",
+      "operationId": "createOpportunity",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/opportunities/{id}",
+      "operationId": "getOpportunity",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/opportunities/{id}",
+      "operationId": "updateOpportunity",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/opportunities/{id}/archive",
+      "operationId": "archiveOpportunity",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tasks",
+      "operationId": "listTask",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tasks",
+      "operationId": "createTask",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/tasks/{id}",
+      "operationId": "getTask",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/tasks/{id}",
+      "operationId": "updateTask",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/tasks/{id}/archive",
+      "operationId": "archiveTask",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/knowledge",
+      "operationId": "listKnowledgeEntry",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/knowledge",
+      "operationId": "createKnowledgeEntry",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/knowledge/{id}",
+      "operationId": "getKnowledgeEntry",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/knowledge/{id}",
+      "operationId": "updateKnowledgeEntry",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/knowledge/{id}/archive",
+      "operationId": "archiveKnowledgeEntry",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/workflows",
+      "operationId": "listWorkflow",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/workflows",
+      "operationId": "createWorkflow",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/workflows/{id}",
+      "operationId": "getWorkflow",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/v1/workflows/{id}",
+      "operationId": "updateWorkflow",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/workflows/{id}/archive",
+      "operationId": "archiveWorkflow",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/reports/overview",
+      "operationId": "commercialOverview",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/workflows/{id}/activate",
+      "operationId": "activateWorkflow",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/v1/workflows/{id}/pause",
+      "operationId": "pauseWorkflow",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/v1/workflows/{id}/executions",
+      "operationId": "workflowExecutions",
+      "security": [
+        {
+          "session": []
+        }
+      ]
+    }
+  ]
+}

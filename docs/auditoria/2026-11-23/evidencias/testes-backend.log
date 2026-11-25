@@ -1,0 +1,40 @@
+▶ Configuração e políticas sem serviços externos
+  ✔ rollback recusa banco não descartável antes de abrir conexão (5.8157ms)
+  ✔ exige variáveis e não revela seu conteúdo (2.3858ms)
+  ✔ produção rejeita HTTP, DB sem TLS e segredos compartilhados (1.5289ms)
+  ✔ somente owner/admin têm capacidades de gestão da fundação (1.8451ms)
+  ✔ erro desconhecido nunca expõe stack, SQL ou segredo (1.1451ms)
+✔ Configuração e políticas sem serviços externos (16.4976ms)
+▶ DEMO_ONLY — fundação com PostgreSQL real e protocolo OIDC assinado
+  ✔ health/readiness e contrato são públicos, API interna não existe (181.7286ms)
+  ✔ sessão real opaca, cookie restrito e Cache-Control no-store (29.9671ms)
+  ✔ tenant A não lê B por path ou query; listagem contém somente A (58.2868ms)
+  ✔ tenant A não escreve B nem muda o escopo por header/body/query (162.6974ms)
+  ✔ viewer recebe 403 em mutações de domínio, inclusive com role forjada (261.5804ms)
+  ✔ viewer vê apenas seu membership; owner/manager veem equipe permitida (82.881ms)
+  ✔ admin cliente não promove a owner/admin; IDs de objetos de B não atravessam A (89.6402ms)
+  ✔ CSRF exige token e Origin exatos; JSON e DTOs são estritos (208.8751ms)
+  ✔ idempotência concorrente gera um resultado e um único evento/auditoria (489.9773ms)
+  ✔ último owner e identidade dos objetos são protegidos (86.2837ms)
+  ✔ FORCE RLS, role sem bypass e defesa SQL direta contra tenant B (52.1877ms)
+  ✔ SET LOCAL não vaza para conexão reutilizada e auditoria é append-only (22.5003ms)
+  ✔ outbox e auditoria são atômicos; inbox deduplica e rollback permite retry (42.189ms)
+  ✔ OIDC rejeita state/replay e assinatura, nonce, issuer, audience e expiração inválidos (275.9242ms)
+  ✔ falha do IdP não derruba operações locais com sessão vigente (59.0242ms)
+  ✔ logout e expiração revogam sessões; nova autenticação rotaciona o token (217.2346ms)
+  ✔ revogação de membership vale no próximo uso; replay não contorna autorização (333.6236ms)
+  ✔ erro uniforme e logs não registram tokens, query, payload ou pessoa (24.0408ms)
+  ✔ baseline local de GET/POST sem provedores externos (1321.6288ms)
+  ✔ respostas reais de identidade, organização, membership e erro satisfazem o OpenAPI (217.5949ms)
+  ✔ migration é idempotente e readiness rejeita RLS removida (264.9896ms)
+  ✔ down/up reconstrói o schema somente no cluster descartável de teste (657.8938ms)
+✔ DEMO_ONLY — fundação com PostgreSQL real e protocolo OIDC assinado (35481.4426ms)
+✔ OpenTelemetry exporta trace e métrica para collector local sem dado pessoal (125.15ms)
+ℹ tests 28
+ℹ suites 2
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 57620.4991

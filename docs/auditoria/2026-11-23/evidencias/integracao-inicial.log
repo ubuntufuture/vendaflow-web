@@ -1,0 +1,19 @@
+Inicializando PostgreSQL real DEMO_ONLY (timeout de inicialização 240s)…
+PostgreSQL real pronto; iniciando integração HTTP/browser.
+✓ Running next.config.ts took 161ms
+20 verificações executadas
+40 verificações executadas
+60 verificações executadas
+80 verificações executadas
+100 verificações executadas
+`x-forwarded-host` header with value `127.0.0.1:3400` does not match `origin` header with value `invasor.invalid` from a forwarded Server Actions request. Aborting the action.
+⨯ Error: Invalid Server Actions request.
+    at async p (C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-web\.next\server\chunks\101.js:23:12408)
+    at async q (C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-web\.next\server\chunks\101.js:24:4601)
+    at async w (C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-web\.next\server\chunks\101.js:24:6022)
+    at async _ (C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-web\.next\server\chunks\101.js:26:1527) {
+  digest: '1750317304'
+}
+120 verificações executadas
+FAIL: falha de alteração preserva rascunho e não modifica o banco 
+123 PASS, 1 FAIL

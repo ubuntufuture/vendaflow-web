@@ -1,0 +1,16 @@
+{
+  "scope": "catálogo UI estático em laboratório; não certifica produto ou RUM",
+  "routes": ["PUB01", "APP03", "ADM02"],
+  "profiles": ["desktop", "mobile-rede-restrita"],
+  "lcpP75Ms": 2500,
+  "clsP75": 0.1,
+  "aspirationalUsefulContentP75Ms": 1000,
+  "usefulContentMetricImplemented": false,
+  "rumInpP75Ms": 200,
+  "rumAvailable": false,
+  "apiGetP95Ms": 300,
+  "apiPostP95Ms": 500,
+  "apiApplicable": false,
+  "bundleRegressionBaselineApproved": false,
+  "notes": ["FCP é medido, mas não substitui primeiro conteúdo útil.", "Os limites laboratoriais por rota são gates internos; não transformam screenshot em evidência de campo.", "Budget de JS deve ser fechado a partir do analyzer e perfil produtivo; não há garantia de produto com este sandbox."]
+}

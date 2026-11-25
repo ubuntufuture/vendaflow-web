@@ -1,0 +1,101 @@
+{
+  "executedAt": "2026-11-23T18:49:21.707Z",
+  "results": [
+    {
+      "id": "venda-web-fundação--login",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--cadastro",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--recuperacao",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--identidade-indisponivel",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--estados",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--inicio",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--conversas",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--contatos",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--funil",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--automacoes",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--criar-automacao",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--assistente",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--relatorios",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--cobranca",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--whats-app",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    },
+    {
+      "id": "venda-web-stitch-ativo--privacidade",
+      "status": "PASS",
+      "rendered": true,
+      "violations": []
+    }
+  ]
+}

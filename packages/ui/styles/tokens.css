@@ -1,0 +1,73 @@
+/* Gerado por npm run tokens. Edite branding/tokens.json. */
+:root {
+  --vf-brand-primary: #FF6A4D;
+  --vf-brand-foreground: #0B0E14;
+  --vf-brand-background: #FFF9F6;
+  --vf-brand-surface: #FFFFFF;
+  --vf-brand-muted: #E6E8EC;
+  --vf-font: "Inter Variable", "Inter", sans-serif;
+  --vf-space-1: 0.25rem;
+  --vf-space-2: 0.5rem;
+  --vf-space-3: 0.75rem;
+  --vf-space-4: 1rem;
+  --vf-space-6: 1.5rem;
+  --vf-space-8: 2rem;
+  --vf-space-12: 3rem;
+  --vf-space-16: 4rem;
+  --vf-radius-control: 0.5rem;
+  --vf-radius-panel: 1rem;
+  --vf-radius-dialog: 1.5rem;
+  --vf-radius-pill: 999px;
+  --vf-elevation-flat: none;
+  --vf-elevation-raised: 0 4px 0 -2px var(--vf-border-subtle);
+  --vf-elevation-overlay: 0 8px 0 -4px var(--vf-border-subtle);
+  --vf-motion-fast: 120ms;
+  --vf-motion-normal: 180ms;
+  --vf-motion-reduced: 0ms;
+  --vf-motion-easing: cubic-bezier(0.2, 0, 0, 1);
+  --vf-type-caption: 0.75rem;
+  --vf-line-caption: 1.125rem;
+  --vf-type-label: 0.875rem;
+  --vf-line-label: 1.25rem;
+  --vf-type-body: 1rem;
+  --vf-line-body: 1.5rem;
+  --vf-type-title: 1.25rem;
+  --vf-line-title: 1.75rem;
+  --vf-type-heading: 2rem;
+  --vf-line-heading: 2.5rem;
+  --vf-type-display: 3.5rem;
+  --vf-line-display: 3.75rem;
+}
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --vf-canvas: var(--vf-brand-background);
+  --vf-panel: var(--vf-brand-surface);
+  --vf-text: var(--vf-brand-foreground);
+  --vf-text-secondary: var(--vf-brand-foreground);
+  --vf-border: var(--vf-brand-foreground);
+  --vf-border-subtle: var(--vf-brand-muted);
+  --vf-action: var(--vf-brand-primary);
+  --vf-on-action: var(--vf-brand-foreground);
+  --vf-focus: var(--vf-brand-foreground);
+  --vf-navigation: var(--vf-brand-foreground);
+  --vf-on-navigation: var(--vf-brand-surface);
+  --vf-selected: var(--vf-brand-primary);
+  --vf-on-selected: var(--vf-brand-foreground);
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --vf-canvas: var(--vf-brand-foreground);
+  --vf-panel: var(--vf-brand-foreground);
+  --vf-text: var(--vf-brand-surface);
+  --vf-text-secondary: var(--vf-brand-muted);
+  --vf-border: var(--vf-brand-muted);
+  --vf-border-subtle: var(--vf-brand-muted);
+  --vf-action: var(--vf-brand-primary);
+  --vf-on-action: var(--vf-brand-foreground);
+  --vf-focus: var(--vf-brand-primary);
+  --vf-navigation: var(--vf-brand-foreground);
+  --vf-on-navigation: var(--vf-brand-surface);
+  --vf-selected: var(--vf-brand-primary);
+  --vf-on-selected: var(--vf-brand-foreground);
+}
+@media (prefers-reduced-motion: reduce) { :root { --vf-motion-fast: 0ms; --vf-motion-normal: 0ms; } }

@@ -1,0 +1,273 @@
+{
+  "executedAt": "2026-11-22T00:10:17.822Z",
+  "browser": "157.0.8103.80",
+  "cpu": "AMD PRO A10-9700 R7, 10 COMPUTE CORES 4C+6G    ",
+  "memoryBytes": 7443247104,
+  "environment": "Windows loopback, production Next build; desktop 1440x1000, unthrottled; cache browser warm, no private response cache; no external calls except local test IdP",
+  "sampleCountPerRoute": 5,
+  "fieldRum": false,
+  "summaries": [
+    {
+      "route": "/",
+      "fcpP75": 188,
+      "fcpP95": 196,
+      "ttfbP75": 28.19999998807907
+    },
+    {
+      "route": "/entrar",
+      "fcpP75": 144,
+      "fcpP95": 148,
+      "ttfbP75": 27.80000001192093
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "fcpP75": 128,
+      "fcpP95": 192,
+      "ttfbP75": 50.799999952316284
+    }
+  ],
+  "samples": [
+    {
+      "route": "/",
+      "iteration": 1,
+      "ttfb": 28.19999998807907,
+      "fcp": 188
+    },
+    {
+      "route": "/",
+      "iteration": 2,
+      "ttfb": 26.100000023841858,
+      "fcp": 176
+    },
+    {
+      "route": "/",
+      "iteration": 3,
+      "ttfb": 23.399999976158142,
+      "fcp": 128
+    },
+    {
+      "route": "/",
+      "iteration": 4,
+      "ttfb": 30.5,
+      "fcp": 196
+    },
+    {
+      "route": "/",
+      "iteration": 5,
+      "ttfb": 26.30000001192093,
+      "fcp": 180
+    },
+    {
+      "route": "/entrar",
+      "iteration": 1,
+      "ttfb": 42,
+      "fcp": 124
+    },
+    {
+      "route": "/entrar",
+      "iteration": 2,
+      "ttfb": 27,
+      "fcp": 144
+    },
+    {
+      "route": "/entrar",
+      "iteration": 3,
+      "ttfb": 27.80000001192093,
+      "fcp": 104
+    },
+    {
+      "route": "/entrar",
+      "iteration": 4,
+      "ttfb": 25.80000001192093,
+      "fcp": 148
+    },
+    {
+      "route": "/entrar",
+      "iteration": 5,
+      "ttfb": 23.600000023841858,
+      "fcp": 96
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 1,
+      "ttfb": 54.89999997615814,
+      "fcp": 128
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 2,
+      "ttfb": 48.80000001192093,
+      "fcp": 124
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 3,
+      "ttfb": 50.799999952316284,
+      "fcp": 192
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 4,
+      "ttfb": 44.09999996423721,
+      "fcp": 112
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 5,
+      "ttfb": 40.5,
+      "fcp": 100
+    }
+  ],
+  "localWebVitalsEvents": [
+    {
+      "name": "TTFB",
+      "value": 28.19999998807907,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 188,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 26.100000023841858,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 176,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 128,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 23.399999976158142,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 30.5,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 196,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 26.30000001192093,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 180,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 124,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 42,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 27,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 144,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 104,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 27.80000001192093,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 25.80000001192093,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 148,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 96,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 23.600000023841858,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 128,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 54.89999997615814,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 124,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 48.80000001192093,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 192,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 50.799999952316284,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 112,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 44.09999996423721,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 100,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 40.5,
+      "rating": "good"
+    }
+  ]
+}

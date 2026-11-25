@@ -1,0 +1,41 @@
+{
+  "method": "WCAG relative luminance sRGB, solid colors; no UI compliance claim",
+  "pairs": [
+    {
+      "name": "branco sobre coral",
+      "foreground": "#FFFFFF",
+      "background": "#FF6A4D",
+      "ratio": 2.83,
+      "normalTextAA": false,
+      "largeTextAA": false,
+      "essentialNonTextCandidate": false
+    },
+    {
+      "name": "obsidiana sobre coral",
+      "foreground": "#0B0E14",
+      "background": "#FF6A4D",
+      "ratio": 6.826,
+      "normalTextAA": true,
+      "largeTextAA": true,
+      "essentialNonTextCandidate": true
+    },
+    {
+      "name": "obsidiana sobre marfim",
+      "foreground": "#0B0E14",
+      "background": "#FFF9F6",
+      "ratio": 18.519,
+      "normalTextAA": true,
+      "largeTextAA": true,
+      "essentialNonTextCandidate": true
+    },
+    {
+      "name": "cinza claro sobre branco",
+      "foreground": "#E6E8EC",
+      "background": "#FFFFFF",
+      "ratio": 1.227,
+      "normalTextAA": false,
+      "largeTextAA": false,
+      "essentialNonTextCandidate": false
+    }
+  ]
+}

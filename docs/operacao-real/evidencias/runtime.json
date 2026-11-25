@@ -1,0 +1,46 @@
+{
+  "capturedAt": "2026-11-23T23:21:31.550Z",
+  "runtimeDirectory": "D:\\VendaFlowAi-runtime",
+  "database": "PostgreSQL real persistente",
+  "databaseVersion": "18.7",
+  "counts": {
+    "users": 0,
+    "organizations": 0,
+    "contacts": 0,
+    "opportunities": 0,
+    "tasks": 0,
+    "knowledge": 0,
+    "workflows": 0
+  },
+  "rls": {
+    "tables": 16,
+    "enforced": true
+  },
+  "roles": [
+    {
+      "rolname": "venda_app_local",
+      "rolsuper": false,
+      "rolbypassrls": false
+    },
+    {
+      "rolname": "venda_worker_local",
+      "rolsuper": false,
+      "rolbypassrls": false
+    }
+  ],
+  "identity": {
+    "provider": "Keycloak real",
+    "issuer": "http://127.0.0.1:38080/realms/venda-flow-local",
+    "discoveryStatus": 200
+  },
+  "apiReadyStatus": 200,
+  "webStatus": 200,
+  "openapi": {
+    "status": 200,
+    "paths": 31
+  },
+  "businessSeeds": false,
+  "testPort": 3491,
+  "applicationPort": 3400,
+  "productionDeployed": false
+}

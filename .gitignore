@@ -1,0 +1,29 @@
+# Exportações de terceiros são material de consulta local, nunca assets de produção.
+/referencias/stitch_venda_flow_design_system/
+/node_modules/
+/.env
+/.env.*
+!/.env.example
+/.npm-cache/
+**/.next/
+**/out/
+/storybook-static/
+/coverage/
+/test-results/
+*.tsbuildinfo
+/.local/
+**/node_modules/
+/venda-api/dist/
+/venda-api/build/
+/venda-api/.runtime/
+/venda-api/.env
+/venda-web/.env*
+!/venda-web/.env.example
+/venda-web/.runtime/
+/venda-workers/.env*
+!/venda-workers/.env.example
+/venda-workers/build/
+# Network traces can contain session cookies and authorization headers.
+**/*playwright.zip
+**/*.har
+**/traces/

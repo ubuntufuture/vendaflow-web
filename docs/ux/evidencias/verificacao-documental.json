@@ -1,0 +1,56 @@
+{
+  "kind": "verificacao_documental_ux",
+  "executedAt": "2026-11-21T15:58:44.941Z",
+  "mode": "documental",
+  "checks": [
+    {
+      "name": "IDs e rotas únicos por superfície",
+      "status": "PASS"
+    },
+    {
+      "name": "Todas as rotas candidatas têm estados, wireframes e histórias existentes",
+      "status": "PASS"
+    },
+    {
+      "name": "Separação de público, cliente e admin e papéis explícitos",
+      "status": "PASS"
+    },
+    {
+      "name": "Todos os exports classificados sem fonte de rota órfã",
+      "status": "PASS"
+    },
+    {
+      "name": "Integridade SHA256 de todos os arquivos de referência",
+      "status": "PASS"
+    },
+    {
+      "name": "Links locais dos documentos apontam para arquivos existentes",
+      "status": "PASS"
+    },
+    {
+      "name": "Fontes brutas em quarentena fora de runtime",
+      "status": "PASS"
+    },
+    {
+      "name": "Cálculo de contraste confere pares de referência conhecidos",
+      "status": "PASS"
+    }
+  ],
+  "candidateRoutes": 39,
+  "candidateP0": 37,
+  "candidateP0StateCoverage": 37,
+  "exports": 40,
+  "sourceFiles": 78,
+  "coverageOfPrd": "indeterminada_prd_ausente",
+  "blockers": [
+    "referencias/00_ARQUITETURA_GERAL.md",
+    "referencias/03_SEGURANCA_E_GOVERNANCA.md",
+    "referencias/venda-openapi.yaml",
+    "branding/tokens.json",
+    "branding/brandboard.png",
+    "PRD V01–V24 não fornecido ou reconciliado",
+    "Aprovação do conteúdo dos contratos e cobertura P0 contra PRD pendente"
+  ],
+  "runtimeTestsExecuted": false,
+  "stageComplete": false
+}

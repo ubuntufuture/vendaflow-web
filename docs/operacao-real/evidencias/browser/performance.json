@@ -1,0 +1,273 @@
+{
+  "executedAt": "2026-11-23T23:20:34.039Z",
+  "browser": "157.0.8103.80",
+  "cpu": "AMD PRO A10-9700 R7, 10 COMPUTE CORES 4C+6G    ",
+  "memoryBytes": 7443247104,
+  "environment": "Windows loopback, production Next build; desktop 1440x1000, unthrottled; cache browser warm, no private response cache; no external calls except local test IdP",
+  "sampleCountPerRoute": 5,
+  "fieldRum": false,
+  "summaries": [
+    {
+      "route": "/",
+      "fcpP75": 184,
+      "fcpP95": 216,
+      "ttfbP75": 35.80000001192093
+    },
+    {
+      "route": "/entrar",
+      "fcpP75": 104,
+      "fcpP95": 144,
+      "ttfbP75": 26.30000001192093
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "fcpP75": 176,
+      "fcpP95": 184,
+      "ttfbP75": 51.59999996423721
+    }
+  ],
+  "samples": [
+    {
+      "route": "/",
+      "iteration": 1,
+      "ttfb": 35.80000001192093,
+      "fcp": 216
+    },
+    {
+      "route": "/",
+      "iteration": 2,
+      "ttfb": 25.399999976158142,
+      "fcp": 116
+    },
+    {
+      "route": "/",
+      "iteration": 3,
+      "ttfb": 43.30000001192093,
+      "fcp": 184
+    },
+    {
+      "route": "/",
+      "iteration": 4,
+      "ttfb": 30,
+      "fcp": 132
+    },
+    {
+      "route": "/",
+      "iteration": 5,
+      "ttfb": 35,
+      "fcp": 144
+    },
+    {
+      "route": "/entrar",
+      "iteration": 1,
+      "ttfb": 39.89999997615814,
+      "fcp": 144
+    },
+    {
+      "route": "/entrar",
+      "iteration": 2,
+      "ttfb": 25,
+      "fcp": 100
+    },
+    {
+      "route": "/entrar",
+      "iteration": 3,
+      "ttfb": 23.69999998807907,
+      "fcp": 96
+    },
+    {
+      "route": "/entrar",
+      "iteration": 4,
+      "ttfb": 23.899999976158142,
+      "fcp": 96
+    },
+    {
+      "route": "/entrar",
+      "iteration": 5,
+      "ttfb": 26.30000001192093,
+      "fcp": 104
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 1,
+      "ttfb": 101.09999996423721,
+      "fcp": 184
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 2,
+      "ttfb": 50.59999996423721,
+      "fcp": 176
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 3,
+      "ttfb": 48.90000003576279,
+      "fcp": 112
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 4,
+      "ttfb": 51.59999996423721,
+      "fcp": 124
+    },
+    {
+      "route": "app-shell-DEMO_ONLY",
+      "iteration": 5,
+      "ttfb": 49.19999998807907,
+      "fcp": 124
+    }
+  ],
+  "localWebVitalsEvents": [
+    {
+      "name": "TTFB",
+      "value": 35.80000001192093,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 216,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 116,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 25.399999976158142,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 184,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 43.30000001192093,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 132,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 30,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 144,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 35,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 144,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 39.89999997615814,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 100,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 25,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 96,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 23.69999998807907,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 96,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 23.899999976158142,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 104,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 26.30000001192093,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 184,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 101.09999996423721,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 50.59999996423721,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 176,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 112,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 48.90000003576279,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 124,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 51.59999996423721,
+      "rating": "good"
+    },
+    {
+      "name": "FCP",
+      "value": 124,
+      "rating": "good"
+    },
+    {
+      "name": "TTFB",
+      "value": 49.19999998807907,
+      "rating": "good"
+    }
+  ]
+}

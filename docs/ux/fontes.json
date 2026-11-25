@@ -1,0 +1,715 @@
+{
+  "archiveOriginal": "C:/Users/UBUNTU FUTURE/Documents/Ubuntu Future Labs/VendaFlow/UX-UI/stitch_venda_flow_design_system.zip",
+  "sources": [
+    {
+      "export": "acessar_a_conta_venda_flow_ai_entrar",
+      "route": "PUB03",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/acessar_a_conta_venda_flow_ai_entrar/code.html",
+          "bytes": 18433,
+          "sha256": "b770f2402edbe1464f4c1534c37567b86b9a3162b24acc4e460aefdbf9774751"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/acessar_a_conta_venda_flow_ai_entrar/screen.png",
+          "bytes": 127147,
+          "sha256": "ad9ed5fffe1e62e6bef2f585088efac0e94eed94c0a850d70384c495450ad296"
+        }
+      ]
+    },
+    {
+      "export": "assinaturas_admin_assinaturas_console_administrativo_venda_flow_ai",
+      "route": "ADM05",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/assinaturas_admin_assinaturas_console_administrativo_venda_flow_ai/code.html",
+          "bytes": 38938,
+          "sha256": "d8d9160648d47b91ef6cb4b584fb12d6ef1c42cc4e31a746dac1eb29ea257607"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/assinaturas_admin_assinaturas_console_administrativo_venda_flow_ai/screen.png",
+          "bytes": 540595,
+          "sha256": "562bfacc3d7872ae3d1c9a65cbe76422ac3432d545d62ac0f39202d77355178a"
+        }
+      ]
+    },
+    {
+      "export": "assistente_de_ia_automa_es_mobile_390px",
+      "route": "APP13",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/assistente_de_ia_automa_es_mobile_390px/code.html",
+          "bytes": 19315,
+          "sha256": "5c4bb2072e4dabe1f32f2a55ab4a0686110b19eb890227614c7b9159cb0de3c6"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/assistente_de_ia_automa_es_mobile_390px/screen.png",
+          "bytes": 197345,
+          "sha256": "b1fa92203306f7c0c12caea15ae436f272cc42dd5b99551eaa458126e262ab97"
+        }
+      ]
+    },
+    {
+      "export": "assistente_de_ia_automa_es_venda_flow_ai_desktop_1440px",
+      "route": "APP13",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/assistente_de_ia_automa_es_venda_flow_ai_desktop_1440px/code.html",
+          "bytes": 21741,
+          "sha256": "9d321f9994114556297e914f3d84b1802a16fbcb76289713aa5986587fd4365d"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/assistente_de_ia_automa_es_venda_flow_ai_desktop_1440px/screen.png",
+          "bytes": 339649,
+          "sha256": "c8e189c1b3d2f6d001cb40ed9b0f6956cf772d52ccd9b5d46bd67d4b0bc19a33"
+        }
+      ]
+    },
+    {
+      "export": "automa_es_app_automacoes_mobile_390px",
+      "route": "APP11",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/automa_es_app_automacoes_mobile_390px/code.html",
+          "bytes": 19032,
+          "sha256": "dcdec1407cadca365c5eac9fcf35e3557c51a94d9aaf34be3c2278e53a2ab567"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/automa_es_app_automacoes_mobile_390px/screen.png",
+          "bytes": 198186,
+          "sha256": "7d6abfeefdda41ed8f0b033a841a78617897a9ec50392b5fcd9e32eb133ef633"
+        }
+      ]
+    },
+    {
+      "export": "automa_es_app_automacoes_venda_flow_ai_desktop_1440px",
+      "route": "APP11",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/automa_es_app_automacoes_venda_flow_ai_desktop_1440px/code.html",
+          "bytes": 18329,
+          "sha256": "fc88b863f39eefe564d6fff7e06df850ccc7d014a50f89cdc2963befa5eaa3d6"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/automa_es_app_automacoes_venda_flow_ai_desktop_1440px/screen.png",
+          "bytes": 226468,
+          "sha256": "04226e22ac45a41a84cc300d912b968dbdcffef742ab9003092acc53bceacc7a"
+        }
+      ]
+    },
+    {
+      "export": "brandboard_venda_flow_ai.png",
+      "route": null,
+      "classification": "referencia_de_marca",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/brandboard_venda_flow_ai.png/screen.png",
+          "bytes": 1632491,
+          "sha256": "ca063cdf24475bfb3775f346ed13781b694fb8dcd1dbd874817213fffedb43a6"
+        }
+      ]
+    },
+    {
+      "export": "clientes_app_clientes_venda_flow_ai_desktop_1440px_1",
+      "route": "APP05",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/clientes_app_clientes_venda_flow_ai_desktop_1440px_1/code.html",
+          "bytes": 39506,
+          "sha256": "609d1b6b537a1568a8b550a97839f9180a86ace9f1dd9458a1ca73c62e6dacca"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/clientes_app_clientes_venda_flow_ai_desktop_1440px_1/screen.png",
+          "bytes": 472385,
+          "sha256": "199fd0630b920dd4ebfb47943e37a6e5ba3457bf00f858ea611b90e9810e3289"
+        }
+      ]
+    },
+    {
+      "export": "clientes_app_clientes_venda_flow_ai_desktop_1440px_2",
+      "route": "APP05",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/clientes_app_clientes_venda_flow_ai_desktop_1440px_2/code.html",
+          "bytes": 32446,
+          "sha256": "5fc541a7aa03dc503314df137c2633ee0e833b43525066551fc0623a4f243bab"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/clientes_app_clientes_venda_flow_ai_desktop_1440px_2/screen.png",
+          "bytes": 423354,
+          "sha256": "b64b8a242f44df137d90073700b57d47bdffdf45dc63eb1e3e006edc11626bc9"
+        }
+      ]
+    },
+    {
+      "export": "configura_es_app_configuracoes_mobile_390px",
+      "route": "APP17",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/configura_es_app_configuracoes_mobile_390px/code.html",
+          "bytes": 21274,
+          "sha256": "cc8e697e12929a4130cd493fd00b977204ca4d72256bbbc3650ee59a97906a89"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/configura_es_app_configuracoes_mobile_390px/screen.png",
+          "bytes": 106346,
+          "sha256": "9f180aefbce197599ea94a03ae015fd42ba2c1d8f63b5ba49aa3f89870b914f7"
+        }
+      ]
+    },
+    {
+      "export": "configura_es_app_configuracoes_venda_flow_ai_desktop_1440px",
+      "route": "APP17",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/configura_es_app_configuracoes_venda_flow_ai_desktop_1440px/code.html",
+          "bytes": 36007,
+          "sha256": "70ac6a3fc6021ca174ad6c16887f96f59eb32a34cadd74eb0cff6175148d8111"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/configura_es_app_configuracoes_venda_flow_ai_desktop_1440px/screen.png",
+          "bytes": 381309,
+          "sha256": "c224d085e5ac60dae52b2ff6fb0a2f98be9beb50ca4e6351bd06f28088258dac"
+        }
+      ]
+    },
+    {
+      "export": "conversas_app_conversas_mobile_390px_1",
+      "route": "APP03",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/conversas_app_conversas_mobile_390px_1/code.html",
+          "bytes": 26067,
+          "sha256": "89dfad68bb83e26ede11659f4914df2152acc5552072aa4c6767a94078b45079"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/conversas_app_conversas_mobile_390px_1/screen.png",
+          "bytes": 226542,
+          "sha256": "8ecb1420b01ce07f77eec4d647c95b78d545ccc6deccbc6496608d6284ee9652"
+        }
+      ]
+    },
+    {
+      "export": "conversas_app_conversas_mobile_390px_2",
+      "route": "APP04",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/conversas_app_conversas_mobile_390px_2/code.html",
+          "bytes": 29252,
+          "sha256": "433da738ccde67e46589294623cf9ee4ec0b576a3726e812411256f46e1aadc1"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/conversas_app_conversas_mobile_390px_2/screen.png",
+          "bytes": 216901,
+          "sha256": "af33934f1b2f4aab2112378610086fc66f6defa00cf0e18f1b636f01ea909807"
+        }
+      ]
+    },
+    {
+      "export": "conversas_app_conversas_venda_flow_ai_desktop_1440px_1",
+      "route": "APP03",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/conversas_app_conversas_venda_flow_ai_desktop_1440px_1/code.html",
+          "bytes": 33919,
+          "sha256": "792a2e82b787f1b447c2e7d0379450da198c39352413bc38f52b71c87d2a6d2b"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/conversas_app_conversas_venda_flow_ai_desktop_1440px_1/screen.png",
+          "bytes": 402489,
+          "sha256": "fb86bed1a89710f4a3d6a2c390bbd29c5f39f43afa6773eef083245d84cd6b4e"
+        }
+      ]
+    },
+    {
+      "export": "conversas_app_conversas_venda_flow_ai_desktop_1440px_2",
+      "route": "APP03",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/conversas_app_conversas_venda_flow_ai_desktop_1440px_2/code.html",
+          "bytes": 29225,
+          "sha256": "b2bab02cf5b772efcf0d1662f6f23f3b6b372d05d78efb7abad600a7e98cc34d"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/conversas_app_conversas_venda_flow_ai_desktop_1440px_2/screen.png",
+          "bytes": 331351,
+          "sha256": "74fdd5522e24395ab30a2758777c44bb824c3f60bac5bd0e0bf9dfd5eec76961"
+        }
+      ]
+    },
+    {
+      "export": "criar_automa_o_app_automacoes_nova_venda_flow_ai_desktop_1440px",
+      "route": "APP12",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/criar_automa_o_app_automacoes_nova_venda_flow_ai_desktop_1440px/code.html",
+          "bytes": 19427,
+          "sha256": "ee99f5b38629e1fef85bf0f0ba4ec850584ecba4aaf24056a54fdbfcd0333f37"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/criar_automa_o_app_automacoes_nova_venda_flow_ai_desktop_1440px/screen.png",
+          "bytes": 216039,
+          "sha256": "7ff3176cdc9015a0923190cf4838d704071423180e6faa81f8ddbd02e1393353"
+        }
+      ]
+    },
+    {
+      "export": "criar_conta_venda_flow_ai_cadastro",
+      "route": "PUB04",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/criar_conta_venda_flow_ai_cadastro/code.html",
+          "bytes": 19931,
+          "sha256": "efecc29648ef8e5f70d1b547356536c7f390b5c56a1c9f2995333874fd8597af"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/criar_conta_venda_flow_ai_cadastro/screen.png",
+          "bytes": 198150,
+          "sha256": "ec34c61ba4cd4dae8868a9e9b3c5daacecca80861619d014e2b8f1ad7bc12158"
+        }
+      ]
+    },
+    {
+      "export": "detalhe_da_oportunidade_mobile_390px",
+      "route": "APP08",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/detalhe_da_oportunidade_mobile_390px/code.html",
+          "bytes": 26980,
+          "sha256": "cbc20f5913ecf26f1082df8182a76f13bbfefee1f3d4cb75b55bf7eb4e9b74f1"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/detalhe_da_oportunidade_mobile_390px/screen.png",
+          "bytes": 95810,
+          "sha256": "f4eb4e34621378f3a8cd02e7b402234d20d252b56747c74daf40c82ecee8fe71"
+        }
+      ]
+    },
+    {
+      "export": "empresas_admin_empresas_console_administrativo_venda_flow_ai",
+      "route": "ADM03",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/empresas_admin_empresas_console_administrativo_venda_flow_ai/code.html",
+          "bytes": 42592,
+          "sha256": "b387d9aa3df9751d43396984dee130900c0e713cf08b91411491b2eaa3452772"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/empresas_admin_empresas_console_administrativo_venda_flow_ai/screen.png",
+          "bytes": 478520,
+          "sha256": "79ae54169a55232c9bb01e3181f1aec5df5e7b85b6a2d3b575c21dc386f2d4f4"
+        }
+      ]
+    },
+    {
+      "export": "in_cio_app_mobile_390px",
+      "route": "APP02",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/in_cio_app_mobile_390px/code.html",
+          "bytes": 21147,
+          "sha256": "34e08f6a103c999d24a60d4492e2f6f0cc7a4b58a90bc9df2399e4a6f900ad58"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/in_cio_app_mobile_390px/screen.png",
+          "bytes": 221155,
+          "sha256": "334402f3bedea06af86a9b2ec95d589b4982408b61a750f5a2920516d196ea55"
+        }
+      ]
+    },
+    {
+      "export": "in_cio_app_venda_flow_ai_desktop_1440px",
+      "route": "APP02",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/in_cio_app_venda_flow_ai_desktop_1440px/code.html",
+          "bytes": 23714,
+          "sha256": "d1674ec0d116b258c75316068c12dde078656586246f9ae4d563792781345915"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/in_cio_app_venda_flow_ai_desktop_1440px/screen.png",
+          "bytes": 306959,
+          "sha256": "e38e837a5824f58991816ec374e393b00ceba0c6acf29a4cad3fb065853b38ad"
+        }
+      ]
+    },
+    {
+      "export": "login_administrativo_admin_login_venda_flow_ai",
+      "route": "ADM01",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/login_administrativo_admin_login_venda_flow_ai/code.html",
+          "bytes": 18091,
+          "sha256": "a80013261ce584cbb8e789ee8bd4ad77a9006c4a1b72d0e6bd2fe3c9f42bc66e"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/login_administrativo_admin_login_venda_flow_ai/screen.png",
+          "bytes": 194428,
+          "sha256": "1d4e1e8b7675467195b33276b4d34522fc740cd4c8c7bece8f56d1529ef91913"
+        }
+      ]
+    },
+    {
+      "export": "mini_design_system_venda_flow_ai",
+      "route": null,
+      "classification": "referencia_de_marca",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/mini_design_system_venda_flow_ai/code.html",
+          "bytes": 38844,
+          "sha256": "9ac8303c9dd4aaa90bfed756cb826d6ebed4306ca51c319a3e152eb2a32f932d"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/mini_design_system_venda_flow_ai/screen.png",
+          "bytes": 223355,
+          "sha256": "7f71acedc62abca8f827df9601b266972d5845fcde3f6a356f9d3ff6229411fc"
+        }
+      ]
+    },
+    {
+      "export": "p_gina_inicial_mobile_390px",
+      "route": "PUB01",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/p_gina_inicial_mobile_390px/code.html",
+          "bytes": 24506,
+          "sha256": "e688cba12ea05fe0e49452804af1bf2caf0ac831c3e0c48c63f580857fd8a345"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/p_gina_inicial_mobile_390px/screen.png",
+          "bytes": 142990,
+          "sha256": "2fd3db3391ffe642f338fea2590041f5a5ab411f4a76241d102c7d0db24fc1a6"
+        }
+      ]
+    },
+    {
+      "export": "p_gina_inicial_venda_flow_ai",
+      "route": "PUB01",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/p_gina_inicial_venda_flow_ai/code.html",
+          "bytes": 29590,
+          "sha256": "b59969f93b37f3c6e6e20671019bf99d09eff02fe083d74ee56d553a891f2b10"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/p_gina_inicial_venda_flow_ai/screen.png",
+          "bytes": 209664,
+          "sha256": "668323aa94c9feac818d3d3c916d1ffbb4aa148193ec28ee4890859292b79147"
+        }
+      ]
+    },
+    {
+      "export": "painel_do_cliente_mobile_390px",
+      "route": "APP02",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/painel_do_cliente_mobile_390px/code.html",
+          "bytes": 27370,
+          "sha256": "90c1400d005188298c5372e7b6f0341ffe8e32909cfc51690ccb0dc5e2cdf5cd"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/painel_do_cliente_mobile_390px/screen.png",
+          "bytes": 197080,
+          "sha256": "5613c85ba21c8a265fc2c8c38d7f0ba173074db81437965fc7f22407cdbb7dcf"
+        }
+      ]
+    },
+    {
+      "export": "painel_do_cliente_venda_flow_ai_desktop_1440px",
+      "route": "APP02",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/painel_do_cliente_venda_flow_ai_desktop_1440px/code.html",
+          "bytes": 44976,
+          "sha256": "def5d44b0e02d44ec369810a104f3a6f119553b618f303910cb865be214ba907"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/painel_do_cliente_venda_flow_ai_desktop_1440px/screen.png",
+          "bytes": 366314,
+          "sha256": "79a20d3495797a52bfcc94c7a537cace4eec358e0865bd10033ac0eaaa553eaf"
+        }
+      ]
+    },
+    {
+      "export": "planos_e_faturamento_app_faturamento_mobile_390px",
+      "route": "APP16",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/planos_e_faturamento_app_faturamento_mobile_390px/code.html",
+          "bytes": 17607,
+          "sha256": "9e3f4260ed4003d82437d17fd0a01fc669b362f3936311a06a2a40b0e56bfabc"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/planos_e_faturamento_app_faturamento_mobile_390px/screen.png",
+          "bytes": 89659,
+          "sha256": "eb9eace532f7e37856dcf4cdfdf4a2f89ef5209c2d9c14063642731e7677aec1"
+        }
+      ]
+    },
+    {
+      "export": "planos_e_faturamento_app_faturamento_venda_flow_ai_desktop_1440px",
+      "route": "APP16",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/planos_e_faturamento_app_faturamento_venda_flow_ai_desktop_1440px/code.html",
+          "bytes": 39865,
+          "sha256": "2ec535a0aa766df5b515f271c8709b9ed352fddc296a75c6abf29999a84474a8"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/planos_e_faturamento_app_faturamento_venda_flow_ai_desktop_1440px/screen.png",
+          "bytes": 422730,
+          "sha256": "43234d288baedde13ded0c6931c10bd5fa429e6652b34ff539b5c84627a08ff3"
+        }
+      ]
+    },
+    {
+      "export": "planos_e_pre_os_mobile_390px",
+      "route": "PUB02",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/planos_e_pre_os_mobile_390px/code.html",
+          "bytes": 28154,
+          "sha256": "a0c8263e7fcb3190015bb54f06a27cc0b37d70ead09e8048d1787778ccdc0fb1"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/planos_e_pre_os_mobile_390px/screen.png",
+          "bytes": 136484,
+          "sha256": "bfaec13660ee801b1e3048fd84ef1fc13c609bd20b6e35095d2cf422841baef6"
+        }
+      ]
+    },
+    {
+      "export": "planos_e_pre_os_venda_flow_ai",
+      "route": "PUB02",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/planos_e_pre_os_venda_flow_ai/code.html",
+          "bytes": 22591,
+          "sha256": "94fc9c6cb30ea430a0fa48fc285ef6915e71e9d4106131310cdef7ef4c5ca866"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/planos_e_pre_os_venda_flow_ai/screen.png",
+          "bytes": 301658,
+          "sha256": "f9d7aa9fcddfeafc7ab586ac71e8af5fea6fd7acd78112764d1b0ea536d7b2e8"
+        }
+      ]
+    },
+    {
+      "export": "primeiros_passos_mobile_390px_configurar",
+      "route": "APP01",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/primeiros_passos_mobile_390px_configurar/code.html",
+          "bytes": 25176,
+          "sha256": "70021172c1ebb68f38e7c3d9c8f9b67a11ec0e7e81bd78ac9167fde584fd94b4"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/primeiros_passos_mobile_390px_configurar/screen.png",
+          "bytes": 202258,
+          "sha256": "29425c47b4f405ed48e7217c9f03bbb01ee5125a395f358fbd753fa5971dfaf5"
+        }
+      ]
+    },
+    {
+      "export": "primeiros_passos_venda_flow_ai_configurar",
+      "route": "APP01",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/primeiros_passos_venda_flow_ai_configurar/code.html",
+          "bytes": 35059,
+          "sha256": "63598421f8eac7f6bd11ce157ce5a45dd1dc95aeaae321b532c0b25306ec5e8a"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/primeiros_passos_venda_flow_ai_configurar/screen.png",
+          "bytes": 234694,
+          "sha256": "014f732fe3da12b0513032697b70b1971b643720a4d3527bc9534beabce3fd17"
+        }
+      ]
+    },
+    {
+      "export": "relat_rios_app_relatorios_mobile_390px",
+      "route": "APP15",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/relat_rios_app_relatorios_mobile_390px/code.html",
+          "bytes": 19500,
+          "sha256": "efccb23128da42d6701c5036cceb5906451a2097c68bfa7b11a93cbdddcf71c0"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/relat_rios_app_relatorios_mobile_390px/screen.png",
+          "bytes": 92372,
+          "sha256": "a4f8e8b3a4e204aa39d4560cd2fc86337aea3f7d95fe262b60a13f158a2cf02e"
+        }
+      ]
+    },
+    {
+      "export": "relat_rios_app_relatorios_venda_flow_ai_desktop_1440px",
+      "route": "APP15",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/relat_rios_app_relatorios_venda_flow_ai_desktop_1440px/code.html",
+          "bytes": 31934,
+          "sha256": "af838223232fe84535039ced364d852675809716935df7bc9dad3a218169cb39"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/relat_rios_app_relatorios_venda_flow_ai_desktop_1440px/screen.png",
+          "bytes": 379265,
+          "sha256": "9cc0b46f50445deb3fc38dd974e327c2f7dfae5113440f2b8274d36a7d888c0a"
+        }
+      ]
+    },
+    {
+      "export": "suporte_e_auditoria_admin_operacao_console_administrativo_venda_flow_ai",
+      "route": "ADM06",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/suporte_e_auditoria_admin_operacao_console_administrativo_venda_flow_ai/code.html",
+          "bytes": 54053,
+          "sha256": "0b06a4c8555f4e4275a5fbccf3a2d35793699ef21fac6a6615cce07cd80fc8ae"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/suporte_e_auditoria_admin_operacao_console_administrativo_venda_flow_ai/screen.png",
+          "bytes": 469189,
+          "sha256": "fbb2cc2ab53f03b5103ba6422ac739d46d8b2c52ba304a4de170974644346b82"
+        }
+      ]
+    },
+    {
+      "export": "venda_flow_ai_design_system",
+      "route": null,
+      "classification": "referencia_de_marca",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/venda_flow_ai_design_system/DESIGN.md",
+          "bytes": 13369,
+          "sha256": "48fa959d24de350f7f05cfd3d5101c13bdcd2fa488c7ec8f70116028a3e38298"
+        }
+      ]
+    },
+    {
+      "export": "vendas_app_vendas_mobile_390px",
+      "route": "APP07",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/vendas_app_vendas_mobile_390px/code.html",
+          "bytes": 30629,
+          "sha256": "20d5398994de0c74b4822ac1a54464397a1ffa5ae587e33f73909145ed1a1104"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/vendas_app_vendas_mobile_390px/screen.png",
+          "bytes": 216703,
+          "sha256": "0999bab0bbf35e267f1c4d3e06beb6afddab32a1c2538d752d4b0d2c52ef166a"
+        }
+      ]
+    },
+    {
+      "export": "vendas_app_vendas_venda_flow_ai_desktop_1440px",
+      "route": "APP07",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/vendas_app_vendas_venda_flow_ai_desktop_1440px/code.html",
+          "bytes": 35028,
+          "sha256": "ce5f0ea5282700f995428a774d2aa776aebece3222a516f7b17e846d2c9ecbf9"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/vendas_app_vendas_venda_flow_ai_desktop_1440px/screen.png",
+          "bytes": 455166,
+          "sha256": "c79ce54c13c51dc3b4e8b5bf6386e2a09ceb34877204dfbd5f5ce83f36fd8d74"
+        }
+      ]
+    },
+    {
+      "export": "vis_o_geral_admin_console_administrativo_venda_flow_ai",
+      "route": "ADM02",
+      "classification": "referencia_de_tela",
+      "trustedForProduction": false,
+      "files": [
+        {
+          "path": "referencias/stitch_venda_flow_design_system/vis_o_geral_admin_console_administrativo_venda_flow_ai/code.html",
+          "bytes": 29543,
+          "sha256": "4c925aa3bcfefa7536b0c8d85b422d29c1f5efa82ba835e875c6a8d067b58204"
+        },
+        {
+          "path": "referencias/stitch_venda_flow_design_system/vis_o_geral_admin_console_administrativo_venda_flow_ai/screen.png",
+          "bytes": 398357,
+          "sha256": "8824f8e24838aa928490459a9f3f5c82e112f8c72859ef06930c96def20d1ef7"
+        }
+      ]
+    }
+  ]
+}

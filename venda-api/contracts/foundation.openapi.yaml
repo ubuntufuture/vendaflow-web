@@ -1,0 +1,618 @@
+openapi: 3.0.3
+info:
+  title: Venda Flow AI — fundação candidata
+  version: 0.1.0
+  description: "Contrato novo da etapa 03. Compatibilidade com venda-openapi.yaml
+    não demonstrada: referência ausente. Não inclui domínios comerciais nem API
+    interna admin."
+paths:
+  /health:
+    get:
+      operationId: health
+      summary: health
+      security: []
+      parameters: []
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Health"
+        "400": &a1
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "401": &a2
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "403": &a3
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404": &a4
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "409": &a5
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "413": &a6
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "415": &a7
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "429": &a8
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500": &a9
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "503": &a10
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /ready:
+    get:
+      operationId: readiness
+      summary: readiness
+      security: []
+      parameters: []
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Health"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/openapi.json:
+    get:
+      operationId: openapi
+      security: []
+      responses:
+        "200":
+          description: Contrato candidato da fundação
+          content:
+            application/json:
+              schema:
+                type: object
+  /v1/auth/login:
+    get:
+      operationId: login
+      security: []
+      responses:
+        "302":
+          description: Redirecionamento OIDC com cookie de fluxo HttpOnly Secure
+            SameSite=Lax
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/auth/callback:
+    get:
+      operationId: callback
+      security: []
+      parameters:
+        - name: code
+          in: query
+          schema:
+            type: string
+        - name: state
+          in: query
+          schema:
+            type: string
+      responses:
+        "302":
+          description: Sessão estabelecida após validação OIDC; redirecionamento fixo
+            configurado
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/auth/logout:
+    post:
+      operationId: logout
+      summary: logout
+      security:
+        - session: []
+      parameters:
+        - &a11
+          name: X-CSRF-Token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Resposta confirmada
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/me:
+    get:
+      operationId: me
+      summary: me
+      security:
+        - session: []
+      parameters: []
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Me"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/organizations:
+    get:
+      operationId: listOrganizations
+      summary: listOrganizations
+      security:
+        - session: []
+      parameters: []
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Organizations"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+    post:
+      operationId: createOrganization
+      summary: createOrganization
+      security:
+        - session: []
+      parameters:
+        - *a11
+        - &a15
+          name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[A-Za-z0-9_-]{16,128}$
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateOrganization"
+      responses:
+        "201":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Organization"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/organizations/{organizationId}:
+    get:
+      operationId: getOrganization
+      summary: getOrganization
+      security:
+        - session: []
+      parameters:
+        - &a13
+          name: organizationId
+          in: path
+          required: true
+          schema: &a12
+            type: string
+            format: uuid
+        - &a14
+          name: X-Organization-Id
+          in: header
+          required: false
+          schema: *a12
+          description: Se fornecido, deve concordar com o seletor do tenant e com
+            membership ativo.
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Organization"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+    patch:
+      operationId: updateOrganization
+      summary: updateOrganization
+      security:
+        - session: []
+      parameters:
+        - *a13
+        - *a14
+        - *a11
+        - *a15
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateOrganization"
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Organization"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/memberships:
+    get:
+      operationId: listMemberships
+      summary: listMemberships
+      security:
+        - session: []
+      parameters:
+        - name: organizationId
+          in: query
+          required: true
+          schema: *a12
+        - *a14
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Memberships"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/organizations/{organizationId}/memberships:
+    post:
+      operationId: createMembership
+      summary: createMembership
+      security:
+        - session: []
+      parameters:
+        - *a13
+        - *a14
+        - *a11
+        - *a15
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateMembership"
+      responses:
+        "201":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Membership"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/organizations/{organizationId}/memberships/{membershipId}:
+    patch:
+      operationId: updateMembership
+      summary: updateMembership
+      security:
+        - session: []
+      parameters:
+        - *a13
+        - name: membershipId
+          in: path
+          required: true
+          schema: *a12
+        - *a14
+        - *a11
+        - *a15
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateMembership"
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Membership"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+components:
+  securitySchemes:
+    session:
+      type: apiKey
+      in: cookie
+      name: __Host-venda_session
+  schemas:
+    Error:
+      type: object
+      additionalProperties: false
+      required:
+        - error
+      properties:
+        error:
+          type: object
+          additionalProperties: false
+          required:
+            - code
+            - message
+            - requestId
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            requestId: *a12
+    Organization:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - name
+        - timezone
+        - locale
+        - currency
+        - createdAt
+      properties:
+        id: *a12
+        name:
+          type: string
+          minLength: 1
+          maxLength: 120
+        timezone:
+          type: string
+          maxLength: 100
+        locale:
+          type: string
+          enum:
+            - pt-BR
+        currency:
+          type: string
+          enum:
+            - BRL
+        createdAt: &a16
+          type: string
+          format: date-time
+    Membership:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - organizationId
+        - userId
+        - role
+        - active
+        - createdAt
+      properties:
+        id: *a12
+        organizationId: *a12
+        userId: *a12
+        role: &a17
+          type: string
+          enum:
+            - owner
+            - admin
+            - manager
+            - agent
+            - viewer
+            - billing
+        active:
+          type: boolean
+        createdAt: *a16
+    CreateOrganization:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+        - timezone
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 120
+        timezone:
+          type: string
+          maxLength: 100
+    UpdateOrganization:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 120
+        timezone:
+          type: string
+          maxLength: 100
+    CreateMembership:
+      type: object
+      additionalProperties: false
+      required:
+        - userId
+        - role
+      properties:
+        userId: *a12
+        role: *a17
+    UpdateMembership:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        role: *a17
+        active:
+          type: boolean
+    Me:
+      type: object
+      additionalProperties: false
+      required:
+        - user
+        - csrfToken
+        - sessionExpiresAt
+      properties:
+        user:
+          type: object
+          additionalProperties: false
+          required:
+            - id
+          properties:
+            id: *a12
+        csrfToken:
+          type: string
+        sessionExpiresAt: *a16
+    Organizations:
+      type: object
+      additionalProperties: false
+      required:
+        - data
+      properties:
+        data:
+          type: array
+          maxItems: 100
+          items:
+            $ref: "#/components/schemas/Organization"
+    Memberships:
+      type: object
+      additionalProperties: false
+      required:
+        - data
+      properties:
+        data:
+          type: array
+          maxItems: 100
+          items:
+            $ref: "#/components/schemas/Membership"
+    Health:
+      type: object
+      additionalProperties: false
+      required:
+        - status
+      properties:
+        status:
+          type: string
+          enum:
+            - ok

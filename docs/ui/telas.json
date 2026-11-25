@@ -1,0 +1,470 @@
+[
+  {
+    "id": "PUB01",
+    "title": "Início público",
+    "priority": "P0",
+    "surface": "public",
+    "proposedProductPath": "/",
+    "reviewPath": "/telas/PUB01/",
+    "captures": [
+      "docs/ui/evidencias/telas/PUB01-desktop.png",
+      "docs/ui/evidencias/telas/PUB01-mobile.png"
+    ]
+  },
+  {
+    "id": "PUB02",
+    "title": "Planos",
+    "priority": "P0",
+    "surface": "public",
+    "proposedProductPath": "/planos",
+    "reviewPath": "/telas/PUB02/",
+    "captures": [
+      "docs/ui/evidencias/telas/PUB02-desktop.png",
+      "docs/ui/evidencias/telas/PUB02-mobile.png"
+    ]
+  },
+  {
+    "id": "PUB03",
+    "title": "Entrar",
+    "priority": "P0",
+    "surface": "public",
+    "proposedProductPath": "/entrar",
+    "reviewPath": "/telas/PUB03/",
+    "captures": [
+      "docs/ui/evidencias/telas/PUB03-desktop.png",
+      "docs/ui/evidencias/telas/PUB03-mobile.png"
+    ]
+  },
+  {
+    "id": "PUB04",
+    "title": "Criar conta",
+    "priority": "P0",
+    "surface": "public",
+    "proposedProductPath": "/cadastro",
+    "reviewPath": "/telas/PUB04/",
+    "captures": [
+      "docs/ui/evidencias/telas/PUB04-desktop.png",
+      "docs/ui/evidencias/telas/PUB04-mobile.png"
+    ]
+  },
+  {
+    "id": "PUB05",
+    "title": "Privacidade",
+    "priority": "P0",
+    "surface": "public",
+    "proposedProductPath": "/privacidade",
+    "reviewPath": "/telas/PUB05/",
+    "captures": [
+      "docs/ui/evidencias/telas/PUB05-desktop.png",
+      "docs/ui/evidencias/telas/PUB05-mobile.png"
+    ]
+  },
+  {
+    "id": "PUB06",
+    "title": "Termos",
+    "priority": "P0",
+    "surface": "public",
+    "proposedProductPath": "/termos",
+    "reviewPath": "/telas/PUB06/",
+    "captures": [
+      "docs/ui/evidencias/telas/PUB06-desktop.png",
+      "docs/ui/evidencias/telas/PUB06-mobile.png"
+    ]
+  },
+  {
+    "id": "AUTH01",
+    "title": "Retorno OIDC cliente",
+    "priority": "P0",
+    "surface": "public",
+    "proposedProductPath": "/auth/callback",
+    "reviewPath": "/telas/AUTH01/",
+    "captures": [
+      "docs/ui/evidencias/telas/AUTH01-desktop.png",
+      "docs/ui/evidencias/telas/AUTH01-mobile.png"
+    ]
+  },
+  {
+    "id": "APP01",
+    "title": "Primeiros passos",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/configurar",
+    "reviewPath": "/telas/APP01/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP01-desktop.png",
+      "docs/ui/evidencias/telas/APP01-mobile.png"
+    ]
+  },
+  {
+    "id": "APP02",
+    "title": "Início operacional",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app",
+    "reviewPath": "/telas/APP02/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP02-desktop.png",
+      "docs/ui/evidencias/telas/APP02-mobile.png"
+    ]
+  },
+  {
+    "id": "APP03",
+    "title": "Conversas",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/conversas",
+    "reviewPath": "/telas/APP03/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP03-desktop.png",
+      "docs/ui/evidencias/telas/APP03-mobile.png"
+    ]
+  },
+  {
+    "id": "APP04",
+    "title": "Detalhe de conversa",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/conversas/:id",
+    "reviewPath": "/telas/APP04/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP04-desktop.png",
+      "docs/ui/evidencias/telas/APP04-mobile.png"
+    ]
+  },
+  {
+    "id": "APP05",
+    "title": "Contatos",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/clientes",
+    "reviewPath": "/telas/APP05/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP05-desktop.png",
+      "docs/ui/evidencias/telas/APP05-mobile.png"
+    ]
+  },
+  {
+    "id": "APP06",
+    "title": "Detalhe de contato",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/clientes/:id",
+    "reviewPath": "/telas/APP06/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP06-desktop.png",
+      "docs/ui/evidencias/telas/APP06-mobile.png"
+    ]
+  },
+  {
+    "id": "APP07",
+    "title": "Vendas e funis",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/vendas",
+    "reviewPath": "/telas/APP07/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP07-desktop.png",
+      "docs/ui/evidencias/telas/APP07-mobile.png"
+    ]
+  },
+  {
+    "id": "APP08",
+    "title": "Oportunidade",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/vendas/:id",
+    "reviewPath": "/telas/APP08/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP08-desktop.png",
+      "docs/ui/evidencias/telas/APP08-mobile.png"
+    ]
+  },
+  {
+    "id": "APP09",
+    "title": "Tarefas",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/tarefas",
+    "reviewPath": "/telas/APP09/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP09-desktop.png",
+      "docs/ui/evidencias/telas/APP09-mobile.png"
+    ]
+  },
+  {
+    "id": "APP10",
+    "title": "Detalhe de tarefa",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/tarefas/:id",
+    "reviewPath": "/telas/APP10/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP10-desktop.png",
+      "docs/ui/evidencias/telas/APP10-mobile.png"
+    ]
+  },
+  {
+    "id": "APP11",
+    "title": "Automações",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/automacoes",
+    "reviewPath": "/telas/APP11/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP11-desktop.png",
+      "docs/ui/evidencias/telas/APP11-mobile.png"
+    ]
+  },
+  {
+    "id": "APP12",
+    "title": "Criar automação",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/automacoes/nova",
+    "reviewPath": "/telas/APP12/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP12-desktop.png",
+      "docs/ui/evidencias/telas/APP12-mobile.png"
+    ]
+  },
+  {
+    "id": "APP13",
+    "title": "Assistente de IA",
+    "priority": "P1",
+    "surface": "app",
+    "proposedProductPath": "/app/automacoes/assistente",
+    "reviewPath": "/telas/APP13/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP13-desktop.png",
+      "docs/ui/evidencias/telas/APP13-mobile.png"
+    ]
+  },
+  {
+    "id": "APP14",
+    "title": "Conhecimento",
+    "priority": "P1",
+    "surface": "app",
+    "proposedProductPath": "/app/conhecimento",
+    "reviewPath": "/telas/APP14/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP14-desktop.png",
+      "docs/ui/evidencias/telas/APP14-mobile.png"
+    ]
+  },
+  {
+    "id": "APP15",
+    "title": "Relatórios",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/relatorios",
+    "reviewPath": "/telas/APP15/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP15-desktop.png",
+      "docs/ui/evidencias/telas/APP15-mobile.png"
+    ]
+  },
+  {
+    "id": "APP16",
+    "title": "Planos e faturamento",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/faturamento",
+    "reviewPath": "/telas/APP16/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP16-desktop.png",
+      "docs/ui/evidencias/telas/APP16-mobile.png"
+    ]
+  },
+  {
+    "id": "APP17",
+    "title": "Configurações",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/configuracoes",
+    "reviewPath": "/telas/APP17/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP17-desktop.png",
+      "docs/ui/evidencias/telas/APP17-mobile.png"
+    ]
+  },
+  {
+    "id": "APP18",
+    "title": "Organização",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/configuracoes/organizacao",
+    "reviewPath": "/telas/APP18/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP18-desktop.png",
+      "docs/ui/evidencias/telas/APP18-mobile.png"
+    ]
+  },
+  {
+    "id": "APP19",
+    "title": "Equipe",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/configuracoes/equipe",
+    "reviewPath": "/telas/APP19/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP19-desktop.png",
+      "docs/ui/evidencias/telas/APP19-mobile.png"
+    ]
+  },
+  {
+    "id": "APP20",
+    "title": "Canal WhatsApp",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/configuracoes/canais",
+    "reviewPath": "/telas/APP20/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP20-desktop.png",
+      "docs/ui/evidencias/telas/APP20-mobile.png"
+    ]
+  },
+  {
+    "id": "APP21",
+    "title": "Solicitações de privacidade",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/configuracoes/privacidade",
+    "reviewPath": "/telas/APP21/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP21-desktop.png",
+      "docs/ui/evidencias/telas/APP21-mobile.png"
+    ]
+  },
+  {
+    "id": "APP22",
+    "title": "Preferências e consentimento",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/clientes/:id/consentimento",
+    "reviewPath": "/telas/APP22/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP22-desktop.png",
+      "docs/ui/evidencias/telas/APP22-mobile.png"
+    ]
+  },
+  {
+    "id": "APP23",
+    "title": "Retorno Mercado Pago",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/faturamento/retorno",
+    "reviewPath": "/telas/APP23/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP23-desktop.png",
+      "docs/ui/evidencias/telas/APP23-mobile.png"
+    ]
+  },
+  {
+    "id": "APP24",
+    "title": "Ajuda",
+    "priority": "P0",
+    "surface": "app",
+    "proposedProductPath": "/app/ajuda",
+    "reviewPath": "/telas/APP24/",
+    "captures": [
+      "docs/ui/evidencias/telas/APP24-desktop.png",
+      "docs/ui/evidencias/telas/APP24-mobile.png"
+    ]
+  },
+  {
+    "id": "ADM01",
+    "title": "Login interno",
+    "priority": "P0",
+    "surface": "admin",
+    "proposedProductPath": "/admin/login",
+    "reviewPath": "/telas/ADM01/",
+    "captures": [
+      "docs/ui/evidencias/telas/ADM01-desktop.png",
+      "docs/ui/evidencias/telas/ADM01-mobile.png"
+    ]
+  },
+  {
+    "id": "ADM02",
+    "title": "Visão geral técnica",
+    "priority": "P0",
+    "surface": "admin",
+    "proposedProductPath": "/admin",
+    "reviewPath": "/telas/ADM02/",
+    "captures": [
+      "docs/ui/evidencias/telas/ADM02-desktop.png",
+      "docs/ui/evidencias/telas/ADM02-mobile.png"
+    ]
+  },
+  {
+    "id": "ADM03",
+    "title": "Empresas",
+    "priority": "P0",
+    "surface": "admin",
+    "proposedProductPath": "/admin/empresas",
+    "reviewPath": "/telas/ADM03/",
+    "captures": [
+      "docs/ui/evidencias/telas/ADM03-desktop.png",
+      "docs/ui/evidencias/telas/ADM03-mobile.png"
+    ]
+  },
+  {
+    "id": "ADM04",
+    "title": "Diagnóstico da empresa",
+    "priority": "P0",
+    "surface": "admin",
+    "proposedProductPath": "/admin/empresas/:id",
+    "reviewPath": "/telas/ADM04/",
+    "captures": [
+      "docs/ui/evidencias/telas/ADM04-desktop.png",
+      "docs/ui/evidencias/telas/ADM04-mobile.png"
+    ]
+  },
+  {
+    "id": "ADM05",
+    "title": "Assinaturas e reconciliação",
+    "priority": "P0",
+    "surface": "admin",
+    "proposedProductPath": "/admin/assinaturas",
+    "reviewPath": "/telas/ADM05/",
+    "captures": [
+      "docs/ui/evidencias/telas/ADM05-desktop.png",
+      "docs/ui/evidencias/telas/ADM05-mobile.png"
+    ]
+  },
+  {
+    "id": "ADM06",
+    "title": "Operação e suporte",
+    "priority": "P0",
+    "surface": "admin",
+    "proposedProductPath": "/admin/operacao",
+    "reviewPath": "/telas/ADM06/",
+    "captures": [
+      "docs/ui/evidencias/telas/ADM06-desktop.png",
+      "docs/ui/evidencias/telas/ADM06-mobile.png"
+    ]
+  },
+  {
+    "id": "ADM07",
+    "title": "Auditoria",
+    "priority": "P0",
+    "surface": "admin",
+    "proposedProductPath": "/admin/auditoria",
+    "reviewPath": "/telas/ADM07/",
+    "captures": [
+      "docs/ui/evidencias/telas/ADM07-desktop.png",
+      "docs/ui/evidencias/telas/ADM07-mobile.png"
+    ]
+  },
+  {
+    "id": "ADM08",
+    "title": "Retorno OIDC interno",
+    "priority": "P0",
+    "surface": "admin",
+    "proposedProductPath": "/admin/auth/callback",
+    "reviewPath": "/telas/ADM08/",
+    "captures": [
+      "docs/ui/evidencias/telas/ADM08-desktop.png",
+      "docs/ui/evidencias/telas/ADM08-mobile.png"
+    ]
+  }
+]

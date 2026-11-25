@@ -1,0 +1,50 @@
+{
+  "source": "Resultados observados no terminal pelo agente, sem execução simulada",
+  "date": "2026-11-23",
+  "commands": [
+    {
+      "command": "npm --prefix venda-api test",
+      "exitCode": 0,
+      "passed": 40,
+      "failed": 0,
+      "evidence": "venda-api/evidencias/resultados.xml"
+    },
+    {
+      "command": "npm run build:platform",
+      "exitCode": 0,
+      "scope": "API NestJS, worker TypeScript strict e Next.js"
+    },
+    {
+      "command": "npm run build:web",
+      "exitCode": 0,
+      "scope": "Rebuild após correção do wizard e do reflow mobile"
+    },
+    {
+      "command": "npm --prefix venda-api run contract",
+      "exitCode": 0,
+      "paths": 31,
+      "foundationPreserved": true
+    },
+    {
+      "command": "npm run contract:web",
+      "exitCode": 0,
+      "generatedClientMatches": true
+    },
+    {
+      "command": "npm run test:web",
+      "exitCode": 0,
+      "passed": 16,
+      "failed": 0,
+      "note": "A tentativa inicial sofreu restrição de leitura no esbuild; a repetição autorizada passou."
+    }
+  ],
+  "browser": {
+    "command": "VENDA_TEST_REAL_OIDC=true npm run test:web:browser",
+    "exitCode": 0,
+    "passed": 198,
+    "failed": 0,
+    "evidence": "browser/browser.json",
+    "fixture": "Cluster PostgreSQL e realm Keycloak isolados, porta 3491"
+  },
+  "productionDeployed": false
+}

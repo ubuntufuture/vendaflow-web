@@ -1,0 +1,5564 @@
+{
+  "sourceRoot": "referencias/stitch_venda_flow_design_system",
+  "screens": [
+    {
+      "source": "acessar_a_conta_venda_flow_ai_entrar/code.html",
+      "sha256": "b770f2402edbe1464f4c1534c37567b86b9a3162b24acc4e460aefdbf9774751",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Entre na sua conta"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"w-full pt-space-lg pb-space-sm flex flex-col items-center justify-center\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"w-full flex-1 flex flex-col items-center justify-center px-space-md py-space-sm\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"w-full py-space-md mt-auto\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all\" id=\"email-input\" placeholder=\"seu@empresa.com.br\" required=\"\" type=\"email\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-11 pl-10 pr-11 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all\" id=\"password-input\" placeholder=\"••••••••••••\" required=\"\" type=\"password\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "checked=\"\" class=\"w-4 h-4 rounded text-secondary-container focus:ring-0 cursor-pointer accent-secondary-container\" type=\"checkbox\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-11 h-12 text-center rounded-lg bg-surface-container-low font-data-metric text-headline-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container\" id=\"otp-0\" maxlength=\"1\" oninput=\"handleOtpInput(this, 1)\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-11 h-12 text-center rounded-lg bg-surface-container-low font-data-metric text-headline-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container\" id=\"otp-1\" maxlength=\"1\" oninput=\"handleOtpInput(this, 2)\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-11 h-12 text-center rounded-lg bg-surface-container-low font-data-metric text-headline-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container\" id=\"otp-2\" maxlength=\"1\" oninput=\"handleOtpInput(this, 3)\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-11 h-12 text-center rounded-lg bg-surface-container-low font-data-metric text-headline-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container\" id=\"otp-3\" maxlength=\"1\" oninput=\"handleOtpInput(this, 4)\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-11 h-12 text-center rounded-lg bg-surface-container-low font-data-metric text-headline-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container\" id=\"otp-4\" maxlength=\"1\" oninput=\"handleOtpInput(this, 5)\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-11 h-12 text-center rounded-lg bg-surface-container-low font-data-metric text-headline-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container\" id=\"otp-5\" maxlength=\"1\" oninput=\"handleOtpInput(this, null)\" type=\"text\"/"
+        }
+      ],
+      "controls": [
+        "close",
+        "visibility",
+        "Entrar no Venda Flow arrow_forward",
+        "Erro inline",
+        "Tela 2FA (MFA)",
+        "Validar e Entrar lock_open",
+        "chevron_left Trocar de conta",
+        "Reenviar código em 42s"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#cac5c3",
+        "#191c1f",
+        "#76777b",
+        "#f7f9fd",
+        "#45474b",
+        "#494644",
+        "#5c5e66",
+        "#d8dade",
+        "#c6c6cb",
+        "#000000",
+        "#44474e",
+        "#ba1a1a",
+        "#1d1b1a",
+        "#c4c6cf",
+        "#93000a",
+        "#650b00",
+        "#f2f4f8",
+        "#fe694c",
+        "#878381",
+        "#191c22",
+        "#ffffff",
+        "#eceef2",
+        "#ffdad6",
+        "#ffb4a5",
+        "#eff1f5",
+        "#e0e2e6",
+        "#e1e2eb",
+        "#81848c",
+        "#e7e1de",
+        "#ae3019",
+        "#2d3134",
+        "#ffdad3",
+        "#3e0400",
+        "#8c1703",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "min-h-screen",
+        "flex",
+        "flex-col",
+        "w-full",
+        "h-8",
+        "w-auto",
+        "flex-1",
+        "max-w-[460px]",
+        "w-1.5",
+        "h-1.5",
+        "h-11",
+        "w-4",
+        "h-4",
+        "max-w-[340px]",
+        "w-11",
+        "h-12",
+        "max-w-4xl",
+        "sm:flex-row",
+        "sm:block"
+      ]
+    },
+    {
+      "source": "assinaturas_admin_assinaturas_console_administrativo_venda_flow_ai/code.html",
+      "sha256": "d8d9160648d47b91ef6cb4b584fb12d6ef1c42cc4e31a746dac1eb29ea257607",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Gestão de Assinaturas e Faturamento"
+        },
+        {
+          "level": "h2",
+          "text": "Ocorrência de Faturamento: Solar Express"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-primary text-on-primary z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-1 px-space-sm mt-1\" data-active-classes=\"bg-primary-container text-on-primary font-title-md rounded-lg\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-background min-h-screen\""
+        },
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed top-0 right-0 h-full w-full max-w-[480px] bg-surface-container-lowest shadow-2xl z-50 flex flex-col justify-between transition-transform duration-300 ease-in-out transform translate-x-0 overflow-y-auto\" id=\"transaction-drawer\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors\" placeholder=\"Filtrar por empresa, doc ou MP hash...\" type=\"text\"/"
+        }
+      ],
+      "controls": [
+        "lock_clockEncerrar Sessão",
+        "file_download Exportar relatório de conciliação (.CSV)",
+        "cached Verificar Fila Global",
+        "Todas (1.482)",
+        "Ativas (1.474)",
+        "Com pendência 3",
+        "Canceladas (5)",
+        "tune Filtros",
+        "content_copy",
+        "visibility Ver ocorrência",
+        "content_copy",
+        "info Ver detalhes",
+        "content_copy",
+        "info Ver detalhes",
+        "chevron_left",
+        "chevron_right",
+        "close",
+        "sync Sincronizar status com Mercado Pago",
+        "support_agent Abrir ocorrência de suporte",
+        "Fechar"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#76777b",
+        "#f7f9fd",
+        "#c4c6cf",
+        "#191c22",
+        "#e1e2eb",
+        "#c6c6cb",
+        "#000000",
+        "#1d1b1a",
+        "#2d3134",
+        "#191c1f",
+        "#d8dade",
+        "#81848c",
+        "#ffffff",
+        "#494644",
+        "#fe694c",
+        "#44474e",
+        "#3e0400",
+        "#ffdad6",
+        "#8c1703",
+        "#45474b",
+        "#ffdad3",
+        "#eff1f5",
+        "#e0e2e6",
+        "#650b00",
+        "#f2f4f8",
+        "#e7e1de",
+        "#ae3019",
+        "#ba1a1a",
+        "#e6e8ec",
+        "#93000a",
+        "#eceef2",
+        "#cac5c3",
+        "#878381",
+        "#ffb4a5",
+        "#5c5e66",
+        "#1049"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "h-16",
+        "w-2",
+        "h-2",
+        "h-8",
+        "w-auto",
+        "lg:flex",
+        "w-1.5",
+        "h-1.5",
+        "sm:block",
+        "w-8",
+        "h-6",
+        "w-px",
+        "min-h-screen",
+        "w-full",
+        "md:flex-row",
+        "lg:flex-row",
+        "flex-wrap",
+        "grid",
+        "grid-cols-1",
+        "sm:grid-cols-2",
+        "lg:grid-cols-4",
+        "h-1",
+        "w-[88%]",
+        "w-[94%]",
+        "w-[25%]",
+        "w-[99%]",
+        "md:w-72",
+        "h-10",
+        "w-9",
+        "h-9",
+        "sm:flex-row",
+        "w-12",
+        "h-12",
+        "max-w-2xl",
+        "w-2.5",
+        "h-2.5",
+        "max-w-[480px]",
+        "sticky",
+        "flex-1",
+        "grid-cols-2",
+        "w-0.5",
+        "w-3",
+        "h-3"
+      ]
+    },
+    {
+      "source": "assistente_de_ia_automa_es_mobile_390px/code.html",
+      "sha256": "5c4bb2072e4dabe1f32f2a55ab4a0686110b19eb890227614c7b9159cb0de3c6",
+      "title": "Venda Flow AI",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Automações"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex flex-col relative w-full px-space-sm pt-16 pb-20 bg-surface flex-1\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]\" data-active-classes=\"text-secondary\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full rounded-lg bg-surface-container-low p-3 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-colors resize-none\" id=\"company-intro\" rows=\"3\""
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full min-h-[44px] rounded-lg bg-surface-container-low px-3 font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-colors\" id=\"business-hours\" type=\"text\" value=\"Segunda a Sexta, 08h às 18h\"/"
+        }
+      ],
+      "controls": [
+        "Automações",
+        "Assistente de IA",
+        "",
+        "Seg a Sex",
+        "Inclui Sábado",
+        "24 horas",
+        "add Adicionar pergunta",
+        "Quando o cliente pedir check_circle",
+        "Em dúvidas sobre pagamento radio_button_unchecked",
+        "Sempre que não souber responder radio_button_unchecked",
+        "play_arrow Testar resposta"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap",
+        "https://cdn.tailwindcss.com"
+      ],
+      "colors": [
+        "#ffffff",
+        "#e7e1de",
+        "#ffdad6",
+        "#1d1b1a",
+        "#45474b",
+        "#d8dade",
+        "#c4c6cf",
+        "#000000",
+        "#191c1f",
+        "#93000a",
+        "#cac5c3",
+        "#e0e2e6",
+        "#f7f9fd",
+        "#ae3019",
+        "#eff1f5",
+        "#fe694c",
+        "#ffb4a5",
+        "#81848c",
+        "#3e0400",
+        "#650b00",
+        "#878381",
+        "#c6c6cb",
+        "#ffdad3",
+        "#8c1703",
+        "#494644",
+        "#44474e",
+        "#ba1a1a",
+        "#e1e2eb",
+        "#eceef2",
+        "#191c22",
+        "#76777b",
+        "#2d3134",
+        "#5c5e66",
+        "#f2f4f8",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-16",
+        "w-8",
+        "h-8",
+        "flex-1",
+        "min-h-[44px]",
+        "min-w-0",
+        "w-11",
+        "h-11",
+        "w-14",
+        "w-12",
+        "h-7",
+        "w-5",
+        "h-5",
+        "flex-wrap",
+        "min-h-[48px]",
+        "min-w-[44px]"
+      ]
+    },
+    {
+      "source": "assistente_de_ia_automa_es_venda_flow_ai_desktop_1440px/code.html",
+      "sha256": "9d321f9994114556297e914f3d84b1802a16fbcb76289713aa5986587fd4365d",
+      "title": "Venda Flow AI",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Automatize o básico. Cuide melhor de cada cliente."
+        },
+        {
+          "level": "h2",
+          "text": "Ativar assistente"
+        },
+        {
+          "level": "h3",
+          "text": "Perguntas e respostas frequentes"
+        },
+        {
+          "level": "h2",
+          "text": "Testar resposta"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-surface-container-high z-50 flex flex-col justify-between py-space-md\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-space-xs px-space-sm\" data-active-classes=\"bg-secondary-container text-on-secondary-container\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-space-xs\" data-active-classes=\"bg-secondary-container text-on-secondary-container\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-container-high z-40 px-space-md flex items-center justify-between\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-surface min-h-screen\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full rounded-lg bg-surface-container-low px-space-sm py-space-xs font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:bg-surface-container-lowest focus:outline-none focus:shadow-sm transition-all resize-none\" id=\"company-intro\" rows=\"3\""
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 rounded-lg bg-surface-container-low pl-10 pr-space-sm font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:outline-none focus:shadow-sm transition-all\" id=\"business-hours\" type=\"text\" value=\"Segunda a Sábado, das 07h às 20h.\"/"
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"w-full h-11 rounded-lg bg-surface-container-low px-space-sm pr-10 font-body-md text-body-md text-on-surface appearance-none focus:bg-surface-container-lowest focus:outline-none focus:shadow-sm transition-all cursor-pointer\" id=\"handoff-rule\""
+        }
+      ],
+      "controls": [
+        "notifications",
+        "",
+        "play_arrow Testar resposta"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap",
+        "https://cdn.tailwindcss.com"
+      ],
+      "colors": [
+        "#ffffff",
+        "#e7e1de",
+        "#ffdad6",
+        "#1d1b1a",
+        "#45474b",
+        "#d8dade",
+        "#c4c6cf",
+        "#000000",
+        "#191c1f",
+        "#93000a",
+        "#cac5c3",
+        "#e0e2e6",
+        "#f7f9fd",
+        "#ae3019",
+        "#eff1f5",
+        "#fe694c",
+        "#ffb4a5",
+        "#81848c",
+        "#3e0400",
+        "#650b00",
+        "#878381",
+        "#c6c6cb",
+        "#ffdad3",
+        "#8c1703",
+        "#494644",
+        "#44474e",
+        "#ba1a1a",
+        "#e1e2eb",
+        "#eceef2",
+        "#191c22",
+        "#76777b",
+        "#2d3134",
+        "#5c5e66",
+        "#f2f4f8",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "w-8",
+        "h-8",
+        "h-16",
+        "w-2",
+        "h-2",
+        "min-h-screen",
+        "w-full",
+        "max-w-[1440px]",
+        "flex-wrap",
+        "w-1.5",
+        "h-1.5",
+        "h-[3px]",
+        "grid",
+        "grid-cols-1",
+        "lg:grid-cols-12",
+        "min-w-0",
+        "h-7",
+        "w-12",
+        "h-5",
+        "w-5",
+        "h-10",
+        "h-11",
+        "max-w-[85%]",
+        "max-w-[92%]"
+      ]
+    },
+    {
+      "source": "automa_es_app_automacoes_mobile_390px/code.html",
+      "sha256": "dcdec1407cadca365c5eac9fcf35e3557c51a94d9aaf34be3c2278e53a2ab567",
+      "title": "Venda Flow AI",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Automações"
+        },
+        {
+          "level": "h2",
+          "text": "Automatize o básico. Cuide melhor de cada cliente."
+        },
+        {
+          "level": "h3",
+          "text": "Modelos prontos"
+        },
+        {
+          "level": "h4",
+          "text": "Mensagem de boas-vindas"
+        },
+        {
+          "level": "h4",
+          "text": "Lembrete de acompanhamento"
+        },
+        {
+          "level": "h4",
+          "text": "Aviso para um atendente"
+        },
+        {
+          "level": "h3",
+          "text": "Minhas automações"
+        },
+        {
+          "level": "h3",
+          "text": "Atendimento inteligente"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex flex-col relative w-full px-space-sm pt-16 pb-20 bg-surface flex-1\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]\" data-active-classes=\"text-secondary\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "add Criar automação",
+        "Automações",
+        "Assistente de IA",
+        "tune Configurar",
+        "tune Configurar",
+        "tune Configurar",
+        "Confirmação de pedido Dispara após pagamento aprovado chevron_right",
+        "Pesquisa de satisfação Envia 2h após entrega concluída chevron_right",
+        "Ajustar instruções"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap",
+        "https://cdn.tailwindcss.com"
+      ],
+      "colors": [
+        "#ffffff",
+        "#e7e1de",
+        "#ffdad6",
+        "#1d1b1a",
+        "#45474b",
+        "#d8dade",
+        "#c4c6cf",
+        "#000000",
+        "#191c1f",
+        "#93000a",
+        "#cac5c3",
+        "#e0e2e6",
+        "#f7f9fd",
+        "#ae3019",
+        "#eff1f5",
+        "#fe694c",
+        "#ffb4a5",
+        "#81848c",
+        "#3e0400",
+        "#650b00",
+        "#878381",
+        "#c6c6cb",
+        "#ffdad3",
+        "#8c1703",
+        "#494644",
+        "#44474e",
+        "#ba1a1a",
+        "#e1e2eb",
+        "#eceef2",
+        "#191c22",
+        "#76777b",
+        "#2d3134",
+        "#5c5e66",
+        "#f2f4f8",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-16",
+        "w-8",
+        "h-8",
+        "flex-1",
+        "w-2",
+        "h-2",
+        "min-h-[48px]",
+        "min-h-[44px]",
+        "min-w-0",
+        "w-10",
+        "h-10",
+        "min-h-[56px]",
+        "w-2.5",
+        "h-2.5",
+        "min-w-[44px]"
+      ]
+    },
+    {
+      "source": "automa_es_app_automacoes_venda_flow_ai_desktop_1440px/code.html",
+      "sha256": "fc88b863f39eefe564d6fff7e06df850ccc7d014a50f89cdc2963befa5eaa3d6",
+      "title": "Venda Flow AI",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Automatize o básico. Cuide melhor de cada cliente."
+        },
+        {
+          "level": "h2",
+          "text": "Modelos prontos"
+        },
+        {
+          "level": "h3",
+          "text": "Mensagem de boas-vindas"
+        },
+        {
+          "level": "h3",
+          "text": "Lembrete de acompanhamento"
+        },
+        {
+          "level": "h3",
+          "text": "Aviso para um atendente"
+        },
+        {
+          "level": "h2",
+          "text": "Minhas automações"
+        },
+        {
+          "level": "h2",
+          "text": "Assistente de IA"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-surface-container-high z-50 flex flex-col justify-between py-space-md\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-space-xs px-space-sm\" data-active-classes=\"bg-secondary-container text-on-secondary-container\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-space-xs\" data-active-classes=\"bg-secondary-container text-on-secondary-container\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-container-high z-40 px-space-md flex items-center justify-between\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-surface min-h-screen\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "notifications",
+        "add Criar automação",
+        "Automações",
+        "Assistente de IA",
+        "Configurar",
+        "Configurar",
+        "Configurar",
+        "Configurar",
+        "Configurar"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap",
+        "https://cdn.tailwindcss.com"
+      ],
+      "colors": [
+        "#ffffff",
+        "#e7e1de",
+        "#ffdad6",
+        "#1d1b1a",
+        "#45474b",
+        "#d8dade",
+        "#c4c6cf",
+        "#000000",
+        "#191c1f",
+        "#93000a",
+        "#cac5c3",
+        "#e0e2e6",
+        "#f7f9fd",
+        "#ae3019",
+        "#eff1f5",
+        "#fe694c",
+        "#ffb4a5",
+        "#81848c",
+        "#3e0400",
+        "#650b00",
+        "#878381",
+        "#c6c6cb",
+        "#ffdad3",
+        "#8c1703",
+        "#494644",
+        "#44474e",
+        "#ba1a1a",
+        "#e1e2eb",
+        "#eceef2",
+        "#191c22",
+        "#76777b",
+        "#2d3134",
+        "#5c5e66",
+        "#f2f4f8",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "w-8",
+        "h-8",
+        "h-16",
+        "w-2",
+        "h-2",
+        "min-h-screen",
+        "w-full",
+        "max-w-[1440px]",
+        "h-10",
+        "h-0.5",
+        "grid",
+        "grid-cols-3",
+        "min-w-0"
+      ]
+    },
+    {
+      "source": "clientes_app_clientes_venda_flow_ai_desktop_1440px_1/code.html",
+      "sha256": "609d1b6b537a1568a8b550a97839f9180a86ace9f1dd9458a1ca73c62e6dacca",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Clientes e Contatos"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-[260px] bg-primary text-on-primary z-50 flex flex-col justify-between select-none shadow-[2px_0_12px_rgba(0,0,0,0.06)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col px-space-xs gap-1\" data-active-classes=\"bg-primary-container text-on-primary font-title-md border-l-2 border-secondary-container\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-[260px] right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md border-b border-surface-container-high\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-surface min-h-screen\""
+        },
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed top-0 right-0 h-full w-full sm:w-[440px] bg-surface-container-lowest z-50 shadow-2xl flex flex-col transition-transform duration-300 transform translate-x-0\" id=\"clientDrawer\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 pl-10 pr-16 bg-surface-container-low rounded text-on-surface placeholder:text-outline text-body-md font-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-primary transition-all\" placeholder=\"Buscar por nome, empresa ou telefone WhatsApp...\" type=\"text\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full p-2.5 bg-surface-container-low rounded-lg text-body-sm font-body-md text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none\" placeholder=\"Adicionar uma nota rápida sobre Juliana...\" rows=\"2\""
+        }
+      ],
+      "controls": [
+        "more_vert Mais ações",
+        "upload_file Importar contatos CSV",
+        "download Exportar contatos",
+        "tune Campos personalizados",
+        "add Adicionar cliente",
+        "Todos (1.248)",
+        "Em negociação (184)",
+        "Clientes ativos (892)",
+        "Inativos (172)",
+        "Ver ficha",
+        "Ver ficha",
+        "Ver ficha",
+        "Ver ficha",
+        "Ver ficha",
+        "chevron_left",
+        "1",
+        "2",
+        "3",
+        "125",
+        "chevron_right",
+        "close",
+        "edit Editar contato",
+        "add_circle Criar oportunidade",
+        "forum Abrir conversa no WhatsApp",
+        "+ Adicionar tag",
+        "Salvar nota"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuB65wUtGXlG2Chet9xQLMK9bNM0Qaa4F9Cl2yGly7L_9BukVPv5Li_-J-uHRqfJ5wr_YIXjfW4Jo_IBbm-saY7pinEPRvUqevh8wLph_zjddNwCF9ZCq5joLAKOCZNqwKNlSWnU4f5pFCQcvuihqhUuJ3tSpsS8YHvaGC24D6k3_c76MtMOYabwrS4NhCFVjEhXCHngc6z_L5NGhFbUHgs8JQStNd61ZR-5fgbZC74",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCGWc93mCIHp6oDhGg07WI-18krdT0bmn1zPrONAfmkUBANjhJBZDoiAF-WuKS8bHJwrCZDMwLPiNdF83er-2UxKLSOKMMlKumNG9Gk9CshV0NeGvAD4kpwK_jUZav_dqQVAgjIZhF4-wTT676ueE5h1e8BbDvp6P5-zyePLi3Hj6kG9OEezjH0Jz3P1PKsdbfJuwSkJss37s6t6nzFFfk_j38n-ZES18FPD_QG9R8",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuD6EcXorpEOa0JnIKtsnqlTviX4q_8kbTaaHE5ruGWEs1Dv0wsAlvUlTCB8Hy7r6wJjvH05QlR2bqrp5PALy6fQIYEKP9l4dygwQmKurscsUZpxPb-84Avm1XfJ_8xnomXVFn-dbWaL-iq_7owzSvcPTipYs1zE6baGOxefSoe_GeVJ3JRWALT-LCEbRjkMVHcHQqx86INnnK96szIoamx-Oq9v5Na5yB7EOk8djx0",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBsVIWnbdTM_G73REKwRD5UqBP_7C4tYWwdRCe1WbHB1OgkK355R__fAfIM7TJoBIIw4Rcim_V5uGgEjJISHwPausxLCIZgjusnTzv02C2ifEjBuQfOB4yzoNf_twT4Xr7bO9jEffuloiX6INrnhCP1KencD2c6_uQxKr0NzLmzdUXtgOxJoo3FRvRMaTv7PZUnutdzRehcBvknDtAFqqFY9cK55kSjl4v24IrmxBI"
+      ],
+      "colors": [
+        "#191c22",
+        "#494644",
+        "#cac5c3",
+        "#76777b",
+        "#ffffff",
+        "#c4c6cf",
+        "#eff1f5",
+        "#878381",
+        "#f2f4f8",
+        "#3e0400",
+        "#5c5e66",
+        "#93000a",
+        "#650b00",
+        "#fe694c",
+        "#000000",
+        "#45474b",
+        "#81848c",
+        "#1d1b1a",
+        "#f7f9fd",
+        "#2d3134",
+        "#ae3019",
+        "#e0e2e6",
+        "#ffdad3",
+        "#ffb4a5",
+        "#8c1703",
+        "#191c1f",
+        "#d8dade",
+        "#c6c6cb",
+        "#ffdad6",
+        "#44474e",
+        "#ba1a1a",
+        "#e7e1de",
+        "#eceef2",
+        "#e1e2eb",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-[260px]",
+        "flex",
+        "flex-col",
+        "h-16",
+        "h-8",
+        "w-auto",
+        "w-8",
+        "min-w-0",
+        "flex-1",
+        "w-2",
+        "h-2",
+        "min-h-screen",
+        "w-full",
+        "max-w-[1560px]",
+        "md:flex-row",
+        "h-10",
+        "w-52",
+        "lg:flex-row",
+        "max-w-xl",
+        "w-10",
+        "max-w-[200px]",
+        "w-1.5",
+        "h-1.5",
+        "sm:flex-row",
+        "sm:w-[440px]",
+        "h-9",
+        "w-14",
+        "h-14",
+        "w-7",
+        "h-7",
+        "flex-wrap",
+        "w-5",
+        "h-5"
+      ]
+    },
+    {
+      "source": "clientes_app_clientes_venda_flow_ai_desktop_1440px_2/code.html",
+      "sha256": "5fc541a7aa03dc503314df137c2633ee0e833b43525066551fc0623a4f243bab",
+      "title": "Clientes e Contatos — Venda Flow AI",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Clientes e Contatos"
+        },
+        {
+          "level": "h2",
+          "text": "Ficha do Cliente"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"w-[240px] shrink-0 bg-[#0B0E14] text-white flex flex-col justify-between h-full select-none border-r border-[#1F242D]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"px-3 flex flex-col gap-1\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"h-16 bg-white border-b border-[#E6E8EC] px-6 flex items-center justify-between shrink-0\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 min-w-0 overflow-y-auto custom-scrollbar p-6 flex flex-col gap-5\""
+        },
+        {
+          "element": "aside",
+          "attributes": "class=\"w-[400px] shrink-0 bg-white border-l border-[#E6E8EC] shadow-lg flex flex-col h-full overflow-hidden\" id=\"clientDrawer\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 pl-10 pr-14 bg-[#F7F9FD] border border-[#E6E8EC] rounded-lg text-[13px] text-[#0B0E14] placeholder:text-gray-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF6A4D]/30 focus:border-[#FF6A4D] transition-all\" placeholder=\"Buscar por nome, empresa ou telefone WhatsApp...\" type=\"text\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full p-2.5 bg-[#F7F9FD] border border-[#E6E8EC] rounded-lg text-[12px] text-[#0B0E14] placeholder:text-gray-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF6A4D]/30 focus:border-[#FF6A4D] resize-none\" placeholder=\"Adicionar uma nota rápida sobre Juliana...\" rows=\"2\""
+        }
+      ],
+      "controls": [
+        "notifications",
+        "more_vert Mais ações",
+        "upload_file Importar contatos CSV",
+        "download Exportar contatos",
+        "tune Campos personalizados",
+        "add Adicionar cliente",
+        "Todos (1.248)",
+        "Em negociação (184)",
+        "Ativos (892)",
+        "Inativos (172)",
+        "Ver ficha",
+        "Ver ficha",
+        "Ver ficha",
+        "Ver ficha",
+        "Ver ficha",
+        "chevron_left",
+        "1",
+        "2",
+        "3",
+        "125",
+        "chevron_right",
+        "close",
+        "edit Editar contato",
+        "add_circle Criar oportunidade",
+        "forum Abrir conversa no WhatsApp",
+        "+ Adicionar tag",
+        "Salvar nota"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com?plugins=forms,container-queries",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuB65wUtGXlG2Chet9xQLMK9bNM0Qaa4F9Cl2yGly7L_9BukVPv5Li_-J-uHRqfJ5wr_YIXjfW4Jo_IBbm-saY7pinEPRvUqevh8wLph_zjddNwCF9ZCq5joLAKOCZNqwKNlSWnU4f5pFCQcvuihqhUuJ3tSpsS8YHvaGC24D6k3_c76MtMOYabwrS4NhCFVjEhXCHngc6z_L5NGhFbUHgs8JQStNd61ZR-5fgbZC74",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCGWc93mCIHp6oDhGg07WI-18krdT0bmn1zPrONAfmkUBANjhJBZDoiAF-WuKS8bHJwrCZDMwLPiNdF83er-2UxKLSOKMMlKumNG9Gk9CshV0NeGvAD4kpwK_jUZav_dqQVAgjIZhF4-wTT676ueE5h1e8BbDvp6P5-zyePLi3Hj6kG9OEezjH0Jz3P1PKsdbfJuwSkJss37s6t6nzFFfk_j38n-ZES18FPD_QG9R8",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuD6EcXorpEOa0JnIKtsnqlTviX4q_8kbTaaHE5ruGWEs1Dv0wsAlvUlTCB8Hy7r6wJjvH05QlR2bqrp5PALy6fQIYEKP9l4dygwQmKurscsUZpxPb-84Avm1XfJ_8xnomXVFn-dbWaL-iq_7owzSvcPTipYs1zE6baGOxefSoe_GeVJ3JRWALT-LCEbRjkMVHcHQqx86INnnK96szIoamx-Oq9v5Na5yB7EOk8djx0",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBsVIWnbdTM_G73REKwRD5UqBP_7C4tYWwdRCe1WbHB1OgkK355R__fAfIM7TJoBIIw4Rcim_V5uGgEjJISHwPausxLCIZgjusnTzv02C2ifEjBuQfOB4yzoNf_twT4Xr7bO9jEffuloiX6INrnhCP1KencD2c6_uQxKr0NzLmzdUXtgOxJoo3FRvRMaTv7PZUnutdzRehcBvknDtAFqqFY9cK55kSjl4v24IrmxBI"
+      ],
+      "colors": [
+        "#0B0E14",
+        "#FF6A4D",
+        "#E85A3E",
+        "#FFF9F6",
+        "#E6E8EC",
+        "#F7F9FD",
+        "#D1D5DB",
+        "#1F242D",
+        "#161B22",
+        "#FFF3ED",
+        "#FFFFFF"
+      ],
+      "layoutClasses": [
+        "flex",
+        "h-screen",
+        "w-[240px]",
+        "flex-col",
+        "h-full",
+        "h-16",
+        "w-8",
+        "h-8",
+        "min-w-0",
+        "flex-1",
+        "w-2",
+        "h-2",
+        "w-9",
+        "h-9",
+        "min-h-0",
+        "xl:flex-row",
+        "flex-wrap",
+        "h-10",
+        "w-52",
+        "w-full",
+        "lg:flex-row",
+        "min-w-[220px]",
+        "min-w-[780px]",
+        "w-10",
+        "w-1.5",
+        "h-1.5",
+        "sm:flex-row",
+        "w-[400px]",
+        "h-14",
+        "w-14",
+        "w-5",
+        "h-5"
+      ]
+    },
+    {
+      "source": "configura_es_app_configuracoes_mobile_390px/code.html",
+      "sha256": "cc8e697e12929a4130cd493fd00b977204ca4d72256bbbc3650ee59a97906a89",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Configurações"
+        },
+        {
+          "level": "h2",
+          "text": "WhatsApp Oficial"
+        },
+        {
+          "level": "h2",
+          "text": "Dados da Empresa"
+        },
+        {
+          "level": "h2",
+          "text": "Equipe Ativa"
+        },
+        {
+          "level": "h2",
+          "text": "Privacidade & LGPD"
+        },
+        {
+          "level": "h3",
+          "text": "Excluir Conta?"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 flex flex-col relative w-full pt-16 pb-safe bg-background min-h-[calc(100vh-4rem)]\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "arrow_back",
+        "WhatsApp",
+        "Empresa",
+        "Equipe",
+        "Privacidade",
+        "cell_tower Testar conexão",
+        "sync Reconectar",
+        "person_add + Convidar atendente",
+        "download Baixar meus dados (Portabilidade) chevron_right",
+        "delete_forever Solicitar exclusão de conta chevron_right",
+        "Cancelar",
+        "Confirmar"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#878381",
+        "#ba1a1a",
+        "#93000a",
+        "#191c22",
+        "#2d3134",
+        "#f2f4f8",
+        "#e1e2eb",
+        "#c4c6cf",
+        "#3e0400",
+        "#e0e2e6",
+        "#76777b",
+        "#d8dade",
+        "#650b00",
+        "#494644",
+        "#ffdad3",
+        "#ffdad6",
+        "#45474b",
+        "#191c1f",
+        "#44474e",
+        "#8c1703",
+        "#eff1f5",
+        "#eceef2",
+        "#ffffff",
+        "#e7e1de",
+        "#fe694c",
+        "#81848c",
+        "#5c5e66",
+        "#ae3019",
+        "#1d1b1a",
+        "#000000",
+        "#c6c6cb",
+        "#ffb4a5",
+        "#cac5c3",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "min-h-screen",
+        "flex",
+        "flex-col",
+        "fixed",
+        "h-16",
+        "w-11",
+        "h-11",
+        "h-8",
+        "w-auto",
+        "max-w-[160px]",
+        "w-8",
+        "flex-shrink-0",
+        "flex-1",
+        "w-full",
+        "min-h-[calc(100vh-4rem)]",
+        "w-9",
+        "h-9",
+        "h-2",
+        "w-2",
+        "h-full",
+        "grid",
+        "grid-cols-2",
+        "h-10",
+        "max-w-sm",
+        "max-w-xs"
+      ]
+    },
+    {
+      "source": "configura_es_app_configuracoes_venda_flow_ai_desktop_1440px/code.html",
+      "sha256": "70ac6a3fc6021ca174ad6c16887f96f59eb32a34cadd74eb0cff6175148d8111",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Configurações da Conta"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col px-space-xs gap-1\" data-active-classes=\"bg-surface-container text-on-surface font-title-md\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-1\" data-active-classes=\"bg-surface-container text-on-surface font-title-md\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"w-full pt-16 bg-background px-space-lg pb-space-xl\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary-container shadow-sm\" type=\"text\" value=\"Padaria e Confeitaria Central Ltda\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary-container shadow-sm\" type=\"text\" value=\"Padaria Central\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md font-mono focus:outline-none focus:ring-1 focus:ring-secondary-container shadow-sm\" type=\"text\" value=\"12.345.678/0001-90\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-secondary-container shadow-sm\" type=\"email\" value=\"contato@padariacentral.com.br\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md font-mono max-w-md focus:outline-none focus:ring-1 focus:ring-secondary-container shadow-sm\" type=\"text\" value=\"+55 (11) 3003-8899\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md font-mono flex-1 focus:outline-none\" readonly=\"\" type=\"text\" value=\"https://api.padariacentral.com.br/v1/flow-events\"/"
+        }
+      ],
+      "controls": [
+        "notifications",
+        "chat WhatsApp (Conexão Oficial)",
+        "business Empresa",
+        "group Equipe",
+        "shield Privacidade e Dados",
+        "sync Reconectar canal",
+        "open_in_new Ver diretrizes da Meta Cloud",
+        "check Salvar alterações",
+        "person_add + Convidar membro",
+        "more_vert",
+        "more_vert",
+        "more_vert",
+        "download Baixar arquivo de dados (JSON/CSV)",
+        "delete_forever Solicitar exclusão de dados da conta",
+        "webhook Webhooks e Integrações de API de Terceiros Dispare eventos em sistemas ERP, PDV ou ferramentas de CRM externas. expand_more",
+        "Copiar",
+        "receipt_long Logs de Auditoria de Acesso Registro rastreável de autenticações, exportações e modificações administrativas. expand_more"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#878381",
+        "#ba1a1a",
+        "#93000a",
+        "#191c22",
+        "#2d3134",
+        "#f2f4f8",
+        "#e1e2eb",
+        "#c4c6cf",
+        "#f7f9fd",
+        "#3e0400",
+        "#e0e2e6",
+        "#76777b",
+        "#d8dade",
+        "#650b00",
+        "#494644",
+        "#ffdad3",
+        "#ffdad6",
+        "#45474b",
+        "#191c1f",
+        "#44474e",
+        "#8c1703",
+        "#eff1f5",
+        "#eceef2",
+        "#ffffff",
+        "#e7e1de",
+        "#fe694c",
+        "#81848c",
+        "#5c5e66",
+        "#ae3019",
+        "#1d1b1a",
+        "#000000",
+        "#c6c6cb",
+        "#ffb4a5",
+        "#cac5c3",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "h-8",
+        "w-auto",
+        "h-16",
+        "w-2",
+        "h-2",
+        "w-9",
+        "h-9",
+        "w-8",
+        "w-full",
+        "max-w-[1280px]",
+        "w-1.5",
+        "h-1.5",
+        "md:flex-row",
+        "w-fit",
+        "grid",
+        "grid-cols-1",
+        "lg:grid-cols-12",
+        "w-12",
+        "h-12",
+        "md:grid-cols-2",
+        "sm:grid-cols-3",
+        "flex-wrap",
+        "h-10",
+        "max-w-md",
+        "sm:flex-row",
+        "w-10",
+        "flex-1"
+      ]
+    },
+    {
+      "source": "conversas_app_conversas_mobile_390px_1/code.html",
+      "sha256": "89dfad68bb83e26ede11659f4914df2152acc5552072aa4c6767a94078b45079",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Conversas"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface px-gutter\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-11 pl-10 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/70 rounded-xl font-body-md text-body-md shadow-sm border-0 outline-none focus:ring-2 focus:ring-[#FF6A4D]/30 transition-all\" id=\"search-input\" placeholder=\"Buscar contato, empresa ou mensagem...\" type=\"text\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/60 font-body-md text-body-md border-0 outline-none focus:ring-0 resize-none max-h-24 py-1\" id=\"chat-input-area\" placeholder=\"Digite uma mensagem...\" rows=\"1\""
+        }
+      ],
+      "controls": [
+        "search",
+        "account_circle",
+        "Todas 28",
+        "Não respondidas 6",
+        "Minhas",
+        "arrow_back",
+        "call",
+        "more_vert",
+        "refresh Regerar",
+        "input Inserir resposta",
+        "attach_file",
+        "mic",
+        "send"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com?plugins=forms,container-queries",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDRGHIAoO-QGXhmSpToqQmekPyaIAz1OI021ipyXqF-TPap8YJoeMgYBxzOQx4yhI3kSjtmeM321ERjhbub0O_5rxx08ZZzsweNfIvyLqbS_bT0F-in78ji3m-dThQEXVYJ-yqfjdR0ZX7Qz1gAm0qe7UJihjZWTCPIvYM6FDlMYg-Y-t5VgvzZ070Q_EQfwUs9AO5Qj7CJR5kWaTFyWkPO07yrAdUu5TSpOJhZuR0",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuB2akX3FDNIOxoO-EHI74MBMdiiqpCtKEo3-qYLyj1NRw4kNfHdOmlHOGlvs9x0U0bQ_Uf-QjYeVrIXJWfaTG23nlmu8mPV46txD1Y3MUwRbuSgiza_tzDpUMpvQu0i0wx4qYkwzC0gQQIT0HcnGilWmIlMhIMx4dzCyGrINHQzzy37P8WRknd5B15jnG-tEwcJgToMQ9BGArrIhzpjl-Nssx0NGP_OLmJc1XzTiBA",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCQzFN-91fiw6pme9_8Qrxs_TMitDjM42UxNcRfYq_pX8MVLxxNjv85c36VbU6zscNHe5QtVH2QeHYyJY7NnBoaOFrMU9dSyLfpGQfXZ0AkfofIRQsSf1yhu-9GqzS4nTIxkYCWUYz6Upt31wz1QrpZBmKxatTHsILa7iW8dXU2b_4Lf7gL92MbCnRCVM2Ll9a1_aGe5NwHLxvBVunDapEs338Udtartm0ccmlAAOA",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuA8iUiM0FQZFVTiD27lZbOyj8aFZcxdCE9xh_zsLmMABdoFzES0d3rtlSoM0OC2lrsbLQQlA6y9gHecqHmKFmc3h9mXf_y2PKvJ_82BJrXOl2fMEUrxNZw7xUGhXf8MQ_Zm8R0ufOPqDgpUZFLx-VzsWvIYXuI-rriw4hZx7a7_9jAJbD_U2SF7xfcw5kvPTEayWBMKZODa5gWMGDLQ_TQJqIu_Je90RBzw3mWSMSA"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#c4c6cf",
+        "#eceef2",
+        "#ffffff",
+        "#45474b",
+        "#ffb4a5",
+        "#191c1f",
+        "#44474e",
+        "#1d1b1a",
+        "#000000",
+        "#191c22",
+        "#fe694c",
+        "#cac5c3",
+        "#d8dade",
+        "#76777b",
+        "#81848c",
+        "#ffdad3",
+        "#8c1703",
+        "#eff1f5",
+        "#ae3019",
+        "#3e0400",
+        "#650b00",
+        "#5c5e66",
+        "#e7e1de",
+        "#ffdad6",
+        "#e1e2eb",
+        "#e6e8ec",
+        "#2d3134",
+        "#878381",
+        "#ba1a1a",
+        "#e0e2e6",
+        "#494644",
+        "#f2f4f8",
+        "#93000a",
+        "#c6c6cb",
+        "#FF6A4D"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-14",
+        "w-9",
+        "h-9",
+        "flex-1",
+        "h-11",
+        "w-2",
+        "h-2",
+        "min-h-[76px]",
+        "w-12",
+        "h-12",
+        "w-3.5",
+        "h-3.5",
+        "min-w-0",
+        "w-5",
+        "h-5",
+        "min-w-[40px]",
+        "min-h-[40px]",
+        "w-10",
+        "h-10",
+        "w-3",
+        "h-3",
+        "min-w-[38px]",
+        "min-h-[38px]",
+        "max-w-[85%]",
+        "min-w-[44px]",
+        "min-h-[44px]",
+        "max-h-24",
+        "h-16",
+        "min-w-[56px]"
+      ]
+    },
+    {
+      "source": "conversas_app_conversas_mobile_390px_2/code.html",
+      "sha256": "433da738ccde67e46589294623cf9ee4ec0b576a3726e812411256f46e1aadc1",
+      "title": "",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "Conversas"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 flex flex-col relative w-full pt-14 pb-20 bg-surface px-gutter\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]\" data-active-classes=\"text-secondary-container font-label-sm\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-11 pl-10 pr-10 bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/70 rounded-xl font-body-md text-body-md shadow-sm outline-none focus:bg-surface-container-low transition-all\" placeholder=\"Buscar contato, empresa ou mensagem...\" type=\"text\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/60 font-body-md text-body-md outline-none resize-none max-h-24 py-1\" id=\"chat-input-area\" placeholder=\"Digite uma mensagem...\" rows=\"1\""
+        }
+      ],
+      "controls": [
+        "account_circle",
+        "tune",
+        "Todas 28",
+        "Não respondidas 6",
+        "Minhas",
+        "IA Ativa",
+        "arrow_back",
+        "call",
+        "more_vert",
+        "refresh Regerar",
+        "input Inserir resposta",
+        "description /proposta",
+        "qr_code /pix",
+        "calendar_today /agenda",
+        "attach_file",
+        "quickreply",
+        "mic",
+        "send"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDRGHIAoO-QGXhmSpToqQmekPyaIAz1OI021ipyXqF-TPap8YJoeMgYBxzOQx4yhI3kSjtmeM321ERjhbub0O_5rxx08ZZzsweNfIvyLqbS_bT0F-in78ji3m-dThQEXVYJ-yqfjdR0ZX7Qz1gAm0qe7UJihjZWTCPIvYM6FDlMYg-Y-t5VgvzZ070Q_EQfwUs9AO5Qj7CJR5kWaTFyWkPO07yrAdUu5TSpOJhZuR0",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuB2akX3FDNIOxoO-EHI74MBMdiiqpCtKEo3-qYLyj1NRw4kNfHdOmlHOGlvs9x0U0bQ_Uf-QjYeVrIXJWfaTG23nlmu8mPV46txD1Y3MUwRbuSgiza_tzDpUMpvQu0i0wx4qYkwzC0gQQIT0HcnGilWmIlMhIMx4dzCyGrINHQzzy37P8WRknd5B15jnG-tEwcJgToMQ9BGArrIhzpjl-Nssx0NGP_OLmJc1XzTiBA",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCQzFN-91fiw6pme9_8Qrxs_TMitDjM42UxNcRfYq_pX8MVLxxNjv85c36VbU6zscNHe5QtVH2QeHYyJY7NnBoaOFrMU9dSyLfpGQfXZ0AkfofIRQsSf1yhu-9GqzS4nTIxkYCWUYz6Upt31wz1QrpZBmKxatTHsILa7iW8dXU2b_4Lf7gL92MbCnRCVM2Ll9a1_aGe5NwHLxvBVunDapEs338Udtartm0ccmlAAOA",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuA8iUiM0FQZFVTiD27lZbOyj8aFZcxdCE9xh_zsLmMABdoFzES0d3rtlSoM0OC2lrsbLQQlA6y9gHecqHmKFmc3h9mXf_y2PKvJ_82BJrXOl2fMEUrxNZw7xUGhXf8MQ_Zm8R0ufOPqDgpUZFLx-VzsWvIYXuI-rriw4hZx7a7_9jAJbD_U2SF7xfcw5kvPTEayWBMKZODa5gWMGDLQ_TQJqIu_Je90RBzw3mWSMSA"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#c4c6cf",
+        "#eceef2",
+        "#ffffff",
+        "#45474b",
+        "#ffb4a5",
+        "#191c1f",
+        "#44474e",
+        "#1d1b1a",
+        "#000000",
+        "#191c22",
+        "#fe694c",
+        "#cac5c3",
+        "#d8dade",
+        "#76777b",
+        "#81848c",
+        "#ffdad3",
+        "#8c1703",
+        "#eff1f5",
+        "#ae3019",
+        "#3e0400",
+        "#650b00",
+        "#5c5e66",
+        "#e7e1de",
+        "#ffdad6",
+        "#e1e2eb",
+        "#e6e8ec",
+        "#2d3134",
+        "#878381",
+        "#ba1a1a",
+        "#e0e2e6",
+        "#494644",
+        "#f2f4f8",
+        "#93000a",
+        "#c6c6cb"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-14",
+        "w-8",
+        "h-8",
+        "w-1.5",
+        "h-1.5",
+        "w-9",
+        "h-9",
+        "flex-1",
+        "w-2",
+        "h-2",
+        "h-11",
+        "min-h-[72px]",
+        "w-12",
+        "h-12",
+        "w-3.5",
+        "h-3.5",
+        "min-w-0",
+        "w-5",
+        "h-5",
+        "min-w-[40px]",
+        "min-h-[40px]",
+        "w-10",
+        "h-10",
+        "w-3",
+        "h-3",
+        "max-w-[85%]",
+        "min-w-[44px]",
+        "min-h-[44px]",
+        "max-h-24",
+        "h-16",
+        "min-w-[56px]"
+      ]
+    },
+    {
+      "source": "conversas_app_conversas_venda_flow_ai_desktop_1440px_1/code.html",
+      "sha256": "792a2e82b787f1b447c2e7d0379450da198c39352413bc38f52b71c87d2a6d2b",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Conversas"
+        },
+        {
+          "level": "h2",
+          "text": "Detalhes do Cliente"
+        },
+        {
+          "level": "h3",
+          "text": "Juliana Mendes"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-[260px] bg-primary text-on-primary z-50 flex flex-col justify-between select-none shadow-[2px_0_12px_rgba(0,0,0,0.06)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col px-space-xs gap-1\" data-active-classes=\"bg-primary-container text-on-primary font-title-md border-l-2 border-secondary-container\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-[260px] right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md border-b border-surface-container-high\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-surface min-h-screen\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 flex flex-col h-full bg-surface-bright overflow-hidden\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"h-16 px-space-md bg-surface-container-lowest flex items-center justify-between shadow-[0_1px_4px_rgba(0,0,0,0.03)] shrink-0 z-10\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"p-space-sm bg-surface-container-lowest shrink-0 shadow-[0_-2px_10px_rgba(0,0,0,0.03)]\""
+        },
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed right-0 top-0 bottom-0 w-[420px] bg-surface-container-lowest shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between\" id=\"contactDrawer\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-low text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all\" placeholder=\"Buscar conversa ou contato...\" type=\"text\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full bg-transparent resize-none text-body-md text-on-surface placeholder:text-outline focus:outline-none p-1\" id=\"composerInput\" placeholder=\"Escreva sua mensagem para Juliana Mendes...\" rows=\"2\""
+        }
+      ],
+      "controls": [
+        "refresh",
+        "Todas (14)",
+        "Não respondidas (3)",
+        "Minhas (5)",
+        "check_circle Marcar como resolvida",
+        "dock_to_left Detalhes do contato",
+        "south Inserir na caixa de resposta",
+        "Ajustar tom / Prompt",
+        "attach_file",
+        "difference Usar modelo",
+        "auto_awesome Regenerar IA",
+        "Enviar send",
+        "Ver regras Meta Cloud",
+        "close",
+        "Histórico Completo",
+        "Editar Cadastro"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#191c22",
+        "#494644",
+        "#cac5c3",
+        "#76777b",
+        "#ffffff",
+        "#c4c6cf",
+        "#eff1f5",
+        "#878381",
+        "#f2f4f8",
+        "#3e0400",
+        "#5c5e66",
+        "#93000a",
+        "#650b00",
+        "#fe694c",
+        "#000000",
+        "#45474b",
+        "#81848c",
+        "#1d1b1a",
+        "#f7f9fd",
+        "#2d3134",
+        "#ae3019",
+        "#e0e2e6",
+        "#ffdad3",
+        "#ffb4a5",
+        "#8c1703",
+        "#191c1f",
+        "#d8dade",
+        "#c6c6cb",
+        "#ffdad6",
+        "#44474e",
+        "#ba1a1a",
+        "#e7e1de",
+        "#eceef2",
+        "#e1e2eb",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-[260px]",
+        "flex",
+        "flex-col",
+        "h-16",
+        "h-8",
+        "w-auto",
+        "w-8",
+        "min-w-0",
+        "flex-1",
+        "w-2",
+        "h-2",
+        "min-h-screen",
+        "w-full",
+        "h-[calc(100vh-64px)]",
+        "w-[380px]",
+        "h-10",
+        "w-1.5",
+        "h-1.5",
+        "w-11",
+        "h-11",
+        "w-3",
+        "h-3",
+        "w-2.5",
+        "h-2.5",
+        "w-10",
+        "max-w-xl",
+        "max-w-lg",
+        "w-6",
+        "h-6",
+        "w-[420px]",
+        "w-14",
+        "h-14",
+        "flex-wrap",
+        "max-w-[200px]",
+        "w-[90%]"
+      ]
+    },
+    {
+      "source": "conversas_app_conversas_venda_flow_ai_desktop_1440px_2/code.html",
+      "sha256": "b2bab02cf5b772efcf0d1662f6f23f3b6b372d05d78efb7abad600a7e98cc34d",
+      "title": "Venda Flow AI — Conversas",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Conversas"
+        },
+        {
+          "level": "h2",
+          "text": "Juliana Mendes"
+        },
+        {
+          "level": "h2",
+          "text": "Detalhes do Cliente"
+        },
+        {
+          "level": "h3",
+          "text": "Juliana Mendes"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 bottom-0 w-[240px] bg-primary text-on-primary z-40 flex flex-col justify-between select-none\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col px-3 gap-1\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"h-14 bg-white border-b border-[#E6E8EC] px-6 flex items-center justify-between shrink-0\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 min-w-0 flex flex-col h-full bg-[#F7F9FD]\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"h-[72px] px-6 bg-white border-b border-[#E6E8EC] flex items-center justify-between gap-4 shrink-0\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"px-6 py-3 bg-white border-t border-[#E6E8EC] shrink-0\""
+        },
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed right-0 top-0 bottom-0 w-[400px] bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between\" id=\"contactDrawer\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container-low border border-transparent text-[13px] text-on-surface placeholder:text-outline focus:outline-none focus:bg-white focus:border-primary transition-all\" placeholder=\"Buscar conversa ou contato...\" type=\"text\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full bg-transparent border-0 resize-none text-[14px] text-on-surface placeholder:text-outline focus:ring-0 p-1\" id=\"composerInput\" placeholder=\"Escreva sua mensagem para Juliana Mendes...\" rows=\"2\""
+        }
+      ],
+      "controls": [
+        "notifications",
+        "refresh",
+        "Todas (14)",
+        "Não respondidas (3)",
+        "Minhas (5)",
+        "account_circle Atribuído: Mariana Silva expand_more",
+        "check_circle Marcar como resolvida",
+        "dock_to_left Detalhes do contato",
+        "south Inserir na caixa de resposta",
+        "Ajustar tom",
+        "attach_file",
+        "difference Usar modelo",
+        "auto_awesome Regenerar IA",
+        "Enviar send",
+        "Ver regras Meta Cloud",
+        "close",
+        "Histórico Completo",
+        "Editar Cadastro"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com?plugins=forms,container-queries"
+      ],
+      "colors": [
+        "#191c22",
+        "#494644",
+        "#cac5c3",
+        "#76777b",
+        "#ffffff",
+        "#c4c6cf",
+        "#eff1f5",
+        "#878381",
+        "#f2f4f8",
+        "#3e0400",
+        "#5c5e66",
+        "#93000a",
+        "#650b00",
+        "#fe694c",
+        "#000000",
+        "#45474b",
+        "#81848c",
+        "#1d1b1a",
+        "#f7f9fd",
+        "#2d3134",
+        "#ae3019",
+        "#e0e2e6",
+        "#ffdad3",
+        "#ffb4a5",
+        "#8c1703",
+        "#191c1f",
+        "#d8dade",
+        "#c6c6cb",
+        "#ffdad6",
+        "#44474e",
+        "#ba1a1a",
+        "#e7e1de",
+        "#eceef2",
+        "#e1e2eb",
+        "#e6e8ec",
+        "#FF6A4D",
+        "#E6E8EC",
+        "#F7F9FD",
+        "#FFF9F6",
+        "#FFE5DF",
+        "#e85a3e",
+        "#FFF0ED"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "w-[240px]",
+        "flex",
+        "flex-col",
+        "h-16",
+        "w-8",
+        "h-8",
+        "min-w-0",
+        "flex-1",
+        "h-screen",
+        "h-14",
+        "w-2",
+        "h-2",
+        "min-h-0",
+        "w-[340px]",
+        "h-full",
+        "w-full",
+        "h-9",
+        "w-1.5",
+        "h-1.5",
+        "w-10",
+        "h-10",
+        "w-2.5",
+        "h-2.5",
+        "h-[72px]",
+        "max-w-xl",
+        "w-6",
+        "h-6",
+        "w-[400px]",
+        "w-12",
+        "h-12",
+        "w-[90%]"
+      ]
+    },
+    {
+      "source": "criar_automa_o_app_automacoes_nova_venda_flow_ai_desktop_1440px/code.html",
+      "sha256": "ee99f5b38629e1fef85bf0f0ba4ec850584ecba4aaf24056a54fdbfcd0333f37",
+      "title": "Venda Flow AI",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "2. O que fazer?"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-surface-container-high z-50 flex flex-col justify-between py-space-md\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-space-xs px-space-sm\" data-active-classes=\"bg-secondary-container text-on-secondary-container\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-space-xs\" data-active-classes=\"bg-secondary-container text-on-secondary-container\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-container-high z-40 px-space-md flex items-center justify-between\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-surface min-h-screen\""
+        },
+        {
+          "element": "nav",
+          "attributes": "aria-label=\"Breadcrumb\" class=\"flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "checked=\"\" class=\"sr-only\" name=\"automation_action\" type=\"radio\" value=\"whatsapp_welcome\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"sr-only\" name=\"automation_action\" type=\"radio\" value=\"notify_agent\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"sr-only\" name=\"automation_action\" type=\"radio\" value=\"create_task\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full rounded-xl bg-surface-container-low p-space-sm font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all resize-none\" id=\"welcome-message\" rows=\"4\""
+        }
+      ],
+      "controls": [
+        "notifications",
+        "+ Nome do cliente",
+        "Voltar",
+        "Continuar"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap",
+        "https://cdn.tailwindcss.com"
+      ],
+      "colors": [
+        "#ffffff",
+        "#e7e1de",
+        "#ffdad6",
+        "#1d1b1a",
+        "#45474b",
+        "#d8dade",
+        "#c4c6cf",
+        "#000000",
+        "#191c1f",
+        "#93000a",
+        "#cac5c3",
+        "#e0e2e6",
+        "#f7f9fd",
+        "#ae3019",
+        "#eff1f5",
+        "#fe694c",
+        "#ffb4a5",
+        "#81848c",
+        "#3e0400",
+        "#650b00",
+        "#878381",
+        "#c6c6cb",
+        "#ffdad3",
+        "#8c1703",
+        "#494644",
+        "#44474e",
+        "#ba1a1a",
+        "#e1e2eb",
+        "#eceef2",
+        "#191c22",
+        "#76777b",
+        "#2d3134",
+        "#5c5e66",
+        "#f2f4f8",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "w-8",
+        "h-8",
+        "h-16",
+        "w-2",
+        "h-2",
+        "min-h-screen",
+        "w-full",
+        "max-w-5xl",
+        "w-1.5",
+        "h-1.5",
+        "grid",
+        "grid-cols-3",
+        "min-w-0",
+        "max-w-3xl",
+        "w-5",
+        "h-5",
+        "flex-1"
+      ]
+    },
+    {
+      "source": "criar_conta_venda_flow_ai_cadastro/code.html",
+      "sha256": "efecc29648ef8e5f70d1b547356536c7f390b5c56a1c9f2995333874fd8597af",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Crie sua conta corporativa"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"w-full pt-space-lg pb-space-sm flex flex-col items-center justify-center\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"w-full flex-1 flex flex-col items-center justify-center px-space-md py-space-sm\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"w-full py-space-md mt-auto\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "autocomplete=\"name\" class=\"w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all\" id=\"fullName\" oninput=\"validateNameInput(this)\" placeholder=\"Mariana Silva\" required=\"\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "autocomplete=\"email\" class=\"w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all\" id=\"workEmail\" oninput=\"validateEmailInput(this)\" placeholder=\"mariana@suaempresa.com.br\" required=\"\" type=\"email\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "autocomplete=\"new-password\" class=\"w-full h-10 pl-10 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all\" id=\"password\" minlength=\"8\" oninput=\"checkPasswordStrength(this.value)\" placeholder=\"No mínimo 8 dígitos\" required=\"\" type=\"password\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"mt-1 w-4 h-4 rounded text-secondary-container focus:ring-secondary-container accent-secondary-container transition-all cursor-pointer\" id=\"termsCheckbox\" required=\"\" type=\"checkbox\"/"
+        }
+      ],
+      "controls": [
+        "close",
+        "visibility",
+        "Criar conta e avançar arrow_forward"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#cac5c3",
+        "#191c1f",
+        "#76777b",
+        "#f7f9fd",
+        "#45474b",
+        "#494644",
+        "#5c5e66",
+        "#d8dade",
+        "#c6c6cb",
+        "#000000",
+        "#44474e",
+        "#ba1a1a",
+        "#1d1b1a",
+        "#c4c6cf",
+        "#93000a",
+        "#650b00",
+        "#f2f4f8",
+        "#fe694c",
+        "#878381",
+        "#191c22",
+        "#ffffff",
+        "#eceef2",
+        "#ffdad6",
+        "#ffb4a5",
+        "#eff1f5",
+        "#e0e2e6",
+        "#e1e2eb",
+        "#81848c",
+        "#e7e1de",
+        "#ae3019",
+        "#2d3134",
+        "#ffdad3",
+        "#3e0400",
+        "#8c1703",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "min-h-screen",
+        "flex",
+        "flex-col",
+        "w-full",
+        "h-8",
+        "w-auto",
+        "flex-1",
+        "w-80",
+        "h-80",
+        "w-96",
+        "h-96",
+        "max-w-[460px]",
+        "w-12",
+        "h-12",
+        "w-7",
+        "h-7",
+        "w-1.5",
+        "h-1.5",
+        "w-8",
+        "h-10",
+        "grid",
+        "grid-cols-4",
+        "h-full",
+        "w-4",
+        "h-4",
+        "h-11",
+        "max-w-4xl",
+        "sm:flex-row",
+        "sm:block"
+      ]
+    },
+    {
+      "source": "detalhe_da_oportunidade_mobile_390px/code.html",
+      "sha256": "cbc20f5913ecf26f1082df8182a76f13bbfefee1f3d4cb75b55bf7eb4e9b74f1",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Detalhe Da Venda"
+        },
+        {
+          "level": "h2",
+          "text": "Juliana Mendes"
+        },
+        {
+          "level": "h3",
+          "text": "Assinatura Anual Flow Pro (12x Agentes)"
+        },
+        {
+          "level": "h4",
+          "text": "Tarefas da negociação"
+        },
+        {
+          "level": "h4",
+          "text": "history_edu Notas e Histórico"
+        },
+        {
+          "level": "h3",
+          "text": "Criar Proposta"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"flex-1 h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none placeholder:text-outline\" id=\"task-input-field\" placeholder=\"Descreva a nova tarefa...\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "checked=\"\" class=\"mt-0.5 w-5 h-5 rounded accent-secondary-container cursor-pointer flex-shrink-0\" onchange=\"toggleTaskStyle(this)\" type=\"checkbox\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"mt-0.5 w-5 h-5 rounded accent-secondary-container cursor-pointer flex-shrink-0\" onchange=\"toggleTaskStyle(this)\" type=\"checkbox\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full p-3 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none resize-none\" id=\"new-note-textarea\" placeholder=\"Adicionar nota sobre esta oportunidade...\" rows=\"2\""
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-11 px-3 rounded-lg bg-surface-container-low font-title-md text-title-md text-primary font-bold focus:outline-none\" type=\"text\" value=\"18.450,00\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "type=\"checkbox\" onchange=\"toggleTaskStyle(this)\" class=\"mt-0.5 w-5 h-5 rounded accent-secondary-container cursor-pointer flex-shrink-0\" /"
+        }
+      ],
+      "controls": [
+        "arrow_back",
+        "more_vert",
+        "Mudar etapa expand_more",
+        "Novo Lead",
+        "Qualificado",
+        "Em conversa check",
+        "Proposta Enviada",
+        "Negociação",
+        "check_circle Concluir venda",
+        "description Criar proposta",
+        "schedule Marcar acompanhamento",
+        "edit_note Adicionar nota",
+        "add Adicionar",
+        "Salvar",
+        "send Salvar nota",
+        "close",
+        "Cancelar",
+        "send_and_archive Enviar PDF"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuCcrfBxy6XxKI_lzZDCVyt31Ndopr-c1ucifc8fccHsY0I-U5PiuZ7zB_XvwH-tx36MBwLshk3B2ScRj6YU5pULXn6p4MKqCIT9O0QYrOYV4mS4EDQk-lGc_La2fiNGt2IeXd_RMO5qeoFlf39rkfQRdVLepEredM42710E2l3ztFnI3RSNMlABZyo7bYHbKlPmilbWG7ewlGE1YFzDJONEEjT_EfXrRuNQWhwKTSU",
+        "https://wa.me/5511999999999"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#000000",
+        "#93000a",
+        "#878381",
+        "#44474e",
+        "#d8dade",
+        "#ffffff",
+        "#ffb4a5",
+        "#494644",
+        "#5c5e66",
+        "#e7e1de",
+        "#191c22",
+        "#c4c6cf",
+        "#ffdad6",
+        "#eceef2",
+        "#fe694c",
+        "#81848c",
+        "#45474b",
+        "#e1e2eb",
+        "#76777b",
+        "#ffdad3",
+        "#1d1b1a",
+        "#ae3019",
+        "#e0e2e6",
+        "#2d3134",
+        "#cac5c3",
+        "#eff1f5",
+        "#191c1f",
+        "#8c1703",
+        "#e6e8ec",
+        "#650b00",
+        "#f2f4f8",
+        "#ba1a1a",
+        "#3e0400",
+        "#c6c6cb"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-16",
+        "w-11",
+        "h-11",
+        "max-w-[200px]",
+        "w-8",
+        "h-8",
+        "w-2",
+        "h-2",
+        "h-9",
+        "w-48",
+        "h-1",
+        "w-12",
+        "h-12",
+        "flex-shrink-0",
+        "h-full",
+        "min-w-0",
+        "flex-wrap",
+        "grid",
+        "grid-cols-2",
+        "sm:flex-row",
+        "flex-1",
+        "h-10",
+        "w-5",
+        "h-5",
+        "w-6",
+        "h-6"
+      ]
+    },
+    {
+      "source": "empresas_admin_empresas_console_administrativo_venda_flow_ai/code.html",
+      "sha256": "b387d9aa3df9751d43396984dee130900c0e713cf08b91411491b2eaa3452772",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Empresas Cadastradas"
+        },
+        {
+          "level": "h2",
+          "text": "Governança: Padaria Central Gourmet"
+        },
+        {
+          "level": "h3",
+          "text": "Suspender Instância Corporativa"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-primary text-on-primary z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-1 px-space-sm mt-1\" data-active-classes=\"bg-primary-container text-on-primary font-title-md rounded-lg\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-background min-h-screen\""
+        },
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed top-0 right-0 h-full w-full max-w-[480px] bg-surface-container-lowest shadow-2xl z-50 flex flex-col transform transition-transform duration-300 ease-in-out translate-x-0\" id=\"governanceDrawer\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 pl-10 pr-4 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg outline-none focus:bg-surface-container-lowest transition-colors placeholder:text-outline\" id=\"tableSearchInput\" placeholder=\"Buscar por Razão Social, CNPJ ou identificador...\" type=\"text\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full p-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest placeholder:text-outline resize-none\" id=\"auditNotes\" placeholder=\"Insira anotações de governança ou referências de tickets...\" rows=\"2\""
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest placeholder:text-outline\" id=\"suspendReason\" placeholder=\"Descreva o embasamento legal, inadimplência superior a 60 dias ou violação dos Termos de Uso...\" rows=\"3\""
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"mt-1 w-4 h-4 rounded text-secondary-container focus:ring-secondary-container\" id=\"confirmCheckbox\" onchange=\"validateSuspendBtn()\" type=\"checkbox\"/"
+        }
+      ],
+      "controls": [
+        "lock_clockEncerrar Sessão",
+        "Todas (1.428)",
+        "Ativas (1.392)",
+        "Suspensas (36)",
+        "Em implantação (14)",
+        "visibility Governança",
+        "visibility Governança",
+        "visibility Governança",
+        "visibility Governança",
+        "1",
+        "2",
+        "3",
+        "143",
+        "close",
+        "save Salvar notas de auditoria",
+        "block Suspender empresa",
+        "close",
+        "Cancelar",
+        "gavel Efetivar Suspensão Imediata"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#76777b",
+        "#f7f9fd",
+        "#c4c6cf",
+        "#191c22",
+        "#e1e2eb",
+        "#c6c6cb",
+        "#000000",
+        "#1d1b1a",
+        "#2d3134",
+        "#191c1f",
+        "#d8dade",
+        "#81848c",
+        "#ffffff",
+        "#494644",
+        "#fe694c",
+        "#44474e",
+        "#3e0400",
+        "#ffdad6",
+        "#8c1703",
+        "#45474b",
+        "#ffdad3",
+        "#eff1f5",
+        "#e0e2e6",
+        "#650b00",
+        "#f2f4f8",
+        "#e7e1de",
+        "#ae3019",
+        "#ba1a1a",
+        "#e6e8ec",
+        "#93000a",
+        "#eceef2",
+        "#cac5c3",
+        "#878381",
+        "#ffb4a5",
+        "#5c5e66"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "h-16",
+        "w-2",
+        "h-2",
+        "h-8",
+        "w-auto",
+        "lg:flex",
+        "w-1.5",
+        "h-1.5",
+        "sm:block",
+        "w-8",
+        "h-6",
+        "w-px",
+        "min-h-screen",
+        "w-full",
+        "sm:flex-row",
+        "md:flex-row",
+        "max-w-2xl",
+        "lg:flex-row",
+        "flex-1",
+        "h-10",
+        "w-9",
+        "h-9",
+        "grid",
+        "grid-cols-1",
+        "md:grid-cols-3",
+        "max-w-[480px]",
+        "w-7",
+        "h-7",
+        "h-px",
+        "max-w-lg",
+        "w-10",
+        "w-4",
+        "h-4"
+      ]
+    },
+    {
+      "source": "in_cio_app_mobile_390px/code.html",
+      "sha256": "34e08f6a103c999d24a60d4492e2f6f0cc7a4b58a90bc9df2399e4a6f900ad58",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Bom dia! 👋"
+        },
+        {
+          "level": "h2",
+          "text": "Seu painel está pronto"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]\" data-active-classes=\"text-secondary font-label-sm font-semibold\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "Abrir",
+        "Abrir",
+        "Abrir",
+        "Abrir",
+        "Abrir",
+        "cell_tower Conectar WhatsApp"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAlu7EXZuGv4aSnWvYPY5R0_bXLakXZ1O8iaLAGrYaly_uek8RvhIQy8lnimEjaZYTl2Hf0fiESLDq6dD5RQjIFDdhCxSjS5fjqLbybRMvkxYJT8kmqgabPitB827cg6wOOdBvaNNuGh9Q5OzzENAIaacftQU488c4lxD3eL-9AZhr97TRL2eYx40Bzi6iEFQXDr2NnKkAKY9PooVY3xDEoSaCuCebU4YoeTXIQEPg",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDyQl0J1j-cgCq-UIRHknHBNPCUTvR7Qob5AbKo7YEX5sEltoaudtDbhAZNwzipsSDXaPgiMBU2V0oMLMWfGHBANSBPYY_hZoNnBSM3Hu4XtNR7Mn1DJg2KuuwqaFprlvJeCMt2wUE6tCuUqyo1li76s4NwV58xoqvmLuPhFUBGzRQlGf3EMIoHRcbJoVn4Y0Gxd9VLCBvMlFPUFHtxoGwaCwxDDGyzPqOb3YkEtzU",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuBl8yoaddNDKAm0rLVjarF7aQbjvuF374wOlp7Y8exRBdqlTH35MN_O-PE_yMHis56tcYXNWxhX-4v9frOGAifUc3oASkafkrk22Eyi9F4Vvbo2QxhSwNOU5X47xJqNG7QITEQd5VMjLWkaQKY06eTQx9wjgSvQ7KB-WGkHdPeNBkdJmFj3b5Z008WIwUu67jj4kUOcw_l_WXML9PC5s2v40m-_ab7CQY9yHrB1_l4",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuAtANLradG5VD_ewKufZu6xog8UTC6v5DnlkVlYG1_CHPlYgOs9t17svKFlzqPPu-byItLtTsH-JMV0F3u_sFh2-1S9BSWGQ0bWcTMfrmKwP4f1rr3eoNuiKpeSrMWmevxboukSgUOsKlN_98Fy6LWTYIghsprhAK0n39-CC559ChXVsEr-jZTFXiZDVgZRm_s8iA0wi1AdkKDPHlKp2MRvnz8PBBf55Jhx6aze0zI",
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuDQs3hb46BX3kmmqjGVfwfVriPfcoaNEA44GfH84Luoes-IT_L3r0hL09ktPsoH_qvGM2BDkABjdNaoYXwkgAWLDbkv_BR9_34PPYP0QTetr2PqLhHb1k4-kpuuwpNTHUgfStiYRzKQHhUW1ykr8ZX9Yi4c38QJOvXl-VVM2MztD_l3u-w3VP7bjSkfQ5AV530hJBPTbfTT6S3oCB7KMxl42L0auOs6MOr1yPgXaKY"
+      ],
+      "colors": [
+        "#93000a",
+        "#ffffff",
+        "#8c1703",
+        "#ffdad3",
+        "#c4c6cf",
+        "#e0e2e6",
+        "#191c22",
+        "#ffdad6",
+        "#3e0400",
+        "#d8dade",
+        "#1d1b1a",
+        "#45474b",
+        "#fe694c",
+        "#f7f9fd",
+        "#e6e8ec",
+        "#ba1a1a",
+        "#878381",
+        "#494644",
+        "#191c1f",
+        "#650b00",
+        "#ae3019",
+        "#000000",
+        "#eff1f5",
+        "#44474e",
+        "#eceef2",
+        "#2d3134",
+        "#76777b",
+        "#81848c",
+        "#f2f4f8",
+        "#e7e1de",
+        "#cac5c3",
+        "#c6c6cb",
+        "#e1e2eb",
+        "#5c5e66",
+        "#ffb4a5"
+      ],
+      "layoutClasses": [
+        "h-full",
+        "min-h-screen",
+        "flex",
+        "flex-col",
+        "fixed",
+        "h-16",
+        "min-w-0",
+        "h-8",
+        "w-auto",
+        "flex-shrink-0",
+        "w-2",
+        "h-2",
+        "w-8",
+        "w-full",
+        "w-1.5",
+        "h-1.5",
+        "w-10",
+        "h-10",
+        "h-11",
+        "w-9",
+        "h-9",
+        "w-2.5",
+        "h-2.5",
+        "w-12",
+        "h-12",
+        "max-w-[280px]",
+        "flex-1",
+        "min-w-[56px]"
+      ]
+    },
+    {
+      "source": "in_cio_app_venda_flow_ai_desktop_1440px/code.html",
+      "sha256": "d1674ec0d116b258c75316068c12dde078656586246f9ae4d563792781345915",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Bom dia! Veja o que precisa da sua atenção."
+        },
+        {
+          "level": "h2",
+          "text": "Precisa de atenção"
+        },
+        {
+          "level": "h3",
+          "text": "Seu painel está pronto. Conecte o WhatsApp para começar."
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-primary text-on-primary z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-space-xs px-space-xs\" data-active-classes=\"bg-primary-container text-on-primary font-title-md rounded-lg\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-1 mb-space-sm\" data-active-classes=\"bg-primary-container text-on-primary font-title-md rounded-lg\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-surface min-h-screen\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"flex flex-col md:flex-row md:items-center justify-between gap-space-sm\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "notifications",
+        "searchBuscar (Ctrl+K)"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#93000a",
+        "#ffffff",
+        "#8c1703",
+        "#ffdad3",
+        "#c4c6cf",
+        "#e0e2e6",
+        "#191c22",
+        "#ffdad6",
+        "#3e0400",
+        "#d8dade",
+        "#1d1b1a",
+        "#45474b",
+        "#fe694c",
+        "#f7f9fd",
+        "#e6e8ec",
+        "#ba1a1a",
+        "#878381",
+        "#494644",
+        "#191c1f",
+        "#650b00",
+        "#ae3019",
+        "#000000",
+        "#eff1f5",
+        "#44474e",
+        "#eceef2",
+        "#2d3134",
+        "#76777b",
+        "#81848c",
+        "#f2f4f8",
+        "#e7e1de",
+        "#cac5c3",
+        "#c6c6cb",
+        "#e1e2eb",
+        "#5c5e66",
+        "#ffb4a5"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "h-16",
+        "h-8",
+        "w-auto",
+        "w-8",
+        "w-2",
+        "h-2",
+        "min-h-screen",
+        "w-full",
+        "max-w-7xl",
+        "md:flex-row",
+        "h-10",
+        "grid",
+        "grid-cols-1",
+        "md:grid-cols-3",
+        "w-9",
+        "h-9",
+        "sm:flex-row",
+        "w-10",
+        "min-w-0",
+        "max-w-2xl",
+        "w-12",
+        "h-12",
+        "sm:w-auto"
+      ]
+    },
+    {
+      "source": "login_administrativo_admin_login_venda_flow_ai/code.html",
+      "sha256": "a80013261ce584cbb8e789ee8bd4ad77a9006c4a1b72d0e6bd2fe3c9f42bc66e",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Console Administrativo"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "main",
+          "attributes": "class=\"w-full flex items-center justify-center p-space-sm\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all\" id=\"corporateEmail\" placeholder=\"nome@vendaflow.com.br\" required=\"\" type=\"email\" value=\"operador@vendaflow.com.br\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 pl-10 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all\" id=\"corporatePassword\" placeholder=\"••••••••••••••••\" required=\"\" type=\"password\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "autofocus=\"\" class=\"totp-digit w-10 h-11 text-center font-data-metric text-data-metric text-on-surface bg-surface-container-lowest rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-container shadow-sm\" maxlength=\"1\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"totp-digit w-10 h-11 text-center font-data-metric text-data-metric text-on-surface bg-surface-container-lowest rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-container shadow-sm\" maxlength=\"1\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"totp-digit w-10 h-11 text-center font-data-metric text-data-metric text-on-surface bg-surface-container-lowest rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-container shadow-sm\" maxlength=\"1\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"totp-digit w-10 h-11 text-center font-data-metric text-data-metric text-on-surface bg-surface-container-lowest rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-container shadow-sm\" maxlength=\"1\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"totp-digit w-10 h-11 text-center font-data-metric text-data-metric text-on-surface bg-surface-container-lowest rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-container shadow-sm\" maxlength=\"1\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"totp-digit w-10 h-11 text-center font-data-metric text-data-metric text-on-surface bg-surface-container-lowest rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-container shadow-sm\" maxlength=\"1\" type=\"text\"/"
+        }
+      ],
+      "controls": [
+        "Entrar com Okta / Google Workspace SSO Corporativo",
+        "Esqueci minha credencial",
+        "visibility",
+        "Inserir YubiKey",
+        "verified_user Autenticar com MFA",
+        "Simular IP Não Corporativo"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com"
+      ],
+      "colors": [
+        "#76777b",
+        "#f7f9fd",
+        "#c4c6cf",
+        "#191c22",
+        "#e1e2eb",
+        "#c6c6cb",
+        "#000000",
+        "#1d1b1a",
+        "#2d3134",
+        "#191c1f",
+        "#d8dade",
+        "#81848c",
+        "#ffffff",
+        "#494644",
+        "#fe694c",
+        "#44474e",
+        "#3e0400",
+        "#ffdad6",
+        "#8c1703",
+        "#45474b",
+        "#ffdad3",
+        "#eff1f5",
+        "#e0e2e6",
+        "#650b00",
+        "#f2f4f8",
+        "#e7e1de",
+        "#ae3019",
+        "#ba1a1a",
+        "#e6e8ec",
+        "#93000a",
+        "#eceef2",
+        "#cac5c3",
+        "#878381",
+        "#ffb4a5",
+        "#5c5e66",
+        "#4285F4",
+        "#34A853",
+        "#FBBC05",
+        "#EA4335"
+      ],
+      "layoutClasses": [
+        "min-h-screen",
+        "flex",
+        "w-full",
+        "flex-col",
+        "min-h-[942px]",
+        "w-96",
+        "h-96",
+        "w-[30rem]",
+        "h-[30rem]",
+        "max-w-[520px]",
+        "w-8",
+        "h-8",
+        "w-5",
+        "h-5",
+        "w-2",
+        "h-2",
+        "flex-1",
+        "w-4",
+        "h-4",
+        "flex-grow",
+        "h-[1px]",
+        "flex-shrink",
+        "h-10",
+        "w-10",
+        "h-11"
+      ]
+    },
+    {
+      "source": "mini_design_system_venda_flow_ai/code.html",
+      "sha256": "9ac8303c9dd4aaa90bfed756cb826d6ebed4306ca51c319a3e152eb2a32f932d",
+      "title": "A. Mini Design System — Venda Flow AI",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "A. Mini Design System"
+        },
+        {
+          "level": "h2",
+          "text": "1. Paleta de Cores"
+        },
+        {
+          "level": "h3",
+          "text": "Obsidiana"
+        },
+        {
+          "level": "h3",
+          "text": "Coral"
+        },
+        {
+          "level": "h3",
+          "text": "Marfim"
+        },
+        {
+          "level": "h3",
+          "text": "Branco"
+        },
+        {
+          "level": "h3",
+          "text": "Cinza Claro"
+        },
+        {
+          "level": "h2",
+          "text": "2. Tipografia (Inter)"
+        },
+        {
+          "level": "h2",
+          "text": "3. Escala de Espaçamentos (8pt Grid)"
+        },
+        {
+          "level": "h2",
+          "text": "4. Componentes e 4 Estados Essenciais"
+        },
+        {
+          "level": "h3",
+          "text": "Botões Interativos"
+        },
+        {
+          "level": "h3",
+          "text": "Campos de Entrada (Inputs)"
+        },
+        {
+          "level": "h2",
+          "text": "5. Badges e Tags de Status"
+        },
+        {
+          "level": "h2",
+          "text": "6. Cartões de Informação e Tabela de Dados"
+        },
+        {
+          "level": "h3",
+          "text": "Fila de Negociações Recentes"
+        },
+        {
+          "level": "h2",
+          "text": "7. Especificação de Sobreposições: Modal e Drawer Lateral"
+        },
+        {
+          "level": "h3",
+          "text": "Publicar Automação de IA?"
+        },
+        {
+          "level": "h3",
+          "text": "Agente de Negociação"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"border-b border-cinza-claro bg-white sticky top-0 z-40\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"max-w-7xl mx-auto px-6 pt-10 space-y-16\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-cinza-claro text-xs text-cinza-muted flex flex-col sm:flex-row items-center justify-between gap-4\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full text-xs h-10 px-3 rounded-lg border-cinza-claro focus:border-coral focus:ring-1 focus:ring-coral bg-white text-obsidiana placeholder:text-cinza-muted transition-all\" placeholder=\"Ex: Acme Soluções Digitais\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full text-xs h-10 pl-9 pr-3 rounded-lg border-coral ring-2 ring-coral/20 bg-white text-obsidiana font-medium\" type=\"email\" value=\"contato@empresa.com.br\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full text-xs h-10 px-3 rounded-lg border-red-500 bg-red-50/20 text-red-900 focus:border-red-500 focus:ring-red-200\" type=\"text\" value=\"+55 (11) 988\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full text-xs h-10 px-3 rounded-lg border-cinza-claro bg-[#F4F5F7] text-cinza-muted cursor-not-allowed\" disabled=\"\" type=\"text\" value=\"AGT-7890-VENDAFLOW\"/"
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"w-full text-xs h-9 px-2.5 rounded-lg border-cinza-claro bg-marfim text-obsidiana focus:border-coral focus:ring-coral\""
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full text-xs h-9 px-2.5 rounded-lg border-cinza-claro bg-white text-obsidiana\" type=\"text\" value=\"10%\"/"
+        }
+      ],
+      "controls": [
+        "Continuar",
+        "Hover / Foco",
+        "Salvando...",
+        "Bloqueado",
+        "Cancelar",
+        "Hover Ativo",
+        "Aguarde",
+        "Inativo",
+        "Ver detalhes",
+        "Ver detalhes",
+        "Buscando",
+        "Sem acesso",
+        "Filtrar",
+        "Exportar Relatório",
+        "Assumir chat",
+        "Assumir chat",
+        "Ver recibo",
+        "Anterior",
+        "1",
+        "2",
+        "Próximo",
+        "Revisar Regras",
+        "Confirmar Ativação",
+        "",
+        "Salvar Fluxo",
+        "Fechar"
+      ],
+      "externalAssets": [
+        "https://cdn.tailwindcss.com?plugins=forms,container-queries",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      ],
+      "colors": [
+        "#0B0E14",
+        "#07090D",
+        "#161B26",
+        "#FF6A4D",
+        "#F25838",
+        "#FFF1EE",
+        "#FFE7E2",
+        "#FFF9F6",
+        "#E6E8EC",
+        "#F4F5F7",
+        "#8A92A0",
+        "#F8F9FA",
+        "#FFFFFF",
+        "#E6F7ED",
+        "#0E7A42",
+        "#FFF0F5",
+        "#D82B7D"
+      ],
+      "layoutClasses": [
+        "min-h-screen",
+        "sticky",
+        "max-w-7xl",
+        "h-20",
+        "flex",
+        "w-10",
+        "h-10",
+        "w-full",
+        "h-full",
+        "w-1.5",
+        "h-1.5",
+        "flex-col",
+        "md:flex-row",
+        "max-w-2xl",
+        "w-2",
+        "h-2",
+        "grid",
+        "grid-cols-1",
+        "sm:grid-cols-2",
+        "lg:grid-cols-5",
+        "h-28",
+        "lg:grid-cols-12",
+        "w-28",
+        "flex-1",
+        "w-8",
+        "h-8",
+        "w-16",
+        "w-24",
+        "w-32",
+        "lg:grid-cols-2",
+        "grid-cols-2",
+        "sm:grid-cols-4",
+        "h-3.5",
+        "w-3.5",
+        "w-4",
+        "h-4",
+        "lg:grid-cols-4",
+        "md:grid-cols-3",
+        "sm:flex-row",
+        "min-h-[380px]",
+        "max-w-sm",
+        "w-12",
+        "h-12",
+        "w-6",
+        "h-6",
+        "h-9",
+        "max-w-xs",
+        "w-1/2"
+      ]
+    },
+    {
+      "source": "painel_do_cliente_mobile_390px/code.html",
+      "sha256": "90c1400d005188298c5372e7b6f0341ffe8e32909cfc51690ccb0dc5e2cdf5cd",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Bom dia, Renato"
+        },
+        {
+          "level": "h2",
+          "text": "Canais Conversacionais"
+        },
+        {
+          "level": "h2",
+          "text": "Fila Prioritária"
+        },
+        {
+          "level": "h3",
+          "text": "Painel de Controle"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 flex flex-col relative w-full pt-14 pb-20 bg-surface px-gutter\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]\" data-active-classes=\"text-secondary-container font-label-sm\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "tune",
+        "Hoje",
+        "7 dias",
+        "30 dias",
+        "add Criar Fluxo",
+        "Ver conversa",
+        "headset_mic Assumir",
+        "Ver conversa",
+        "headset_mic Assumir",
+        "Ver conversa",
+        "headset_mic Assumir",
+        "close",
+        "logout Sair"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#c4c6cf",
+        "#eceef2",
+        "#ffffff",
+        "#45474b",
+        "#ffb4a5",
+        "#191c1f",
+        "#44474e",
+        "#1d1b1a",
+        "#000000",
+        "#191c22",
+        "#fe694c",
+        "#cac5c3",
+        "#d8dade",
+        "#76777b",
+        "#81848c",
+        "#ffdad3",
+        "#8c1703",
+        "#eff1f5",
+        "#ae3019",
+        "#3e0400",
+        "#650b00",
+        "#5c5e66",
+        "#e7e1de",
+        "#ffdad6",
+        "#e1e2eb",
+        "#e6e8ec",
+        "#2d3134",
+        "#878381",
+        "#ba1a1a",
+        "#e0e2e6",
+        "#494644",
+        "#f2f4f8",
+        "#93000a",
+        "#c6c6cb"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-14",
+        "w-8",
+        "h-8",
+        "w-1.5",
+        "h-1.5",
+        "flex-1",
+        "w-2",
+        "h-2",
+        "w-11",
+        "h-11",
+        "min-h-[36px]",
+        "w-10",
+        "h-10",
+        "min-h-[44px]",
+        "grid",
+        "grid-cols-2",
+        "h-2.5",
+        "h-full",
+        "w-2.5",
+        "min-h-[38px]",
+        "max-h-[751px]",
+        "w-7",
+        "h-7",
+        "w-9",
+        "h-9",
+        "h-16",
+        "min-w-[56px]"
+      ]
+    },
+    {
+      "source": "painel_do_cliente_venda_flow_ai_desktop_1440px/code.html",
+      "sha256": "def5d44b0e02d44ec369810a104f3a6f119553b618f303910cb865be214ba907",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Início"
+        },
+        {
+          "level": "h2",
+          "text": "Evolução de vendas"
+        },
+        {
+          "level": "h2",
+          "text": "Canais de conversa"
+        },
+        {
+          "level": "h2",
+          "text": "Fila recente de atendimentos prioritários"
+        },
+        {
+          "level": "h4",
+          "text": "Resumo da Interação por IA"
+        },
+        {
+          "level": "h4",
+          "text": "Última Mensagem Trocada"
+        },
+        {
+          "level": "h3",
+          "text": "Assumir atendimento manual?"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-[260px] bg-primary text-on-primary z-50 flex flex-col justify-between select-none\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col px-space-xs gap-1\" data-active-classes=\"bg-primary-container text-on-primary font-title-md\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-[260px] right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-surface min-h-screen\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "calendar_today Últimos 30 dias expand_more",
+        "Hoje",
+        "Últimos 7 dias",
+        "Últimos 30 dias",
+        "Este trimestre",
+        "add Nova Automação",
+        "visibility Ver Fila Completa",
+        "Assumir chevron_right",
+        "Assumir chevron_right",
+        "Assumir chevron_right",
+        "Assumir chevron_right",
+        "close",
+        "Fechar",
+        "Intervir no Chat",
+        "Cancelar",
+        "Sim, transferir para mim"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#191c22",
+        "#494644",
+        "#cac5c3",
+        "#76777b",
+        "#ffffff",
+        "#c4c6cf",
+        "#eff1f5",
+        "#878381",
+        "#f2f4f8",
+        "#3e0400",
+        "#5c5e66",
+        "#93000a",
+        "#650b00",
+        "#fe694c",
+        "#000000",
+        "#45474b",
+        "#81848c",
+        "#1d1b1a",
+        "#f7f9fd",
+        "#2d3134",
+        "#ae3019",
+        "#e0e2e6",
+        "#ffdad3",
+        "#ffb4a5",
+        "#8c1703",
+        "#191c1f",
+        "#d8dade",
+        "#c6c6cb",
+        "#ffdad6",
+        "#44474e",
+        "#ba1a1a",
+        "#e7e1de",
+        "#eceef2",
+        "#e1e2eb",
+        "#e6e8ec",
+        "#25D366"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-[260px]",
+        "flex",
+        "flex-col",
+        "h-16",
+        "h-8",
+        "w-auto",
+        "w-8",
+        "min-w-0",
+        "flex-1",
+        "w-1.5",
+        "h-1.5",
+        "min-h-screen",
+        "w-full",
+        "md:flex-row",
+        "flex-wrap",
+        "h-10",
+        "w-48",
+        "grid",
+        "grid-cols-1",
+        "sm:grid-cols-2",
+        "xl:grid-cols-4",
+        "lg:grid-cols-12",
+        "w-2.5",
+        "h-2.5",
+        "h-56",
+        "w-5",
+        "h-5",
+        "h-2",
+        "sm:flex-row",
+        "w-2",
+        "w-[420px]",
+        "max-w-full",
+        "max-w-[85%]",
+        "max-w-md",
+        "w-12",
+        "h-12",
+        "w-56"
+      ]
+    },
+    {
+      "source": "planos_e_faturamento_app_faturamento_mobile_390px/code.html",
+      "sha256": "9e3f4260ed4003d82437d17fd0a01fc669b362f3936311a06a2a40b0e56bfabc",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Faturamento"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 flex flex-col relative w-full pt-16 pb-safe bg-background min-h-[calc(100vh-4rem)]\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "arrow_back",
+        "upgrade Alterar plano",
+        "open_in_new Gerenciar no Mercado Pago",
+        "download",
+        "download",
+        "download"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#878381",
+        "#ba1a1a",
+        "#93000a",
+        "#191c22",
+        "#2d3134",
+        "#f2f4f8",
+        "#e1e2eb",
+        "#c4c6cf",
+        "#3e0400",
+        "#e0e2e6",
+        "#76777b",
+        "#d8dade",
+        "#650b00",
+        "#494644",
+        "#ffdad3",
+        "#ffdad6",
+        "#45474b",
+        "#191c1f",
+        "#44474e",
+        "#8c1703",
+        "#eff1f5",
+        "#eceef2",
+        "#ffffff",
+        "#e7e1de",
+        "#fe694c",
+        "#81848c",
+        "#5c5e66",
+        "#ae3019",
+        "#1d1b1a",
+        "#000000",
+        "#c6c6cb",
+        "#ffb4a5",
+        "#cac5c3",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "min-h-screen",
+        "flex",
+        "flex-col",
+        "fixed",
+        "h-16",
+        "w-11",
+        "h-11",
+        "h-8",
+        "w-auto",
+        "max-w-[160px]",
+        "w-8",
+        "flex-shrink-0",
+        "flex-1",
+        "w-full",
+        "min-h-[calc(100vh-4rem)]",
+        "min-w-0",
+        "w-9",
+        "h-9",
+        "w-2",
+        "h-2",
+        "h-full",
+        "h-12",
+        "h-0.5",
+        "w-10",
+        "h-10"
+      ]
+    },
+    {
+      "source": "planos_e_faturamento_app_faturamento_venda_flow_ai_desktop_1440px/code.html",
+      "sha256": "2ec535a0aa766df5b515f271c8709b9ed352fddc296a75c6abf29999a84474a8",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Planos e Faturamento"
+        },
+        {
+          "level": "h2",
+          "text": "Plano Profissional"
+        },
+        {
+          "level": "h3",
+          "text": "Segurança de Pagamento"
+        },
+        {
+          "level": "h3",
+          "text": "Fluxo de Cobrança e Ativação Instantânea"
+        },
+        {
+          "level": "h3",
+          "text": "Histórico de Cobranças"
+        },
+        {
+          "level": "h3",
+          "text": "Selecione o plano ideal para sua equipe"
+        },
+        {
+          "level": "h4",
+          "text": "Essencial"
+        },
+        {
+          "level": "h4",
+          "text": "Profissional"
+        },
+        {
+          "level": "h4",
+          "text": "Escala Enterprise"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col px-space-xs gap-1\" data-active-classes=\"bg-surface-container text-on-surface font-title-md\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-1\" data-active-classes=\"bg-surface-container text-on-surface font-title-md\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"w-full pt-16 bg-background px-space-lg pb-space-xl\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "notifications",
+        "open_in_new Gerenciar no Mercado Pago",
+        "swap_horiz Alterar plano",
+        "support_agent",
+        "file_download Exportar Relatório (.CSV)",
+        "filter_list Filtrar período",
+        "receipt Recibo #8921",
+        "receipt Recibo #7810",
+        "receipt Recibo #6540",
+        "close",
+        "Fazer Downgrade",
+        "Plano Ativo",
+        "Migrar para Escala",
+        "Cancelar"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#878381",
+        "#ba1a1a",
+        "#93000a",
+        "#191c22",
+        "#2d3134",
+        "#f2f4f8",
+        "#e1e2eb",
+        "#c4c6cf",
+        "#f7f9fd",
+        "#3e0400",
+        "#e0e2e6",
+        "#76777b",
+        "#d8dade",
+        "#650b00",
+        "#494644",
+        "#ffdad3",
+        "#ffdad6",
+        "#45474b",
+        "#191c1f",
+        "#44474e",
+        "#8c1703",
+        "#eff1f5",
+        "#eceef2",
+        "#ffffff",
+        "#e7e1de",
+        "#fe694c",
+        "#81848c",
+        "#5c5e66",
+        "#ae3019",
+        "#1d1b1a",
+        "#000000",
+        "#c6c6cb",
+        "#ffb4a5",
+        "#cac5c3",
+        "#e6e8ec",
+        "#8921",
+        "#7810",
+        "#6540"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "h-8",
+        "w-auto",
+        "h-16",
+        "w-2",
+        "h-2",
+        "w-9",
+        "h-9",
+        "w-8",
+        "w-full",
+        "w-1",
+        "h-1",
+        "grid",
+        "grid-cols-12",
+        "w-48",
+        "h-48",
+        "grid-cols-1",
+        "md:grid-cols-3",
+        "flex-wrap",
+        "w-10",
+        "h-10",
+        "md:flex-row",
+        "md:grid-cols-5",
+        "w-1.5",
+        "h-1.5",
+        "max-w-4xl",
+        "max-h-[921px]"
+      ]
+    },
+    {
+      "source": "planos_e_pre_os_mobile_390px/code.html",
+      "sha256": "a0c8263e7fcb3190015bb54f06a27cc0b37d70ead09e8048d1787778ccdc0fb1",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Planos transparentes para cada momento do seu negócio"
+        },
+        {
+          "level": "h2",
+          "text": "Plano Iniciante"
+        },
+        {
+          "level": "h2",
+          "text": "Plano Profissional"
+        },
+        {
+          "level": "h2",
+          "text": "Plano Enterprise"
+        },
+        {
+          "level": "h3",
+          "text": "Dúvidas sobre faturamento"
+        },
+        {
+          "level": "h4",
+          "text": "Precisa de um plano customizado?"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"w-full mt-space-lg px-gutter py-space-md bg-surface-container-lowest text-on-surface-variant\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\" data-active-classes=\"text-secondary\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "Faturamento Mensal",
+        "Anual -20%",
+        "Escolher plano arrow_forward",
+        "Escolher plano Profissional bolt",
+        "Escolher plano arrow_forward",
+        "Como funciona a cobrança pelo Mercado Pago? expand_more",
+        "Existe período de carência ou fidelidade? expand_more",
+        "Como funcionam as tarifas da Meta para WhatsApp? expand_more"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs",
+        "https://wa.me/"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#eff1f5",
+        "#ffb4a5",
+        "#8c1703",
+        "#c4c6cf",
+        "#191c1f",
+        "#ffdad6",
+        "#ba1a1a",
+        "#650b00",
+        "#c6c6cb",
+        "#e0e2e6",
+        "#191c22",
+        "#ffdad3",
+        "#3e0400",
+        "#f2f4f8",
+        "#878381",
+        "#44474e",
+        "#fe694c",
+        "#ffffff",
+        "#e7e1de",
+        "#93000a",
+        "#e1e2eb",
+        "#d8dade",
+        "#eceef2",
+        "#000000",
+        "#81848c",
+        "#45474b",
+        "#494644",
+        "#1d1b1a",
+        "#5c5e66",
+        "#76777b",
+        "#cac5c3",
+        "#e6e8ec",
+        "#ae3019",
+        "#2d3134"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-16",
+        "h-8",
+        "w-auto",
+        "h-10",
+        "min-w-[44px]",
+        "w-8",
+        "flex-1",
+        "w-fit",
+        "w-10",
+        "h-px",
+        "h-11",
+        "min-h-[44px]",
+        "h-1.5",
+        "h-12",
+        "min-h-[48px]",
+        "w-16",
+        "w-12",
+        "max-w-[280px]"
+      ]
+    },
+    {
+      "source": "planos_e_pre_os_venda_flow_ai/code.html",
+      "sha256": "94fc9c6cb30ea430a0fa48fc285ef6915e71e9d4106131310cdef7ef4c5ca866",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Planos transparentes para cada momento do seu negócio"
+        },
+        {
+          "level": "h2",
+          "text": "Transparência operacional sobre canais e faturamento"
+        },
+        {
+          "level": "h2",
+          "text": "Perguntas frequentes sobre faturamento"
+        },
+        {
+          "level": "h3",
+          "text": "Como funciona o pagamento?"
+        },
+        {
+          "level": "h3",
+          "text": "Há taxa de cancelamento ou fidelidade?"
+        },
+        {
+          "level": "h3",
+          "text": "Como funcionam os custos de envio do WhatsApp?"
+        },
+        {
+          "level": "h3",
+          "text": "Quando os preços definitivos serão divulgados?"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"hidden md:flex items-center gap-8\" data-active-classes=\"text-primary font-bold\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"w-full pt-16 bg-surface\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"w-full bg-surface-container-low mt-space-xl py-space-lg\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "Escolher plano",
+        "Escolher plano",
+        "Escolher plano"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#1d1b1a",
+        "#000000",
+        "#c4c6cf",
+        "#2d3134",
+        "#ae3019",
+        "#ffffff",
+        "#3e0400",
+        "#45474b",
+        "#f2f4f8",
+        "#76777b",
+        "#e0e2e6",
+        "#191c22",
+        "#191c1f",
+        "#eceef2",
+        "#ffdad6",
+        "#ffb4a5",
+        "#ba1a1a",
+        "#d8dade",
+        "#fe694c",
+        "#81848c",
+        "#f7f9fd",
+        "#8c1703",
+        "#cac5c3",
+        "#eff1f5",
+        "#e6e8ec",
+        "#e1e2eb",
+        "#494644",
+        "#44474e",
+        "#e7e1de",
+        "#878381",
+        "#5c5e66",
+        "#c6c6cb",
+        "#ffdad3",
+        "#650b00",
+        "#93000a"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "w-full",
+        "h-16",
+        "max-w-7xl",
+        "flex",
+        "h-8",
+        "w-auto",
+        "md:flex",
+        "h-10",
+        "w-8",
+        "flex-col",
+        "w-3/4",
+        "max-w-4xl",
+        "h-64",
+        "max-w-3xl",
+        "w-1.5",
+        "h-1.5",
+        "max-w-2xl",
+        "grid",
+        "grid-cols-1",
+        "md:grid-cols-3",
+        "md:flex-row",
+        "w-10",
+        "max-w-sm",
+        "h-7",
+        "flex-wrap"
+      ]
+    },
+    {
+      "source": "primeiros_passos_mobile_390px_configurar/code.html",
+      "sha256": "70021172c1ebb68f38e7c3d9c8f9b67a11ec0e7e81bd78ac9167fde584fd94b4",
+      "title": "",
+      "headings": [
+        {
+          "level": "h2",
+          "text": "Configurar Espaço"
+        },
+        {
+          "level": "h3",
+          "text": "WhatsApp Business Cloud"
+        },
+        {
+          "level": "h3",
+          "text": "Espaço Ativado!"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex flex-col flex-1 w-full max-w-[390px] mx-auto px-margin pt-14 pb-safe bg-surface justify-between\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"w-full py-space-sm flex flex-col items-center justify-center gap-space-xs\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full bg-transparent text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none\" id=\"company-name\" placeholder=\"Ex: Lumina Odontologia\" type=\"text\" value=\"TechStore Express\"/"
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"w-full bg-transparent text-on-surface font-body-md text-body-md focus:outline-none appearance-none pr-6 cursor-pointer\" id=\"company-sector\""
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full bg-transparent text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none\" id=\"company-phone\" inputmode=\"numeric\" placeholder=\"(11) 98765-4321\" type=\"tel\" value=\"(11) 99482-1088\"/"
+        }
+      ],
+      "controls": [
+        "arrow_back",
+        "Avançar para Integração arrow_forward",
+        "sync_alt Conectar com Meta",
+        "Reset",
+        "Conectado",
+        "Erro",
+        "Continuar arrow_forward",
+        "Fazer depois no painel",
+        "Ir para o painel dashboard",
+        "Revisar informações"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#cac5c3",
+        "#191c1f",
+        "#76777b",
+        "#f7f9fd",
+        "#45474b",
+        "#494644",
+        "#5c5e66",
+        "#d8dade",
+        "#c6c6cb",
+        "#000000",
+        "#44474e",
+        "#ba1a1a",
+        "#1d1b1a",
+        "#c4c6cf",
+        "#93000a",
+        "#650b00",
+        "#f2f4f8",
+        "#fe694c",
+        "#878381",
+        "#191c22",
+        "#ffffff",
+        "#eceef2",
+        "#ffdad6",
+        "#ffb4a5",
+        "#eff1f5",
+        "#e0e2e6",
+        "#e1e2eb",
+        "#81848c",
+        "#e7e1de",
+        "#ae3019",
+        "#2d3134",
+        "#ffdad3",
+        "#3e0400",
+        "#8c1703",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-14",
+        "max-w-[390px]",
+        "w-11",
+        "h-11",
+        "h-8",
+        "w-auto",
+        "w-8",
+        "flex-1",
+        "h-1.5",
+        "h-full",
+        "w-1/3",
+        "w-10",
+        "h-10",
+        "min-w-0",
+        "h-12",
+        "w-2",
+        "h-2",
+        "w-12",
+        "w-1.5",
+        "grid",
+        "grid-cols-2",
+        "h-9"
+      ]
+    },
+    {
+      "source": "primeiros_passos_venda_flow_ai_configurar/code.html",
+      "sha256": "63598421f8eac7f6bd11ce157ce5a45dd1dc95aeaae321b532c0b25306ec5e8a",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Configure seu motor de vendas inteligente"
+        },
+        {
+          "level": "h2",
+          "text": "Conte-nos sobre o seu negócio"
+        },
+        {
+          "level": "h2",
+          "text": "Conecte seu canal oficial do WhatsApp"
+        },
+        {
+          "level": "h2",
+          "text": "Tudo pronto para acelerar suas vendas!"
+        },
+        {
+          "level": "h3",
+          "text": "Aurora Soluções Imobiliárias"
+        },
+        {
+          "level": "h3",
+          "text": "WhatsApp Cloud API"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"w-full pt-space-lg pb-space-sm flex flex-col items-center justify-center\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"w-full flex-1 flex flex-col items-center justify-center px-space-md py-space-sm\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"w-full py-space-md mt-auto\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary/50 focus:bg-surface-container-lowest transition-all\" id=\"company-name\" placeholder=\"Ex: Studio Alpha, Drogaria São José\" type=\"text\" value=\"Aurora Soluções Imobiliárias\"/"
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"w-full h-11 pl-10 pr-9 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary/50 focus:bg-surface-container-lowest appearance-none transition-all\" id=\"company-sector\""
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary/50 focus:bg-surface-container-lowest transition-all\" id=\"company-phone\" placeholder=\"+55 (00) 00000-0000\" type=\"tel\" value=\"+55 (11) 98765-4321\"/"
+        }
+      ],
+      "controls": [
+        "1 Passo 1 de 3 Sua empresa",
+        "2 Passo 2 de 3 Conexão WhatsApp",
+        "3 Passo 3 de 3 Pronto para vender",
+        "Continuar para conexão arrow_forward",
+        "Padrão",
+        "Conectando",
+        "Conectado",
+        "Erro",
+        "hub Conectar com Meta",
+        "refresh Tentar novamente agora",
+        "arrow_back Voltar",
+        "Fazer depois",
+        "Continuar arrow_forward",
+        "arrow_back Revisar dados",
+        "hub Conectar com Meta",
+        "progress_activity Autenticando...",
+        "Desconectar",
+        "refresh Tentar novamente"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#cac5c3",
+        "#191c1f",
+        "#76777b",
+        "#f7f9fd",
+        "#45474b",
+        "#494644",
+        "#5c5e66",
+        "#d8dade",
+        "#c6c6cb",
+        "#000000",
+        "#44474e",
+        "#ba1a1a",
+        "#1d1b1a",
+        "#c4c6cf",
+        "#93000a",
+        "#650b00",
+        "#f2f4f8",
+        "#fe694c",
+        "#878381",
+        "#191c22",
+        "#ffffff",
+        "#eceef2",
+        "#ffdad6",
+        "#ffb4a5",
+        "#eff1f5",
+        "#e0e2e6",
+        "#e1e2eb",
+        "#81848c",
+        "#e7e1de",
+        "#ae3019",
+        "#2d3134",
+        "#ffdad3",
+        "#3e0400",
+        "#8c1703",
+        "#e6e8ec"
+      ],
+      "layoutClasses": [
+        "min-h-screen",
+        "flex",
+        "flex-col",
+        "w-full",
+        "h-8",
+        "w-auto",
+        "flex-1",
+        "max-w-5xl",
+        "w-1.5",
+        "h-1.5",
+        "max-w-xl",
+        "grid",
+        "grid-cols-3",
+        "w-7",
+        "h-7",
+        "min-w-0",
+        "h-1",
+        "h-full",
+        "sm:flex-row",
+        "grid-cols-1",
+        "md:grid-cols-2",
+        "h-11",
+        "w-8",
+        "w-10",
+        "h-10",
+        "w-2",
+        "h-2",
+        "w-12",
+        "h-12",
+        "sm:w-auto",
+        "h-9",
+        "max-w-4xl",
+        "sm:block"
+      ]
+    },
+    {
+      "source": "p_gina_inicial_mobile_390px/code.html",
+      "sha256": "e688cba12ea05fe0e49452804af1bf2caf0ac831c3e0c48c63f580857fd8a345",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Mais conversas. Mais negócios."
+        },
+        {
+          "level": "h2",
+          "text": "Feito para acelerar sua equipe"
+        },
+        {
+          "level": "h3",
+          "text": "Converse com seus clientes"
+        },
+        {
+          "level": "h3",
+          "text": "Organize oportunidades"
+        },
+        {
+          "level": "h3",
+          "text": "Automatize tarefas simples"
+        },
+        {
+          "level": "h2",
+          "text": "Pronto em 3 passos simples"
+        },
+        {
+          "level": "h2",
+          "text": "Perguntas Frequentes"
+        },
+        {
+          "level": "h2",
+          "text": "Pronto para organizar suas vendas pelo WhatsApp?"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"w-full mt-space-lg px-gutter py-space-md bg-surface-container-lowest text-on-surface-variant\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\" data-active-classes=\"text-secondary\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "Preciso de conhecimento técnico para começar? expand_more",
+        "A plataforma funciona com o WhatsApp oficial? expand_more",
+        "Como funciona a assinatura e cobrança? expand_more",
+        "Posso cancelar quando quiser? expand_more"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#eff1f5",
+        "#ffb4a5",
+        "#8c1703",
+        "#c4c6cf",
+        "#191c1f",
+        "#ffdad6",
+        "#ba1a1a",
+        "#650b00",
+        "#c6c6cb",
+        "#e0e2e6",
+        "#191c22",
+        "#ffdad3",
+        "#3e0400",
+        "#f2f4f8",
+        "#878381",
+        "#44474e",
+        "#fe694c",
+        "#ffffff",
+        "#e7e1de",
+        "#93000a",
+        "#e1e2eb",
+        "#d8dade",
+        "#eceef2",
+        "#000000",
+        "#81848c",
+        "#45474b",
+        "#494644",
+        "#1d1b1a",
+        "#5c5e66",
+        "#76777b",
+        "#cac5c3",
+        "#e6e8ec",
+        "#ae3019",
+        "#2d3134"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-16",
+        "h-8",
+        "w-auto",
+        "h-10",
+        "min-w-[44px]",
+        "w-8",
+        "flex-1",
+        "w-64",
+        "h-64",
+        "w-48",
+        "h-48",
+        "max-w-[340px]",
+        "h-12",
+        "min-h-[44px]",
+        "h-11",
+        "w-2.5",
+        "h-2.5",
+        "grid",
+        "grid-cols-2",
+        "min-w-0",
+        "w-10",
+        "w-36",
+        "h-36",
+        "min-h-[48px]",
+        "w-12",
+        "max-w-[320px]"
+      ]
+    },
+    {
+      "source": "p_gina_inicial_venda_flow_ai/code.html",
+      "sha256": "b59969f93b37f3c6e6e20671019bf99d09eff02fe083d74ee56d553a891f2b10",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Mais conversas. Mais negócios."
+        },
+        {
+          "level": "h3",
+          "text": "Desempenho Comercial"
+        },
+        {
+          "level": "h2",
+          "text": "Estrutura pensada para o fluxo comercial"
+        },
+        {
+          "level": "h3",
+          "text": "Converse com seus clientes"
+        },
+        {
+          "level": "h3",
+          "text": "Organize oportunidades"
+        },
+        {
+          "level": "h3",
+          "text": "Automatize tarefas simples"
+        },
+        {
+          "level": "h2",
+          "text": "Como funciona a implementação"
+        },
+        {
+          "level": "h4",
+          "text": "Conecte seu WhatsApp"
+        },
+        {
+          "level": "h4",
+          "text": "Configure os fluxos"
+        },
+        {
+          "level": "h4",
+          "text": "Acompanhe e venda"
+        },
+        {
+          "level": "h2",
+          "text": "Perguntas Frequentes"
+        },
+        {
+          "level": "h3",
+          "text": "Pronto para organizar suas vendas pelo WhatsApp?"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"hidden md:flex items-center gap-8\" data-active-classes=\"text-primary font-bold\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"w-full pt-16 bg-surface\""
+        },
+        {
+          "element": "footer",
+          "attributes": "class=\"w-full bg-surface-container-low mt-space-xl py-space-lg\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "Preciso de conhecimento técnico para começar? expand_more",
+        "A plataforma funciona com o WhatsApp oficial? expand_more",
+        "Como funciona a assinatura e cobrança? expand_more",
+        "Posso cancelar quando quiser? expand_more"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#1d1b1a",
+        "#000000",
+        "#c4c6cf",
+        "#2d3134",
+        "#ae3019",
+        "#ffffff",
+        "#3e0400",
+        "#45474b",
+        "#f2f4f8",
+        "#76777b",
+        "#e0e2e6",
+        "#191c22",
+        "#191c1f",
+        "#eceef2",
+        "#ffdad6",
+        "#ffb4a5",
+        "#ba1a1a",
+        "#d8dade",
+        "#fe694c",
+        "#81848c",
+        "#f7f9fd",
+        "#8c1703",
+        "#cac5c3",
+        "#eff1f5",
+        "#e6e8ec",
+        "#e1e2eb",
+        "#494644",
+        "#44474e",
+        "#e7e1de",
+        "#878381",
+        "#5c5e66",
+        "#c6c6cb",
+        "#ffdad3",
+        "#650b00",
+        "#93000a"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "w-full",
+        "h-16",
+        "max-w-7xl",
+        "flex",
+        "h-8",
+        "w-auto",
+        "md:flex",
+        "h-10",
+        "w-8",
+        "flex-col",
+        "w-[760px]",
+        "h-[340px]",
+        "max-w-5xl",
+        "w-2",
+        "h-2",
+        "max-w-2xl",
+        "sm:flex-row",
+        "sm:w-auto",
+        "h-11",
+        "max-w-6xl",
+        "w-3",
+        "h-3",
+        "grid",
+        "grid-cols-1",
+        "md:grid-cols-12",
+        "min-h-[500px]",
+        "w-7",
+        "h-7",
+        "grid-cols-2",
+        "lg:grid-cols-4",
+        "lg:grid-cols-12",
+        "max-w-[210px]",
+        "h-full",
+        "max-w-xl",
+        "md:grid-cols-3",
+        "w-12",
+        "h-12",
+        "w-10",
+        "max-w-4xl",
+        "md:flex-row",
+        "flex-shrink-0",
+        "max-w-sm",
+        "flex-wrap"
+      ]
+    },
+    {
+      "source": "relat_rios_app_relatorios_mobile_390px/code.html",
+      "sha256": "efccb23128da42d6701c5036cceb5906451a2097c68bfa7b11a93cbdddcf71c0",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Relatórios"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex-1 flex flex-col relative w-full pt-16 pb-safe bg-background min-h-[calc(100vh-4rem)]\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "arrow_back",
+        "download CSV",
+        "7 dias",
+        "30 dias",
+        "90 dias",
+        "verified Entendido, aplicar"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#878381",
+        "#ba1a1a",
+        "#93000a",
+        "#191c22",
+        "#2d3134",
+        "#f2f4f8",
+        "#e1e2eb",
+        "#c4c6cf",
+        "#3e0400",
+        "#e0e2e6",
+        "#76777b",
+        "#d8dade",
+        "#650b00",
+        "#494644",
+        "#ffdad3",
+        "#ffdad6",
+        "#45474b",
+        "#191c1f",
+        "#44474e",
+        "#8c1703",
+        "#eff1f5",
+        "#eceef2",
+        "#ffffff",
+        "#e7e1de",
+        "#fe694c",
+        "#81848c",
+        "#5c5e66",
+        "#ae3019",
+        "#1d1b1a",
+        "#000000",
+        "#c6c6cb",
+        "#ffb4a5",
+        "#cac5c3",
+        "#e6e8ec",
+        "#E6E8EC",
+        "#E0E2E6",
+        "#FE694C",
+        "#45474B",
+        "#191C1F"
+      ],
+      "layoutClasses": [
+        "min-h-screen",
+        "flex",
+        "flex-col",
+        "fixed",
+        "h-16",
+        "w-11",
+        "h-11",
+        "h-8",
+        "w-auto",
+        "max-w-[160px]",
+        "w-8",
+        "flex-shrink-0",
+        "flex-1",
+        "w-full",
+        "min-h-[calc(100vh-4rem)]",
+        "w-1.5",
+        "h-1.5",
+        "grid",
+        "grid-cols-3",
+        "w-2.5",
+        "h-2.5",
+        "h-28",
+        "w-10",
+        "h-10"
+      ]
+    },
+    {
+      "source": "relat_rios_app_relatorios_venda_flow_ai_desktop_1440px/code.html",
+      "sha256": "af838223232fe84535039ced364d852675809716935df7bc9dad3a218169cb39",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Relatórios e Desempenho"
+        },
+        {
+          "level": "h2",
+          "text": "Conversas atendidas"
+        },
+        {
+          "level": "h2",
+          "text": "Oportunidades criadas"
+        },
+        {
+          "level": "h2",
+          "text": "Vendas marcadas como concluídas"
+        },
+        {
+          "level": "h3",
+          "text": "Evolução do Período (Últimos 30 dias)"
+        },
+        {
+          "level": "h3",
+          "text": "Detalhamento por Semana"
+        },
+        {
+          "level": "h4",
+          "text": "Nenhum atendimento registrado neste intervalo"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col px-space-xs gap-1\" data-active-classes=\"bg-surface-container text-on-surface font-title-md\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-1\" data-active-classes=\"bg-surface-container text-on-surface font-title-md\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"w-full pt-16 bg-background px-space-lg pb-space-xl\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "notifications",
+        "7 dias",
+        "30 dias",
+        "90 dias",
+        "more_vert",
+        "download Exportar dados em CSV",
+        "print Imprimir demonstrativo",
+        "swap_horiz Simular Vazio",
+        "Ver documentação de métricas"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#878381",
+        "#ba1a1a",
+        "#93000a",
+        "#191c22",
+        "#2d3134",
+        "#f2f4f8",
+        "#e1e2eb",
+        "#c4c6cf",
+        "#f7f9fd",
+        "#3e0400",
+        "#e0e2e6",
+        "#76777b",
+        "#d8dade",
+        "#650b00",
+        "#494644",
+        "#ffdad3",
+        "#ffdad6",
+        "#45474b",
+        "#191c1f",
+        "#44474e",
+        "#8c1703",
+        "#eff1f5",
+        "#eceef2",
+        "#ffffff",
+        "#e7e1de",
+        "#fe694c",
+        "#81848c",
+        "#5c5e66",
+        "#ae3019",
+        "#1d1b1a",
+        "#000000",
+        "#c6c6cb",
+        "#ffb4a5",
+        "#cac5c3",
+        "#e6e8ec",
+        "#C6C6CB",
+        "#FE694C",
+        "#AE3019"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "h-8",
+        "w-auto",
+        "h-16",
+        "w-2",
+        "h-2",
+        "w-9",
+        "h-9",
+        "w-8",
+        "w-full",
+        "md:flex-row",
+        "w-1.5",
+        "h-1.5",
+        "w-10",
+        "h-10",
+        "w-56",
+        "grid",
+        "grid-cols-1",
+        "md:grid-cols-3",
+        "sm:flex-row",
+        "w-3",
+        "h-0.5",
+        "h-1",
+        "h-56",
+        "w-16",
+        "max-w-md"
+      ]
+    },
+    {
+      "source": "suporte_e_auditoria_admin_operacao_console_administrativo_venda_flow_ai/code.html",
+      "sha256": "0b06a4c8555f4e4275a5fbccf3a2d35793699ef21fac6a6615cce07cd80fc8ae",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Operação: Suporte Técnico e Auditoria"
+        },
+        {
+          "level": "h3",
+          "text": "Padaria Central"
+        },
+        {
+          "level": "h4",
+          "text": "Inspeção Criptográfica de Trilha"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-primary text-on-primary z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-1 px-space-sm mt-1\" data-active-classes=\"bg-primary-container text-on-primary font-title-md rounded-lg\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-background min-h-screen\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface placeholder-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all\" placeholder=\"Buscar por ticket, tenant ou operador...\" type=\"text\"/"
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"w-full h-11 pt-3.5 pb-0.5 px-3 rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer\""
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"w-full h-11 pt-3.5 pb-0.5 px-3 rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer\""
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"w-full h-11 pt-3.5 pb-0.5 px-3 rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer\""
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full p-2.5 rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary\" placeholder=\"Registrar apontamento interno confidencial...\" rows=\"3\""
+        }
+      ],
+      "controls": [
+        "lock_clockEncerrar Sessão",
+        "verified Emitir Relatório DPO",
+        "support_agent Suporte Operacional 14 ativos",
+        "policy Trilha de Auditoria LGPD 100% gravada",
+        "filter_list Filtros",
+        "add Abrir Chamado Interno",
+        "Atender chevron_right",
+        "Atender chevron_right",
+        "Atender chevron_right",
+        "Histórico history",
+        "chevron_left",
+        "1",
+        "2",
+        "3",
+        "chevron_right",
+        "lock_open Solicitar Desmascaramento DPO",
+        "refresh Atualizar Stream",
+        "fingerprint Ver detalhe autorizado",
+        "fingerprint Ver detalhe autorizado",
+        "security Ver detalhe autorizado",
+        "close",
+        "refresh Forçar Renovação Dispara OAuth Handshake",
+        "send_time_extension Solicitar Reautenticação Notifica o admin no WhatsApp",
+        "Cancelar",
+        "Encaminhar N3",
+        "Salvar & Notificar",
+        "close",
+        "Fechar",
+        "key Desbloquear com Chave DPO"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#76777b",
+        "#f7f9fd",
+        "#c4c6cf",
+        "#191c22",
+        "#e1e2eb",
+        "#c6c6cb",
+        "#000000",
+        "#1d1b1a",
+        "#2d3134",
+        "#191c1f",
+        "#d8dade",
+        "#81848c",
+        "#ffffff",
+        "#494644",
+        "#fe694c",
+        "#44474e",
+        "#3e0400",
+        "#ffdad6",
+        "#8c1703",
+        "#45474b",
+        "#ffdad3",
+        "#eff1f5",
+        "#e0e2e6",
+        "#650b00",
+        "#f2f4f8",
+        "#e7e1de",
+        "#ae3019",
+        "#ba1a1a",
+        "#e6e8ec",
+        "#93000a",
+        "#eceef2",
+        "#cac5c3",
+        "#878381",
+        "#ffb4a5",
+        "#5c5e66"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "h-16",
+        "w-2",
+        "h-2",
+        "h-8",
+        "w-auto",
+        "lg:flex",
+        "w-1.5",
+        "h-1.5",
+        "sm:block",
+        "w-8",
+        "h-6",
+        "w-px",
+        "min-h-screen",
+        "w-full",
+        "w-96",
+        "h-96",
+        "lg:flex-row",
+        "max-w-3xl",
+        "sm:flex",
+        "grid",
+        "grid-cols-1",
+        "md:grid-cols-4",
+        "w-10",
+        "h-10",
+        "md:flex-row",
+        "md:w-auto",
+        "md:w-80",
+        "max-w-xs",
+        "w-7",
+        "h-7",
+        "w-48",
+        "h-48",
+        "w-12",
+        "h-12",
+        "flex-shrink-0",
+        "max-w-2xl",
+        "sm:grid-cols-3",
+        "md:w-3/4",
+        "h-11",
+        "sm:flex-row",
+        "max-w-lg",
+        "flex-1",
+        "grid-cols-2",
+        "max-w-xl"
+      ]
+    },
+    {
+      "source": "vendas_app_vendas_mobile_390px/code.html",
+      "sha256": "20d5398994de0c74b4822ac1a54464397a1ffa5ae587e33f73909145ed1a1104",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Vendas"
+        },
+        {
+          "level": "h2",
+          "text": "Assinatura Anual Flow Pro (12x Agentes)"
+        },
+        {
+          "level": "h2",
+          "text": "Integração Catálogo Peças"
+        },
+        {
+          "level": "h2",
+          "text": "Triagem com IA 24h"
+        },
+        {
+          "level": "h3",
+          "text": "Assinatura Anual Flow Pro"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]\" data-active-classes=\"text-secondary-container font-semibold\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-11 pl-10 pr-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all\" id=\"deal-search-input\" placeholder=\"Buscar oportunidade ou cliente...\" type=\"search\"/"
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"appearance-none bg-surface-container-low text-on-surface font-label-md text-body-sm font-medium pl-2.5 pr-7 py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary-container cursor-pointer\" onchange=\"changeDealStage('opp-1', this.value)\""
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"appearance-none bg-surface-container-low text-on-surface font-label-md text-body-sm font-medium pl-2.5 pr-7 py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary-container cursor-pointer\" onchange=\"changeDealStage('opp-2', this.value)\""
+        },
+        {
+          "element": "select",
+          "attributes": "class=\"appearance-none bg-surface-container-low text-on-surface font-label-md text-body-sm font-medium pl-2.5 pr-7 py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary-container cursor-pointer\" onchange=\"changeDealStage('opp-3', this.value)\""
+        },
+        {
+          "element": "input",
+          "attributes": "checked=\"\" class=\"w-4 h-4 rounded text-secondary-container accent-secondary-container focus:ring-0\" type=\"checkbox\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-4 h-4 rounded text-secondary-container accent-secondary-container focus:ring-0\" type=\"checkbox\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-4 h-4 rounded text-secondary-container accent-secondary-container focus:ring-0\" type=\"checkbox\"/"
+        }
+      ],
+      "controls": [
+        "notifications",
+        "add + Oportunidade",
+        "Novo 2",
+        "Em conversa 3",
+        "Proposta enviada 2",
+        "Fechado 1",
+        "tune Filtro de arquivadas (inclui Perdido)",
+        "close",
+        "chat Ver Conversa",
+        "call Ligar",
+        "Fechar",
+        "Enviar Proposta"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com"
+      ],
+      "colors": [
+        "#f7f9fd",
+        "#000000",
+        "#93000a",
+        "#878381",
+        "#44474e",
+        "#d8dade",
+        "#ffffff",
+        "#ffb4a5",
+        "#494644",
+        "#5c5e66",
+        "#e7e1de",
+        "#191c22",
+        "#c4c6cf",
+        "#ffdad6",
+        "#eceef2",
+        "#fe694c",
+        "#81848c",
+        "#45474b",
+        "#e1e2eb",
+        "#76777b",
+        "#ffdad3",
+        "#1d1b1a",
+        "#ae3019",
+        "#e0e2e6",
+        "#2d3134",
+        "#cac5c3",
+        "#eff1f5",
+        "#191c1f",
+        "#8c1703",
+        "#e6e8ec",
+        "#650b00",
+        "#f2f4f8",
+        "#ba1a1a",
+        "#3e0400",
+        "#c6c6cb",
+        "#2041"
+      ],
+      "layoutClasses": [
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "fixed",
+        "w-full",
+        "h-16",
+        "w-9",
+        "h-9",
+        "w-11",
+        "h-11",
+        "w-8",
+        "h-8",
+        "h-10",
+        "min-w-0",
+        "sm:flex-row",
+        "max-h-[724px]",
+        "w-12",
+        "h-1.5",
+        "flex-1",
+        "w-4",
+        "h-4",
+        "min-w-[56px]",
+        "min-h-[44px]"
+      ]
+    },
+    {
+      "source": "vendas_app_vendas_venda_flow_ai_desktop_1440px/code.html",
+      "sha256": "ce5f0ea5282700f995428a774d2aa776aebece3222a516f7b17e846d2c9ecbf9",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Funil de Vendas"
+        },
+        {
+          "level": "h4",
+          "text": "Plano Anual Odonto Pro"
+        },
+        {
+          "level": "h4",
+          "text": "Automação de Encartes WhatsApp"
+        },
+        {
+          "level": "h4",
+          "text": "Assinatura Anual Flow Pro (12x Agentes)"
+        },
+        {
+          "level": "h4",
+          "text": "Integração Catálogo Peças"
+        },
+        {
+          "level": "h4",
+          "text": "Triagem com IA 24h"
+        },
+        {
+          "level": "h4",
+          "text": "Atendimento Enterprise 5 Canais"
+        },
+        {
+          "level": "h4",
+          "text": "Piloto 15 Números WhatsApp"
+        },
+        {
+          "level": "h4",
+          "text": "Plano Pro Anual Concluído"
+        },
+        {
+          "level": "h3",
+          "text": "Juliana Mendes"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"px-space-xs space-y-1\" data-active-classes=\"bg-secondary-container text-on-secondary font-semibold\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"space-y-1\" data-active-classes=\"bg-surface-container text-on-surface font-semibold\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-[260px] right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"w-full pt-16 px-space-md bg-surface min-h-screen\""
+        },
+        {
+          "element": "aside",
+          "attributes": "class=\"w-full xl:w-[35%] bg-surface-container-lowest rounded-2xl shadow-[0_4px_24px_rgba(11,14,20,0.06)] p-space-md flex flex-col gap-space-md shrink-0 sticky top-20\""
+        }
+      ],
+      "fields": [
+        {
+          "element": "input",
+          "attributes": "class=\"w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-secondary-container shadow-[0_1px_2px_rgba(11,14,20,0.03)]\" placeholder=\"Buscar oportunidade ou cliente...\" type=\"text\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "checked=\"\" class=\"w-4 h-4 rounded text-secondary-container focus:ring-secondary-container mt-0.5 cursor-pointer\" id=\"task-1\" type=\"checkbox\"/"
+        },
+        {
+          "element": "input",
+          "attributes": "class=\"w-4 h-4 rounded text-secondary-container focus:ring-secondary-container mt-0.5 cursor-pointer\" id=\"task-2\" type=\"checkbox\"/"
+        },
+        {
+          "element": "textarea",
+          "attributes": "class=\"w-full p-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-[12px] placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-secondary-container resize-none\" placeholder=\"Digite uma nota sobre esta negociação...\" rows=\"2\""
+        }
+      ],
+      "controls": [
+        "more_vert",
+        "search",
+        "notifications",
+        "tune Filtros avançados",
+        "add Nova oportunidade",
+        "Todas ativas (8)",
+        "Minhas (5)",
+        "inventory_2 Filtro de arquivadas (inclui Perdido)",
+        "close",
+        "verified Concluir venda",
+        "description Criar proposta",
+        "notifications_active Marcar acompanhamento",
+        "edit_note Adicionar nota",
+        "add Adicionar tarefa rápida",
+        "Salvar nota"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com"
+      ],
+      "colors": [
+        "#000000",
+        "#93000a",
+        "#878381",
+        "#44474e",
+        "#d8dade",
+        "#ffffff",
+        "#ffb4a5",
+        "#494644",
+        "#5c5e66",
+        "#e7e1de",
+        "#191c22",
+        "#c4c6cf",
+        "#ffdad6",
+        "#f7f9fd",
+        "#eceef2",
+        "#fe694c",
+        "#81848c",
+        "#45474b",
+        "#e1e2eb",
+        "#76777b",
+        "#ffdad3",
+        "#1d1b1a",
+        "#ae3019",
+        "#e0e2e6",
+        "#2d3134",
+        "#cac5c3",
+        "#eff1f5",
+        "#191c1f",
+        "#8c1703",
+        "#e6e8ec",
+        "#650b00",
+        "#f2f4f8",
+        "#ba1a1a",
+        "#3e0400",
+        "#c6c6cb",
+        "#10b981"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-[260px]",
+        "flex",
+        "flex-col",
+        "h-16",
+        "w-8",
+        "h-8",
+        "min-w-0",
+        "flex-1",
+        "w-2",
+        "h-2",
+        "w-9",
+        "h-9",
+        "w-px",
+        "h-6",
+        "w-full",
+        "min-h-screen",
+        "w-1.5",
+        "h-1.5",
+        "md:flex-row",
+        "lg:flex-row",
+        "max-w-md",
+        "h-10",
+        "xl:flex-row",
+        "xl:w-[65%]",
+        "grid",
+        "grid-cols-2",
+        "md:grid-cols-4",
+        "grid-cols-1",
+        "md:grid-cols-2",
+        "xl:grid-cols-4",
+        "xl:w-[35%]",
+        "sticky",
+        "w-2.5",
+        "h-2.5",
+        "w-4",
+        "h-4"
+      ]
+    },
+    {
+      "source": "vis_o_geral_admin_console_administrativo_venda_flow_ai/code.html",
+      "sha256": "4c925aa3bcfefa7536b0c8d85b422d29c1f5efa82ba835e875c6a8d067b58204",
+      "title": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Visão Geral Administrativa"
+        },
+        {
+          "level": "h2",
+          "text": "Ações necessárias"
+        }
+      ],
+      "landmarks": [
+        {
+          "element": "aside",
+          "attributes": "class=\"fixed left-0 top-0 h-full w-64 bg-primary text-on-primary z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]\""
+        },
+        {
+          "element": "nav",
+          "attributes": "class=\"flex flex-col gap-1 px-space-sm mt-1\" data-active-classes=\"bg-primary-container text-on-primary font-title-md rounded-lg\""
+        },
+        {
+          "element": "header",
+          "attributes": "class=\"fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-md\""
+        },
+        {
+          "element": "main",
+          "attributes": "class=\"relative pt-16 bg-background min-h-screen\""
+        }
+      ],
+      "fields": [],
+      "controls": [
+        "lock_clockEncerrar Sessão",
+        "refresh",
+        "key Resolver",
+        "terminal Auditar Webhook",
+        "gavel Revisar Chamado",
+        "inventory_2 Verificar Template",
+        "visibility Detalhes",
+        "close"
+      ],
+      "externalAssets": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200",
+        "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+        "https://cdn.tailwindcss.com",
+        "https://lh3.googleusercontent.com/aida/ALJJyrDJ6VOU818cwy6B32vQbLGdE76pGBFS5etWoFIZT-hVCzzVKHJgIwUwWG9N1QadI-1y_7zU3qNZZy1b7C8l1tlMxoXQbTTnFB-A60UZL4UtBtpmPNDz35BMFH74pjOG47fMAX_Vi9aLxRCvaaQD53WK4OXLZQEBKE5WLXssGdK-VweDasUa8kzZhC0WFsRw26alGUGHhz7HXoBdiZ-ERCzdi7VgN2aAaijeat2eAHdP5uqPk4ivw9owSgs"
+      ],
+      "colors": [
+        "#76777b",
+        "#f7f9fd",
+        "#c4c6cf",
+        "#191c22",
+        "#e1e2eb",
+        "#c6c6cb",
+        "#000000",
+        "#1d1b1a",
+        "#2d3134",
+        "#191c1f",
+        "#d8dade",
+        "#81848c",
+        "#ffffff",
+        "#494644",
+        "#fe694c",
+        "#44474e",
+        "#3e0400",
+        "#ffdad6",
+        "#8c1703",
+        "#45474b",
+        "#ffdad3",
+        "#eff1f5",
+        "#e0e2e6",
+        "#650b00",
+        "#f2f4f8",
+        "#e7e1de",
+        "#ae3019",
+        "#ba1a1a",
+        "#e6e8ec",
+        "#93000a",
+        "#eceef2",
+        "#cac5c3",
+        "#878381",
+        "#ffb4a5",
+        "#5c5e66"
+      ],
+      "layoutClasses": [
+        "fixed",
+        "h-full",
+        "w-64",
+        "flex",
+        "flex-col",
+        "h-16",
+        "w-2",
+        "h-2",
+        "h-8",
+        "w-auto",
+        "lg:flex",
+        "w-1.5",
+        "h-1.5",
+        "sm:block",
+        "w-8",
+        "h-6",
+        "w-px",
+        "min-h-screen",
+        "w-full",
+        "max-w-7xl",
+        "md:flex-row",
+        "w-2.5",
+        "h-2.5",
+        "sm:flex",
+        "grid",
+        "grid-cols-1",
+        "sm:grid-cols-2",
+        "lg:grid-cols-4",
+        "w-9",
+        "h-9",
+        "sm:flex-row",
+        "w-7",
+        "h-7",
+        "min-w-0",
+        "w-10",
+        "h-10",
+        "flex-shrink-0",
+        "flex-wrap",
+        "h-px",
+        "md:grid-cols-3"
+      ]
+    }
+  ]
+}

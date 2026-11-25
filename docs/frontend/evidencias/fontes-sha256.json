@@ -1,0 +1,214 @@
+[
+  {
+    "file": "venda-web/.env.example",
+    "sha256": "53a547c03498267b9972474993b8e528903f550dabe78169be274a211ec83a4b"
+  },
+  {
+    "file": "venda-web/app/(auth)/cadastro/page.tsx",
+    "sha256": "c3ba73d6d18da21c3096abc97dd1553844a806e5ef626a9afd4c0c316c873165"
+  },
+  {
+    "file": "venda-web/app/(auth)/entrar/page.tsx",
+    "sha256": "d19ba78666240ccfac45ebe521a06f2d2b5110ac729d4680fbbd4a85290a9c2b"
+  },
+  {
+    "file": "venda-web/app/(auth)/layout.tsx",
+    "sha256": "1ff636072e97daa9a717e26a881d52e2f490b2eea1527b336d6936e9761c7de1"
+  },
+  {
+    "file": "venda-web/app/(auth)/recuperar-acesso/page.tsx",
+    "sha256": "aa65bc2eec74734bf038b479d97d7d84b1d03f6a9d8dd7cf62c490793b137512"
+  },
+  {
+    "file": "venda-web/app/(public)/layout.tsx",
+    "sha256": "500b9f0d059f5933d6f5ecd9ee95325e18385749bde05d5b0bf768534d2676c2"
+  },
+  {
+    "file": "venda-web/app/(public)/page.tsx",
+    "sha256": "75d8ae5014b9fb449fd7276439c218b1abe76392a094a1fddd8a26409a860372"
+  },
+  {
+    "file": "venda-web/app/(public)/planos/page.tsx",
+    "sha256": "44882e69736652288373f7d0248ce00be93d56e8de9265f8f2abf2c1c83d019c"
+  },
+  {
+    "file": "venda-web/app/(public)/[legal]/page.tsx",
+    "sha256": "2bfca5377f8fb6ebf47becadf4b8d76ff3dea5782997cbe1672810e472b70d64"
+  },
+  {
+    "file": "venda-web/app/(workspace)/app/loading.tsx",
+    "sha256": "0118fa012874430ca91e16de530d679864031f25251f1e51d5cbcf5f738a16d1"
+  },
+  {
+    "file": "venda-web/app/(workspace)/app/o/[organizationId]/[[...section]]/page.tsx",
+    "sha256": "35c05d950a957008e717aea8a128281d6cdbca746c681f7490696a8304abc0dd"
+  },
+  {
+    "file": "venda-web/app/(workspace)/app/page.tsx",
+    "sha256": "2670645d718c949377bf976ec487b6e21f3adccefb68dd95bc0ee69b7f628891"
+  },
+  {
+    "file": "venda-web/app/(workspace)/app/[...section]/page.tsx",
+    "sha256": "464759df791550b874f8ae5ec1b9a5101829e388b926238b34c3147ca513150c"
+  },
+  {
+    "file": "venda-web/app/(workspace)/configurar/page.tsx",
+    "sha256": "609f477781760d481b94ad293fa7c47f9545520060db0062c39f5604c849f5f6"
+  },
+  {
+    "file": "venda-web/app/(workspace)/error.tsx",
+    "sha256": "b57dbb5308a14407b96f0ccb7f653cedc962ea4b1cc4db5a77169c9a6c4a9c4f"
+  },
+  {
+    "file": "venda-web/app/(workspace)/layout.tsx",
+    "sha256": "054e944316d77a4c783cb8ccdea99585b7f809edf1e19a0d719a24ebb1b875e7"
+  },
+  {
+    "file": "venda-web/app/actions.ts",
+    "sha256": "ece0db5f6206dd84a17efd1ca3bba1974c8bd89f57e1a674f2ff10e9aadecd76"
+  },
+  {
+    "file": "venda-web/app/auth/callback/route.ts",
+    "sha256": "d965d3bab07072e629c71798038030839a10b30121ab68606217c6136c184274"
+  },
+  {
+    "file": "venda-web/app/layout.tsx",
+    "sha256": "6bc2801b32884a84f0072e4d48d05d43a063ace0b418dfb8654c35fb41c674e7"
+  },
+  {
+    "file": "venda-web/app/not-found.tsx",
+    "sha256": "b9aa2e43651c1a3a0497039034e075721f61a4164c8a8c7ab6b031d7e811774a"
+  },
+  {
+    "file": "venda-web/app/v1/auth/[action]/route.ts",
+    "sha256": "7a59b396ce2299ac81da9b3a2f8e3bd8a15c1e1e29a2f2942eb33b9ad164c38b"
+  },
+  {
+    "file": "venda-web/app/web.css",
+    "sha256": "2548d4eb9c0405961b8c8b20fefbdb330f9502b307f48bd0ebd93bd9292c3050"
+  },
+  {
+    "file": "venda-web/components/auth-panel.tsx",
+    "sha256": "a7d03fdc48c97908905bf147d93dbf84d2a9625d83059da98a55689433683691"
+  },
+  {
+    "file": "venda-web/components/organization-form.client.tsx",
+    "sha256": "7f17faf5f463b146a6a605b7427c2db7e2ffd00cb2ab0a6b314c5e797e955de0"
+  },
+  {
+    "file": "venda-web/components/responsive-menu.client.tsx",
+    "sha256": "775c47422070417e1169de514fa4e8a9f4f639adf4f57eac0b70f82702325d78"
+  },
+  {
+    "file": "venda-web/components/theme.client.tsx",
+    "sha256": "0dd9fbc434a4807784e9258e1e1088baf20052fe83a1f16ff3a1bcaf5185b379"
+  },
+  {
+    "file": "venda-web/components/ui.tsx",
+    "sha256": "6e32ba6fd5e0a9d259bfa8d581689c1f906c40401a0ed820a79449067f781e68"
+  },
+  {
+    "file": "venda-web/components/vitals.client.tsx",
+    "sha256": "3426f14f6347590267f88886553a22e34be8154265b3d632d93d732f8c6dfacd"
+  },
+  {
+    "file": "venda-web/lib/api.generated.ts",
+    "sha256": "8ab0bb01e01738f2e0b24203d6e3769ba34d35eb935d02aed1dcd088c7305bee"
+  },
+  {
+    "file": "venda-web/lib/api.server.ts",
+    "sha256": "394adf109811c32149be1b11b31838a4dfa69a5158472271ed8b810b44c9de32"
+  },
+  {
+    "file": "venda-web/lib/modules.ts",
+    "sha256": "5fd436ee6898332974c6cce48431e6ac540179230601fdfe9a45220635235681"
+  },
+  {
+    "file": "venda-web/lib/security.ts",
+    "sha256": "89d5c96ee575e87c9ef585d5adb17af9db2cdd4ca95e4508845c4f7315659243"
+  },
+  {
+    "file": "venda-web/lib/transport.ts",
+    "sha256": "dbb1e70dc943c7baf6aef85b41271037548d7e56ea0c311f40071187ac50aa16"
+  },
+  {
+    "file": "venda-web/lib/validation.ts",
+    "sha256": "48988cc1bbb10f019a865a0f2d65cf9bca91aeb16f9a3489a11a0fc1b5e42879"
+  },
+  {
+    "file": "venda-web/next-env.d.ts",
+    "sha256": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b"
+  },
+  {
+    "file": "venda-web/next.config.ts",
+    "sha256": "113fa2faf26323d93c7d830c252cf2d31308240c8df30f4e6c7ff3e83067f196"
+  },
+  {
+    "file": "venda-web/proxy.ts",
+    "sha256": "dc1f464d29b0b0e2ba9a2289affab138b428fb64b7b6f0ac13e93d71c7ce27d1"
+  },
+  {
+    "file": "venda-web/README.md",
+    "sha256": "c2daf6b152f83cb3b7621635f6a05569cd363fd3d64b079a8890fe4f0da48034"
+  },
+  {
+    "file": "venda-web/stories/Foundation.stories.tsx",
+    "sha256": "3d60598f7c1a8c7615ef84625e9235aa7d8cfa76dbb78bc5dfedc2b95b29cf62"
+  },
+  {
+    "file": "venda-web/test/postgres-adapter.mjs",
+    "sha256": "d32f33e269db6f11dae07fcc61cfb841a5074e679ea2b79257baa47410caf4ff"
+  },
+  {
+    "file": "venda-web/test/security.test.ts",
+    "sha256": "501bd56e09994188af28e85367180065c8cb29eaad8951f880178d48e9fe8d85"
+  },
+  {
+    "file": "venda-web/test/transport.test.ts",
+    "sha256": "3d3b5827fdbdad6145de73539694b47de81db1501d6ad975ba58ee8e2c968447"
+  },
+  {
+    "file": "venda-web/tsconfig.json",
+    "sha256": "12048d46cdea24dbca1b028d1fb06a46d197ad43c88cf86ceff33365a6a46203"
+  },
+  {
+    "file": "venda-web/vitest.config.ts",
+    "sha256": "cd43a2775749e7fe92b498a26c4bfd6baa9ca272e89f007633225c8f899f94de"
+  },
+  {
+    "file": "scripts/test-web-browser.mjs",
+    "sha256": "406b25269296cb81a2111545b615aca55b5c235b03116c735693b339515cb55b"
+  },
+  {
+    "file": "scripts/measure-web.mjs",
+    "sha256": "51110c8b729a6158b7cb7dc3145b9565605f3702b143808059e75a967908f1c5"
+  },
+  {
+    "file": "scripts/test-web-storybook.mjs",
+    "sha256": "7cb488eb52a2d9371304b83da3991bac16e8f209de313c41cc7a2c693eb71a2c"
+  },
+  {
+    "file": "scripts/verify-web.mjs",
+    "sha256": "3a5c4bd08ca03a650f960b53474b6192967f88114797829348ee3b72abd9fa02"
+  },
+  {
+    "file": "scripts/check-web-contract.mjs",
+    "sha256": "7713782e13189dd8d6ade9f5d0d30518f63e170f8e65172c4c2c0564058a915a"
+  },
+  {
+    "file": "scripts/smoke-web.mjs",
+    "sha256": "3f328faaa6186bdb52d732bc04d91e51acf73911dfb49d9bf60ae1c7986ef88b"
+  },
+  {
+    "file": "venda-api/contracts/foundation.openapi.yaml",
+    "sha256": "c7c3ac1262cd2543ac5a91509654a3e057d933cc7b997cdf28c050c94b7e663f"
+  },
+  {
+    "file": "branding/tokens.json",
+    "sha256": "c9a9e023dd5977c90ebd393c2276f96f4bdc5ca9a49d49297ae85d79d44b1efb"
+  },
+  {
+    "file": "branding/brandboard.png",
+    "sha256": "ca063cdf24475bfb3775f346ed13781b694fb8dcd1dbd874817213fffedb43a6"
+  }
+]

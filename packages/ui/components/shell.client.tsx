@@ -1,0 +1,18 @@
+'use client';
+import { useState, type ReactNode } from 'react';
+import type { ReviewRoute } from '../screens';
+import { Badge, Button, Field, Wordmark } from './primitives';
+import { Icon, type IconName } from './icons';
+const href = (id: string) => `/telas/${id}/`;
+const appNav: [string, string, IconName][] = [['APP02','Início','home'],['APP03','Conversas','conversation'],['APP05','Contatos','contacts'],['APP07','Vendas','sales'],['APP09','Tarefas','task'],['APP11','Automações','automation'],['APP15','Relatórios','sales'],['APP16','Faturamento','billing'],['APP17','Configurações','settings']];
+const adminNav: [string, string, IconName][] = [['ADM02','Visão geral','home'],['ADM03','Empresas','contacts'],['ADM05','Assinaturas','billing'],['ADM06','Operação e suporte','shield'],['ADM07','Auditoria','task']];
+export function Shell({ route, children, title, description, action }: { route: ReviewRoute; children: ReactNode; title?: string; description?: string; action?: ReactNode }) {
+  const [menu, setMenu] = useState(false); const admin = route.surface === 'admin';
+  const nav = admin ? adminNav : appNav;
+  const parent = route.id === 'APP04' ? 'APP03' : route.id === 'APP06' || route.id === 'APP22' ? 'APP05' : route.id === 'APP08' ? 'APP07' : route.id === 'APP10' ? 'APP09' : ['APP12','APP13','APP14'].includes(route.id) ? 'APP11' : route.id === 'APP23' ? 'APP16' : ['APP18','APP19','APP20','APP21'].includes(route.id) ? 'APP17' : route.id === 'ADM04' ? 'ADM03' : route.id;
+  return <div className="vf-shell"><a className="vf-skip" href="#conteudo">Pular para o conteúdo</a><aside className="vf-sidebar" data-open={menu}><Wordmark inverse /><p className="vf-sidebar-tagline">Mais conversas. Mais negócios.</p><p className="vf-nav-label">{admin ? 'Console administrativo' : 'Sua operação'}</p><nav className="vf-nav" aria-label={admin ? 'Navegação administrativa' : 'Navegação do cliente'}>{nav.map(([id,label,icon])=><a href={href(id)} key={id} aria-current={id===parent?'page':undefined}><Icon name={icon} />{label}</a>)}</nav><div className="vf-sidebar-bottom"><a href={href(admin?'ADM01':'APP24')}>{admin?'Acesso interno':'Ajuda e orientações'}</a><span>{admin?'Identidade interna necessária':'Nenhuma organização selecionada'}</span></div></aside><div className="vf-workspace"><header className="vf-topbar"><div className="vf-row"><Button className="vf-mobile-menu" variant="quiet" aria-label={menu?'Fechar navegação':'Abrir navegação'} aria-expanded={menu} onClick={()=>setMenu(!menu)}><Icon name="menu" /></Button><span className="vf-topbar-context">{admin?'Console administrativo':'Área do cliente'}<span className="vf-topbar-subtitle">{admin?'Operação do Venda Flow AI':'Atendimento e organização comercial'}</span></span></div><Badge icon="lock">{admin?'Acesso restrito':'Sem organização selecionada'}</Badge></header><main className="vf-main" id="conteudo" tabIndex={-1}><div className="vf-page-heading"><div><p className="vf-kicker">{admin?'Governança e operação':'Venda Flow AI'}</p><h1>{title??route.title}</h1>{description&&<p>{description}</p>}</div>{action}</div>{children}</main></div></div>;
+}
+export function Toolbar({ searchLabel = 'Buscar', filters = ['Todos', 'Meus registros'], hideSearch = false }: { searchLabel?: string; filters?: string[]; hideSearch?: boolean }) {
+  const [selected,setSelected]=useState(filters[0]);
+  return <div className="vf-toolbar">{!hideSearch&&<Field label={searchLabel} type="search" placeholder="Digite para buscar" />}<div className="vf-filter-group" role="group" aria-label="Filtrar registros">{filters.map(f=><button key={f} type="button" className="vf-filter" aria-pressed={selected===f} onClick={()=>setSelected(f)}>{f}</button>)}</div></div>;
+}

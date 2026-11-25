@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-11-23T19:06:00.940Z",
+  "browser": "Chrome visível",
+  "url": "http://127.0.0.1:3400/app/o/d0cb0907-27c3-4c5c-84c5-31419e12aea4/clientes",
+  "mode": "DEMO_ONLY",
+  "observed": [
+    "menu lateral claro",
+    "item ativo coral",
+    "símbolo transparente da marca",
+    "tela Contatos",
+    "sessão de teste autenticada"
+  ],
+  "screenshot": "chrome-ui-clara.jpg",
+  "leftOpen": true
+}

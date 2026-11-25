@@ -1,0 +1,160 @@
+{
+  "executedAt": "2026-11-23T17:52:09.777Z",
+  "results": [
+    {
+      "name": "unitarios-web",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "venda-web/vitest.config.ts",
+        "--reporter=json",
+        "--outputFile=C:\\Users\\UBUNTU FUTURE\\VendaFlowAi\\docs\\auditoria\\2026-11-23\\evidencias\\unitarios-web.json"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi",
+      "exitCode": 0,
+      "durationMs": 8452,
+      "status": "PASS"
+    },
+    {
+      "name": "regressao-ui",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--reporter=json",
+        "--outputFile=C:\\Users\\UBUNTU FUTURE\\VendaFlowAi\\docs\\auditoria\\2026-11-23\\evidencias\\regressao-ui.json"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi",
+      "exitCode": 0,
+      "durationMs": 15293,
+      "status": "PASS"
+    },
+    {
+      "name": "build-backend",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.build.json"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi\\venda-api",
+      "exitCode": 0,
+      "durationMs": 12709,
+      "status": "PASS"
+    },
+    {
+      "name": "compile-testes-backend",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "tsconfig.json"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi\\venda-api",
+      "exitCode": 0,
+      "durationMs": 9854,
+      "status": "PASS"
+    },
+    {
+      "name": "testes-backend",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=spec",
+        "--test-reporter=junit",
+        "--test-reporter-destination=stdout",
+        "--test-reporter-destination=C:\\Users\\UBUNTU FUTURE\\VendaFlowAi\\docs\\auditoria\\2026-11-23\\evidencias\\backend-resultados.xml",
+        "dist/test/config.test.js",
+        "dist/test/foundation.test.js",
+        "dist/test/telemetry.test.js"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi\\venda-api",
+      "exitCode": 0,
+      "durationMs": 58419,
+      "status": "PASS"
+    },
+    {
+      "name": "build-web",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/next/dist/bin/next",
+        "build",
+        "venda-web",
+        "--webpack"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi",
+      "exitCode": 0,
+      "durationMs": 97423,
+      "status": "PASS"
+    },
+    {
+      "name": "integracao-inicial",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "scripts/test-web-browser.mjs"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi",
+      "exitCode": 1,
+      "durationMs": 161241,
+      "status": "FAIL"
+    },
+    {
+      "name": "unitarios-web-final",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "venda-web/vitest.config.ts",
+        "--reporter=json",
+        "--outputFile=C:\\Users\\UBUNTU FUTURE\\VendaFlowAi\\docs\\auditoria\\2026-11-23\\evidencias\\unitarios-web.json"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi",
+      "exitCode": 0,
+      "durationMs": 3637,
+      "status": "PASS"
+    },
+    {
+      "name": "regressao-ui-final",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--reporter=json",
+        "--outputFile=C:\\Users\\UBUNTU FUTURE\\VendaFlowAi\\docs\\auditoria\\2026-11-23\\evidencias\\regressao-ui.json"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi",
+      "exitCode": 0,
+      "durationMs": 12505,
+      "status": "PASS"
+    },
+    {
+      "name": "build-web-final",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/next/dist/bin/next",
+        "build",
+        "venda-web",
+        "--webpack"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi",
+      "exitCode": 0,
+      "durationMs": 63153,
+      "status": "PASS"
+    },
+    {
+      "name": "integracao-final",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "scripts/test-web-browser.mjs"
+      ],
+      "cwd": "C:\\Users\\UBUNTU FUTURE\\VendaFlowAi",
+      "exitCode": 0,
+      "durationMs": 155332,
+      "status": "PASS"
+    }
+  ]
+}

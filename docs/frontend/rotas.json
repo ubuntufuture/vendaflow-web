@@ -1,0 +1,222 @@
+{
+  "canonicalPrdAvailable": false,
+  "routes": [
+    {
+      "id": "PUB01",
+      "uxPath": "/",
+      "priority": "P0",
+      "status": "public_or_identity_boundary",
+      "realPath": "/"
+    },
+    {
+      "id": "PUB02",
+      "uxPath": "/planos",
+      "priority": "P0",
+      "status": "public_or_identity_boundary",
+      "realPath": "/planos"
+    },
+    {
+      "id": "PUB03",
+      "uxPath": "/entrar",
+      "priority": "P0",
+      "status": "public_or_identity_boundary",
+      "realPath": "/entrar"
+    },
+    {
+      "id": "PUB04",
+      "uxPath": "/cadastro",
+      "priority": "P0",
+      "status": "public_or_identity_boundary",
+      "realPath": "/cadastro"
+    },
+    {
+      "id": "PUB05",
+      "uxPath": "/privacidade",
+      "priority": "P0",
+      "status": "public_or_identity_boundary",
+      "realPath": "/privacidade"
+    },
+    {
+      "id": "PUB06",
+      "uxPath": "/termos",
+      "priority": "P0",
+      "status": "public_or_identity_boundary",
+      "realPath": "/termos"
+    },
+    {
+      "id": "AUTH01",
+      "uxPath": "/auth/callback",
+      "priority": "P0",
+      "status": "alias_callback",
+      "realPath": "/auth/callback"
+    },
+    {
+      "id": "APP01",
+      "uxPath": "/configurar",
+      "priority": "P0",
+      "status": "real_onboarding",
+      "realPath": "/configurar"
+    },
+    {
+      "id": "APP02",
+      "uxPath": "/app",
+      "priority": "P0",
+      "status": "real_organization_selection",
+      "realPath": "/app"
+    },
+    {
+      "id": "APP03",
+      "uxPath": "/app/conversas",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/conversas"
+    },
+    {
+      "id": "APP04",
+      "uxPath": "/app/conversas/:id",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/conversas/:id"
+    },
+    {
+      "id": "APP05",
+      "uxPath": "/app/clientes",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/clientes"
+    },
+    {
+      "id": "APP06",
+      "uxPath": "/app/clientes/:id",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/clientes/:id"
+    },
+    {
+      "id": "APP07",
+      "uxPath": "/app/vendas",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/vendas"
+    },
+    {
+      "id": "APP08",
+      "uxPath": "/app/vendas/:id",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/vendas/:id"
+    },
+    {
+      "id": "APP09",
+      "uxPath": "/app/tarefas",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/tarefas"
+    },
+    {
+      "id": "APP10",
+      "uxPath": "/app/tarefas/:id",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/tarefas/:id"
+    },
+    {
+      "id": "APP11",
+      "uxPath": "/app/automacoes",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/automacoes"
+    },
+    {
+      "id": "APP12",
+      "uxPath": "/app/automacoes/nova",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/automacoes/nova"
+    },
+    {
+      "id": "APP13",
+      "uxPath": "/app/automacoes/assistente",
+      "priority": "P1",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/automacoes/assistente"
+    },
+    {
+      "id": "APP14",
+      "uxPath": "/app/conhecimento",
+      "priority": "P1",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/conhecimento"
+    },
+    {
+      "id": "APP15",
+      "uxPath": "/app/relatorios",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/relatorios"
+    },
+    {
+      "id": "APP16",
+      "uxPath": "/app/faturamento",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/faturamento"
+    },
+    {
+      "id": "APP17",
+      "uxPath": "/app/configuracoes",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/configuracoes"
+    },
+    {
+      "id": "APP18",
+      "uxPath": "/app/configuracoes/organizacao",
+      "priority": "P0",
+      "status": "real_api_scoped",
+      "realPath": "/app/o/:organizationId/configuracoes/organizacao"
+    },
+    {
+      "id": "APP19",
+      "uxPath": "/app/configuracoes/equipe",
+      "priority": "P0",
+      "status": "real_api_scoped",
+      "realPath": "/app/o/:organizationId/configuracoes/equipe"
+    },
+    {
+      "id": "APP20",
+      "uxPath": "/app/configuracoes/canais",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/configuracoes/canais"
+    },
+    {
+      "id": "APP21",
+      "uxPath": "/app/configuracoes/privacidade",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/configuracoes/privacidade"
+    },
+    {
+      "id": "APP22",
+      "uxPath": "/app/clientes/:id/consentimento",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/clientes/:id/consentimento"
+    },
+    {
+      "id": "APP23",
+      "uxPath": "/app/faturamento/retorno",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/faturamento/retorno"
+    },
+    {
+      "id": "APP24",
+      "uxPath": "/app/ajuda",
+      "priority": "P0",
+      "status": "blocked_commercial_contract",
+      "realPath": "/app/o/:organizationId/ajuda"
+    }
+  ]
+}

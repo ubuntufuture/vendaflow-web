@@ -1,0 +1,98 @@
+[
+  {
+    "path": "src/app.ts",
+    "sha256": "5b696f29452d47be5843ac8833d759b57f8b26d39dcbbfa86fbea22e70e986af"
+  },
+  {
+    "path": "src/auth.ts",
+    "sha256": "fb683e6eb55c294e6b8788ae07815b1ada00e0ffe225954e23feb2def4d35512"
+  },
+  {
+    "path": "src/config.ts",
+    "sha256": "da2ec5184381ed3fe776ebe4c163999425aadeb202f7c1edac0a1d1073687b0a"
+  },
+  {
+    "path": "src/database.ts",
+    "sha256": "084934bf52696771d4ee69a7f0d5c1a990ee9dedef041ea51656ca92024950fb"
+  },
+  {
+    "path": "src/dto.ts",
+    "sha256": "3571b63248fdb047aa8b5e895717de9eff83396d6f655ed35a05fa009eafaf35"
+  },
+  {
+    "path": "src/events.ts",
+    "sha256": "adf5906ea749f4d4feb56afa86a83549665393382c0fd970ecc21a1fdd0eb941"
+  },
+  {
+    "path": "src/foundation.ts",
+    "sha256": "dd39c1c8706b356e73fa713e5f08a9065da7266b1a903dc068a77f1349f113f2"
+  },
+  {
+    "path": "src/http.ts",
+    "sha256": "8fd9f9f11a562d634dc3875ff00a485576f2039e3529c19535ab44a74a0ed5a0"
+  },
+  {
+    "path": "src/main.ts",
+    "sha256": "39b453ac101f72db5c2bee10431e38ec621e130e5b7783fd8762d80573b72a4b"
+  },
+  {
+    "path": "src/migrate.ts",
+    "sha256": "44d1707cdc4a45849c7e15f013ba2b2d60e44ad3461fbfa718cc089194c89509"
+  },
+  {
+    "path": "src/policy.ts",
+    "sha256": "7147835d9297251f542c2fc372560f22196bb2bc656455dd1a8f929ae35e8eae"
+  },
+  {
+    "path": "src/telemetry.ts",
+    "sha256": "98d470cf3ecfe50cd98419b1c05722ed586e8fb248875349708cf60d349aed2f"
+  },
+  {
+    "path": "migrations/001_foundation.down.sql",
+    "sha256": "cdd0fac60d9a36cf434f94142d395587299eea793afa491299125d6981af0a70"
+  },
+  {
+    "path": "migrations/001_foundation.up.sql",
+    "sha256": "660b068f35bd0951d052c8baff5d9f08bd9a6cefabc4dbd305b32b9df8552a1e"
+  },
+  {
+    "path": "contracts/foundation.openapi.yaml",
+    "sha256": "c7c3ac1262cd2543ac5a91509654a3e057d933cc7b997cdf28c050c94b7e663f"
+  },
+  {
+    "path": "contracts/README.md",
+    "sha256": "46b8b1cbdff1e96e2cf20eca5edbd144514098be27670591336996ecd548c3f4"
+  },
+  {
+    "path": "test/config.test.ts",
+    "sha256": "d32400e8c4a819f1091a81abce4b992c3eb365a7c87e94230108f090ed51d679"
+  },
+  {
+    "path": "test/foundation.test.ts",
+    "sha256": "312ec316026598650d7360a20a941e2fcdc81c011b03deda32714513a3f55d8c"
+  },
+  {
+    "path": "test/idp.ts",
+    "sha256": "85049dcf516e47cf66886aa51c87a5a0184e56419f9f4a46471b2195e644aa2a"
+  },
+  {
+    "path": "test/postgres.ts",
+    "sha256": "d71541909b0a59bf30387bb353115d883de997d0f01e09d4f0e2c5466149796c"
+  },
+  {
+    "path": "test/telemetry.test.ts",
+    "sha256": "85f05c7fdf133ded33e504fb73b4fbcf0d8899ad1d46dbfe945951ae80991668"
+  },
+  {
+    "path": "scripts/contract.mjs",
+    "sha256": "7f65a49e34b79c99995c2dcc2df8e36fbab39e04127c3d7d8d5d003edf5e259f"
+  },
+  {
+    "path": "scripts/verify.mjs",
+    "sha256": "1b11d2847b24399607de61a5da9609d7aa8cd5e608bbccc980dbe33fa2860d98"
+  },
+  {
+    "path": "scripts/write-contract.mjs",
+    "sha256": "3592c0421dd50c551e20f07d5892bfb2faeea1226d8a54e168d278589ef90f0b"
+  }
+]

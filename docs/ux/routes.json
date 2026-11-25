@@ -1,0 +1,1154 @@
+{
+  "product": "venda-flow-ai",
+  "locale": "pt-BR",
+  "currency": "BRL",
+  "coverageOfPrd": "indeterminada_prd_ausente",
+  "routes": [
+    {
+      "id": "PUB01",
+      "surface": "public",
+      "path": "/",
+      "title": "Início público",
+      "priority": "P0",
+      "wireframe": "WF01",
+      "roles": [
+        "visitante"
+      ],
+      "stories": [
+        "US01"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "p_gina_inicial_mobile_390px",
+        "p_gina_inicial_venda_flow_ai"
+      ]
+    },
+    {
+      "id": "PUB02",
+      "surface": "public",
+      "path": "/planos",
+      "title": "Planos",
+      "priority": "P0",
+      "wireframe": "WF01",
+      "roles": [
+        "visitante"
+      ],
+      "stories": [
+        "US01"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "planos_e_pre_os_mobile_390px",
+        "planos_e_pre_os_venda_flow_ai"
+      ]
+    },
+    {
+      "id": "PUB03",
+      "surface": "public",
+      "path": "/entrar",
+      "title": "Entrar",
+      "priority": "P0",
+      "wireframe": "WF02",
+      "roles": [
+        "visitante"
+      ],
+      "stories": [
+        "US02"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "acessar_a_conta_venda_flow_ai_entrar"
+      ]
+    },
+    {
+      "id": "PUB04",
+      "surface": "public",
+      "path": "/cadastro",
+      "title": "Criar conta",
+      "priority": "P0",
+      "wireframe": "WF02",
+      "roles": [
+        "visitante"
+      ],
+      "stories": [
+        "US02"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "criar_conta_venda_flow_ai_cadastro"
+      ]
+    },
+    {
+      "id": "PUB05",
+      "surface": "public",
+      "path": "/privacidade",
+      "title": "Privacidade",
+      "priority": "P0",
+      "wireframe": "WF01",
+      "roles": [
+        "visitante"
+      ],
+      "stories": [
+        "US14"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "PUB06",
+      "surface": "public",
+      "path": "/termos",
+      "title": "Termos",
+      "priority": "P0",
+      "wireframe": "WF01",
+      "roles": [
+        "visitante"
+      ],
+      "stories": [
+        "US01"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "AUTH01",
+      "surface": "public",
+      "path": "/auth/callback",
+      "title": "Retorno OIDC cliente",
+      "priority": "P0",
+      "wireframe": "WF02",
+      "roles": [
+        "visitante"
+      ],
+      "stories": [
+        "US02"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP01",
+      "surface": "app",
+      "path": "/configurar",
+      "title": "Primeiros passos",
+      "priority": "P0",
+      "wireframe": "WF03",
+      "roles": [
+        "responsavel"
+      ],
+      "stories": [
+        "US03"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "primeiros_passos_mobile_390px_configurar",
+        "primeiros_passos_venda_flow_ai_configurar"
+      ]
+    },
+    {
+      "id": "APP02",
+      "surface": "app",
+      "path": "/app",
+      "title": "Início operacional",
+      "priority": "P0",
+      "wireframe": "WF04",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US05"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "in_cio_app_mobile_390px",
+        "in_cio_app_venda_flow_ai_desktop_1440px",
+        "painel_do_cliente_mobile_390px",
+        "painel_do_cliente_venda_flow_ai_desktop_1440px"
+      ]
+    },
+    {
+      "id": "APP03",
+      "surface": "app",
+      "path": "/app/conversas",
+      "title": "Conversas",
+      "priority": "P0",
+      "wireframe": "WF05",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US04"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "conversas_app_conversas_mobile_390px_1",
+        "conversas_app_conversas_venda_flow_ai_desktop_1440px_1",
+        "conversas_app_conversas_venda_flow_ai_desktop_1440px_2"
+      ]
+    },
+    {
+      "id": "APP04",
+      "surface": "app",
+      "path": "/app/conversas/:id",
+      "title": "Detalhe de conversa",
+      "priority": "P0",
+      "wireframe": "WF05",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US04"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "conversas_app_conversas_mobile_390px_2"
+      ]
+    },
+    {
+      "id": "APP05",
+      "surface": "app",
+      "path": "/app/clientes",
+      "title": "Contatos",
+      "priority": "P0",
+      "wireframe": "WF06",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US06"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "clientes_app_clientes_venda_flow_ai_desktop_1440px_1",
+        "clientes_app_clientes_venda_flow_ai_desktop_1440px_2"
+      ]
+    },
+    {
+      "id": "APP06",
+      "surface": "app",
+      "path": "/app/clientes/:id",
+      "title": "Detalhe de contato",
+      "priority": "P0",
+      "wireframe": "WF06",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US06"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP07",
+      "surface": "app",
+      "path": "/app/vendas",
+      "title": "Vendas e funis",
+      "priority": "P0",
+      "wireframe": "WF07",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US07"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "vendas_app_vendas_mobile_390px",
+        "vendas_app_vendas_venda_flow_ai_desktop_1440px"
+      ]
+    },
+    {
+      "id": "APP08",
+      "surface": "app",
+      "path": "/app/vendas/:id",
+      "title": "Oportunidade",
+      "priority": "P0",
+      "wireframe": "WF07",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US07"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "detalhe_da_oportunidade_mobile_390px"
+      ]
+    },
+    {
+      "id": "APP09",
+      "surface": "app",
+      "path": "/app/tarefas",
+      "title": "Tarefas",
+      "priority": "P0",
+      "wireframe": "WF08",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US08"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP10",
+      "surface": "app",
+      "path": "/app/tarefas/:id",
+      "title": "Detalhe de tarefa",
+      "priority": "P0",
+      "wireframe": "WF08",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US08"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP11",
+      "surface": "app",
+      "path": "/app/automacoes",
+      "title": "Automações",
+      "priority": "P0",
+      "wireframe": "WF09",
+      "roles": [
+        "responsavel",
+        "gestor"
+      ],
+      "stories": [
+        "US09"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "automa_es_app_automacoes_mobile_390px",
+        "automa_es_app_automacoes_venda_flow_ai_desktop_1440px"
+      ]
+    },
+    {
+      "id": "APP12",
+      "surface": "app",
+      "path": "/app/automacoes/nova",
+      "title": "Criar automação",
+      "priority": "P0",
+      "wireframe": "WF09",
+      "roles": [
+        "responsavel",
+        "gestor"
+      ],
+      "stories": [
+        "US09"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "criar_automa_o_app_automacoes_nova_venda_flow_ai_desktop_1440px"
+      ]
+    },
+    {
+      "id": "APP13",
+      "surface": "app",
+      "path": "/app/automacoes/assistente",
+      "title": "Assistente de IA",
+      "priority": "P1",
+      "wireframe": "WF10",
+      "roles": [
+        "responsavel",
+        "gestor"
+      ],
+      "stories": [
+        "US10"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "assistente_de_ia_automa_es_mobile_390px",
+        "assistente_de_ia_automa_es_venda_flow_ai_desktop_1440px"
+      ]
+    },
+    {
+      "id": "APP14",
+      "surface": "app",
+      "path": "/app/conhecimento",
+      "title": "Conhecimento",
+      "priority": "P1",
+      "wireframe": "WF10",
+      "roles": [
+        "responsavel",
+        "gestor"
+      ],
+      "stories": [
+        "US10"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP15",
+      "surface": "app",
+      "path": "/app/relatorios",
+      "title": "Relatórios",
+      "priority": "P0",
+      "wireframe": "WF11",
+      "roles": [
+        "responsavel",
+        "gestor"
+      ],
+      "stories": [
+        "US11"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "relat_rios_app_relatorios_mobile_390px",
+        "relat_rios_app_relatorios_venda_flow_ai_desktop_1440px"
+      ]
+    },
+    {
+      "id": "APP16",
+      "surface": "app",
+      "path": "/app/faturamento",
+      "title": "Planos e faturamento",
+      "priority": "P0",
+      "wireframe": "WF12",
+      "roles": [
+        "responsavel",
+        "financeiro_cliente"
+      ],
+      "stories": [
+        "US12"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "planos_e_faturamento_app_faturamento_mobile_390px",
+        "planos_e_faturamento_app_faturamento_venda_flow_ai_desktop_1440px"
+      ]
+    },
+    {
+      "id": "APP17",
+      "surface": "app",
+      "path": "/app/configuracoes",
+      "title": "Configurações",
+      "priority": "P0",
+      "wireframe": "WF13",
+      "roles": [
+        "responsavel"
+      ],
+      "stories": [
+        "US03"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "configura_es_app_configuracoes_mobile_390px",
+        "configura_es_app_configuracoes_venda_flow_ai_desktop_1440px"
+      ]
+    },
+    {
+      "id": "APP18",
+      "surface": "app",
+      "path": "/app/configuracoes/organizacao",
+      "title": "Organização",
+      "priority": "P0",
+      "wireframe": "WF13",
+      "roles": [
+        "responsavel"
+      ],
+      "stories": [
+        "US03"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP19",
+      "surface": "app",
+      "path": "/app/configuracoes/equipe",
+      "title": "Equipe",
+      "priority": "P0",
+      "wireframe": "WF13",
+      "roles": [
+        "responsavel"
+      ],
+      "stories": [
+        "US03"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP20",
+      "surface": "app",
+      "path": "/app/configuracoes/canais",
+      "title": "Canal WhatsApp",
+      "priority": "P0",
+      "wireframe": "WF13",
+      "roles": [
+        "responsavel"
+      ],
+      "stories": [
+        "US03"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP21",
+      "surface": "app",
+      "path": "/app/configuracoes/privacidade",
+      "title": "Solicitações de privacidade",
+      "priority": "P0",
+      "wireframe": "WF13",
+      "roles": [
+        "responsavel"
+      ],
+      "stories": [
+        "US14"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP22",
+      "surface": "app",
+      "path": "/app/clientes/:id/consentimento",
+      "title": "Preferências e consentimento",
+      "priority": "P0",
+      "wireframe": "WF13",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente"
+      ],
+      "stories": [
+        "US06"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP23",
+      "surface": "app",
+      "path": "/app/faturamento/retorno",
+      "title": "Retorno Mercado Pago",
+      "priority": "P0",
+      "wireframe": "WF12",
+      "roles": [
+        "responsavel",
+        "financeiro_cliente"
+      ],
+      "stories": [
+        "US12"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "APP24",
+      "surface": "app",
+      "path": "/app/ajuda",
+      "title": "Ajuda",
+      "priority": "P0",
+      "wireframe": "WF14",
+      "roles": [
+        "responsavel",
+        "gestor",
+        "atendente",
+        "financeiro_cliente"
+      ],
+      "stories": [
+        "US18"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "ADM01",
+      "surface": "admin",
+      "path": "/admin/login",
+      "title": "Login interno",
+      "priority": "P0",
+      "wireframe": "WF02",
+      "roles": [
+        "suporte_interno",
+        "financeiro_interno",
+        "auditor_interno"
+      ],
+      "stories": [
+        "US15"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "login_administrativo_admin_login_venda_flow_ai"
+      ]
+    },
+    {
+      "id": "ADM02",
+      "surface": "admin",
+      "path": "/admin",
+      "title": "Visão geral técnica",
+      "priority": "P0",
+      "wireframe": "WF15",
+      "roles": [
+        "suporte_interno"
+      ],
+      "stories": [
+        "US15"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "vis_o_geral_admin_console_administrativo_venda_flow_ai"
+      ]
+    },
+    {
+      "id": "ADM03",
+      "surface": "admin",
+      "path": "/admin/empresas",
+      "title": "Empresas",
+      "priority": "P0",
+      "wireframe": "WF15",
+      "roles": [
+        "suporte_interno"
+      ],
+      "stories": [
+        "US15"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "empresas_admin_empresas_console_administrativo_venda_flow_ai"
+      ]
+    },
+    {
+      "id": "ADM04",
+      "surface": "admin",
+      "path": "/admin/empresas/:id",
+      "title": "Diagnóstico da empresa",
+      "priority": "P0",
+      "wireframe": "WF15",
+      "roles": [
+        "suporte_interno"
+      ],
+      "stories": [
+        "US15"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "ADM05",
+      "surface": "admin",
+      "path": "/admin/assinaturas",
+      "title": "Assinaturas e reconciliação",
+      "priority": "P0",
+      "wireframe": "WF16",
+      "roles": [
+        "financeiro_interno"
+      ],
+      "stories": [
+        "US13"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "assinaturas_admin_assinaturas_console_administrativo_venda_flow_ai"
+      ]
+    },
+    {
+      "id": "ADM06",
+      "surface": "admin",
+      "path": "/admin/operacao",
+      "title": "Operação e suporte",
+      "priority": "P0",
+      "wireframe": "WF16",
+      "roles": [
+        "suporte_interno"
+      ],
+      "stories": [
+        "US15"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "export_zip",
+      "sources": [
+        "suporte_e_auditoria_admin_operacao_console_administrativo_venda_flow_ai"
+      ]
+    },
+    {
+      "id": "ADM07",
+      "surface": "admin",
+      "path": "/admin/auditoria",
+      "title": "Auditoria",
+      "priority": "P0",
+      "wireframe": "WF17",
+      "roles": [
+        "auditor_interno"
+      ],
+      "stories": [
+        "US16"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    },
+    {
+      "id": "ADM08",
+      "surface": "admin",
+      "path": "/admin/auth/callback",
+      "title": "Retorno OIDC interno",
+      "priority": "P0",
+      "wireframe": "WF02",
+      "roles": [
+        "suporte_interno",
+        "financeiro_interno",
+        "auditor_interno"
+      ],
+      "stories": [
+        "US15"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "error",
+        "forbidden",
+        "timeout",
+        "success",
+        "stale"
+      ],
+      "status": "proposta_nao_implementada",
+      "prdMapping": null,
+      "origin": "complemento_de_jornada_proposto",
+      "sources": []
+    }
+  ]
+}

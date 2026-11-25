@@ -1,0 +1,16 @@
+{
+  "executedAt": "2026-11-21T23:48:02.914Z",
+  "fixture": "DEMO_ONLY real PostgreSQL and signed OIDC local protocol simulator, no external provider sandbox",
+  "postgresVersion": null,
+  "outcomes": [
+    {
+      "name": "execução completa do harness",
+      "status": "FAIL",
+      "detail": "PostgreSQL falhou (initdb.exe), exit timeout. Confira o log local de teste; credenciais não são registradas."
+    }
+  ],
+  "screenshots": [],
+  "passed": false,
+  "externalProviderSandboxExecuted": false,
+  "productionDeployed": false
+}

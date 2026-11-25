@@ -1,0 +1,10 @@
+{
+  "executedAt": "2026-11-22T00:19:55.241Z",
+  "results": [
+    {
+      "name": "execução",
+      "status": "FAIL",
+      "detail": "Please use browser.newContext()\n Please check out https://github.com/dequelabs/axe-core-npm/blob/develop/packages/playwright/error-handling.md"
+    }
+  ]
+}

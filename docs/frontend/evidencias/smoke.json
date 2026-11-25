@@ -1,0 +1,41 @@
+{
+  "executedAt": "2026-11-22T01:00:08.406Z",
+  "results": [
+    {
+      "name": "build produtivo serve landing server-first",
+      "status": "PASS"
+    },
+    {
+      "name": "sem cookie de identidade fabricado no público",
+      "status": "PASS"
+    },
+    {
+      "name": "CSP produtivo usa nonce e não unsafe-eval",
+      "status": "PASS"
+    },
+    {
+      "name": "callback alias ignora Host injetado e usa origem configurada",
+      "status": "PASS"
+    },
+    {
+      "name": "bridge não encaminha ação arbitrária",
+      "status": "PASS"
+    },
+    {
+      "name": "login não aceita destino arbitrário por query",
+      "status": "PASS"
+    },
+    {
+      "name": "indisponibilidade privada segura sem cache",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime sem ANALYZE não carrega bundle-analyzer",
+      "status": "PASS"
+    },
+    {
+      "name": "deadline SSR real termina quando upstream não envia headers",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "name": "venda-flow-ai-ui-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "tokens": "node scripts/build-tokens.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:browser": "node scripts/test-ui-browser.mjs",
+    "dev:ui": "next dev sandbox/ui-review --hostname 127.0.0.1 --port 3100",
+    "build:ui": "npm run tokens && next build sandbox/ui-review",
+    "storybook": "storybook dev -p 6006 --host 127.0.0.1 --no-open --disable-telemetry",
+    "build:storybook": "storybook build --disable-telemetry",
+    "verify:ux": "node scripts/verify-ux.mjs",
+    "audit:ui": "node scripts/audit-ui.mjs",
+    "measure:ui": "node scripts/measure-ui.mjs",
+    "analyze:ui": "node scripts/analyze-ui.mjs",
+    "dev:web": "next dev venda-web --hostname 127.0.0.1 --port 3400",
+    "build:web": "next build venda-web --webpack",
+    "build:api": "npm --prefix venda-api run build",
+    "build:workers": "npm --prefix venda-workers run build",
+    "build:platform": "npm run build:api && npm run build:workers && npm run build:web",
+    "start:web": "next start venda-web --hostname 127.0.0.1 --port 3400",
+    "typecheck:web": "tsc --project venda-web/tsconfig.json --noEmit",
+    "generate:web": "openapi-typescript venda-api/contracts/venda.openapi.yaml -o venda-web/lib/api.generated.ts",
+    "test:web": "vitest run --config venda-web/vitest.config.ts",
+    "test:web:browser": "node scripts/test-web-browser.mjs",
+    "measure:web": "node scripts/measure-web.mjs",
+    "verify:web": "node scripts/verify-web.mjs",
+    "test:web:storybook": "node scripts/test-web-storybook.mjs",
+    "contract:web": "node scripts/check-web-contract.mjs",
+    "smoke:web": "node scripts/smoke-web.mjs",
+    "audit:platform": "node scripts/audit-platform.mjs",
+    "review:local": "node scripts/run-local.mjs",
+    "setup:local": "node scripts/setup-native-local.mjs",
+    "setup:local:docker": "node scripts/setup-local-real.mjs",
+    "start:local": "node scripts/run-local.mjs",
+    "report:platform": "node scripts/report-platform.mjs",
+    "check:mercadopago": "node scripts/check-mercadopago-sandbox.mjs",
+    "verify:publish": "node scripts/verify-publish-safety.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.0",
+    "next": "16.4.6",
+    "openapi-fetch": "^0.17.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "web-vitals": "^6.2.3",
+    "zod": "^4.6.7"
+  },
+  "overrides": {
+    "@joshwooding/vite-plugin-react-docgen-typescript": {
+      "glob": "14.0.6"
+    }
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@next/bundle-analyzer": "^16.4.6",
+    "@storybook/addon-a11y": "10.6.8",
+    "@storybook/addon-docs": "10.6.8",
+    "@storybook/react-vite": "10.6.8",
+    "@testing-library/jest-dom": "^6.9.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "jsdom": "^27.0.0",
+    "lighthouse": "^13.6.0",
+    "openapi-typescript": "^7.13.0",
+    "pixelmatch": "^7.1.0",
+    "playwright": "^1.56.0",
+    "pngjs": "^7.0.0",
+    "storybook": "10.6.8",
+    "typescript": "^5.9.0",
+    "vite": "^7.2.0",
+    "vitest": "^4.0.0"
+  }
+}

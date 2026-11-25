@@ -1,0 +1,15 @@
+{
+  "executedAt": "2026-11-23T17:41:48.997Z",
+  "scope": "DEMO_ONLY collector loopback, nenhum fornecedor externo",
+  "received": [
+    {
+      "path": "/v1/traces",
+      "bytes": 776
+    },
+    {
+      "path": "/v1/metrics",
+      "bytes": 834
+    }
+  ],
+  "passed": true
+}

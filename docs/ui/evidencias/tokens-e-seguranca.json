@@ -1,0 +1,155 @@
+{
+  "executedAt": "2026-11-21T17:10:01.507Z",
+  "checks": [
+    {
+      "name": "Paleta exata fornecida pelo usuário",
+      "status": "PASS"
+    },
+    {
+      "name": "Todos os pares semânticos essenciais light/dark atingem o contraste requerido",
+      "status": "PASS"
+    },
+    {
+      "name": "Temas sem nova cor e família Inter",
+      "status": "PASS"
+    },
+    {
+      "name": "CSS e componentes não introduzem hex/rgb/hsl fora dos cinco tokens",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem credenciais, chamadas de API ou fontes remotas nas telas",
+      "status": "PASS"
+    },
+    {
+      "name": "SVG oficial ausente é explicitamente declarado",
+      "status": "PASS"
+    },
+    {
+      "name": "Brandboard canônico preserva bytes da referência do ZIP",
+      "status": "PASS"
+    },
+    {
+      "name": "Motion reduzido e TypeScript strict configurados",
+      "status": "PASS"
+    }
+  ],
+  "pairs": [
+    {
+      "theme": "light",
+      "foreground": "text",
+      "background": "canvas",
+      "ratio": 18.519,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "text",
+      "background": "panel",
+      "ratio": 19.317,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "text-secondary",
+      "background": "panel",
+      "ratio": 19.317,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "on-action",
+      "background": "action",
+      "ratio": 6.826,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "on-navigation",
+      "background": "navigation",
+      "ratio": 19.317,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "on-selected",
+      "background": "selected",
+      "ratio": 6.826,
+      "minimum": 4.5
+    },
+    {
+      "theme": "light",
+      "foreground": "focus",
+      "background": "panel",
+      "ratio": 19.317,
+      "minimum": 3
+    },
+    {
+      "theme": "light",
+      "foreground": "border",
+      "background": "panel",
+      "ratio": 19.317,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "foreground": "text",
+      "background": "canvas",
+      "ratio": 19.317,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "text",
+      "background": "panel",
+      "ratio": 19.317,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "text-secondary",
+      "background": "panel",
+      "ratio": 15.746,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "on-action",
+      "background": "action",
+      "ratio": 6.826,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "on-navigation",
+      "background": "navigation",
+      "ratio": 19.317,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "on-selected",
+      "background": "selected",
+      "ratio": 6.826,
+      "minimum": 4.5
+    },
+    {
+      "theme": "dark",
+      "foreground": "focus",
+      "background": "panel",
+      "ratio": 6.826,
+      "minimum": 3
+    },
+    {
+      "theme": "dark",
+      "foreground": "border",
+      "background": "panel",
+      "ratio": 15.746,
+      "minimum": 3
+    }
+  ],
+  "limits": [
+    "Auditoria estática não prova RLS, sessão, autorização ou segurança de runtime.",
+    "Nenhuma API externa integrada; nenhum segredo necessário."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "executedAt": "2026-11-21T17:21:25.774Z",
+  "mode": "revisao-ui",
+  "checks": [
+    {
+      "name": "Testes de componentes sem falha",
+      "status": "PASS"
+    },
+    {
+      "name": "Verificações reais de navegador sem falha",
+      "status": "PASS"
+    },
+    {
+      "name": "Paleta, contraste, origem do PNG e controles estáticos passam",
+      "status": "PASS"
+    },
+    {
+      "name": "Todas as rotas candidatas P0 têm captura desktop e mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Cada estado tem cenário Storybook capturado",
+      "status": "PASS"
+    },
+    {
+      "name": "Trace, comparação e diff visual existem",
+      "status": "PASS"
+    },
+    {
+      "name": "Builds estáticos Next e Storybook completos",
+      "status": "PASS"
+    },
+    {
+      "name": "Nenhuma vulnerabilidade conhecida no npm audit final",
+      "status": "PASS"
+    },
+    {
+      "name": "Lighthouse registra todos os perfis e amostras sem substituir RUM",
+      "status": "PASS"
+    },
+    {
+      "name": "Budget laboratorial LCP e CLS por rota",
+      "status": "PASS"
+    },
+    {
+      "name": "Analyzer oficial possui relatório cliente",
+      "status": "PASS"
+    }
+  ],
+  "stageComplete": false,
+  "blockers": [
+    "referencias/00_ARQUITETURA_GERAL.md",
+    "referencias/03_SEGURANCA_E_GOVERNANCA.md",
+    "referencias/venda-openapi.yaml",
+    "PRD V01–V24 e rastreabilidade P0 ausentes",
+    "SVG oficial validado não fornecido; placeholder tipográfico explicitamente autorizado"
+  ],
+  "productionClaims": {
+    "rum": false,
+    "apiContractsValidated": false,
+    "authorizationImplemented": false,
+    "billingIntegrated": false,
+    "channelIntegrated": false,
+    "officialLogoApproved": false
+  }
+}

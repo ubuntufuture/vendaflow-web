@@ -1,0 +1,88 @@
+{
+  "executedAt": "2026-11-23T18:50:43.983Z",
+  "htmlFiles": 38,
+  "browser": {
+    "pass": 186,
+    "fail": 0,
+    "screenshots": 69
+  },
+  "platform100Functional": false,
+  "pixelIdenticalCertified": false,
+  "productionDeployed": false,
+  "logo": {
+    "kind": "PNG transparente derivado do board; wordmark Inter",
+    "officialSvgApproved": false
+  },
+  "sourceMap": [
+    [
+      "Site público",
+      "/",
+      "p_gina_inicial_venda_flow_ai"
+    ],
+    [
+      "Planos",
+      "/planos",
+      "planos_e_pre_os_venda_flow_ai"
+    ],
+    [
+      "Acesso / cadastro",
+      "/entrar, /cadastro",
+      "acessar_a_conta_venda_flow_ai_entrar; criar_conta_venda_flow_ai_cadastro"
+    ],
+    [
+      "Configuração guiada",
+      "/configurar",
+      "primeiros_passos_venda_flow_ai_configurar"
+    ],
+    [
+      "Início",
+      "/app/o/:id",
+      "in_cio_app_venda_flow_ai_desktop_1440px"
+    ],
+    [
+      "Conversas",
+      "/app/o/:id/conversas",
+      "conversas_app_conversas_venda_flow_ai_desktop_1440px_2"
+    ],
+    [
+      "Contatos",
+      "/app/o/:id/clientes",
+      "clientes_app_clientes_venda_flow_ai_desktop_1440px_2"
+    ],
+    [
+      "Vendas",
+      "/app/o/:id/vendas",
+      "vendas_app_vendas_venda_flow_ai_desktop_1440px"
+    ],
+    [
+      "Automações",
+      "/app/o/:id/automacoes",
+      "automa_es_app_automacoes_venda_flow_ai_desktop_1440px"
+    ],
+    [
+      "Nova automação",
+      "/app/o/:id/automacoes/nova",
+      "criar_automa_o_app_automacoes_nova_venda_flow_ai_desktop_1440px"
+    ],
+    [
+      "Assistente",
+      "/app/o/:id/automacoes/assistente",
+      "assistente_de_ia_automa_es_venda_flow_ai_desktop_1440px"
+    ],
+    [
+      "Relatórios",
+      "/app/o/:id/relatorios",
+      "relat_rios_app_relatorios_venda_flow_ai_desktop_1440px"
+    ],
+    [
+      "Cobrança",
+      "/app/o/:id/faturamento",
+      "planos_e_faturamento_app_faturamento_venda_flow_ai_desktop_1440px"
+    ],
+    [
+      "Configurações",
+      "/app/o/:id/configuracoes/*",
+      "configura_es_app_configuracoes_venda_flow_ai_desktop_1440px"
+    ]
+  ]
+}

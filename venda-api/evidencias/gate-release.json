@@ -1,0 +1,66 @@
+{
+  "executedAt": "2026-11-21T23:20:58.740Z",
+  "mode": "release",
+  "checks": [
+    {
+      "name": "PostgreSQL real identificado e 22 cenários de integração passam",
+      "status": "PASS"
+    },
+    {
+      "name": "JUnit tem 28 testes, sem falha, cancelamento ou skip",
+      "status": "PASS"
+    },
+    {
+      "name": "OpenAPI candidato válido",
+      "status": "PASS"
+    },
+    {
+      "name": "GET p95 <=300ms e POST p95 <=500ms no perfil local",
+      "status": "PASS"
+    },
+    {
+      "name": "OpenTelemetry exporta trace e métrica ao collector de teste",
+      "status": "PASS"
+    },
+    {
+      "name": "npm audit sem vulnerabilidades conhecidas",
+      "status": "PASS"
+    },
+    {
+      "name": "TypeScript strict e build produtivo sem provedor DEMO_ONLY",
+      "status": "PASS"
+    },
+    {
+      "name": "Contrato visual e camadas anteriores não são dependências do backend",
+      "status": "PASS"
+    },
+    {
+      "name": "Arquitetura, segurança e contrato canônicos disponíveis",
+      "status": "FAIL",
+      "reason": "../referencias/00_ARQUITETURA_GERAL.md, ../referencias/03_SEGURANCA_E_GOVERNANCA.md, ../referencias/venda-openapi.yaml\n\n3 !== 0\n"
+    },
+    {
+      "name": "Compatibilidade backward demonstrada contra contrato canônico",
+      "status": "FAIL",
+      "reason": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "Provedor OIDC externo validado em sandbox autorizado",
+      "status": "FAIL",
+      "reason": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "name": "PRD V01–V24 reconciliado com a fundação",
+      "status": "FAIL",
+      "reason": "PRD não fornecido; rastreabilidade ainda não comprovada."
+    }
+  ],
+  "stageComplete": false,
+  "missingReferences": [
+    "../referencias/00_ARQUITETURA_GERAL.md",
+    "../referencias/03_SEGURANCA_E_GOVERNANCA.md",
+    "../referencias/venda-openapi.yaml"
+  ],
+  "externalProviderSandboxExecuted": false,
+  "productionDeployed": false
+}

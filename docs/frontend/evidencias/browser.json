@@ -1,0 +1,586 @@
+{
+  "executedAt": "2026-11-22T00:59:56.446Z",
+  "fixture": "DEMO_ONLY real PostgreSQL and signed OIDC local protocol simulator, no external provider sandbox",
+  "postgresVersion": "PostgreSQL 18.7 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+  "outcomes": [
+    {
+      "name": "axe / desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow / desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "título único / desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local / desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /entrar desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /entrar desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /entrar desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /entrar desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /cadastro desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /cadastro desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /cadastro desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /cadastro desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /recuperar-acesso desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /recuperar-acesso desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /recuperar-acesso desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /recuperar-acesso desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /planos desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /planos desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /planos desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /planos desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /privacidade desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /privacidade desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /privacidade desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /privacidade desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /termos desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /termos desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /termos desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /termos desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /app desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /app desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /app desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /app desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe home dark desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe / mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow / mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "título único / mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local / mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /entrar mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /entrar mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /entrar mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /entrar mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /cadastro mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /cadastro mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /cadastro mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /cadastro mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /recuperar-acesso mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /recuperar-acesso mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /recuperar-acesso mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /recuperar-acesso mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /planos mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /planos mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /planos mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /planos mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /privacidade mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /privacidade mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /privacidade mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /privacidade mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /termos mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /termos mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /termos mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /termos mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe /app mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "reflow /app mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "título único /app mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter local /app mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe home dark mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "404 público mantém landmark e destino de skip link únicos",
+      "status": "PASS"
+    },
+    {
+      "name": "axe 404 público",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "skip link é o primeiro foco",
+      "status": "PASS"
+    },
+    {
+      "name": "skip link alcança conteúdo",
+      "status": "PASS"
+    },
+    {
+      "name": "diff visual local estável",
+      "status": "PASS",
+      "detail": {
+        "changedPixels": 0
+      }
+    },
+    {
+      "name": "login OIDC real de protocolo e cookie HttpOnly Secure",
+      "status": "PASS"
+    },
+    {
+      "name": "axe organizações vazio",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe onboarding",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "erro Zod de timezone anunciado e focado",
+      "status": "PASS"
+    },
+    {
+      "name": "onboarding confirmou organização no PostgreSQL",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app  desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow  desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /configuracoes/organizacao desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /configuracoes/organizacao desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /configuracoes/equipe desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /configuracoes/equipe desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /conversas desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /conversas desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /faturamento desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /faturamento desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app  tablet",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow  tablet",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /configuracoes/organizacao tablet",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /configuracoes/organizacao tablet",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /configuracoes/equipe tablet",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /configuracoes/equipe tablet",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /conversas tablet",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /conversas tablet",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /faturamento tablet",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /faturamento tablet",
+      "status": "PASS"
+    },
+    {
+      "name": "menu mobile começa recolhido e prioriza conteúdo",
+      "status": "PASS"
+    },
+    {
+      "name": "menu mobile abre com teclado",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app  mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow  mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /configuracoes/organizacao mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /configuracoes/organizacao mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /configuracoes/equipe mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /configuracoes/equipe mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /conversas mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /conversas mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe app /faturamento mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "app reflow /faturamento mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "atualização confirmada no PostgreSQL",
+      "status": "PASS"
+    },
+    {
+      "name": "B não recebe dados de A na URL",
+      "status": "PASS"
+    },
+    {
+      "name": "A não recebe dados de B na URL",
+      "status": "PASS"
+    },
+    {
+      "name": "lista de organizações não mistura tenants",
+      "status": "PASS"
+    },
+    {
+      "name": "viewer vê 403 e não recebe formulário de mutação",
+      "status": "PASS"
+    },
+    {
+      "name": "axe viewer 403",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "revogação de membership reflete após navegação",
+      "status": "PASS"
+    },
+    {
+      "name": "mutação de origem externa recusada",
+      "status": "PASS"
+    },
+    {
+      "name": "CSP sem unsafe-eval em build produtivo",
+      "status": "PASS"
+    },
+    {
+      "name": "respostas privadas não são cacheadas",
+      "status": "PASS"
+    },
+    {
+      "name": "timeout real de transporte apresenta 504 sem sucesso inventado",
+      "status": "PASS"
+    },
+    {
+      "name": "logout revoga sessão e interface privada",
+      "status": "PASS"
+    },
+    {
+      "name": "logout offline remove cookie local e informa revogação não confirmada",
+      "status": "PASS"
+    },
+    {
+      "name": "falha da API tem estado explícito sem dados antigos",
+      "status": "PASS"
+    },
+    {
+      "name": "sem erros de hidratação ou JavaScript",
+      "status": "PASS",
+      "detail": []
+    }
+  ],
+  "screenshots": [
+    "telas/--desktop.png",
+    "telas/-entrar-desktop.png",
+    "telas/-cadastro-desktop.png",
+    "telas/-recuperar-acesso-desktop.png",
+    "telas/-planos-desktop.png",
+    "telas/-privacidade-desktop.png",
+    "telas/-termos-desktop.png",
+    "telas/-app-desktop.png",
+    "telas/home-dark-desktop.png",
+    "telas/--mobile.png",
+    "telas/-entrar-mobile.png",
+    "telas/-cadastro-mobile.png",
+    "telas/-recuperar-acesso-mobile.png",
+    "telas/-planos-mobile.png",
+    "telas/-privacidade-mobile.png",
+    "telas/-termos-mobile.png",
+    "telas/-app-mobile.png",
+    "telas/home-dark-mobile.png",
+    "telas/publico-404.png",
+    "telas/home-baseline.png",
+    "telas/home-repeticao.png",
+    "telas/organizacoes-vazio.png",
+    "telas/onboarding-validacao.png",
+    "telas/app-inicio-desktop.png",
+    "telas/app-configuracoes-organizacao-desktop.png",
+    "telas/app-configuracoes-equipe-desktop.png",
+    "telas/app-conversas-desktop.png",
+    "telas/app-faturamento-desktop.png",
+    "telas/app-inicio-tablet.png",
+    "telas/app-configuracoes-organizacao-tablet.png",
+    "telas/app-configuracoes-equipe-tablet.png",
+    "telas/app-conversas-tablet.png",
+    "telas/app-faturamento-tablet.png",
+    "telas/app-inicio-mobile.png",
+    "telas/app-configuracoes-organizacao-mobile.png",
+    "telas/app-configuracoes-equipe-mobile.png",
+    "telas/app-conversas-mobile.png",
+    "telas/app-faturamento-mobile.png",
+    "telas/app-viewer-403.png",
+    "telas/api-timeout.png",
+    "telas/api-indisponivel.png"
+  ],
+  "passed": true,
+  "externalProviderSandboxExecuted": false,
+  "productionDeployed": false
+}

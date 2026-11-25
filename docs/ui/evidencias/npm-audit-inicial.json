@@ -1,0 +1,132 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@joshwooding/vite-plugin-react-docgen-typescript": {
+      "name": "@joshwooding/vite-plugin-react-docgen-typescript",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "glob"
+      ],
+      "effects": [
+        "@storybook/react-vite"
+      ],
+      "range": "0.4.0 || 0.5.0 - 0.9.0",
+      "nodes": [
+        "node_modules/@joshwooding/vite-plugin-react-docgen-typescript"
+      ],
+      "fixAvailable": {
+        "name": "@storybook/react-vite",
+        "version": "8.5.3",
+        "isSemVerMajor": true
+      }
+    },
+    "@storybook/react-vite": {
+      "name": "@storybook/react-vite",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "@joshwooding/vite-plugin-react-docgen-typescript"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-pr-36141-sha-6ddbeb4a || >=8.5.4",
+      "nodes": [
+        "node_modules/@storybook/react-vite"
+      ],
+      "fixAvailable": {
+        "name": "@storybook/react-vite",
+        "version": "8.5.3",
+        "isSemVerMajor": true
+      }
+    },
+    "glob": {
+      "name": "glob",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1244013,
+          "name": "glob",
+          "dependency": "glob",
+          "title": "Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal",
+          "url": "https://github.com/advisories/GHSA-3g3m-2fjr-6pw4",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=9.0.0 <=14.0.1"
+        },
+        "minimatch"
+      ],
+      "effects": [
+        "@joshwooding/vite-plugin-react-docgen-typescript"
+      ],
+      "range": "9.0.0 - 14.0.1",
+      "nodes": [
+        "node_modules/glob"
+      ],
+      "fixAvailable": {
+        "name": "@storybook/react-vite",
+        "version": "8.5.3",
+        "isSemVerMajor": true
+      }
+    },
+    "minimatch": {
+      "name": "minimatch",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1244623,
+          "name": "minimatch",
+          "dependency": "minimatch",
+          "title": "minimatch has potential denial of service via globparts amplification",
+          "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-405"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=7.0.0 <11.0.1"
+        }
+      ],
+      "effects": [
+        "glob"
+      ],
+      "range": "7.0.0 - 11.0.0",
+      "nodes": [
+        "node_modules/minimatch"
+      ],
+      "fixAvailable": {
+        "name": "@storybook/react-vite",
+        "version": "8.5.3",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 4,
+      "high": 0,
+      "critical": 0,
+      "total": 4
+    },
+    "dependencies": {
+      "prod": 18,
+      "dev": 443,
+      "optional": 158,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 499
+    }
+  }
+}

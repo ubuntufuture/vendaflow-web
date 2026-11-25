@@ -1,0 +1,38 @@
+name: venda-flow-local
+services:
+  database:
+    image: postgres:18.7
+    environment:
+      POSTGRES_USER: venda_local_migrator
+      POSTGRES_PASSWORD: ${VENDA_LOCAL_DB_ADMIN_PASSWORD:?Execute setup-local-real.mjs}
+      POSTGRES_DB: venda_flow_local
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - venda_database:/var/lib/postgresql
+    labels:
+      com.vendaflow.product: venda-flow-ai
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U venda_local_migrator -d venda_flow_local"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  identity:
+    image: quay.io/keycloak/keycloak:26.8.2
+    command: ["start-dev", "--import-realm"]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: venda-local-admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${VENDA_LOCAL_IDENTITY_ADMIN_PASSWORD:?Execute setup-local-real.mjs}
+      KC_HOSTNAME: http://127.0.0.1:38080
+      JAVA_OPTS_KC_HEAP: "-Xms64m -Xmx384m"
+    ports:
+      - "127.0.0.1:38080:8080"
+    volumes:
+      - venda_identity:/opt/keycloak/data
+      - ../../.local/identity-import:/opt/keycloak/data/import:ro
+    labels:
+      com.vendaflow.product: venda-flow-ai
+    mem_limit: 768m
+volumes:
+  venda_database:
+  venda_identity:

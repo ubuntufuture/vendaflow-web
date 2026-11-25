@@ -1,0 +1,2089 @@
+openapi: 3.0.3
+info:
+  title: Venda Flow AI — API
+  version: 0.2.0
+  description: "Extensão candidata baseada nos fluxos recebidos. Sem dados seed,
+    gateway ou evidência fictícia. Compatibilidade com OpenAPI canônico
+    pendente: arquivo não fornecido."
+paths:
+  /health:
+    get:
+      operationId: health
+      summary: health
+      security: []
+      parameters: []
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Health"
+        "400": &a1
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "401": &a2
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "403": &a3
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404": &a4
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "409": &a5
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "413": &a6
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "415": &a7
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "429": &a8
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500": &a9
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "503": &a10
+          description: Erro uniforme, sem dados sensíveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /ready:
+    get:
+      operationId: readiness
+      summary: readiness
+      security: []
+      parameters: []
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Health"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/openapi.json:
+    get:
+      operationId: openapi
+      security: []
+      responses:
+        "200":
+          description: Contrato candidato da fundação
+          content:
+            application/json:
+              schema:
+                type: object
+  /v1/auth/login:
+    get:
+      operationId: login
+      security: []
+      responses:
+        "302":
+          description: Redirecionamento OIDC com cookie de fluxo HttpOnly Secure
+            SameSite=Lax
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/auth/callback:
+    get:
+      operationId: callback
+      security: []
+      parameters:
+        - name: code
+          in: query
+          schema:
+            type: string
+        - name: state
+          in: query
+          schema:
+            type: string
+        - name: iss
+          in: query
+          required: false
+          schema:
+            type: string
+            maxLength: 2048
+        - name: session_state
+          in: query
+          required: false
+          schema:
+            type: string
+            maxLength: 2048
+        - name: error
+          in: query
+          required: false
+          schema:
+            type: string
+            maxLength: 2048
+        - name: error_description
+          in: query
+          required: false
+          schema:
+            type: string
+            maxLength: 2048
+      responses:
+        "302":
+          description: Sessão estabelecida após validação OIDC; redirecionamento fixo
+            configurado
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/auth/logout:
+    post:
+      operationId: logout
+      summary: logout
+      security:
+        - session: []
+      parameters:
+        - &a11
+          name: X-CSRF-Token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Resposta confirmada
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/me:
+    get:
+      operationId: me
+      summary: me
+      security:
+        - session: []
+      parameters: []
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Me"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/organizations:
+    get:
+      operationId: listOrganizations
+      summary: listOrganizations
+      security:
+        - session: []
+      parameters: []
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Organizations"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+    post:
+      operationId: createOrganization
+      summary: createOrganization
+      security:
+        - session: []
+      parameters:
+        - *a11
+        - &a15
+          name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[A-Za-z0-9_-]{16,128}$
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateOrganization"
+      responses:
+        "201":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Organization"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/organizations/{organizationId}:
+    get:
+      operationId: getOrganization
+      summary: getOrganization
+      security:
+        - session: []
+      parameters:
+        - &a13
+          name: organizationId
+          in: path
+          required: true
+          schema: &a12
+            type: string
+            format: uuid
+        - &a14
+          name: X-Organization-Id
+          in: header
+          required: false
+          schema: *a12
+          description: Se fornecido, deve concordar com o seletor do tenant e com
+            membership ativo.
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Organization"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+    patch:
+      operationId: updateOrganization
+      summary: updateOrganization
+      security:
+        - session: []
+      parameters:
+        - *a13
+        - *a14
+        - *a11
+        - *a15
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateOrganization"
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Organization"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/memberships:
+    get:
+      operationId: listMemberships
+      summary: listMemberships
+      security:
+        - session: []
+      parameters:
+        - name: organizationId
+          in: query
+          required: true
+          schema: *a12
+        - *a14
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Memberships"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/organizations/{organizationId}/memberships:
+    post:
+      operationId: createMembership
+      summary: createMembership
+      security:
+        - session: []
+      parameters:
+        - *a13
+        - *a14
+        - *a11
+        - *a15
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateMembership"
+      responses:
+        "201":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Membership"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/organizations/{organizationId}/memberships/{membershipId}:
+    patch:
+      operationId: updateMembership
+      summary: updateMembership
+      security:
+        - session: []
+      parameters:
+        - *a13
+        - name: membershipId
+          in: path
+          required: true
+          schema: *a12
+        - *a14
+        - *a11
+        - *a15
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateMembership"
+      responses:
+        "200":
+          description: Resposta confirmada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Membership"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "415": *a7
+        "429": *a8
+        "500": *a9
+        "503": *a10
+  /v1/contacts:
+    get:
+      security: &a17
+        - session: []
+      parameters:
+        - &a18
+          name: organizationId
+          in: query
+          required: true
+          schema: &a16
+            type: string
+            format: uuid
+        - name: q
+          in: query
+          schema:
+            type: string
+            maxLength: 120
+        - name: cursor
+          in: query
+          schema: *a16
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 50
+      operationId: listContact
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                  - nextCursor
+                properties:
+                  data:
+                    type: array
+                    items: &a19
+                      $ref: "#/components/schemas/Contact"
+                  nextCursor:
+                    type: string
+                    format: uuid
+                    nullable: true
+        "400": &a20
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "401": &a21
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "403": &a22
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404": &a23
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "409": &a24
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "413": &a25
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "429": &a26
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500": &a27
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "503": &a28
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "504": &a29
+          description: Erro uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - &a31
+          name: X-CSRF-Token
+          in: header
+          required: true
+          schema:
+            type: string
+        - &a32
+          name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+            minLength: 16
+            maxLength: 128
+            pattern: ^[A-Za-z0-9_-]+$
+      operationId: createContact
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactInput"
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a19
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/contacts/{id}:
+    get:
+      security: *a17
+      parameters:
+        - *a18
+        - &a30
+          name: id
+          in: path
+          required: true
+          schema: *a16
+      operationId: getContact
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a19
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+    patch:
+      security: *a17
+      parameters:
+        - *a18
+        - *a30
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          description: Versão numérica atual; conflito retorna 409.
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: updateContact
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactPatch"
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a19
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/contacts/{id}/archive:
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - *a30
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: archiveContact
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a19
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/opportunities:
+    get:
+      security: *a17
+      parameters:
+        - *a18
+        - name: q
+          in: query
+          schema:
+            type: string
+            maxLength: 120
+        - name: cursor
+          in: query
+          schema: *a16
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 50
+      operationId: listOpportunity
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                  - nextCursor
+                properties:
+                  data:
+                    type: array
+                    items: &a33
+                      $ref: "#/components/schemas/Opportunity"
+                  nextCursor:
+                    type: string
+                    format: uuid
+                    nullable: true
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - *a31
+        - *a32
+      operationId: createOpportunity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OpportunityInput"
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a33
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/opportunities/{id}:
+    get:
+      security: *a17
+      parameters:
+        - *a18
+        - &a34
+          name: id
+          in: path
+          required: true
+          schema: *a16
+      operationId: getOpportunity
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a33
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+    patch:
+      security: *a17
+      parameters:
+        - *a18
+        - *a34
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          description: Versão numérica atual; conflito retorna 409.
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: updateOpportunity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OpportunityPatch"
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a33
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/opportunities/{id}/archive:
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - *a34
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: archiveOpportunity
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a33
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/tasks:
+    get:
+      security: *a17
+      parameters:
+        - *a18
+        - name: q
+          in: query
+          schema:
+            type: string
+            maxLength: 120
+        - name: cursor
+          in: query
+          schema: *a16
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 50
+      operationId: listTask
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                  - nextCursor
+                properties:
+                  data:
+                    type: array
+                    items: &a35
+                      $ref: "#/components/schemas/Task"
+                  nextCursor:
+                    type: string
+                    format: uuid
+                    nullable: true
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - *a31
+        - *a32
+      operationId: createTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TaskInput"
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a35
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/tasks/{id}:
+    get:
+      security: *a17
+      parameters:
+        - *a18
+        - &a36
+          name: id
+          in: path
+          required: true
+          schema: *a16
+      operationId: getTask
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a35
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+    patch:
+      security: *a17
+      parameters:
+        - *a18
+        - *a36
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          description: Versão numérica atual; conflito retorna 409.
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: updateTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TaskPatch"
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a35
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/tasks/{id}/archive:
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - *a36
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: archiveTask
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a35
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/knowledge:
+    get:
+      security: *a17
+      parameters:
+        - *a18
+        - name: q
+          in: query
+          schema:
+            type: string
+            maxLength: 120
+        - name: cursor
+          in: query
+          schema: *a16
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 50
+      operationId: listKnowledgeEntry
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                  - nextCursor
+                properties:
+                  data:
+                    type: array
+                    items: &a37
+                      $ref: "#/components/schemas/KnowledgeEntry"
+                  nextCursor:
+                    type: string
+                    format: uuid
+                    nullable: true
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - *a31
+        - *a32
+      operationId: createKnowledgeEntry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/KnowledgeEntryInput"
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a37
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/knowledge/{id}:
+    get:
+      security: *a17
+      parameters:
+        - *a18
+        - &a38
+          name: id
+          in: path
+          required: true
+          schema: *a16
+      operationId: getKnowledgeEntry
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a37
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+    patch:
+      security: *a17
+      parameters:
+        - *a18
+        - *a38
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          description: Versão numérica atual; conflito retorna 409.
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: updateKnowledgeEntry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/KnowledgeEntryPatch"
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a37
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/knowledge/{id}/archive:
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - *a38
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: archiveKnowledgeEntry
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a37
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/workflows:
+    get:
+      security: *a17
+      parameters:
+        - *a18
+        - name: q
+          in: query
+          schema:
+            type: string
+            maxLength: 120
+        - name: cursor
+          in: query
+          schema: *a16
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 50
+      operationId: listWorkflow
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                  - nextCursor
+                properties:
+                  data:
+                    type: array
+                    items: &a39
+                      $ref: "#/components/schemas/Workflow"
+                  nextCursor:
+                    type: string
+                    format: uuid
+                    nullable: true
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - *a31
+        - *a32
+      operationId: createWorkflow
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WorkflowInput"
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a39
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/workflows/{id}:
+    get:
+      security: *a17
+      parameters:
+        - *a18
+        - &a40
+          name: id
+          in: path
+          required: true
+          schema: *a16
+      operationId: getWorkflow
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a39
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+    patch:
+      security: *a17
+      parameters:
+        - *a18
+        - *a40
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          description: Versão numérica atual; conflito retorna 409.
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: updateWorkflow
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WorkflowPatch"
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a39
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/workflows/{id}/archive:
+    post:
+      security: *a17
+      parameters:
+        - *a18
+        - *a40
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      operationId: archiveWorkflow
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema: *a39
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/reports/overview:
+    get:
+      operationId: commercialOverview
+      parameters:
+        - *a18
+      security: *a17
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CommercialOverview"
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/workflows/{id}/activate:
+    post:
+      operationId: activateWorkflow
+      security: *a17
+      parameters:
+        - *a18
+        - name: id
+          in: path
+          required: true
+          schema: *a16
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Workflow"
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/workflows/{id}/pause:
+    post:
+      operationId: pauseWorkflow
+      security: *a17
+      parameters:
+        - *a18
+        - name: id
+          in: path
+          required: true
+          schema: *a16
+        - *a31
+        - *a32
+        - name: If-Match
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "201":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Workflow"
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+  /v1/workflows/{id}/executions:
+    get:
+      operationId: workflowExecutions
+      security: *a17
+      parameters:
+        - *a18
+        - name: id
+          in: path
+          required: true
+          schema: *a16
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - id
+                        - taskId
+                        - createdAt
+                      properties:
+                        id: *a16
+                        taskId: *a16
+                        createdAt:
+                          type: string
+                          format: date-time
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
+components:
+  securitySchemes:
+    session:
+      type: apiKey
+      in: cookie
+      name: __Host-venda_session
+  schemas:
+    Error:
+      type: object
+      additionalProperties: false
+      required:
+        - error
+      properties:
+        error:
+          type: object
+          additionalProperties: false
+          required:
+            - code
+            - message
+            - requestId
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            requestId: &a41
+              type: string
+              format: uuid
+    Organization:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - name
+        - timezone
+        - locale
+        - currency
+        - createdAt
+      properties:
+        id: *a41
+        name:
+          type: string
+          minLength: 1
+          maxLength: 120
+        timezone:
+          type: string
+          maxLength: 100
+        locale:
+          type: string
+          enum:
+            - pt-BR
+        currency:
+          type: string
+          enum:
+            - BRL
+        createdAt: &a42
+          type: string
+          format: date-time
+    Membership:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - organizationId
+        - userId
+        - role
+        - active
+        - createdAt
+      properties:
+        id: *a41
+        organizationId: *a41
+        userId: *a41
+        role: &a43
+          type: string
+          enum:
+            - owner
+            - admin
+            - manager
+            - agent
+            - viewer
+            - billing
+        active:
+          type: boolean
+        createdAt: *a42
+    CreateOrganization:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+        - timezone
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 120
+        timezone:
+          type: string
+          maxLength: 100
+    UpdateOrganization:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 120
+        timezone:
+          type: string
+          maxLength: 100
+    CreateMembership:
+      type: object
+      additionalProperties: false
+      required:
+        - userId
+        - role
+      properties:
+        userId: *a41
+        role: *a43
+    UpdateMembership:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        role: *a43
+        active:
+          type: boolean
+    Me:
+      type: object
+      additionalProperties: false
+      required:
+        - user
+        - csrfToken
+        - sessionExpiresAt
+      properties:
+        user:
+          type: object
+          additionalProperties: false
+          required:
+            - id
+          properties:
+            id: *a41
+        csrfToken:
+          type: string
+        sessionExpiresAt: *a42
+    Organizations:
+      type: object
+      additionalProperties: false
+      required:
+        - data
+      properties:
+        data:
+          type: array
+          maxItems: 100
+          items:
+            $ref: "#/components/schemas/Organization"
+    Memberships:
+      type: object
+      additionalProperties: false
+      required:
+        - data
+      properties:
+        data:
+          type: array
+          maxItems: 100
+          items:
+            $ref: "#/components/schemas/Membership"
+    Health:
+      type: object
+      additionalProperties: false
+      required:
+        - status
+      properties:
+        status:
+          type: string
+          enum:
+            - ok
+    ContactInput:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+      properties: &a44
+        name: &a45
+          type: string
+          minLength: 1
+          maxLength: 120
+        phone: &a46
+          type: string
+          pattern: ^\+[1-9][0-9]{7,14}$
+          nullable: true
+        email: &a47
+          type: string
+          format: email
+          maxLength: 254
+          nullable: true
+    ContactPatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties: *a44
+    Contact:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - organizationId
+        - createdAt
+        - updatedAt
+        - version
+        - archived
+        - name
+      properties:
+        id: *a16
+        organizationId: *a16
+        name: *a45
+        phone: *a46
+        email: *a47
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        version:
+          type: integer
+          minimum: 1
+        archived:
+          type: boolean
+    OpportunityInput:
+      type: object
+      additionalProperties: false
+      required:
+        - title
+        - stage
+      properties: &a48
+        title: &a49
+          type: string
+          minLength: 1
+          maxLength: 160
+        contactId: &a50
+          type: string
+          format: uuid
+          nullable: true
+        stage: &a51
+          type: string
+          enum:
+            - new
+            - conversation
+            - proposal
+            - won
+            - lost
+        amountCents: &a52
+          type: integer
+          minimum: 0
+          maximum: 9000000000000
+          nullable: true
+    OpportunityPatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties: *a48
+    Opportunity:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - organizationId
+        - createdAt
+        - updatedAt
+        - version
+        - archived
+        - title
+        - stage
+      properties:
+        id: *a16
+        organizationId: *a16
+        title: *a49
+        contactId: *a50
+        stage: *a51
+        amountCents: *a52
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        version:
+          type: integer
+          minimum: 1
+        archived:
+          type: boolean
+        currency:
+          type: string
+          enum:
+            - BRL
+    TaskInput:
+      type: object
+      additionalProperties: false
+      required:
+        - title
+      properties: &a53
+        title: &a54
+          type: string
+          minLength: 1
+          maxLength: 160
+        contactId: &a55
+          type: string
+          format: uuid
+          nullable: true
+        opportunityId: &a56
+          type: string
+          format: uuid
+          nullable: true
+        dueAt: &a57
+          type: string
+          format: date-time
+          nullable: true
+        completed: &a58
+          type: boolean
+    TaskPatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties: *a53
+    Task:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - organizationId
+        - createdAt
+        - updatedAt
+        - version
+        - archived
+        - title
+      properties:
+        id: *a16
+        organizationId: *a16
+        title: *a54
+        contactId: *a55
+        opportunityId: *a56
+        dueAt: *a57
+        completed: *a58
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        version:
+          type: integer
+          minimum: 1
+        archived:
+          type: boolean
+    KnowledgeEntryInput:
+      type: object
+      additionalProperties: false
+      required:
+        - title
+        - content
+      properties: &a59
+        title: &a60
+          type: string
+          minLength: 1
+          maxLength: 160
+        content: &a61
+          type: string
+          minLength: 1
+          maxLength: 12000
+    KnowledgeEntryPatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties: *a59
+    KnowledgeEntry:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - organizationId
+        - createdAt
+        - updatedAt
+        - version
+        - archived
+        - title
+        - content
+      properties:
+        id: *a16
+        organizationId: *a16
+        title: *a60
+        content: *a61
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        version:
+          type: integer
+          minimum: 1
+        archived:
+          type: boolean
+    WorkflowInput:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+        - trigger
+        - taskTitle
+      properties: &a62
+        name: &a63
+          type: string
+          minLength: 1
+          maxLength: 120
+        trigger: &a64
+          type: string
+          enum:
+            - opportunity.won
+            - task.created
+        taskTitle: &a65
+          type: string
+          minLength: 1
+          maxLength: 160
+    WorkflowPatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties: *a62
+    Workflow:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - organizationId
+        - createdAt
+        - updatedAt
+        - version
+        - archived
+        - name
+        - trigger
+        - taskTitle
+      properties:
+        id: *a16
+        organizationId: *a16
+        name: *a63
+        trigger: *a64
+        taskTitle: *a65
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        version:
+          type: integer
+          minimum: 1
+        archived:
+          type: boolean
+        status:
+          type: string
+          enum:
+            - draft
+            - active
+            - paused
+    CommercialOverview:
+      type: object
+      required:
+        - contacts
+        - openOpportunities
+        - pendingTasks
+        - proposalAmountCents
+        - currency
+        - confirmedRevenueCents
+      properties:
+        contacts:
+          type: integer
+          minimum: 0
+        openOpportunities:
+          type: integer
+          minimum: 0
+        pendingTasks:
+          type: integer
+          minimum: 0
+        proposalAmountCents:
+          type: integer
+          minimum: 0
+        currency:
+          type: string
+          enum:
+            - BRL
+        confirmedRevenueCents:
+          type: integer
+          nullable: true
+          description: "null: não há fonte financeira confirmada. Propostas e
+            oportunidades ganhas não são receita."

@@ -1,0 +1,141 @@
+{
+  "executedAt": "2026-11-23T22:44:29.014Z",
+  "postgresVersion": "PostgreSQL 18.7 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+  "fixture": "DEMO_ONLY, cluster PostgreSQL dedicado e provedor OIDC local de protocolo, sem credencial produtiva",
+  "tests": [
+    {
+      "name": "health/readiness e contrato são públicos, API interna não existe",
+      "status": "PASS"
+    },
+    {
+      "name": "sessão real opaca, cookie restrito e Cache-Control no-store",
+      "status": "PASS"
+    },
+    {
+      "name": "tenant A não lê B por path ou query; listagem contém somente A",
+      "status": "PASS"
+    },
+    {
+      "name": "tenant A não escreve B nem muda o escopo por header/body/query",
+      "status": "PASS"
+    },
+    {
+      "name": "viewer recebe 403 em mutações de domínio, inclusive com role forjada",
+      "status": "PASS"
+    },
+    {
+      "name": "viewer vê apenas seu membership; owner/manager veem equipe permitida",
+      "status": "PASS"
+    },
+    {
+      "name": "admin cliente não promove a owner/admin; IDs de objetos de B não atravessam A",
+      "status": "PASS"
+    },
+    {
+      "name": "CSRF exige token e Origin exatos; JSON e DTOs são estritos",
+      "status": "PASS"
+    },
+    {
+      "name": "idempotência concorrente gera um resultado e um único evento/auditoria",
+      "status": "PASS"
+    },
+    {
+      "name": "último owner e identidade dos objetos são protegidos",
+      "status": "PASS"
+    },
+    {
+      "name": "FORCE RLS, role sem bypass e defesa SQL direta contra tenant B",
+      "status": "PASS"
+    },
+    {
+      "name": "SET LOCAL não vaza para conexão reutilizada e auditoria é append-only",
+      "status": "PASS"
+    },
+    {
+      "name": "outbox e auditoria são atômicos; inbox deduplica e rollback permite retry",
+      "status": "PASS"
+    },
+    {
+      "name": "OIDC rejeita state/replay e assinatura, nonce, issuer, audience e expiração inválidos",
+      "status": "PASS"
+    },
+    {
+      "name": "falha do IdP não derruba operações locais com sessão vigente",
+      "status": "PASS"
+    },
+    {
+      "name": "logout e expiração revogam sessões; nova autenticação rotaciona o token",
+      "status": "PASS"
+    },
+    {
+      "name": "revogação de membership vale no próximo uso; replay não contorna autorização",
+      "status": "PASS"
+    },
+    {
+      "name": "erro uniforme e logs não registram tokens, query, payload ou pessoa",
+      "status": "PASS"
+    },
+    {
+      "name": "baseline local de GET/POST sem provedores externos",
+      "status": "PASS"
+    },
+    {
+      "name": "respostas reais de identidade, organização, membership e erro satisfazem o OpenAPI",
+      "status": "PASS"
+    },
+    {
+      "name": "comercial contacts: criar, consultar, editar e arquivar no PostgreSQL real",
+      "status": "PASS"
+    },
+    {
+      "name": "comercial opportunities: criar, consultar, editar e arquivar no PostgreSQL real",
+      "status": "PASS"
+    },
+    {
+      "name": "comercial tasks: criar, consultar, editar e arquivar no PostgreSQL real",
+      "status": "PASS"
+    },
+    {
+      "name": "comercial knowledge: criar, consultar, editar e arquivar no PostgreSQL real",
+      "status": "PASS"
+    },
+    {
+      "name": "comercial workflows: criar, consultar, editar e arquivar no PostgreSQL real",
+      "status": "PASS"
+    },
+    {
+      "name": "comercial: tenant A/B e viewer são bloqueados por path, query, body, header e RLS",
+      "status": "PASS"
+    },
+    {
+      "name": "comercial: validação estrita, CSRF, idempotência e paginação sem dados falsos",
+      "status": "PASS"
+    },
+    {
+      "name": "comercial: métricas são agregadas no banco e propostas não viram receita",
+      "status": "PASS"
+    },
+    {
+      "name": "automação real: ativa, cria tarefa uma vez, registra recibo e pausa",
+      "status": "PASS"
+    },
+    {
+      "name": "automação: revogação interrompe execuções e tarefa gerada não cria loop",
+      "status": "PASS"
+    },
+    {
+      "name": "callback aceita session_state opcional sem usá-lo como identidade ou autorização",
+      "status": "PASS"
+    },
+    {
+      "name": "migration é idempotente e readiness rejeita RLS removida",
+      "status": "PASS"
+    },
+    {
+      "name": "down/up reconstrói o schema somente no cluster descartável de teste",
+      "status": "PASS"
+    }
+  ],
+  "logRecords": 321,
+  "externalProviderSandboxExecuted": false
+}

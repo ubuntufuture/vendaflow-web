@@ -1,0 +1,530 @@
+{
+  "executedAt": "2026-11-21T17:55:17.395Z",
+  "profile": {
+    "location": "Windows local, loopback",
+    "dataset": "DEMO_ONLY; organizações e memberships criados nesta suíte",
+    "concurrency": 5,
+    "requests": 100,
+    "externalCalls": false,
+    "cache": "sem cache de resposta; sessões aquecidas",
+    "statistic": "nearest rank; amostra pequena, não representa carga produtiva acordada"
+  },
+  "observations": [
+    {
+      "method": "GET",
+      "ms": 93.130799999999,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 96.44780000000173,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 124.20690000000468,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 125.72239999999874,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 144.66109999999753,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 62.04019999999582,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 62.847900000000664,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 65.49820000000182,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 71.44729999999981,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 73.68409999999858,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 43.654600000001665,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 44.39940000000206,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 53.244299999998475,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 53.728399999999965,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 56.06380000000354,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 41.02309999999852,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 41.96630000000005,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 44.47219999999652,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 46.24289999999746,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 60.52780000000348,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 52.29729999999836,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 53.45940000000701,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 53.51840000000084,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 56.07530000000406,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 57.578999999997905,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 52.35670000000391,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 53.43449999999575,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 54.115399999995134,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 55.18269999999757,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 57.122199999997974,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 45.2554999999993,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 48.55920000000333,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 48.76680000000488,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 50.71839999999793,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 56.99380000000383,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 44.428899999998976,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 46.87830000000395,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 48.996399999996356,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 50.727200000001176,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 63.05080000000453,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 43.79939999999624,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 45.456300000005285,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 47.28190000000177,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 51.09389999999985,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 53.66410000000178,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 44.959100000000035,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 46.25330000000395,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 48.54400000000169,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 53.973799999999756,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "ms": 56.756900000000314,
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "ms": 1510.7566000000006,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1513.5069999999978,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1521.5968999999968,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1523.2347000000009,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1529.5512999999992,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1056.0391999999993,
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "ms": 1423.8121000000028,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1567.6838999999964,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1592.888899999998,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1708.2170999999944,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1062.5072,
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "ms": 1062.5507999999973,
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "ms": 1161.9810999999972,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1164.7838000000047,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1221.1322,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1047.7687000000005,
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "ms": 1056.9488000000056,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1058.498599999999,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1064.6096000000034,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1874.6950999999972,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 983.9297000000006,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 984.227899999998,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 995.7321999999986,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 2070.8948999999993,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 2148.7007000000012,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1075.4074000000037,
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "ms": 1460.2220000000016,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1482.8326000000015,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1578.092899999996,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1648.1332000000039,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1047.8669000000082,
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "ms": 1051.662599999996,
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "ms": 1264.1661999999924,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1283.414499999999,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1334.5501999999979,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1516.7641000000003,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1696.0837000000029,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1728.9686999999976,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1765.0462000000116,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1789.202099999995,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1658.4888000000064,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1851.777900000001,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1954.1417999999976,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1998.0308000000077,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 2060.3907999999938,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 1063.4594999999972,
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "ms": 1622.2936999999947,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 2076.5157000000036,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 2128.3573000000033,
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "ms": 2216.6072999999888,
+      "status": 201
+    }
+  ],
+  "summary": [
+    {
+      "method": "GET",
+      "count": 50,
+      "p75": 57.578999999997905,
+      "p95": 124.20690000000468,
+      "errors": 0
+    },
+    {
+      "method": "POST",
+      "count": 50,
+      "p75": 1728.9686999999976,
+      "p95": 2128.3573000000033,
+      "errors": 8
+    }
+  ]
+}

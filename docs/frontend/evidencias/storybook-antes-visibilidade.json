@@ -1,0 +1,30 @@
+{
+  "executedAt": "2026-11-22T00:21:33.049Z",
+  "results": [
+    {
+      "id": "venda-web-fundação--login",
+      "status": "FAIL",
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--cadastro",
+      "status": "FAIL",
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--recuperacao",
+      "status": "FAIL",
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--identidade-indisponivel",
+      "status": "FAIL",
+      "violations": []
+    },
+    {
+      "id": "venda-web-fundação--estados",
+      "status": "FAIL",
+      "violations": []
+    }
+  ]
+}

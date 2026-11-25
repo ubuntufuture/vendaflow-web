@@ -1,0 +1,22 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { useState } from 'react';
+import { Badge, Button, Checkbox, DataTable, Dialog, Field, Select, StateView, Textarea, Toast } from '../components/primitives';
+import { ComponentGallery } from '../screens';
+const meta = { title: 'Design system/Componentes', component: ComponentGallery, tags: ['autodocs'] } satisfies Meta<typeof ComponentGallery>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+export const Catalogo: Story = {};
+export const Botoes: Story = { render: () => <div className="vf-row"><Button>Revisar configuração</Button><Button variant="secondary">Voltar</Button><Button variant="quiet">Mais opções</Button><Button disabled>Indisponível</Button><Button busy>Processando</Button></div> };
+export const Formularios: Story = { render: () => <div className="vf-stack"><Field label="Nome" placeholder="Campo vazio" hint="DEMO_ONLY · sem dados reais" /><Field label="Campo inválido" error="Revise o conteúdo informado." /><Field label="Indisponível" disabled /><Field label="Somente leitura" value="Português (Brasil)" readOnly /><Textarea label="Observação" /><Select label="Finalidade"><option>Selecione uma finalidade</option></Select><Checkbox label="Permissão específica e opcional" /></div> };
+export const Identificadores: Story = { render: () => <div className="vf-row"><Badge icon="check" tone="success">Confirmado</Badge><Badge icon="warning" tone="error">Falha</Badge><Badge icon="clock" tone="attention">Pendente</Badge><Badge icon="lock">Acesso restrito</Badge></div> };
+export const TabelaVazia: Story = { render: () => <DataTable caption="DEMO_ONLY · tabela sem registros" columns={['Contato','Responsável','Próxima ação']} /> };
+export const Carregando: Story = { render: () => <StateView state="loading" /> };
+export const Vazio: Story = { render: () => <StateView state="empty" /> };
+export const Erro: Story = { render: () => <StateView state="error" /> };
+export const PermissaoNegada: Story = { render: () => <StateView state="forbidden" /> };
+export const Timeout: Story = { render: () => <StateView state="timeout" /> };
+export const Sucesso: Story = { render: () => <StateView state="success" /> };
+export const Desatualizado: Story = { render: () => <StateView state="stale" /> };
+function ModalExample() { const [open,setOpen]=useState(false); return <><Button onClick={()=>setOpen(true)}>Abrir diálogo de revisão</Button><Dialog open={open} onClose={()=>setOpen(false)} title="Revisar ação"><div className="vf-panel-body vf-stack"><p>DEMO_ONLY · exemplo de diálogo sem operação de negócio.</p><Field label="Observação" /><Button onClick={()=>setOpen(false)}>Fechar revisão</Button></div></Dialog></>; }
+export const Modal: Story = { render: () => <ModalExample /> };
+export const Notificacao: Story = { render: () => { const [show,setShow]=useState(true); return show?<Toast onDismiss={()=>setShow(false)}>DEMO_ONLY · exemplo de confirmação.</Toast>:<Button onClick={()=>setShow(true)}>Exibir notificação</Button>; } };

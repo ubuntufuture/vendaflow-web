@@ -1,0 +1,16 @@
+{
+  "executedAt": "2026-11-22T00:36:16.628Z",
+  "missingLocal": [
+    "referencias/00_ARQUITETURA_GERAL.md",
+    "referencias/03_SEGURANCA_E_GOVERNANCA.md",
+    "referencias/venda-openapi.yaml"
+  ],
+  "prdAvailable": false,
+  "github": {
+    "url": "https://api.github.com/repos/ubuntufuture/vendaflow-web/contents",
+    "observedStatus": 404,
+    "observedMessage": "This repository is empty.",
+    "provider": "GitHub conectado, ferramenta fetch"
+  },
+  "productionAccessUsed": false
+}

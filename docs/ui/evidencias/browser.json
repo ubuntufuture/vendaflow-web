@@ -1,0 +1,1654 @@
+{
+  "executedAt": "2026-11-21T17:15:27.647Z",
+  "browserExecutable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "browserVersion": "157.0.8103.80",
+  "conditions": {
+    "host": "Windows local",
+    "network": "loopback, sem throttling",
+    "cache": "contexto novo; fontes aguardadas",
+    "locale": "pt-BR",
+    "timezone": "America/Sao_Paulo",
+    "reducedMotion": true
+  },
+  "checks": [
+    {
+      "name": "Título PUB01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB01 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB02 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB02 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB02 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB02 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB03 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB03 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB03 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB03 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB04 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB04 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB04 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB04 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB05 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB05 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB05 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB05 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB06 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB06 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB06 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB06 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título AUTH01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow AUTH01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada AUTH01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe AUTH01 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP01 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP02 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP02 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP02 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP02 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP03 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP03 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP03 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP03 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP04 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP04 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP04 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP04 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP05 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP05 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP05 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP05 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP06 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP06 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP06 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP06 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP07 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP07 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP07 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP07 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP08 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP08 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP08 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP08 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP09 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP09 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP09 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP09 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP10 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP10 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP10 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP10 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP11 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP11 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP11 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP11 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP12 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP12 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP12 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP12 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP13 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP13 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP13 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP13 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP14 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP14 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP14 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP14 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP15 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP15 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP15 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP15 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP16 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP16 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP16 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP16 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP17 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP17 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP17 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP17 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP18 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP18 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP18 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP18 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP19 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP19 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP19 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP19 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP20 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP20 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP20 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP20 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP21 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP21 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP21 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP21 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP22 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP22 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP22 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP22 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP23 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP23 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP23 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP23 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP24 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP24 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP24 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP24 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM01 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM01 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM02 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM02 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM02 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM02 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM03 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM03 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM03 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM03 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM04 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM04 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM04 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM04 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM05 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM05 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM05 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM05 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM06 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM06 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM06 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM06 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM07 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM07 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM07 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM07 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM08 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM08 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM08 desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM08 desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe identidade desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe componentes desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe APP03 dark desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe ADM02 dark desktop",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB01 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB02 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB02 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB02 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB02 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB03 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB03 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB03 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB03 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB04 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB04 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB04 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB04 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB05 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB05 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB05 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB05 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título PUB06 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow PUB06 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada PUB06 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe PUB06 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título AUTH01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow AUTH01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada AUTH01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe AUTH01 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP01 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP02 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP02 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP02 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP02 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP03 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP03 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP03 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP03 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP04 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP04 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP04 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP04 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP05 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP05 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP05 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP05 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP06 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP06 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP06 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP06 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP07 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP07 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP07 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP07 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP08 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP08 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP08 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP08 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP09 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP09 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP09 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP09 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP10 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP10 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP10 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP10 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP11 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP11 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP11 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP11 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP12 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP12 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP12 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP12 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP13 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP13 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP13 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP13 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP14 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP14 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP14 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP14 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP15 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP15 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP15 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP15 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP16 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP16 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP16 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP16 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP17 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP17 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP17 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP17 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP18 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP18 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP18 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP18 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP19 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP19 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP19 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP19 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP20 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP20 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP20 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP20 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP21 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP21 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP21 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP21 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP22 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP22 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP22 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP22 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP23 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP23 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP23 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP23 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título APP24 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow APP24 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada APP24 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP24 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM01 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM01 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM02 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM02 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM02 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM02 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM03 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM03 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM03 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM03 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM04 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM04 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM04 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM04 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM05 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM05 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM05 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM05 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM06 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM06 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM06 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM06 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM07 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM07 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM07 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM07 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Título ADM08 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Sem overflow ADM08 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Inter carregada ADM08 mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM08 mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe identidade mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe componentes mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe APP03 dark mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "axe ADM02 dark mobile",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Sem overflow tablet APP03",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP03 tablet",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Sem overflow tablet APP16",
+      "status": "PASS"
+    },
+    {
+      "name": "axe APP16 tablet",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Sem overflow tablet ADM03",
+      "status": "PASS"
+    },
+    {
+      "name": "axe ADM03 tablet",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Reflow 320 PUB01",
+      "status": "PASS"
+    },
+    {
+      "name": "Reflow 320 APP03",
+      "status": "PASS"
+    },
+    {
+      "name": "Reflow 320 APP16",
+      "status": "PASS"
+    },
+    {
+      "name": "Reflow 320 ADM02",
+      "status": "PASS"
+    },
+    {
+      "name": "Modal nativo abre",
+      "status": "PASS"
+    },
+    {
+      "name": "Tab permanece no modal",
+      "status": "PASS"
+    },
+    {
+      "name": "Shift Tab permanece no modal",
+      "status": "PASS"
+    },
+    {
+      "name": "axe modal aberto",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Escape fecha modal",
+      "status": "PASS"
+    },
+    {
+      "name": "Foco retorna ao acionador",
+      "status": "PASS"
+    },
+    {
+      "name": "Toast é anunciado",
+      "status": "PASS"
+    },
+    {
+      "name": "Filtro por teclado",
+      "status": "PASS"
+    },
+    {
+      "name": "Menu mobile abre",
+      "status": "PASS"
+    },
+    {
+      "name": "Story carregando renderizada",
+      "status": "PASS"
+    },
+    {
+      "name": "axe Story carregando",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Story vazio renderizada",
+      "status": "PASS"
+    },
+    {
+      "name": "axe Story vazio",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Story erro renderizada",
+      "status": "PASS"
+    },
+    {
+      "name": "axe Story erro",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Story permissao-negada renderizada",
+      "status": "PASS"
+    },
+    {
+      "name": "axe Story permissao-negada",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Story timeout renderizada",
+      "status": "PASS"
+    },
+    {
+      "name": "axe Story timeout",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Story sucesso renderizada",
+      "status": "PASS"
+    },
+    {
+      "name": "axe Story sucesso",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Story desatualizado renderizada",
+      "status": "PASS"
+    },
+    {
+      "name": "axe Story desatualizado",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Diff repetibilidade APP03 desktop",
+      "status": "PASS",
+      "detail": {
+        "changedPixels": 0,
+        "totalPixels": 1440000,
+        "scope": "Duas capturas locais da mesma versão; não é comparação com baseline aprovado."
+      }
+    },
+    {
+      "name": "Comparação visual contém PNG original",
+      "status": "PASS",
+      "detail": "docs/ui/evidencias/telas/comparacao-brandboard.png"
+    },
+    {
+      "name": "Sem chamadas externas nas telas",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "Sem exceções JavaScript no navegador",
+      "status": "PASS",
+      "detail": []
+    }
+  ],
+  "screenshots": [
+    "docs/ui/evidencias/telas/PUB01-desktop.png",
+    "docs/ui/evidencias/telas/PUB02-desktop.png",
+    "docs/ui/evidencias/telas/PUB03-desktop.png",
+    "docs/ui/evidencias/telas/PUB04-desktop.png",
+    "docs/ui/evidencias/telas/PUB05-desktop.png",
+    "docs/ui/evidencias/telas/PUB06-desktop.png",
+    "docs/ui/evidencias/telas/AUTH01-desktop.png",
+    "docs/ui/evidencias/telas/APP01-desktop.png",
+    "docs/ui/evidencias/telas/APP02-desktop.png",
+    "docs/ui/evidencias/telas/APP03-desktop.png",
+    "docs/ui/evidencias/telas/APP04-desktop.png",
+    "docs/ui/evidencias/telas/APP05-desktop.png",
+    "docs/ui/evidencias/telas/APP06-desktop.png",
+    "docs/ui/evidencias/telas/APP07-desktop.png",
+    "docs/ui/evidencias/telas/APP08-desktop.png",
+    "docs/ui/evidencias/telas/APP09-desktop.png",
+    "docs/ui/evidencias/telas/APP10-desktop.png",
+    "docs/ui/evidencias/telas/APP11-desktop.png",
+    "docs/ui/evidencias/telas/APP12-desktop.png",
+    "docs/ui/evidencias/telas/APP13-desktop.png",
+    "docs/ui/evidencias/telas/APP14-desktop.png",
+    "docs/ui/evidencias/telas/APP15-desktop.png",
+    "docs/ui/evidencias/telas/APP16-desktop.png",
+    "docs/ui/evidencias/telas/APP17-desktop.png",
+    "docs/ui/evidencias/telas/APP18-desktop.png",
+    "docs/ui/evidencias/telas/APP19-desktop.png",
+    "docs/ui/evidencias/telas/APP20-desktop.png",
+    "docs/ui/evidencias/telas/APP21-desktop.png",
+    "docs/ui/evidencias/telas/APP22-desktop.png",
+    "docs/ui/evidencias/telas/APP23-desktop.png",
+    "docs/ui/evidencias/telas/APP24-desktop.png",
+    "docs/ui/evidencias/telas/ADM01-desktop.png",
+    "docs/ui/evidencias/telas/ADM02-desktop.png",
+    "docs/ui/evidencias/telas/ADM03-desktop.png",
+    "docs/ui/evidencias/telas/ADM04-desktop.png",
+    "docs/ui/evidencias/telas/ADM05-desktop.png",
+    "docs/ui/evidencias/telas/ADM06-desktop.png",
+    "docs/ui/evidencias/telas/ADM07-desktop.png",
+    "docs/ui/evidencias/telas/ADM08-desktop.png",
+    "docs/ui/evidencias/telas/identidade-desktop.png",
+    "docs/ui/evidencias/telas/componentes-desktop.png",
+    "docs/ui/evidencias/telas/APP03-dark-desktop.png",
+    "docs/ui/evidencias/telas/ADM02-dark-desktop.png",
+    "docs/ui/evidencias/telas/PUB01-mobile.png",
+    "docs/ui/evidencias/telas/PUB02-mobile.png",
+    "docs/ui/evidencias/telas/PUB03-mobile.png",
+    "docs/ui/evidencias/telas/PUB04-mobile.png",
+    "docs/ui/evidencias/telas/PUB05-mobile.png",
+    "docs/ui/evidencias/telas/PUB06-mobile.png",
+    "docs/ui/evidencias/telas/AUTH01-mobile.png",
+    "docs/ui/evidencias/telas/APP01-mobile.png",
+    "docs/ui/evidencias/telas/APP02-mobile.png",
+    "docs/ui/evidencias/telas/APP03-mobile.png",
+    "docs/ui/evidencias/telas/APP04-mobile.png",
+    "docs/ui/evidencias/telas/APP05-mobile.png",
+    "docs/ui/evidencias/telas/APP06-mobile.png",
+    "docs/ui/evidencias/telas/APP07-mobile.png",
+    "docs/ui/evidencias/telas/APP08-mobile.png",
+    "docs/ui/evidencias/telas/APP09-mobile.png",
+    "docs/ui/evidencias/telas/APP10-mobile.png",
+    "docs/ui/evidencias/telas/APP11-mobile.png",
+    "docs/ui/evidencias/telas/APP12-mobile.png",
+    "docs/ui/evidencias/telas/APP13-mobile.png",
+    "docs/ui/evidencias/telas/APP14-mobile.png",
+    "docs/ui/evidencias/telas/APP15-mobile.png",
+    "docs/ui/evidencias/telas/APP16-mobile.png",
+    "docs/ui/evidencias/telas/APP17-mobile.png",
+    "docs/ui/evidencias/telas/APP18-mobile.png",
+    "docs/ui/evidencias/telas/APP19-mobile.png",
+    "docs/ui/evidencias/telas/APP20-mobile.png",
+    "docs/ui/evidencias/telas/APP21-mobile.png",
+    "docs/ui/evidencias/telas/APP22-mobile.png",
+    "docs/ui/evidencias/telas/APP23-mobile.png",
+    "docs/ui/evidencias/telas/APP24-mobile.png",
+    "docs/ui/evidencias/telas/ADM01-mobile.png",
+    "docs/ui/evidencias/telas/ADM02-mobile.png",
+    "docs/ui/evidencias/telas/ADM03-mobile.png",
+    "docs/ui/evidencias/telas/ADM04-mobile.png",
+    "docs/ui/evidencias/telas/ADM05-mobile.png",
+    "docs/ui/evidencias/telas/ADM06-mobile.png",
+    "docs/ui/evidencias/telas/ADM07-mobile.png",
+    "docs/ui/evidencias/telas/ADM08-mobile.png",
+    "docs/ui/evidencias/telas/identidade-mobile.png",
+    "docs/ui/evidencias/telas/componentes-mobile.png",
+    "docs/ui/evidencias/telas/APP03-dark-mobile.png",
+    "docs/ui/evidencias/telas/ADM02-dark-mobile.png",
+    "docs/ui/evidencias/telas/APP03-tablet.png",
+    "docs/ui/evidencias/telas/APP16-tablet.png",
+    "docs/ui/evidencias/telas/ADM03-tablet.png",
+    "docs/ui/evidencias/telas/modal-desktop.png",
+    "docs/ui/evidencias/telas/estado-carregando.png",
+    "docs/ui/evidencias/telas/estado-vazio.png",
+    "docs/ui/evidencias/telas/estado-erro.png",
+    "docs/ui/evidencias/telas/estado-permissao-negada.png",
+    "docs/ui/evidencias/telas/estado-timeout.png",
+    "docs/ui/evidencias/telas/estado-sucesso.png",
+    "docs/ui/evidencias/telas/estado-desatualizado.png",
+    "docs/ui/evidencias/telas/comparacao-brandboard.png"
+  ],
+  "limits": [
+    "axe não certifica WCAG completa.",
+    "Sem baseline visual aprovado; diff executado mede apenas repetibilidade.",
+    "Screenshots não medem performance de campo.",
+    "Nenhuma integração produtiva ou dado de cliente."
+  ]
+}

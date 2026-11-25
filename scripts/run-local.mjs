@@ -1,0 +1,33 @@
+// Real persistent local runtime; intentionally imports no test IdP or data fixtures.
+import fs from 'node:fs';
+import path from 'node:path';
+import { createServer } from 'node:http';
+import { pathToFileURL } from 'node:url';
+import {spawn} from 'node:child_process';
+const root=process.cwd(),location=path.join(root,'.local/runtime-location.json');
+const directory=fs.existsSync(location)?JSON.parse(fs.readFileSync(location,'utf8')).directory:path.join(root,'.local');
+const file=path.join(directory,'runtime.json');
+if(!fs.existsSync(file)) throw new Error('Execute npm run setup:local. Nenhum mock será iniciado.');
+const env=JSON.parse(fs.readFileSync(file,'utf8'));
+for(const name of ['VENDA_WEB_ORIGIN','VENDA_API_INTERNAL_ORIGIN','OIDC_ISSUER']) if(new URL(env[name]).hostname!=='127.0.0.1') throw new Error('Launcher exclusivo de loopback.');
+Object.assign(process.env,env);
+delete process.env.VENDA_REVIEW_MODE;
+delete process.env.VENDA_WEB_LOCAL_TEST;
+const {loadConfig}=await import(pathToFileURL(path.join(root,'venda-api/build/config.js')).href);
+const {createApp}=await import(pathToFileURL(path.join(root,'venda-api/build/app.js')).href);
+process.chdir(path.join(root,'venda-api'));
+const runtime=await createApp(loadConfig());
+if(!await runtime.db.ready()) throw new Error('Banco real indisponível ou RLS inadequada.');
+await runtime.app.listen(3201,'127.0.0.1');
+const workerEnv=JSON.parse(fs.readFileSync(path.join(directory,'worker.json'),'utf8'));
+const worker=spawn(process.execPath,[path.join(root,'venda-workers/build/main.js')],{cwd:root,env:{PATH:process.env.PATH,SystemRoot:process.env.SystemRoot,TEMP:process.env.TEMP,...workerEnv},windowsHide:true,stdio:['ignore','inherit','inherit']});
+process.env.NODE_ENV='production';
+const {default:next}=await import('next');
+const web=next({dev:false,dir:path.join(root,'venda-web'),hostname:'127.0.0.1',port:3400});
+await web.prepare();
+const server=createServer(web.getRequestHandler());
+await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(3400,'127.0.0.1',resolve);});
+let closing=false;
+async function close(){if(closing)return;closing=true;worker.kill('SIGTERM');server.closeAllConnections();await new Promise(r=>server.close(r));await web.close();await runtime.close();console.log('Aplicação encerrada. Dados persistentes preservados.');}
+process.once('SIGINT',()=>void close());process.once('SIGTERM',()=>void close());
+console.log('Venda Flow AI: http://127.0.0.1:3400 — PostgreSQL persistente e Keycloak real; sem dados de exemplo e sem login simulado.');

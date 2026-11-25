@@ -1,0 +1,122 @@
+[
+  {
+    "file": "branding/brandboard.png",
+    "sha256": "ca063cdf24475bfb3775f346ed13781b694fb8dcd1dbd874817213fffedb43a6"
+  },
+  {
+    "file": "branding/licenses/Inter-OFL.txt",
+    "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+  },
+  {
+    "file": "branding/README.md",
+    "sha256": "72d4df68060757a8bb769cf682dc3e296b6e405b1d15bb4a2c43d1aee795d748"
+  },
+  {
+    "file": "branding/tokens.json",
+    "sha256": "c9a9e023dd5977c90ebd393c2276f96f4bdc5ca9a49d49297ae85d79d44b1efb"
+  },
+  {
+    "file": "packages/ui/components/gallery.client.tsx",
+    "sha256": "cbb04e28b5dbeb8e568fbfed16dc45a8ed0deaf6108c05ce70dc255cd728e33d"
+  },
+  {
+    "file": "packages/ui/components/icons.tsx",
+    "sha256": "430582e68d712a6b656df5da54ccbd4cc3538eeca28675cef08d0581587d5734"
+  },
+  {
+    "file": "packages/ui/components/index.ts",
+    "sha256": "515088f9cbe7275f2dd4a9f029feffa339ed41c5e13914c9c56e1de0afca848a"
+  },
+  {
+    "file": "packages/ui/components/primitives.tsx",
+    "sha256": "9181699e6a03b58f25918bd515737ff85a5f7f4f7036373b28dacd6235d22be4"
+  },
+  {
+    "file": "packages/ui/components/shell.client.tsx",
+    "sha256": "afd864a0a268168c4c519a189fed9b34324970125c08a67de8a38f328b658730"
+  },
+  {
+    "file": "packages/ui/package.json",
+    "sha256": "384c59d3cdba0686226468c89f4f249c3dabefa852c10471cf95000710ae4ef9"
+  },
+  {
+    "file": "packages/ui/screens.tsx",
+    "sha256": "985b91dadb222861830e7a8545b07bdb1a5e35ed048a999f3b1018a04de3c0f0"
+  },
+  {
+    "file": "packages/ui/stories/Components.stories.tsx",
+    "sha256": "01bee602008922b36c106d2fc1fb0b289000207f209e8a9392b4910d014af4f6"
+  },
+  {
+    "file": "packages/ui/stories/Screens.stories.tsx",
+    "sha256": "ea01b686769aca3c5b0f6b20205d033ddf80d66751b5a84764287da6af4c39ce"
+  },
+  {
+    "file": "packages/ui/styles/tokens.css",
+    "sha256": "a908821668f93fd2d3d112d7a5fc14166b8efd1ff6d40b1d9daa2d94fef1600b"
+  },
+  {
+    "file": "packages/ui/styles/ui.css",
+    "sha256": "7ce84006bb4542d2c409095a4e128f9a01d155ddc4481cc6b0cb2da4c6fcd163"
+  },
+  {
+    "file": "packages/ui/tests/components.test.tsx",
+    "sha256": "985f27b51fea0a58f7a6e19c285c147b1a166972ac74cf6102053db06716112f"
+  },
+  {
+    "file": "packages/ui/tests/setup.ts",
+    "sha256": "ae4b6b92c8c0f06526032b2dedeb4fb0e93b85af2a138a423386f2e36894a685"
+  },
+  {
+    "file": "sandbox/ui-review/app/componentes/page.tsx",
+    "sha256": "359a0e33c3b89500407ca51fcc7cfe0fe7068c09a15dc4305069407c057d03b5"
+  },
+  {
+    "file": "sandbox/ui-review/app/identidade/page.tsx",
+    "sha256": "9b71b09794c35db2800d8f070d31e62009f2b72e09df5dd31e294c6958f9a5e9"
+  },
+  {
+    "file": "sandbox/ui-review/app/layout.tsx",
+    "sha256": "b96f7a1d1954c1098265ad6b6c58bb7cef991cbdef40ee9a92b616c4bcebdd9c"
+  },
+  {
+    "file": "sandbox/ui-review/app/page.tsx",
+    "sha256": "71ac08e6dc55d2575c2d5882a4bf2a38dd9fb6bf732b73cf20f46bd0240d1560"
+  },
+  {
+    "file": "sandbox/ui-review/app/telas/[id]/page.tsx",
+    "sha256": "ff88059a4e40f4302f856bd3607d47adc0d28288367b1c925882f41c41779353"
+  },
+  {
+    "file": "sandbox/ui-review/next-env.d.ts",
+    "sha256": "1b59d4c6b83807db275d43f3cf2cc8e9323f465fab764eea091cc5becd5bad37"
+  },
+  {
+    "file": "sandbox/ui-review/next.config.ts",
+    "sha256": "329ce5d13e4dc8a816aa0f755fd97a42d95805026669589a5c8af2d56ee2c851"
+  },
+  {
+    "file": "sandbox/ui-review/public/referencia/brandboard.png",
+    "sha256": "ca063cdf24475bfb3775f346ed13781b694fb8dcd1dbd874817213fffedb43a6"
+  },
+  {
+    "file": "sandbox/ui-review/README.md",
+    "sha256": "5ae53af20657af8cdc93cb907a84a1d5f6cbeaf63ae824f446d007303c1c9c73"
+  },
+  {
+    "file": "sandbox/ui-review/tsconfig.json",
+    "sha256": "90678eea5822585b2a2865991a71263758a3621dbd76e0244f0bbbb9ded79c49"
+  },
+  {
+    "file": ".storybook/main.ts",
+    "sha256": "56ad8f56cf5c5e4fad0d42852024a242578b073348f3fee2a2287e560114411f"
+  },
+  {
+    "file": ".storybook/preview-head.html",
+    "sha256": "48da0f6602b4c05694fdec26838e7747d24e14e85c0916a939b038f82ea934de"
+  },
+  {
+    "file": ".storybook/preview.tsx",
+    "sha256": "21d2022e9a062e89124f4e8a028a4bb1d2f04680764bce6c401859c29152efd3"
+  }
+]

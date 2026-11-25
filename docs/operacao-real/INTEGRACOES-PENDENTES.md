@@ -1,0 +1,13 @@
+# Integrações externas — estado e contratos pendentes
+
+Referências oficiais consultadas em 23/11/2026. Este documento não declara adapters implementados nem credenciais configuradas.
+
+| Provedor | Ambiente real disponível | Referência | Limites e falhas a contratar/testar |
+|---|---|---|---|
+| Keycloak | Desenvolvimento local real, loopback; login exercitado no browser em realm temporário | [Configuração oficial](https://www.keycloak.org/server/configuration) | Timeout OIDC configurável; state/nonce/PKCE/JWKS e sessão protegida. Operação produtiva, HA, SMTP e MFA interno ainda não certificados. |
+| WhatsApp Business Platform | Nenhuma conta/WABA/número/aplicação/token configurados; sandbox e produção não executados | [Visão geral oficial](https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform), [envio de mensagens](https://developers.facebook.com/documentation/business-messaging/whatsapp/messages/send-messages) | Fixar versão suportada da Graph API no adapter; confirmar limites atribuídos à conta/número. Tratar autenticação/permissão, destinatário/template/janela elegível, throttling, timeout e indisponibilidade sem confirmar entrega prematura. Assinatura de webhook, dedupe, consentimento/finalidade/canal e estados de entrega precisam implementação e testes. |
+| Mercado Pago | Credenciais de teste BR fornecidas e GET /users/me validado em 25/11/2026; assinatura/planos/preços e produção ainda pendentes | [Criar assinatura](https://www.mercadopago.com.br/developers/pt/reference/online-payments/subscriptions/create-preapproval/post) | POST /preapproval; leitura/reconciliação por identificador confirmado pelo provedor. Confirmar limites com a conta/aplicação. Tratar rejeições/validação, 401/403, 429, timeout e 5xx. Não ativar assinatura por retorno do browser. Webhook oficial, reconciliador, idempotência e entitlements exigem implementação e sandbox. |
+| IA/RAG | Provedor/modelo/credenciais não definidos | A selecionar conforme contrato autorizado | Limites de contexto, tokens, custo, taxa, latência e retenção ainda desconhecidos. Nenhuma inferência ou indexação executada. CRUD de texto não representa RAG funcional. |
+| E-mail | SMTP/serviço e domínio não configurados | A selecionar conforme serviço autorizado | Recuperação de senha e convites por e-mail indisponíveis; validar autenticação, rejeição, bounce, throttling e expiração de links antes da liberação. |
+
+Nenhum limite numérico foi inventado. As quotas externas deverão ser confirmadas para as contas efetivas. Retries externos devem respeitar classificação de erro e Retry-After, com limite, jitter, timeout e reconciliação para resultados ambíguos; esse comportamento ainda não foi comprovado para os provedores pendentes.
