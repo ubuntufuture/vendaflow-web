@@ -1005,6 +1005,39 @@ paths:
         "500": *a12
         "503": *a13
         "504": *a14
+  /v1/reports/history:
+    get:
+      operationId: commercialHistory
+      security: *a1
+      parameters:
+        - *a3
+        - name: from
+          in: query
+          schema:
+            type: string
+            format: date
+        - name: to
+          in: query
+          schema:
+            type: string
+            format: date
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CommercialHistory"
+        "400": *a5
+        "401": *a6
+        "403": *a7
+        "404": *a8
+        "409": *a9
+        "413": *a10
+        "429": *a11
+        "500": *a12
+        "503": *a13
+        "504": *a14
   /v1/workflows/{id}/activate:
     post:
       operationId: activateWorkflow
@@ -1454,6 +1487,56 @@ components:
           nullable: true
           description: "null: não há fonte financeira confirmada. Propostas e
             oportunidades ganhas não são receita."
+    CommercialHistory:
+      type: object
+      required:
+        - from
+        - to
+        - timezone
+        - series
+        - confirmedRevenueCents
+        - financialSource
+      properties:
+        from:
+          type: string
+          format: date
+        to:
+          type: string
+          format: date
+        timezone:
+          type: string
+          minLength: 1
+          maxLength: 100
+        confirmedRevenueCents:
+          type: integer
+          nullable: true
+        financialSource:
+          type: string
+          enum:
+            - unconfigured
+        series:
+          type: array
+          maxItems: 92
+          items:
+            type: object
+            required:
+              - date
+              - contactsCreated
+              - opportunitiesCreated
+              - tasksCreated
+            properties:
+              date:
+                type: string
+                format: date
+              contactsCreated:
+                type: integer
+                minimum: 0
+              opportunitiesCreated:
+                type: integer
+                minimum: 0
+              tasksCreated:
+                type: integer
+                minimum: 0
     Error:
       type: object
       additionalProperties: false

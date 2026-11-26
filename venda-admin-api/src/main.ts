@@ -1,0 +1,2 @@
+import{loadAdminConfig}from'./config.js';import{createAdminApp}from'./app.js';
+const config=loadAdminConfig();const runtime=await createAdminApp(config);if(!await runtime.db.ready())throw new Error('Banco interno indisponível ou sem isolamento.');await runtime.app.listen(config.port,config.localDevelopment?'127.0.0.1':'0.0.0.0');process.once('SIGINT',()=>void runtime.close());process.once('SIGTERM',()=>void runtime.close());

@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-11-23T22:44:29.014Z",
+  "executedAt": "2026-11-26T21:27:43.745Z",
   "postgresVersion": "PostgreSQL 18.7 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
   "fixture": "DEMO_ONLY, cluster PostgreSQL dedicado e provedor OIDC local de protocolo, sem credencial produtiva",
   "tests": [
@@ -72,6 +72,10 @@
       "status": "PASS"
     },
     {
+      "name": "catálogo público só expõe versões publicadas e não permite selecionar tenant",
+      "status": "PASS"
+    },
+    {
       "name": "erro uniforme e logs não registram tokens, query, payload ou pessoa",
       "status": "PASS"
     },
@@ -128,6 +132,18 @@
       "status": "PASS"
     },
     {
+      "name": "privacidade: ledger imutável, finalidade/canal, idempotência, RBAC e isolamento A/B",
+      "status": "PASS"
+    },
+    {
+      "name": "privacidade: exportação autorizada com escopo explícito e pedido de exclusão sem conclusão fictícia",
+      "status": "PASS"
+    },
+    {
+      "name": "relatórios históricos respeitam fuso IANA, intervalo, autorização e isolamento, sem receita estimada",
+      "status": "PASS"
+    },
+    {
       "name": "migration é idempotente e readiness rejeita RLS removida",
       "status": "PASS"
     },
@@ -136,6 +152,6 @@
       "status": "PASS"
     }
   ],
-  "logRecords": 321,
+  "logRecords": 364,
   "externalProviderSandboxExecuted": false
 }

@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-26T21:08:06.302Z",
+  "provider": "Meta WhatsApp",
+  "graphVersion": "v26.0",
+  "accountAuthenticated": true,
+  "httpStatus": 200,
+  "providerErrorCode": null,
+  "businessDiscovery": {
+    "available": true,
+    "httpStatus": 200,
+    "providerErrorCode": null
+  },
+  "wabaCount": 0,
+  "phoneNumberCount": 0,
+  "binding": {
+    "attempted": true,
+    "verified": true,
+    "httpStatus": 200,
+    "providerErrorCode": null
+  },
+  "identifiersRecorded": false,
+  "credentialValuesRecorded": false,
+  "messagesSent": 0,
+  "accountBound": false,
+  "modeSource": "user_confirmed_test_token",
+  "reference": "https://developers.facebook.com/docs/graph-api/reference/whats-app-business-account/phone_numbers/"
+}

@@ -1463,6 +1463,39 @@ paths:
         "500": *a27
         "503": *a28
         "504": *a29
+  /v1/reports/history:
+    get:
+      operationId: commercialHistory
+      security: *a17
+      parameters:
+        - *a18
+        - name: from
+          in: query
+          schema:
+            type: string
+            format: date
+        - name: to
+          in: query
+          schema:
+            type: string
+            format: date
+      responses:
+        "200":
+          description: Dados confirmados no banco da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CommercialHistory"
+        "400": *a20
+        "401": *a21
+        "403": *a22
+        "404": *a23
+        "409": *a24
+        "413": *a25
+        "429": *a26
+        "500": *a27
+        "503": *a28
+        "504": *a29
   /v1/workflows/{id}/activate:
     post:
       operationId: activateWorkflow
@@ -1591,6 +1624,262 @@ paths:
         "500": *a27
         "503": *a28
         "504": *a29
+  /v1/plans:
+    get:
+      operationId: publicPlans
+      security: []
+      description: Somente versões publicadas no console interno. Catálogo não
+        comprova contratação nem disponibilidade de integrações.
+      responses:
+        "200":
+          description: Catálogo publicado; data vazia quando nenhum plano foi aprovado.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    maxItems: 200
+                    items:
+                      $ref: "#/components/schemas/PublicPlan"
+        "400":
+          description: Falha uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "503":
+          description: Falha uniforme
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /v1/consents:
+    get:
+      security: *a17
+      parameters: &a50
+        - &a41
+          name: organizationId
+          in: query
+          required: true
+          schema: &a52
+            type: string
+            format: uuid
+      operationId: listConsentRecord
+      responses:
+        "200":
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    maxItems: 100
+                    items:
+                      $ref: "#/components/schemas/ConsentRecord"
+        "400": &a42
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "401": &a43
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "403": &a44
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404": &a45
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "409": &a46
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "413": &a47
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500": &a48
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "503": &a49
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      security: *a17
+      parameters: &a51
+        - *a41
+        - name: X-CSRF-Token
+          in: header
+          required: true
+          schema:
+            type: string
+            minLength: 1
+            maxLength: 256
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+            minLength: 16
+            maxLength: 128
+            pattern: ^[A-Za-z0-9_-]+$
+      operationId: createConsentRecord
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConsentInput"
+      responses:
+        "201":
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConsentRecord"
+        "400": *a42
+        "401": *a43
+        "403": *a44
+        "404": *a45
+        "409": *a46
+        "413": *a47
+        "500": *a48
+        "503": *a49
+  /v1/privacy/requests:
+    get:
+      security: *a17
+      parameters: *a50
+      operationId: listPrivacyRequest
+      responses:
+        "200":
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    maxItems: 100
+                    items:
+                      $ref: "#/components/schemas/PrivacyRequest"
+        "400": *a42
+        "401": *a43
+        "403": *a44
+        "404": *a45
+        "409": *a46
+        "413": *a47
+        "500": *a48
+        "503": *a49
+    post:
+      security: *a17
+      parameters: *a51
+      operationId: createPrivacyRequest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrivacyRequestInput"
+      responses:
+        "201":
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrivacyRequest"
+        "400": *a42
+        "401": *a43
+        "403": *a44
+        "404": *a45
+        "409": *a46
+        "413": *a47
+        "500": *a48
+        "503": *a49
+  /v1/privacy/requests/{id}/export:
+    get:
+      security: *a17
+      parameters:
+        - *a41
+        - name: id
+          in: path
+          required: true
+          schema: *a52
+      operationId: exportPrivacyRequest
+      responses:
+        "200":
+          description: Resultado autorizado da organização
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - scope
+                  - generatedAt
+                  - contact
+                  - opportunities
+                  - tasks
+                  - consents
+                properties:
+                  scope:
+                    type: string
+                    enum:
+                      - contact_and_linked_commercial_records
+                  generatedAt:
+                    type: string
+                    format: date-time
+                  contact:
+                    $ref: "#/components/schemas/Contact"
+                  opportunities:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Opportunity"
+                  tasks:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Task"
+                  consents:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/ConsentRecord"
+        "400": *a42
+        "401": *a43
+        "403": *a44
+        "404": *a45
+        "409": *a46
+        "413": *a47
+        "500": *a48
+        "503": *a49
 components:
   securitySchemes:
     session:
@@ -1616,7 +1905,7 @@ components:
               type: string
             message:
               type: string
-            requestId: &a41
+            requestId: &a53
               type: string
               format: uuid
     Organization:
@@ -1630,7 +1919,7 @@ components:
         - currency
         - createdAt
       properties:
-        id: *a41
+        id: *a53
         name:
           type: string
           minLength: 1
@@ -1646,7 +1935,7 @@ components:
           type: string
           enum:
             - BRL
-        createdAt: &a42
+        createdAt: &a54
           type: string
           format: date-time
     Membership:
@@ -1660,10 +1949,10 @@ components:
         - active
         - createdAt
       properties:
-        id: *a41
-        organizationId: *a41
-        userId: *a41
-        role: &a43
+        id: *a53
+        organizationId: *a53
+        userId: *a53
+        role: &a55
           type: string
           enum:
             - owner
@@ -1674,7 +1963,7 @@ components:
             - billing
         active:
           type: boolean
-        createdAt: *a42
+        createdAt: *a54
     CreateOrganization:
       type: object
       additionalProperties: false
@@ -1708,14 +1997,14 @@ components:
         - userId
         - role
       properties:
-        userId: *a41
-        role: *a43
+        userId: *a53
+        role: *a55
     UpdateMembership:
       type: object
       additionalProperties: false
       minProperties: 1
       properties:
-        role: *a43
+        role: *a55
         active:
           type: boolean
     Me:
@@ -1732,10 +2021,10 @@ components:
           required:
             - id
           properties:
-            id: *a41
+            id: *a53
         csrfToken:
           type: string
-        sessionExpiresAt: *a42
+        sessionExpiresAt: *a54
     Organizations:
       type: object
       additionalProperties: false
@@ -1773,16 +2062,16 @@ components:
       additionalProperties: false
       required:
         - name
-      properties: &a44
-        name: &a45
+      properties: &a56
+        name: &a57
           type: string
           minLength: 1
           maxLength: 120
-        phone: &a46
+        phone: &a58
           type: string
           pattern: ^\+[1-9][0-9]{7,14}$
           nullable: true
-        email: &a47
+        email: &a59
           type: string
           format: email
           maxLength: 254
@@ -1791,7 +2080,7 @@ components:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a44
+      properties: *a56
     Contact:
       type: object
       additionalProperties: false
@@ -1806,9 +2095,9 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        name: *a45
-        phone: *a46
-        email: *a47
+        name: *a57
+        phone: *a58
+        email: *a59
         createdAt:
           type: string
           format: date-time
@@ -1826,16 +2115,16 @@ components:
       required:
         - title
         - stage
-      properties: &a48
-        title: &a49
+      properties: &a60
+        title: &a61
           type: string
           minLength: 1
           maxLength: 160
-        contactId: &a50
+        contactId: &a62
           type: string
           format: uuid
           nullable: true
-        stage: &a51
+        stage: &a63
           type: string
           enum:
             - new
@@ -1843,7 +2132,7 @@ components:
             - proposal
             - won
             - lost
-        amountCents: &a52
+        amountCents: &a64
           type: integer
           minimum: 0
           maximum: 9000000000000
@@ -1852,7 +2141,7 @@ components:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a48
+      properties: *a60
     Opportunity:
       type: object
       additionalProperties: false
@@ -1868,10 +2157,10 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        title: *a49
-        contactId: *a50
-        stage: *a51
-        amountCents: *a52
+        title: *a61
+        contactId: *a62
+        stage: *a63
+        amountCents: *a64
         createdAt:
           type: string
           format: date-time
@@ -1892,30 +2181,30 @@ components:
       additionalProperties: false
       required:
         - title
-      properties: &a53
-        title: &a54
+      properties: &a65
+        title: &a66
           type: string
           minLength: 1
           maxLength: 160
-        contactId: &a55
+        contactId: &a67
           type: string
           format: uuid
           nullable: true
-        opportunityId: &a56
+        opportunityId: &a68
           type: string
           format: uuid
           nullable: true
-        dueAt: &a57
+        dueAt: &a69
           type: string
           format: date-time
           nullable: true
-        completed: &a58
+        completed: &a70
           type: boolean
     TaskPatch:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a53
+      properties: *a65
     Task:
       type: object
       additionalProperties: false
@@ -1930,11 +2219,11 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        title: *a54
-        contactId: *a55
-        opportunityId: *a56
-        dueAt: *a57
-        completed: *a58
+        title: *a66
+        contactId: *a67
+        opportunityId: *a68
+        dueAt: *a69
+        completed: *a70
         createdAt:
           type: string
           format: date-time
@@ -1952,12 +2241,12 @@ components:
       required:
         - title
         - content
-      properties: &a59
-        title: &a60
+      properties: &a71
+        title: &a72
           type: string
           minLength: 1
           maxLength: 160
-        content: &a61
+        content: &a73
           type: string
           minLength: 1
           maxLength: 12000
@@ -1965,7 +2254,7 @@ components:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a59
+      properties: *a71
     KnowledgeEntry:
       type: object
       additionalProperties: false
@@ -1981,8 +2270,8 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        title: *a60
-        content: *a61
+        title: *a72
+        content: *a73
         createdAt:
           type: string
           format: date-time
@@ -2001,17 +2290,17 @@ components:
         - name
         - trigger
         - taskTitle
-      properties: &a62
-        name: &a63
+      properties: &a74
+        name: &a75
           type: string
           minLength: 1
           maxLength: 120
-        trigger: &a64
+        trigger: &a76
           type: string
           enum:
             - opportunity.won
             - task.created
-        taskTitle: &a65
+        taskTitle: &a77
           type: string
           minLength: 1
           maxLength: 160
@@ -2019,7 +2308,7 @@ components:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a62
+      properties: *a74
     Workflow:
       type: object
       additionalProperties: false
@@ -2036,9 +2325,9 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        name: *a63
-        trigger: *a64
-        taskTitle: *a65
+        name: *a75
+        trigger: *a76
+        taskTitle: *a77
         createdAt:
           type: string
           format: date-time
@@ -2087,3 +2376,225 @@ components:
           nullable: true
           description: "null: não há fonte financeira confirmada. Propostas e
             oportunidades ganhas não são receita."
+    CommercialHistory:
+      type: object
+      required:
+        - from
+        - to
+        - timezone
+        - series
+        - confirmedRevenueCents
+        - financialSource
+      properties:
+        from:
+          type: string
+          format: date
+        to:
+          type: string
+          format: date
+        timezone:
+          type: string
+          minLength: 1
+          maxLength: 100
+        confirmedRevenueCents:
+          type: integer
+          nullable: true
+        financialSource:
+          type: string
+          enum:
+            - unconfigured
+        series:
+          type: array
+          maxItems: 92
+          items:
+            type: object
+            required:
+              - date
+              - contactsCreated
+              - opportunitiesCreated
+              - tasksCreated
+            properties:
+              date:
+                type: string
+                format: date
+              contactsCreated:
+                type: integer
+                minimum: 0
+              opportunitiesCreated:
+                type: integer
+                minimum: 0
+              tasksCreated:
+                type: integer
+                minimum: 0
+    PublicPlan:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - code
+        - version
+        - name
+        - amountCents
+        - currency
+        - frequency
+        - frequencyType
+        - features
+        - limits
+      properties:
+        id:
+          type: string
+          format: uuid
+        code:
+          type: string
+        version:
+          type: integer
+          minimum: 1
+        name:
+          type: string
+        amountCents:
+          type: integer
+          minimum: 1
+          maximum: 9000000000000
+        currency:
+          type: string
+          enum:
+            - BRL
+        frequency:
+          type: integer
+          minimum: 1
+          maximum: 365
+        frequencyType:
+          type: string
+          enum:
+            - days
+            - months
+        features:
+          type: array
+          items:
+            type: string
+            enum:
+              - crm
+              - whatsapp
+              - ai
+              - automations
+              - reports
+        limits:
+          type: object
+          additionalProperties:
+            type: integer
+            minimum: 0
+    ConsentInput:
+      type: object
+      additionalProperties: false
+      required:
+        - contactId
+        - purpose
+        - channel
+        - status
+        - lawfulBasis
+        - noticeVersion
+        - sourceReference
+      properties:
+        contactId: *a52
+        purpose: &a78
+          type: string
+          enum:
+            - service
+            - marketing
+        channel: &a79
+          type: string
+          enum:
+            - whatsapp
+            - email
+        status: &a80
+          type: string
+          enum:
+            - granted
+            - revoked
+        lawfulBasis: &a81
+          type: string
+          enum:
+            - consent
+            - contract
+            - legal_obligation
+            - legitimate_interest
+        noticeVersion: &a82
+          type: string
+          minLength: 1
+          maxLength: 64
+        sourceReference: &a83
+          type: string
+          minLength: 1
+          maxLength: 240
+    ConsentRecord:
+      type: object
+      additionalProperties: false
+      required:
+        - contactId
+        - purpose
+        - channel
+        - status
+        - lawfulBasis
+        - noticeVersion
+        - sourceReference
+        - id
+        - organizationId
+        - recordedAt
+        - actorId
+      properties:
+        contactId: *a52
+        purpose: *a78
+        channel: *a79
+        status: *a80
+        lawfulBasis: *a81
+        noticeVersion: *a82
+        sourceReference: *a83
+        id: *a52
+        organizationId: *a52
+        actorId: *a52
+        recordedAt:
+          type: string
+          format: date-time
+    PrivacyRequestInput:
+      type: object
+      additionalProperties: false
+      required:
+        - contactId
+        - kind
+        - sourceReference
+      properties:
+        contactId: *a52
+        kind: &a84
+          type: string
+          enum:
+            - access
+            - export
+            - erasure
+        sourceReference: &a85
+          type: string
+          minLength: 1
+          maxLength: 240
+    PrivacyRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - contactId
+        - kind
+        - sourceReference
+        - id
+        - organizationId
+        - status
+        - createdAt
+      properties:
+        contactId: *a52
+        kind: *a84
+        sourceReference: *a85
+        id: *a52
+        organizationId: *a52
+        status:
+          type: string
+          enum:
+            - pending_review
+        createdAt:
+          type: string
+          format: date-time

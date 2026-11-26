@@ -1,0 +1,13 @@
+import fs from'node:fs';import path from'node:path';import{randomBytes}from'node:crypto';import{createRequire}from'node:module';import{pathToFileURL}from'node:url';
+const root=process.cwd(),directory=JSON.parse(fs.readFileSync('.local/runtime-location.json','utf8')).directory,file=path.join(directory,'secrets.json'),keys=JSON.parse(fs.readFileSync(file,'utf8'));
+if(!keys.adminIdentity?.clientSecret)throw new Error('Configure a identidade interna primeiro.');
+keys.adminRuntime??={db:randomBytes(32).toString('hex'),session:randomBytes(32).toString('hex'),flow:randomBytes(32).toString('hex'),csrf:randomBytes(32).toString('hex')};
+fs.writeFileSync(file,JSON.stringify(keys,null,2));
+const req=createRequire(path.join(root,'venda-api/package.json')),pg=req('pg');
+const db=new pg.Client({connectionString:`postgresql://venda_local_migrator:${keys.dbAdmin}@127.0.0.1:55432/venda_flow_local`});await db.connect();
+try{const migrations=await db.query('SELECT max(version) AS version FROM public.venda_migrations');if(migrations.rows[0].version<8)throw new Error('Aplique e valide as migrações até 008 antes do setup interno.');
+ const role='venda_admin_local';if(!(await db.query('SELECT 1 FROM pg_roles WHERE rolname=$1',[role])).rowCount){if(!/^[a-f0-9]{64}$/.test(keys.adminRuntime.db))throw new Error('Credencial local inválida.');await db.query(`CREATE ROLE ${role} LOGIN NOSUPERUSER NOBYPASSRLS INHERIT PASSWORD '${keys.adminRuntime.db}'`);}await db.query(`GRANT venda_admin_api TO ${role}`);
+}finally{await db.end();}
+const runtime={NODE_ENV:'development',VENDA_ADMIN_LOCAL_DEVELOPMENT:'true',PORT:'3202',ADMIN_DATABASE_URL:`postgresql://venda_admin_local:${keys.adminRuntime.db}@127.0.0.1:55432/venda_flow_local`,ADMIN_DB_TLS:'false',ADMIN_WEB_ORIGIN:'http://127.0.0.1:3401',ADMIN_OIDC_ISSUER:'http://127.0.0.1:38080/realms/venda-flow-admin-local',CUSTOMER_OIDC_ISSUER:'http://127.0.0.1:38080/realms/venda-flow-local',ADMIN_OIDC_CLIENT_ID:'venda-admin-local',ADMIN_OIDC_CLIENT_SECRET:keys.adminIdentity.clientSecret,ADMIN_SESSION_HASH_KEY:keys.adminRuntime.session,ADMIN_FLOW_ENCRYPTION_KEY:keys.adminRuntime.flow,ADMIN_CSRF_KEY:keys.adminRuntime.csrf};
+fs.writeFileSync(path.join(directory,'admin-runtime.json'),JSON.stringify(runtime,null,2));fs.writeFileSync(path.join(directory,'admin-web.json'),JSON.stringify({NODE_ENV:'production',VENDA_ADMIN_LOCAL_DEVELOPMENT:'true',ADMIN_WEB_ORIGIN:runtime.ADMIN_WEB_ORIGIN,ADMIN_API_INTERNAL_ORIGIN:'http://127.0.0.1:3202',ADMIN_IDENTITY_ORIGIN:'http://127.0.0.1:38080'},null,2));
+console.log('Runtime interno configurado com role, chaves e cliente OIDC próprios; nenhum plano foi criado.');

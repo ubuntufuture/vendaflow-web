@@ -20,3 +20,4 @@
 
 /* Keep content-sized grid/flex items inside the viewport. */
 .st-page{grid-template-columns:minmax(0,1fr)}.st-board{position:relative;min-width:0;max-width:100%}.st-opportunity-card{min-width:0;overflow-wrap:anywhere}.st-tools>*{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.st-card summary{padding:12px 0;cursor:pointer}.st-card [role=region]{position:relative}

@@ -1,0 +1,1 @@
+import Link from'next/link';export default function NotFound(){return <main id="conteudo" className="login"><section className="login-card"><h1>Página não encontrada</h1><p>Confira o endereço do console interno.</p><Link href="/app">Voltar ao console</Link></section></main>;}

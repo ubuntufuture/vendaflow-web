@@ -1,55 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuites>
-	<testsuite name="Configuração e políticas sem serviços externos" time="0.018513" disabled="0" errors="0" tests="6" failures="0" skipped="0" timestamp="2026-11-23T22:43:39.283Z" hostname="DESKTOP-PGNJPHU">
-		<testcase name="rollback recusa banco não descartável antes de abrir conexão" time="0.006085" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
-		<testcase name="exige variáveis e não revela seu conteúdo" time="0.001954" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
-		<testcase name="produção rejeita HTTP, DB sem TLS e segredos compartilhados" time="0.001153" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
-		<testcase name="somente owner/admin têm capacidades de gestão da fundação" time="0.001312" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
-		<testcase name="desenvolvimento HTTP real é explícito, restrito a loopback e proibido em produção" time="0.002367" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
-		<testcase name="erro desconhecido nunca expõe stack, SQL ou segredo" time="0.001107" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
+	<testsuite name="Configuração e políticas sem serviços externos" time="0.018532" disabled="0" errors="0" tests="6" failures="0" skipped="0" timestamp="2026-11-26T21:26:21.220Z" hostname="DESKTOP-PGNJPHU">
+		<testcase name="rollback recusa banco não descartável antes de abrir conexão" time="0.005044" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
+		<testcase name="exige variáveis e não revela seu conteúdo" time="0.002908" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
+		<testcase name="produção rejeita HTTP, DB sem TLS e segredos compartilhados" time="0.001850" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
+		<testcase name="somente owner/admin têm capacidades de gestão da fundação" time="0.001623" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
+		<testcase name="desenvolvimento HTTP real é explícito, restrito a loopback e proibido em produção" time="0.001854" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
+		<testcase name="erro desconhecido nunca expõe stack, SQL ou segredo" time="0.001215" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\config.test.js"/>
 	</testsuite>
-	<testsuite name="DEMO_ONLY — fundação com PostgreSQL real e protocolo OIDC assinado" time="57.572889" disabled="0" errors="0" tests="33" failures="0" skipped="0" timestamp="2026-11-23T22:43:45.563Z" hostname="DESKTOP-PGNJPHU">
-		<testcase name="health/readiness e contrato são públicos, API interna não existe" time="0.305761" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="sessão real opaca, cookie restrito e Cache-Control no-store" time="0.038874" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="tenant A não lê B por path ou query; listagem contém somente A" time="0.083656" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="tenant A não escreve B nem muda o escopo por header/body/query" time="0.210665" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="viewer recebe 403 em mutações de domínio, inclusive com role forjada" time="0.287320" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="viewer vê apenas seu membership; owner/manager veem equipe permitida" time="0.079269" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="admin cliente não promove a owner/admin; IDs de objetos de B não atravessam A" time="0.110176" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="CSRF exige token e Origin exatos; JSON e DTOs são estritos" time="0.254862" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="idempotência concorrente gera um resultado e um único evento/auditoria" time="0.502777" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="último owner e identidade dos objetos são protegidos" time="0.110993" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="FORCE RLS, role sem bypass e defesa SQL direta contra tenant B" time="0.050127" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="SET LOCAL não vaza para conexão reutilizada e auditoria é append-only" time="0.023321" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="outbox e auditoria são atômicos; inbox deduplica e rollback permite retry" time="0.035062" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="OIDC rejeita state/replay e assinatura, nonce, issuer, audience e expiração inválidos" time="0.346701" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="falha do IdP não derruba operações locais com sessão vigente" time="0.072368" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="logout e expiração revogam sessões; nova autenticação rotaciona o token" time="0.374443" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="revogação de membership vale no próximo uso; replay não contorna autorização" time="0.403698" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="erro uniforme e logs não registram tokens, query, payload ou pessoa" time="0.023129" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="baseline local de GET/POST sem provedores externos" time="1.498900" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="respostas reais de identidade, organização, membership e erro satisfazem o OpenAPI" time="0.267518" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="comercial contacts: criar, consultar, editar e arquivar no PostgreSQL real" time="0.339788" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="comercial opportunities: criar, consultar, editar e arquivar no PostgreSQL real" time="0.326268" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="comercial tasks: criar, consultar, editar e arquivar no PostgreSQL real" time="0.302348" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="comercial knowledge: criar, consultar, editar e arquivar no PostgreSQL real" time="0.248740" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="comercial workflows: criar, consultar, editar e arquivar no PostgreSQL real" time="0.304169" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="comercial: tenant A/B e viewer são bloqueados por path, query, body, header e RLS" time="0.271915" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="comercial: validação estrita, CSRF, idempotência e paginação sem dados falsos" time="0.278933" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="comercial: métricas são agregadas no banco e propostas não viram receita" time="0.131884" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="automação real: ativa, cria tarefa uma vez, registra recibo e pausa" time="0.503379" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="automação: revogação interrompe execuções e tarefa gerada não cria loop" time="0.271302" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="callback aceita session_state opcional sem usá-lo como identidade ou autorização" time="0.049442" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="migration é idempotente e readiness rejeita RLS removida" time="0.168717" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
-		<testcase name="down/up reconstrói o schema somente no cluster descartável de teste" time="1.449069" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+	<testsuite name="DEMO_ONLY — fundação com PostgreSQL real e protocolo OIDC assinado" time="99.882786" disabled="0" errors="0" tests="37" failures="0" skipped="0" timestamp="2026-11-26T21:26:27.172Z" hostname="DESKTOP-PGNJPHU">
+		<testcase name="health/readiness e contrato são públicos, API interna não existe" time="0.372301" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="sessão real opaca, cookie restrito e Cache-Control no-store" time="0.045932" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="tenant A não lê B por path ou query; listagem contém somente A" time="0.079926" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="tenant A não escreve B nem muda o escopo por header/body/query" time="0.188740" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="viewer recebe 403 em mutações de domínio, inclusive com role forjada" time="0.299866" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="viewer vê apenas seu membership; owner/manager veem equipe permitida" time="0.053630" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="admin cliente não promove a owner/admin; IDs de objetos de B não atravessam A" time="0.098618" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="CSRF exige token e Origin exatos; JSON e DTOs são estritos" time="0.219629" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="idempotência concorrente gera um resultado e um único evento/auditoria" time="0.363341" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="último owner e identidade dos objetos são protegidos" time="0.093610" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="FORCE RLS, role sem bypass e defesa SQL direta contra tenant B" time="0.049705" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="SET LOCAL não vaza para conexão reutilizada e auditoria é append-only" time="0.021370" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="outbox e auditoria são atômicos; inbox deduplica e rollback permite retry" time="0.038233" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="OIDC rejeita state/replay e assinatura, nonce, issuer, audience e expiração inválidos" time="0.385505" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="falha do IdP não derruba operações locais com sessão vigente" time="0.078602" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="logout e expiração revogam sessões; nova autenticação rotaciona o token" time="0.333760" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="revogação de membership vale no próximo uso; replay não contorna autorização" time="0.357692" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="catálogo público só expõe versões publicadas e não permite selecionar tenant" time="0.126381" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="erro uniforme e logs não registram tokens, query, payload ou pessoa" time="0.019262" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="baseline local de GET/POST sem provedores externos" time="1.769350" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="respostas reais de identidade, organização, membership e erro satisfazem o OpenAPI" time="0.262196" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="comercial contacts: criar, consultar, editar e arquivar no PostgreSQL real" time="0.299700" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="comercial opportunities: criar, consultar, editar e arquivar no PostgreSQL real" time="0.285864" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="comercial tasks: criar, consultar, editar e arquivar no PostgreSQL real" time="0.304167" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="comercial knowledge: criar, consultar, editar e arquivar no PostgreSQL real" time="0.269769" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="comercial workflows: criar, consultar, editar e arquivar no PostgreSQL real" time="0.317218" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="comercial: tenant A/B e viewer são bloqueados por path, query, body, header e RLS" time="0.204969" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="comercial: validação estrita, CSRF, idempotência e paginação sem dados falsos" time="0.286056" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="comercial: métricas são agregadas no banco e propostas não viram receita" time="0.153503" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="automação real: ativa, cria tarefa uma vez, registra recibo e pausa" time="0.426833" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="automação: revogação interrompe execuções e tarefa gerada não cria loop" time="0.211951" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="callback aceita session_state opcional sem usá-lo como identidade ou autorização" time="0.034502" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="privacidade: ledger imutável, finalidade/canal, idempotência, RBAC e isolamento A/B" time="0.435982" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="privacidade: exportação autorizada com escopo explícito e pedido de exclusão sem conclusão fictícia" time="0.304313" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="relatórios históricos respeitam fuso IANA, intervalo, autorização e isolamento, sem receita estimada" time="0.288409" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="migration é idempotente e readiness rejeita RLS removida" time="0.173935" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
+		<testcase name="down/up reconstrói o schema somente no cluster descartável de teste" time="1.821239" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\foundation.test.js"/>
 	</testsuite>
-	<testcase name="OpenTelemetry exporta trace e métrica para collector local sem dado pessoal" time="0.127778" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\telemetry.test.js"/>
-	<!-- tests 40 -->
-	<!-- suites 2 -->
-	<!-- pass 40 -->
+	<testsuite name="Mercado Pago — port de leitura sandbox, DEMO_ONLY" time="0.081023" disabled="0" errors="0" tests="8" failures="0" skipped="0" timestamp="2026-11-26T21:28:07.857Z" hostname="DESKTOP-PGNJPHU">
+		<testcase name="não classifica ambiente somente pelo prefixo e recusa escrita/produção" time="0.005541" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\mercado-pago.test.js"/>
+		<testcase name="fixa host HTTPS, impede redirect e expõe somente diagnóstico sem dados pessoais" time="0.059202" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\mercado-pago.test.js"/>
+		<testcase name="classifica HTTP 401 sem registrar corpo ou repetir tentativa" time="0.002413" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\mercado-pago.test.js"/>
+		<testcase name="classifica HTTP 403 sem registrar corpo ou repetir tentativa" time="0.000980" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\mercado-pago.test.js"/>
+		<testcase name="classifica HTTP 429 sem registrar corpo ou repetir tentativa" time="0.001331" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\mercado-pago.test.js"/>
+		<testcase name="classifica HTTP 503 sem registrar corpo ou repetir tentativa" time="0.001063" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\mercado-pago.test.js"/>
+		<testcase name="distingue timeout e omite erros internos do transporte" time="0.001361" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\mercado-pago.test.js"/>
+		<testcase name="recusa payload inválido, conta de outro país e resposta excessiva" time="0.005637" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\mercado-pago.test.js"/>
+	</testsuite>
+	<testsuite name="DEMO_ONLY — assinaturas recorrentes Mercado Pago" time="0.082195" disabled="0" errors="0" tests="5" failures="0" skipped="0" timestamp="2026-11-26T21:28:08.661Z" hostname="DESKTOP-PGNJPHU">
+		<testcase name="cria checkout pendente com valor em centavos e chave estável, sem enviar dados de cartão" time="0.064404" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\subscriptions-client.test.js"/>
+		<testcase name="recusa ambiente incoerente, comprador real em sandbox e preço inválido antes de criar cobrança" time="0.003012" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\subscriptions-client.test.js"/>
+		<testcase name="vincula recurso ao recebedor e referência local e recusa URLs de checkout externas" time="0.007021" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\subscriptions-client.test.js"/>
+		<testcase name="consulta antes de cancelar e não repete cancelamento já confirmado" time="0.002378" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\subscriptions-client.test.js"/>
+		<testcase name="não repete POST após timeout ambíguo nem expõe resposta do provedor" time="0.001817" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\subscriptions-client.test.js"/>
+	</testsuite>
+	<testcase name="OpenTelemetry exporta trace e métrica para collector local sem dado pessoal" time="0.104862" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\telemetry.test.js"/>
+	<testsuite name="DEMO_ONLY — assinaturas oficiais de webhook" time="0.009360" disabled="0" errors="0" tests="2" failures="0" skipped="0" timestamp="2026-11-26T21:28:11.888Z" hostname="DESKTOP-PGNJPHU">
+		<testcase name="Meta assina bytes exatos e rejeita body alterado, algoritmo e tamanho inválidos" time="0.003506" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\webhook-signatures.test.js"/>
+		<testcase name="Mercado Pago valida ID normalizado, request-id e timestamp em segundos ou milissegundos" time="0.003583" classname="test" file="C:\Users\UBUNTU FUTURE\VendaFlowAi\venda-api\dist\test\webhook-signatures.test.js"/>
+	</testsuite>
+	<!-- tests 59 -->
+	<!-- suites 5 -->
+	<!-- pass 59 -->
 	<!-- fail 0 -->
 	<!-- cancelled 0 -->
 	<!-- skipped 0 -->
 	<!-- todo 0 -->
-	<!-- duration_ms 69305.5615 -->
+	<!-- duration_ms 113467.4854 -->
 </testsuites>

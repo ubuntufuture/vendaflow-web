@@ -27,6 +27,7 @@ function resourceController(resource:Resource,dto:Type<object>) {
 class ReportsController {
   constructor(@Inject(CommerceService) private readonly service:CommerceService) {}
   @Get('overview') overview(@Req() req:ApiRequest) {return this.service.overview(req.actor!,validateQuery(req));}
+  @Get('history') history(@Req()req:ApiRequest){if(Object.keys(req.query).some(key=>!['organizationId','from','to'].includes(key)))throw new BadRequestException();return this.service.history(req.actor!,uuid(req.query.organizationId),req.query);}
 }
 @UseGuards(TenantPolicyGuard)
 @Controller('/v1/workflows')
@@ -40,4 +41,4 @@ class WorkflowOperationsController {
     return this.service.workflowState(req.actor!,validateQuery(req),id,state,req.headers['idempotency-key'],req.headers['if-match'],req.requestId);
   }
 }
-export const commerceControllers = [resourceController('contacts',ContactInput),resourceController('opportunities',OpportunityInput),resourceController('tasks',TaskInput),resourceController('knowledge',KnowledgeInput),resourceController('workflows',WorkflowInput),ReportsController,WorkflowOperationsController];
+export const commerceControllers:Type<unknown>[] = [resourceController('contacts',ContactInput),resourceController('opportunities',OpportunityInput),resourceController('tasks',TaskInput),resourceController('knowledge',KnowledgeInput),resourceController('workflows',WorkflowInput),ReportsController,WorkflowOperationsController];

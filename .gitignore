@@ -27,3 +27,8 @@
 **/*playwright.zip
 **/*.har
 **/traces/
+/venda-admin-api/build/
+/venda-admin-api/.env*
+!/venda-admin-api/.env.example
+/venda-admin/.env*
+!/venda-admin/.env.example

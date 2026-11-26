@@ -1,0 +1,19 @@
+{
+  "executedAt": "2026-11-26T21:29:54.141Z",
+  "fixture": "DEMO_ONLY PostgreSQL isolado e protocolo OIDC assinado",
+  "realInteractiveMfaExecuted": false,
+  "outcomes": [
+    {
+      "name": "identidade interna exige MFA e não aceita cookie/issuer do cliente",
+      "status": "PASS"
+    },
+    {
+      "name": "plano nasce em rascunho; chave de intenção evita duas versões e suporte não altera preço",
+      "status": "PASS"
+    },
+    {
+      "name": "MFA precisa ser recente para gravar e revogação interna vale no próximo uso",
+      "status": "PASS"
+    }
+  ]
+}

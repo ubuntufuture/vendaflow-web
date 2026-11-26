@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-26T22:02:29.097Z",
+  "environment": "Local persistente com Keycloak real e PostgreSQL real",
+  "userConfirmedCatalogAccess": true,
+  "browserObserved": "http://127.0.0.1:3401/app#conteudo",
+  "observedHeading": "Planos e preços",
+  "observedState": "Nenhum plano cadastrado",
+  "personalPasswordConfigured": true,
+  "totpEnrolled": true,
+  "activeInternalSessions": 1,
+  "interactiveLoginVerified": true,
+  "secretValuesReadOrRecorded": false,
+  "emailOwnershipVerified": false
+}

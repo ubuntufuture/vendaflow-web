@@ -1,0 +1,118 @@
+{
+  "page": {
+    "origin": "http://127.0.0.1:3491",
+    "path": "/entrar"
+  },
+  "responses": [
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/_next/static/chunks/158-c78c0040ad8e4ae1.js",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/_next/static/chunks/main-app-3ef65dce4bb7bacc.js",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/_next/static/chunks/568-66e5f4bdc1fba52f.js",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/_next/static/chunks/app/(auth)/entrar/page-cc0d1b94b71bc6c6.js",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/_next/static/chunks/137-df4fb5e3b89979c1.js",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/_next/static/chunks/app/(auth)/layout-f203d5c59234244d.js",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/_next/static/chunks/app/layout-53b0c6576fb42d13.js",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/_next/image",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/_next/static/media/6c596dfcddeca1e9-s.p.woff2",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/cadastro",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/recuperar-acesso",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/privacidade",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/brand/venda-flow-symbol.png",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/termos",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/cadastro",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/recuperar-acesso",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/privacidade",
+      "status": 200
+    },
+    {
+      "origin": "http://127.0.0.1:3491",
+      "path": "/termos",
+      "status": 200
+    }
+  ],
+  "api": [
+    {
+      "service": "venda-api",
+      "requestId": "44fed114-5046-4351-8fa8-f32bf6978355",
+      "method": "GET",
+      "route": "/v1/auth/login",
+      "status": 500,
+      "durationMs": 3283.163
+    }
+  ]
+}

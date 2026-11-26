@@ -89,14 +89,17 @@ export async function postgresFixture() {
     "-l",
     path.join(directory, "postgres.log"),
     "-o",
-    `-h 127.0.0.1 -p ${port}`,
+    `-h 127.0.0.1 -p ${port} -c shared_buffers=32MB -c max_connections=40`,
     "-w",
+    "-t", "240",
     "start",
   ]);
   const base = `postgresql://venda_test_admin:${password}@127.0.0.1:${port}/postgres`;
   const admin = new pg.Client({
     connectionString: base,
-    connectionTimeoutMillis: 3000,
+    // Cluster setup on a cold HDD can exceed the production runtime deadline.
+    // This connection is the disposable fixture's control plane only.
+    connectionTimeoutMillis: 30000,
   });
   try {
     await admin.connect();
@@ -121,13 +124,13 @@ export async function postgresFixture() {
       async stop() {
         await control.end();
         await admin.end();
-        run(pg_ctl, ["-D", data, "-m", "fast", "-w", "stop"]);
+        run(pg_ctl, ["-D", data, "-m", "fast", "-w", "-t", "240", "stop"]);
         cleanup();
       },
     };
   } catch (error) {
     await admin.end().catch(() => {});
-    run(pg_ctl, ["-D", data, "-m", "fast", "-w", "stop"]);
+    run(pg_ctl, ["-D", data, "-m", "fast", "-w", "-t", "240", "stop"]);
     cleanup();
     throw error;
   }

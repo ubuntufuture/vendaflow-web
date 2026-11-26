@@ -1,10 +1,10 @@
 {
-  "executedAt": "2026-11-23T23:03:23.155Z",
+  "executedAt": "2026-11-26T21:27:25.992Z",
   "passed": true,
   "contract": "venda-api/contracts/venda.openapi.yaml",
-  "contractSha256": "d9c5678921ef8ec514c79121119c50a0c4e76eab559d13a7f842b5c587ca817c",
+  "contractSha256": "8d295c7bc3c148644f7340a2e3d7232cc3d397b0caa6bfb308b279ec9d1d72de",
   "generated": "venda-web/lib/api.generated.ts",
-  "generatedSha256": "549c56d1330ba2ecb8117f873d713a5f97fab183681b0f7bebfbdfb0794c6f50",
+  "generatedSha256": "ccaf71127103b00a0a25adbf8ec306b754964964bc2b07b491ccd298ac24ac87",
   "regeneratedAndCompared": true,
   "canonicalReferenceAvailable": false,
   "canonicalCompatibilityProven": false,

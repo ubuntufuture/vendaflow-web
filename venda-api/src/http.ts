@@ -129,10 +129,16 @@ export function errorBody(error: unknown, requestId: string) {
 }
 @Catch()
 export class Errors implements ExceptionFilter {
+  constructor(private readonly sink?:LogSink){}
   catch(exception: unknown, host: ArgumentsHost) {
     const req = host.switchToHttp().getRequest<ApiRequest>();
     const res = host.switchToHttp().getResponse<Response>();
     const result = errorBody(exception, req.requestId);
+    if(result.status>=500&&this.sink){
+      const code=typeof exception==='object'&&exception!==null&&'code'in exception?String(exception.code):'';
+      const safeCode=/^[0-9A-Z]{5}$/.test(code)||['ECONNREFUSED','ENOSPC','ERR_CRYPTO_INVALID_IV','ERR_OSSL_EVP_UNSUPPORTED'].includes(code)?code:'UNKNOWN';
+      this.sink(JSON.stringify({service:'venda-api',event:'request.error',requestId:req.requestId,status:result.status,exceptionType:exception instanceof Error?exception.constructor.name:'UnknownError',safeCode}));
+    }
     res.status(result.status).json(result.body);
   }
 }

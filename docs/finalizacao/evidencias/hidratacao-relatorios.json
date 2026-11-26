@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-26T21:48:13.593Z",
+  "reproduction": "React 19 SSR: filhos múltiplos no título SVG eram rejeitados; string única preserva o texto",
+  "before": "<svg><title></title></svg>",
+  "after": "<svg><title>Novas oportunidades de 26/11/2026 a 26/11/2026</title></svg>",
+  "fullBrowserRegressionPending": false,
+  "regression": {
+    "passed": 201,
+    "failed": 0,
+    "evidence": "browser/browser.json"
+  }
+}

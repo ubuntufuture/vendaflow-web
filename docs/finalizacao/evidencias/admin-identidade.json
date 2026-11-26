@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-11-26T22:01:56.796Z",
+  "realmSeparate": true,
+  "passwordRequired": true,
+  "totpRequired": true,
+  "amrMapper": "oidc-amr-mapper",
+  "amrFromCompletedExecutions": true,
+  "firstAdminProvisioned": true,
+  "personalPasswordConfigured": true,
+  "totpEnrolled": true,
+  "emailOwnershipVerified": false,
+  "interactiveLoginTestExecutedBySetup": false,
+  "secretValuesRecorded": false,
+  "reference": "https://www.keycloak.org/admin-api/protocol-mappers"
+}

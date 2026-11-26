@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import YAML from 'yaml';
 import {preservesFoundation} from './backward-compat.mjs';
+import {privacyContract} from './privacy-contract.mjs';
+import {catalogContract} from './catalog-contract.mjs';
 const base = YAML.parse(fs.readFileSync('contracts/foundation.openapi.yaml','utf8'));
 const security = base.paths['/v1/me'].get.security;
 const str = (maxLength=120) => ({type:'string',minLength:1,maxLength});
@@ -41,11 +43,19 @@ for (const [resource,properties] of Object.entries(fields)) {
 }
 commercial.components.schemas.CommercialOverview={type:'object',required:['contacts','openOpportunities','pendingTasks','proposalAmountCents','currency','confirmedRevenueCents'],properties:{contacts:{type:'integer',minimum:0},openOpportunities:{type:'integer',minimum:0},pendingTasks:{type:'integer',minimum:0},proposalAmountCents:{type:'integer',minimum:0},currency:{type:'string',enum:['BRL']},confirmedRevenueCents:{type:'integer',nullable:true,description:'null: não há fonte financeira confirmada. Propostas e oportunidades ganhas não são receita.'}}};
 commercial.paths['/v1/reports/overview']={get:{operationId:'commercialOverview',parameters:[org],security,responses:{200:response({$ref:'#/components/schemas/CommercialOverview'}),...errors}}};
+commercial.components.schemas.CommercialHistory={type:'object',required:['from','to','timezone','series','confirmedRevenueCents','financialSource'],properties:{from:{type:'string',format:'date'},to:{type:'string',format:'date'},timezone:str(100),confirmedRevenueCents:{type:'integer',nullable:true},financialSource:{type:'string',enum:['unconfigured']},series:{type:'array',maxItems:92,items:{type:'object',required:['date','contactsCreated','opportunitiesCreated','tasksCreated'],properties:{date:{type:'string',format:'date'},contactsCreated:{type:'integer',minimum:0},opportunitiesCreated:{type:'integer',minimum:0},tasksCreated:{type:'integer',minimum:0}}}}}};
+commercial.paths['/v1/reports/history']={get:{operationId:'commercialHistory',security,parameters:[org,{name:'from',in:'query',schema:{type:'string',format:'date'}},{name:'to',in:'query',schema:{type:'string',format:'date'}}],responses:{200:response({$ref:'#/components/schemas/CommercialHistory'}),...errors}}};
 commercial.components.schemas.Error=base.components.schemas.Error;
 commercial.components.schemas.Workflow.properties.status.enum=['draft','active','paused'];
 for(const operation of ['activate','pause']) commercial.paths[`/v1/workflows/{id}/${operation}`]={post:{operationId:`${operation}Workflow`,security,parameters:[org,{name:'id',in:'path',required:true,schema:id},...requestHeaders,{name:'If-Match',in:'header',required:true,schema:{type:'string',pattern:'^[1-9][0-9]*$'}}],requestBody:{required:false,content:{'application/json':{schema:{type:'object',additionalProperties:false}}}},responses:{201:response({$ref:'#/components/schemas/Workflow'}),...errors}}};
 commercial.paths['/v1/workflows/{id}/executions']={get:{operationId:'workflowExecutions',security,parameters:[org,{name:'id',in:'path',required:true,schema:id}],responses:{200:response({type:'object',required:['data'],properties:{data:{type:'array',items:{type:'object',required:['id','taskId','createdAt'],properties:{id,taskId:id,createdAt:{type:'string',format:'date-time'}}}}}}),...errors}}};
 const combined={...base,info:{...commercial.info,title:'Venda Flow AI — API'},paths:{...structuredClone(base.paths),...commercial.paths},components:{...base.components,schemas:{...base.components.schemas,...commercial.components.schemas}}};
+const catalog=catalogContract();
+// Reuse the established uniform error schema rather than inventing new responses.
+for(const code of ['400','503'])catalog.path.get.responses[code]={description:'Falha uniforme',content:{'application/json':{schema:{$ref:'#/components/schemas/Error'}}}};
+combined.paths['/v1/plans']=catalog.path;combined.components.schemas.PublicPlan=catalog.schema;
+const privacy=privacyContract(security,base.components.schemas.Error);
+Object.assign(combined.paths,privacy.paths);Object.assign(combined.components.schemas,privacy.schemas);
 for(const name of ['iss','session_state','error','error_description'])combined.paths['/v1/auth/callback'].get.parameters.push({name,in:'query',required:false,schema:{type:'string',maxLength:2048}});
 if(!preservesFoundation(base,combined))throw new Error('Regressão de contrato da fundação');
 fs.writeFileSync('contracts/commercial.openapi.yaml',YAML.stringify(commercial));

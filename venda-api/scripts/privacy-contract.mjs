@@ -1,0 +1,16 @@
+export function privacyContract(security,errorSchema){
+ const id={type:'string',format:'uuid'},str=maxLength=>({type:'string',minLength:1,maxLength}),ref=name=>({$ref:'#/components/schemas/'+name});
+ const query=[{name:'organizationId',in:'query',required:true,schema:id}];
+ const write=[...query,{name:'X-CSRF-Token',in:'header',required:true,schema:str(256)},{name:'Idempotency-Key',in:'header',required:true,schema:{type:'string',minLength:16,maxLength:128,pattern:'^[A-Za-z0-9_-]+$'}}];
+ const input={type:'object',additionalProperties:false,required:['contactId','purpose','channel','status','lawfulBasis','noticeVersion','sourceReference'],properties:{contactId:id,purpose:{type:'string',enum:['service','marketing']},channel:{type:'string',enum:['whatsapp','email']},status:{type:'string',enum:['granted','revoked']},lawfulBasis:{type:'string',enum:['consent','contract','legal_obligation','legitimate_interest']},noticeVersion:str(64),sourceReference:str(240)}};
+ const request={type:'object',additionalProperties:false,required:['contactId','kind','sourceReference'],properties:{contactId:id,kind:{type:'string',enum:['access','export','erasure']},sourceReference:str(240)}};
+ const consent={...input,required:[...input.required,'id','organizationId','recordedAt','actorId'],properties:{...input.properties,id,organizationId:id,actorId:id,recordedAt:{type:'string',format:'date-time'}}};
+ const privacyRequest={...request,required:[...request.required,'id','organizationId','status','createdAt'],properties:{...request.properties,id,organizationId:id,status:{type:'string',enum:['pending_review']},createdAt:{type:'string',format:'date-time'}}};
+ const response=schema=>({description:'Resultado autorizado da organização',content:{'application/json':{schema}}});
+ const errors=Object.fromEntries([400,401,403,404,409,413,500,503].map(code=>[code,response(ref('Error'))]));
+ const list=name=>({type:'object',required:['data'],properties:{data:{type:'array',maxItems:100,items:ref(name)}}});
+ const paths={};
+ for(const [route,name,schema] of [['consents','ConsentRecord','ConsentInput'],['privacy/requests','PrivacyRequest','PrivacyRequestInput']])paths['/v1/'+route]={get:{security,parameters:query,operationId:'list'+name,responses:{200:response(list(name)),...errors}},post:{security,parameters:write,operationId:'create'+name,requestBody:{required:true,content:{'application/json':{schema:ref(schema)}}},responses:{201:response(ref(name)),...errors}}};
+ paths['/v1/privacy/requests/{id}/export']={get:{security,parameters:[...query,{name:'id',in:'path',required:true,schema:id}],operationId:'exportPrivacyRequest',responses:{200:response({type:'object',required:['scope','generatedAt','contact','opportunities','tasks','consents'],properties:{scope:{type:'string',enum:['contact_and_linked_commercial_records']},generatedAt:{type:'string',format:'date-time'},contact:ref('Contact'),opportunities:{type:'array',items:ref('Opportunity')},tasks:{type:'array',items:ref('Task')},consents:{type:'array',items:ref('ConsentRecord')}}}),...errors}}};
+ return {paths,schemas:{ConsentInput:input,ConsentRecord:consent,PrivacyRequestInput:request,PrivacyRequest:privacyRequest,Error:errorSchema}};
+}

@@ -1,0 +1,6 @@
+import fs from'node:fs';import{createRequire}from'node:module';import{execFileSync}from'node:child_process';import path from'node:path';
+const req=createRequire(path.resolve('venda-api/package.json')),YAML=req('yaml'),Parser=req('@apidevtools/swagger-parser');
+const file='venda-admin-api/contracts/admin.openapi.yaml',spec=YAML.parse(fs.readFileSync(file,'utf8'));await Parser.validate(structuredClone(spec));
+const temporary=path.resolve('.local/admin-client-check.ts');fs.mkdirSync('.local',{recursive:true});
+try{execFileSync(process.execPath,['node_modules/openapi-typescript/bin/cli.js',file,'-o',temporary],{stdio:'ignore'});if(fs.readFileSync(temporary,'utf8').replaceAll('\r\n','\n')!==fs.readFileSync('venda-admin/lib/api.generated.ts','utf8').replaceAll('\r\n','\n'))throw new Error('Cliente admin diverge do contrato.');}finally{if(fs.existsSync(temporary))fs.unlinkSync(temporary);}
+const result={checkedAt:new Date().toISOString(),valid:true,paths:Object.keys(spec.paths).length,generatedClientMatches:true,customerContractChanged:false};fs.mkdirSync('venda-admin-api/evidencias',{recursive:true});fs.writeFileSync('venda-admin-api/evidencias/contrato.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

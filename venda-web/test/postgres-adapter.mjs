@@ -59,7 +59,7 @@ export async function postgresFixture() {
   async function stop() {
     if (control) await control.end();
     if (admin) await admin.end();
-    if (started) run(binary.pg_ctl, ["-D", data, "-m", "fast", "-w", "stop"]);
+    if (started) run(binary.pg_ctl, ["-D", data, "-m", "fast", "-w", "-t", "240", "stop"]);
     cleanup();
   }
   try {
@@ -87,7 +87,7 @@ export async function postgresFixture() {
       "-l",
       path.join(directory, "postgres.log"),
       "-o",
-      `-h 127.0.0.1 -p ${port}`,
+      `-h 127.0.0.1 -p ${port} -c shared_buffers=32MB -c max_connections=40`,
       "-w",
       "start",
     ]);

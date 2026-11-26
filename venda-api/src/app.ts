@@ -36,6 +36,8 @@ import {
 import { FoundationService } from "./foundation.js";
 import { CommerceService } from "./commerce.js";
 import { commerceControllers } from "./commerce.controller.js";
+import {PrivacyController} from './privacy.controller.js';
+import {PrivacyService} from './privacy.js';
 import {
   CreateMembershipDto,
   CreateOrganizationDto,
@@ -72,6 +74,12 @@ class FoundationController {
     return YAML.parse(
       fs.readFileSync("contracts/venda.openapi.yaml", "utf8"),
     ) as object;
+  }
+  @Public() @Get('/v1/plans') plans(@Req() req: ApiRequest) {
+    query(req); unscoped(req);
+    return this.auth.db.tx({}, async client => ({data: (await client.query(
+      "SELECT id,code,version,name,amount_cents,currency,frequency,frequency_type,features,limits FROM venda_admin.plan_versions WHERE status='published' ORDER BY code LIMIT 200",
+    )).rows.map(row => ({id:row.id,code:row.code,version:row.version,name:row.name,amountCents:Number(row.amount_cents),currency:row.currency,frequency:row.frequency,frequencyType:row.frequency_type,features:row.features,limits:row.limits}))}));
   }
   @Public() @Get("/v1/auth/login") login(
     @Req() req: ApiRequest,
@@ -195,11 +203,12 @@ export async function createApp(
   const auth = new AuthService(config, db, new OidcClient(config));
   const service = new FoundationService(auth);
   @Module({
-    controllers: [FoundationController,...commerceControllers],
+    controllers: [FoundationController,...commerceControllers,PrivacyController],
     providers: [
       { provide: AuthService, useValue: auth },
       { provide: FoundationService, useValue: service },
       { provide: CommerceService, useValue: new CommerceService(auth) },
+      { provide: PrivacyService, useValue: new PrivacyService(auth) },
       TenantPolicyGuard,
       { provide: APP_GUARD, useClass: SessionGuard },
     ],
@@ -249,7 +258,7 @@ export async function createApp(
       validationError: { target: false, value: false },
     }),
   );
-  app.useGlobalFilters(new Errors());
+  app.useGlobalFilters(new Errors(sink));
   await app.init();
   return {
     app,

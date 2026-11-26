@@ -26,12 +26,13 @@ import { StitchScreen, SettingsTabs } from "../../../../../../components/stitch-
 import { BrandIcon } from "../../../../../../components/brand-icon";
 import { CommerceRoute } from "../../../../../../components/commerce-route";
 import { AutomationWizard } from "../../../../../../components/automation-wizard.client";
+import {PrivacyRoute} from '../../../../../../components/privacy-route';
 export default async function OrganizationPage({
   params,
   searchParams,
 }: {
   params: Promise<{ organizationId: string; section?: string[] }>;
-  searchParams: Promise<{q?:string;cursor?:string}>;
+  searchParams: Promise<{q?:string;cursor?:string;from?:string;to?:string}>;
 }) {
   const { organizationId: id, section = [] } = await params;
   const search=await searchParams;
@@ -100,10 +101,12 @@ export default async function OrganizationPage({
         {slug.startsWith("configuracoes") && <SettingsTabs base={base} slug={slug}/>}
         {hidden ? (
           <Fault status={403} />
+        ) : slug==='configuracoes/privacidade' ? (
+          <PrivacyRoute organizationId={id} timezone={org.timezone}/>
         ) : slug==='automacoes/nova' ? (
           ["owner","admin","manager","agent"].includes(role)?<AutomationWizard organizationId={id} intentKey={randomUUID()}/>:<Fault status={403}/>
         ) : role!=="billing" && ["", "clientes", "vendas", "tarefas", "conhecimento", "automacoes", "relatorios"].includes(slug) ? (
-          <CommerceRoute slug={slug} organizationId={id} canMutate={["owner","admin","manager","agent"].includes(role)} canManageAutomation={["owner","admin","manager"].includes(role)} timezone={org.timezone} {...(typeof search.q==='string'?{query:search.q}:{})} {...(typeof search.cursor==='string'?{cursor:search.cursor}:{})}/>
+          <CommerceRoute slug={slug} organizationId={id} canMutate={["owner","admin","manager","agent"].includes(role)} canManageAutomation={["owner","admin","manager"].includes(role)} timezone={org.timezone} {...(typeof search.q==='string'?{query:search.q}:{})} {...(typeof search.cursor==='string'?{cursor:search.cursor}:{})} {...(typeof search.from==='string'?{from:search.from}:{})} {...(typeof search.to==='string'?{to:search.to}:{})}/>
         ) : !["configuracoes/organizacao", "configuracoes/equipe", "ajuda"].includes(slug) ? (
           <StitchScreen key={slug} slug={slug} base={base} organizationName={org.name} canMutate={["owner","admin","manager","agent"].includes(role)}/>
         ) : slug === "configuracoes/organizacao" ? (

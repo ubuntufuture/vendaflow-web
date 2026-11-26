@@ -5,6 +5,7 @@ export type DomainAction =
   | "membership.created"
   | "membership.updated"
   | "opportunity.won"
+  | "privacy.consent.recorded" | "privacy.request.created" | "privacy.export.read"
   | `${"contact" | "opportunity" | "task" | "knowledge" | "workflow"}.${"created" | "updated" | "archived"}`;
 export async function recordChange(
   client: PoolClient,

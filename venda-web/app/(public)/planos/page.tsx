@@ -1,27 +1,11 @@
-import { ContentHeading, Panel, ActionLink } from "../../../components/ui";
-export const metadata = { title: "Planos" };
-export default function Plans() {
-  return (
-    <div className="page-container">
-      <ContentHeading eyebrow="ASSINATURA" title="Planos e contratação">
-        Consulte condições verificadas antes de contratar.
-      </ContentHeading>
-      <div className="st-three" style={{marginBottom:32}}>
-        {["Estruture seu atendimento", "Organize sua operação", "Amplie com governança"].map((title) => <article className="st-card st-template" key={title}><span className="st-chip">Condições não publicadas</span><h2>{title}</h2><p>Plano, preço, limites e disponibilidade aguardam confirmação do catálogo de assinaturas.</p><strong>Valor não disponível</strong><ActionLink href="/entrar" secondary>Consultar minha conta</ActionLink></article>)}
-      </div>
-      <Panel title="Condições ainda indisponíveis">
-        <p>
-          Não há catálogo de planos e preços confirmado pelo serviço de
-          assinatura neste ambiente.
-        </p>
-        <p>
-          Quando disponível, a contratação será feita exclusivamente pelo
-          Mercado Pago. Criar uma conta não confirma assinatura, trial ou
-          gratuidade.
-        </p>
-        <ActionLink href="/entrar">Acessar minha conta</ActionLink>
-      </Panel>
-      <section className="st-section" style={{paddingTop:48}}><h2>Perguntas frequentes sobre faturamento</h2><div className="st-faq"><details><summary>Como funciona o pagamento?</summary><p>O gateway exclusivo será o Mercado Pago. Nenhum checkout está ativo neste ambiente.</p></details><details><summary>Há fidelidade ou taxa de cancelamento?</summary><p>As condições contratuais ainda não foram fornecidas. Nenhuma isenção ou gratuidade é presumida.</p></details><details><summary>Como funcionam os custos de envio do WhatsApp?</summary><p>Custos e limites do canal devem ser verificados na integração oficial. Eles não são apresentados como parte confirmada da assinatura.</p></details></div></section>
-    </div>
-  );
+import { ContentHeading, Panel, ActionLink } from '../../../components/ui';
+import {api,unwrap} from '../../../lib/api.server';
+import type{components}from'../../../lib/api.generated';
+export const metadata={title:'Planos'};
+const featureNames={crm:'CRM',whatsapp:'WhatsApp',ai:'IA',automations:'Automações',reports:'Relatórios'};
+const limitNames:Record<string,string>={contacts:'Contatos',members:'Membros da equipe',monthly_conversations:'Conversas por mês',monthly_ai_tokens:'Tokens de IA por mês'};
+export default async function Plans(){let plans:components['schemas']['PublicPlan'][]|undefined;try{plans=unwrap(await(await api()).GET('/v1/plans')).data;}catch{}
+ return <div className="page-container"><ContentHeading eyebrow="ASSINATURA" title="Planos e contratação">Condições publicadas pela administração da Venda Flow AI.</ContentHeading>
+ {plans?.length?<div className="st-three" style={{marginBottom:32}}>{plans.map(plan=><article className="st-card st-template" key={plan.id}><span className="st-chip">Plano publicado · versão {plan.version}</span><h2>{plan.name}</h2><strong>{new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(plan.amountCents/100)}</strong><p>A cada {plan.frequency} {plan.frequencyType==='months'?'mês(es)':'dia(s)'}</p><ul>{plan.features.map(feature=><li key={feature}>{featureNames[feature]}</li>)}</ul>{Object.keys(plan.limits).length>0&&<dl>{Object.entries(plan.limits).map(([key,value])=><div key={key}><dt>{limitNames[key]??key}</dt><dd>{new Intl.NumberFormat('pt-BR').format(value)}</dd></div>)}</dl>}<p>Contratação ainda indisponível neste ambiente. A publicação do catálogo não confirma assinatura ativa ou integração disponível.</p><ActionLink href="/entrar" secondary>Consultar minha conta</ActionLink></article>)}</div>:<Panel title={plans?'Nenhum plano publicado':'Catálogo temporariamente indisponível'}><p>{plans?'Os planos e preços serão apresentados após aprovação e publicação no console administrativo.':'Não foi possível consultar as condições publicadas. Tente novamente mais tarde.'}</p><ActionLink href="/entrar">Acessar minha conta</ActionLink></Panel>}
+ <section className="st-section" style={{paddingTop:48}}><h2>Perguntas frequentes sobre faturamento</h2><div className="st-faq"><details><summary>Como funciona o pagamento?</summary><p>O gateway exclusivo é o Mercado Pago. Nenhum checkout está ativo neste ambiente. Criar uma conta não confirma assinatura, trial ou gratuidade.</p></details><details><summary>Há fidelidade ou taxa de cancelamento?</summary><p>As condições contratuais ainda não foram fornecidas. Nenhuma isenção é presumida.</p></details><details><summary>Como funcionam os custos de envio do WhatsApp?</summary><p>Os custos e a disponibilidade do canal dependem da integração oficial. A seleção do recurso no catálogo não comprova sua ativação.</p></details></div></section></div>;
 }

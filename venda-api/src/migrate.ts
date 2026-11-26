@@ -47,6 +47,7 @@ export async function migrate(url: string, direction: "up" | "down" = "up") {
         throw new Error(
           "Rollback destrutivo permitido somente em banco descartável de teste.",
         );
+      await client.query('DROP SCHEMA IF EXISTS venda_admin CASCADE');
       await client.query(
         fs.readFileSync("migrations/001_foundation.down.sql", "utf8"),
       );

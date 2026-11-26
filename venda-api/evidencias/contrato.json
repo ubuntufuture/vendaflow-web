@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-11-23T23:03:00.613Z",
+  "executedAt": "2026-11-26T21:27:07.009Z",
   "openapi": "3.0.3",
   "version": "0.2.0",
   "valid": true,
@@ -32,9 +32,14 @@
     "/v1/workflows/{id}",
     "/v1/workflows/{id}/archive",
     "/v1/reports/overview",
+    "/v1/reports/history",
     "/v1/workflows/{id}/activate",
     "/v1/workflows/{id}/pause",
-    "/v1/workflows/{id}/executions"
+    "/v1/workflows/{id}/executions",
+    "/v1/plans",
+    "/v1/consents",
+    "/v1/privacy/requests",
+    "/v1/privacy/requests/{id}/export"
   ],
   "canonicalContractAvailable": false,
   "backwardCompatibilityProven": false,

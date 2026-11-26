@@ -7,7 +7,7 @@ import os from "node:os";
 import { Ajv } from "ajv";
 import SwaggerParser from "@apidevtools/swagger-parser";
 import { createApp } from "../src/app.js";
-import { loadConfig, type Config } from "../src/config.js";
+import { loadConfig, digest, type Config } from "../src/config.js";
 import { Database, type TransactionTiming } from "../src/database.js";
 import { receiveOnce, recordChange } from "../src/events.js";
 import { migrate } from "../src/migrate.js";
@@ -876,6 +876,17 @@ describe("DEMO_ONLY — fundação com PostgreSQL real e protocolo OIDC assinado
       1,
     );
   });
+  test('catálogo público só expõe versões publicadas e não permite selecionar tenant', async () => {
+    const initial=await api<{data:unknown[]}>('/v1/plans');assert.equal(initial.status,200);assert.deepEqual(initial.body.data,[]);
+    const actor=(await postgres.control.query("INSERT INTO venda_admin.users(issuer,subject,role) VALUES('https://demo-only.invalid','DEMO_ONLY-catalog','platform_admin') RETURNING id")).rows[0];
+    const plan=(await postgres.control.query("INSERT INTO venda_admin.plan_versions(code,version,name,amount_cents,frequency,frequency_type,features,limits,created_by) VALUES('demo-only-public',1,'DEMO_ONLY catálogo',12345,1,'months','[\"crm\"]','{}',$1) RETURNING id",[actor.id])).rows[0];
+    assert.deepEqual((await api<{data:unknown[]}>('/v1/plans')).body.data,[]);
+    await postgres.control.query("UPDATE venda_admin.plan_versions SET status='published',revision=2,published_at=clock_timestamp() WHERE id=$1",[plan.id]);
+    const catalog=await api<{data:Record<string,unknown>[]}>('/v1/plans');assert.equal(catalog.body.data.length,1);assert.equal(catalog.body.data[0]!.amountCents,12345);assert.equal(catalog.body.data[0]!.created_by,undefined);
+    assert.equal((await api('/v1/plans?organizationId='+orgB.id)).status,400);assert.equal((await api('/v1/plans',undefined,'GET',undefined,{'X-Organization-Id':orgB.id})).status,400);
+    await assert.rejects(()=>runtime.db.pool.query('SELECT * FROM venda_admin.sessions'),/permission denied/);
+    await postgres.control.query("UPDATE venda_admin.plan_versions SET status='retired',revision=3 WHERE id=$1",[plan.id]);assert.deepEqual((await api<{data:unknown[]}>('/v1/plans')).body.data,[]);
+  });
   test("erro uniforme e logs não registram tokens, query, payload ou pessoa", async () => {
     const marker = "DEMO_ONLY_DADO_SENSIVEL";
     const result = await api<ErrorResponse>(
@@ -891,7 +902,14 @@ describe("DEMO_ONLY — fundação com PostgreSQL real e protocolo OIDC assinado
     assert(!all.includes(ownerA.csrf));
     assert(!all.includes("DEMO_ONLY organização"));
     for (const line of logs) {
-      const row = JSON.parse(line) as object;
+      const row = JSON.parse(line) as Record<string, unknown>;
+      if (row.event === 'request.error') {
+        assert.deepEqual(Object.keys(row).sort(), ['event','exceptionType','requestId','safeCode','service','status'].sort());
+        assert.equal(row.service, 'venda-api');
+        assert.match(String(row.exceptionType), /^[A-Za-z][A-Za-z0-9]*$/);
+        assert.match(String(row.safeCode), /^(?:[0-9A-Z]{5}|ECONNREFUSED|ENOSPC|ERR_CRYPTO_INVALID_IV|ERR_OSSL_EVP_UNSUPPORTED|UNKNOWN)$/);
+        continue;
+      }
       assert.deepEqual(
         Object.keys(row).sort(),
         [
@@ -1127,6 +1145,48 @@ describe("DEMO_ONLY — fundação com PostgreSQL real e protocolo OIDC assinado
     const url=new URL(next.location);url.searchParams.set('session_state',randomUUID());
     const result=await fetch(url,{redirect:'manual',headers:{Cookie:next.cookie}});
     assert.equal(result.status,302);assert(result.headers.getSetCookie().some(c=>c.startsWith('__Host-venda_session=')));
+  });
+  test('privacidade: ledger imutável, finalidade/canal, idempotência, RBAC e isolamento A/B',async()=>{
+    const contact=(await api<{id:string}>(`/v1/contacts?organizationId=${orgA.id}`,ownerA,'POST',{name:'DEMO_ONLY titular privacidade'})).body;
+    const route=`/v1/consents?organizationId=${orgA.id}`,key=randomUUID();
+    const body={contactId:contact.id,purpose:'marketing',channel:'whatsapp',status:'granted',lawfulBasis:'consent',noticeVersion:'DEMO_ONLY-v1',sourceReference:'DEMO_ONLY evidência de opt-in'};
+    const granted=await api<{id:string}>(route,ownerA,'POST',body,{'Idempotency-Key':key});assert.equal(granted.status,201,JSON.stringify(granted.body));
+    assert.deepEqual((await api(route,ownerA,'POST',body,{'Idempotency-Key':key})).body,granted.body);
+    assert.equal((await api(route,ownerA,'POST',{...body,status:'revoked'},{'Idempotency-Key':key})).status,409);
+    assert.equal((await api(route,viewer,'POST',body)).status,403);assert.equal((await api(route,agent,'POST',body)).status,403);assert.equal((await api(route,billing)).status,403);
+    assert.equal((await api(`/v1/consents?organizationId=${orgB.id}`,ownerA,'POST',body)).status,404);
+    assert.equal((await api(`/v1/consents?organizationId=${orgB.id}`,ownerB,'POST',body)).status,404);
+    assert.equal((await api(route,ownerA,'POST',{...body,lawfulBasis:'contract'})).status,400);
+    assert.equal((await api(route,ownerA,'POST',{...body,organizationId:orgB.id})).status,400);
+    assert.equal((await api(route,ownerA,'POST',{...body,sourceReference:'   '})).status,400);
+    assert.equal((await api(route,ownerA,'POST',body,{'X-Organization-Id':orgB.id})).status,400);
+    assert.equal((await api(route,manager,'POST',{...body,status:'revoked'})).status,201);
+    const rows=(await api<{data:{status:string}[]}>(route,ownerA)).body.data;assert.deepEqual(rows.map(r=>r.status),['revoked','granted']);
+    await assert.rejects(()=>runtime.db.tx({userId:ownerA.userId,organizationId:orgA.id,sessionHash:digest(ownerA.cookie.split('=')[1]!)},c=>c.query('UPDATE venda.consents SET status=$1 WHERE id=$2',['revoked',granted.body.id])),/permission denied/i);
+    await assert.rejects(()=>postgres.control.query('UPDATE venda.consents SET status=$1 WHERE id=$2',['revoked',granted.body.id]),/Append only/i);
+    const audit=await postgres.control.query("SELECT count(*) FROM venda.audit WHERE organization_id=$1 AND action='privacy.consent.recorded'",[orgA.id]);assert.equal(Number(audit.rows[0].count),2);
+  });
+  test('privacidade: exportação autorizada com escopo explícito e pedido de exclusão sem conclusão fictícia',async()=>{
+    const contact=(await api<{id:string}>(`/v1/contacts?organizationId=${orgA.id}`,ownerA,'POST',{name:'DEMO_ONLY exportação',email:'demo-only-export@example.test'})).body;
+    const opportunity=(await api<{id:string}>(`/v1/opportunities?organizationId=${orgA.id}`,ownerA,'POST',{title:'DEMO_ONLY contexto',stage:'new',contactId:contact.id})).body;
+    await api(`/v1/tasks?organizationId=${orgA.id}`,ownerA,'POST',{title:'DEMO_ONLY vinculada via oportunidade',opportunityId:opportunity.id});
+    const path=`/v1/privacy/requests?organizationId=${orgA.id}`,body={contactId:contact.id,kind:'export',sourceReference:'DEMO_ONLY solicitação verificada'};
+    const request=await api<{id:string;status:string}>(path,ownerA,'POST',body);assert.equal(request.status,201);assert.equal(request.body.status,'pending_review');
+    const url=`/v1/privacy/requests/${request.body.id}/export?organizationId=${orgA.id}`;
+    const exported=await api<{scope:string;contact:{id:string};tasks:unknown[]}>(url,ownerA);assert.equal(exported.status,200,JSON.stringify(exported.body));assert.equal(exported.body.contact.id,contact.id);assert.equal(exported.body.tasks.length,1);assert.equal(exported.body.scope,'contact_and_linked_commercial_records');
+    assert.equal((await api(url,viewer)).status,403);assert.equal((await api(url,ownerB)).status,404);
+    assert.equal((await api(`/v1/privacy/requests/${request.body.id}/export?organizationId=${orgB.id}`,ownerB)).status,404);
+    const erasure=await api<{id:string;status:string}>(path,ownerA,'POST',{...body,kind:'erasure'});assert.equal(erasure.body.status,'pending_review');
+    assert.equal((await api(`/v1/privacy/requests/${erasure.body.id}/export?organizationId=${orgA.id}`,ownerA)).status,409);
+  });
+  test('relatórios históricos respeitam fuso IANA, intervalo, autorização e isolamento, sem receita estimada',async()=>{
+    const to=new Date(Date.now()-86400000).toISOString().slice(0,10),from=new Date(Date.now()-2*86400000).toISOString().slice(0,10);
+    await postgres.control.query('INSERT INTO venda.contacts(organization_id,name,created_at) VALUES($1,$2,$3)',[orgA.id,'DEMO_ONLY histórico',to+'T02:30:00Z']);
+    const result=await api<{timezone:string;confirmedRevenueCents:null;series:{date:string;contactsCreated:number}[]}>(`/v1/reports/history?organizationId=${orgA.id}&from=${from}&to=${to}`,ownerA);assert.equal(result.status,200,JSON.stringify(result.body));
+    assert.equal(result.body.timezone,'America/Sao_Paulo');assert.equal(result.body.confirmedRevenueCents,null);assert.deepEqual(result.body.series.map(point=>[point.date,point.contactsCreated]),[[from,1],[to,0]]);
+    assert.equal((await api(`/v1/reports/history?organizationId=${orgB.id}`,ownerA)).status,404);assert.equal((await api(`/v1/reports/history?organizationId=${orgA.id}`,billing)).status,403);
+    for(const query of ['from=2026-02-31','from=0000-01-01','from=2020-01-01&to=2026-01-01','from='+to+'&to='+from,'to=9999-01-01'])assert.equal((await api(`/v1/reports/history?organizationId=${orgA.id}&${query}`,ownerA)).status,400);
+    const other=await api<{series:{contactsCreated:number}[]}>(`/v1/reports/history?organizationId=${orgB.id}&from=${from}&to=${to}`,ownerB);assert(other.body.series.every(point=>point.contactsCreated===0));
   });
   test("migration é idempotente e readiness rejeita RLS removida", async () => {
     await migrate(postgres.adminUrl);

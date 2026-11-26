@@ -88,6 +88,7 @@ export async function idpFixture() {
         }
         let token = await new SignJWT({
           nonce: data.mode === "nonce" ? "DEMO_ONLY-invalid" : data.nonce,
+          ...(data.mode.startsWith('admin-')?{amr:data.mode==='admin-no-mfa'?['pwd']:['pwd','otp'],auth_time:Math.floor(Date.now()/1000)-(data.mode==='admin-stale-mfa'?301:0),realm_access:{roles:[data.mode==='admin-wrong-role'?'owner':data.mode==='admin-viewer'?'support_viewer':'platform_admin']}}:{}),
         })
           .setProtectedHeader({ alg: "RS256", kid: jwk.kid! })
           .setIssuer(data.mode === "issuer" ? `${issuer}/wrong` : issuer)

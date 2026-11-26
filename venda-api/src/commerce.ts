@@ -119,6 +119,21 @@ export class CommerceService {
       return {contacts:Number(r.contacts),openOpportunities:Number(r.open_opportunities),pendingTasks:Number(r.pending_tasks),proposalAmountCents:amount,currency:'BRL',confirmedRevenueCents:null};
     });
   }
+  async history(actor:Principal,org:string,query:Record<string,unknown>){
+    const validDate=(value:unknown)=>{if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value))throw new BadRequestException();const date=new Date(value+'T00:00:00Z');if(!Number.isFinite(date.getTime())||date.toISOString().slice(0,10)!==value)throw new BadRequestException();return value;};
+    return this.tx(actor,org,false,async client=>{
+      const organization=(await client.query<{timezone:string;today:string}>("SELECT timezone,to_char(clock_timestamp() AT TIME ZONE timezone,'YYYY-MM-DD') AS today FROM venda.organizations WHERE id=$1",[org])).rows[0];if(!organization)throw new NotFoundException();
+      const to=query.to===undefined?organization.today:validDate(query.to),from=query.from===undefined?new Date(Date.parse(to+'T00:00:00Z')-29*86400000).toISOString().slice(0,10):validDate(query.from);
+      validDate(from);if(from.startsWith('0000')||to.startsWith('0000'))throw new BadRequestException();
+      const days=(Date.parse(to+'T00:00:00Z')-Date.parse(from+'T00:00:00Z'))/86400000;if(days<0||days>91||to>organization.today)throw new BadRequestException();
+      const rows=await client.query<{date:string;contacts_created:string;opportunities_created:string;tasks_created:string}>(`WITH days AS (SELECT day::date FROM generate_series($2::date,$3::date,interval '1 day') AS day),events AS (
+       SELECT (created_at AT TIME ZONE $4)::date AS day,'contact' AS kind FROM venda.contacts WHERE organization_id=$1 AND created_at>=($2::date::timestamp AT TIME ZONE $4) AND created_at<(($3::date+1)::timestamp AT TIME ZONE $4)
+       UNION ALL SELECT (created_at AT TIME ZONE $4)::date,'opportunity' FROM venda.opportunities WHERE organization_id=$1 AND created_at>=($2::date::timestamp AT TIME ZONE $4) AND created_at<(($3::date+1)::timestamp AT TIME ZONE $4)
+       UNION ALL SELECT (created_at AT TIME ZONE $4)::date,'task' FROM venda.tasks WHERE organization_id=$1 AND created_at>=($2::date::timestamp AT TIME ZONE $4) AND created_at<(($3::date+1)::timestamp AT TIME ZONE $4)
+      ) SELECT to_char(days.day,'YYYY-MM-DD') AS date,count(events.kind) FILTER(WHERE events.kind='contact')::text AS contacts_created,count(events.kind) FILTER(WHERE events.kind='opportunity')::text AS opportunities_created,count(events.kind) FILTER(WHERE events.kind='task')::text AS tasks_created FROM days LEFT JOIN events ON events.day=days.day GROUP BY days.day ORDER BY days.day`,[org,from,to,organization.timezone]);
+      return{from,to,timezone:organization.timezone,financialSource:'unconfigured',confirmedRevenueCents:null,series:rows.rows.map(row=>({date:row.date,contactsCreated:Number(row.contacts_created),opportunitiesCreated:Number(row.opportunities_created),tasksCreated:Number(row.tasks_created)}))};
+    });
+  }
   async workflowState(actor:Principal,org:string,id:string,state:'active'|'paused',key:unknown,version:unknown,requestId:string) {
     uuid(id);
     if(typeof version!=='string'||!/^[1-9][0-9]{0,8}$/.test(version)) throw new BadRequestException();

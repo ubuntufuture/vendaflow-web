@@ -37,7 +37,8 @@ const record = (name, ok, detail) => {
 // Keep disposable test data off the user's persistent application port.
 const testPort = 3491;
 const base = `http://127.0.0.1:${testPort}`;
-let fixture, idp, runtime, browser, web, nextApp, worker;
+let fixture, idp, runtime, browser, web, nextApp, worker, activePage;
+const authDiagnostics=[],apiDiagnostics=[];
 const workerLogs=[];
 async function check(name, fn) {
   try {
@@ -139,7 +140,7 @@ try {
     FLOW_ENCRYPTION_KEY: randomBytes(32).toString("hex"),
     CSRF_KEY: randomBytes(32).toString("hex"),
   });
-  runtime = await createApp(config, new Database(config), () => {});
+  runtime = await createApp(config, new Database(config), line => apiDiagnostics.push(JSON.parse(line)));
   await runtime.app.listen(port, "127.0.0.1");
   process.chdir(root);
   process.env.VENDA_WEB_ORIGIN = base;
@@ -156,6 +157,7 @@ try {
   await nextApp.prepare();
   web = createServer(nextApp.getRequestHandler());
   await new Promise((resolve) => web.listen(testPort, "127.0.0.1", resolve));
+  if(idp.real)await check('API prepara fluxo OIDC real antes da navegação',async()=>{const response=await fetch(`http://127.0.0.1:${port}/v1/auth/login`,{redirect:'manual'});assert.equal(response.status,302);});
   browser = await chromium.launch({
     executablePath:
       process.env.UI_CHROME_PATH ??
@@ -168,8 +170,10 @@ try {
     reducedMotion: "reduce",
   });
   const page = await context.newPage();
-  if(idp.real){const smokeContext=await browser.newContext({locale:'pt-BR'});const smoke=await smokeContext.newPage();await check('login real Keycloak sem simulador de protocolo',()=>login(smoke,'DEMO_ONLY-smoke'));await smokeContext.close();}
-  page.on("pageerror", (error) => pageErrors.push(error.message));
+  if(idp.real){const smokeContext=await browser.newContext({locale:'pt-BR'});const smoke=await smokeContext.newPage();activePage=smoke;smoke.on('response',response=>{const url=new URL(response.url());authDiagnostics.push({origin:url.origin,path:url.pathname,status:response.status()});});await check('login real Keycloak sem simulador de protocolo',()=>login(smoke,'DEMO_ONLY-smoke'));await smokeContext.close();}
+  activePage=page;
+  if(process.env.VENDA_WEB_OIDC_SMOKE_ONLY!=='true'){
+  page.on("pageerror", (error) => {const entry={message:error.message,path:new URL(page.url()).pathname};pageErrors.push(entry);console.log('Erro do navegador:',JSON.stringify(entry));});
   await context.addInitScript(() => {
     window.__vendaVitals = [];
     window.addEventListener("venda:web-vital", (e) =>
@@ -350,6 +354,23 @@ try {
   record('conhecimento textual foi gravado no banco',(await fixture.control.query('SELECT id FROM venda.knowledge WHERE organization_id=$1 AND title=$2',[orgA.split('/').at(-1),'DEMO_ONLY fonte pelo navegador'])).rowCount===1);
   await goto(page,orgA+'/relatorios');
   record('relatório da UI diferencia proposta de receita',await page.getByText('R$ 150,00',{exact:true}).isVisible()&&await page.getByRole('heading',{name:'Receita confirmada',exact:true}).isVisible());
+  await goto(page,orgA+'/configuracoes/privacidade');
+  await page.getByRole('button',{name:'Registrar concessão ou revogação',exact:true}).click();
+  await page.getByRole('combobox',{name:/^Contato/}).selectOption({label:'DEMO_ONLY contato revisado'});
+  await page.getByRole('combobox',{name:/^Finalidade/}).selectOption('marketing');
+  await page.getByLabel('Versão do aviso apresentado',{exact:true}).fill('DEMO_ONLY-v1');
+  await page.getByLabel('Referência da evidência ou solicitação').fill('DEMO_ONLY opt-in documentado');
+  await page.getByRole('button',{name:'Registrar',exact:true}).click();
+  await page.getByRole('cell',{name:'Concedido',exact:true}).waitFor();
+  record('UI registra consentimento real por finalidade e canal',(await fixture.control.query('SELECT id FROM venda.consents WHERE organization_id=$1',[orgA.split('/').at(-1)])).rowCount===1);
+  await page.getByRole('button',{name:'Registrar solicitação',exact:true}).click();
+  await page.getByRole('combobox',{name:/^Contato/}).selectOption({label:'DEMO_ONLY contato revisado'});
+  await page.getByRole('combobox',{name:/^Tipo de solicitação/}).selectOption('export');
+  await page.getByLabel('Referência da evidência ou solicitação').fill('DEMO_ONLY identidade verificada');
+  await page.getByRole('button',{name:'Registrar',exact:true}).click();
+  await page.getByRole('cell',{name:'Em análise',exact:true}).waitFor();
+  const exportResponse=await page.request.get(base+(await page.getByRole('link',{name:/^Exportar dados/}).getAttribute('href')));
+  record('exportação BFF exige sessão e entrega somente dados autorizados',exportResponse.ok()&&exportResponse.headers()['cache-control']==='private, no-store'&&(await exportResponse.json()).contact.name==='DEMO_ONLY contato revisado');
   record(
     "onboarding confirmou organização no PostgreSQL",
     !!(
@@ -699,7 +720,10 @@ try {
       2,
     ) + "\n",
   );
+  }
 } catch (error) {
+  const diagnosticPage=activePage?new URL(activePage.url()):null;fs.writeFileSync(path.join(output,'login-diagnostico.json'),JSON.stringify({page:diagnosticPage?{origin:diagnosticPage.origin,path:diagnosticPage.pathname}:null,responses:authDiagnostics.slice(-20),api:apiDiagnostics.slice(-10)},null,2));
+  if(activePage)await activePage.screenshot({path:path.join(output,'login-falha.png'),fullPage:false}).catch(()=>{});
   record("execução completa do harness", false, error.message);
 } finally {
   if(worker&&worker.exitCode===null&&worker.signalCode===null){await new Promise(resolve=>{worker.once('exit',resolve);worker.kill('SIGTERM');setTimeout(resolve,3000).unref();});}
@@ -711,7 +735,7 @@ try {
   if (nextApp) await nextApp.close();
   if (runtime) await runtime.close().catch(() => {});
   if (idp) await idp.close().catch(error => record('limpeza do provedor de teste',false,error.message));
-  if (fixture) await fixture.stop();
+  if (fixture) await fixture.stop().catch(error=>record('limpeza do cluster de teste',false,error.message));
   process.chdir(root);
   fs.writeFileSync(
     path.join(output, "browser.json"),
@@ -720,6 +744,7 @@ try {
         executedAt: new Date().toISOString(),
         fixture: idp?.real ? "DEMO_ONLY: PostgreSQL real isolado e Keycloak real em realm temporário; nenhum dado no ambiente persistente do usuário" : "DEMO_ONLY real PostgreSQL and signed OIDC local protocol simulator, no external provider sandbox",
         realOidcExecuted: idp?.real === true,
+        suiteMode:process.env.VENDA_WEB_OIDC_SMOKE_ONLY==='true'?'oidc_smoke':'full',
         postgresVersion: fixture?.version ?? null,
         outcomes,
         screenshots,

@@ -22,7 +22,7 @@
     "build:web": "next build venda-web --webpack",
     "build:api": "npm --prefix venda-api run build",
     "build:workers": "npm --prefix venda-workers run build",
-    "build:platform": "npm run build:api && npm run build:workers && npm run build:web",
+    "build:platform": "npm run build:api && npm run build:admin-api && npm run build:workers && npm run build:web && npm run build:admin",
     "start:web": "next start venda-web --hostname 127.0.0.1 --port 3400",
     "typecheck:web": "tsc --project venda-web/tsconfig.json --noEmit",
     "generate:web": "openapi-typescript venda-api/contracts/venda.openapi.yaml -o venda-web/lib/api.generated.ts",
@@ -40,7 +40,18 @@
     "start:local": "node scripts/run-local.mjs",
     "report:platform": "node scripts/report-platform.mjs",
     "check:mercadopago": "node scripts/check-mercadopago-sandbox.mjs",
-    "verify:publish": "node scripts/verify-publish-safety.mjs"
+    "verify:publish": "node scripts/verify-publish-safety.mjs",
+    "build:admin-api": "npm --prefix venda-admin-api run build",
+    "build:admin": "next build venda-admin --webpack",
+    "generate:admin": "openapi-typescript venda-admin-api/contracts/admin.openapi.yaml -o venda-admin/lib/api.generated.ts",
+    "typecheck:admin": "tsc --project venda-admin/tsconfig.json --noEmit",
+    "check:whatsapp": "node scripts/check-whatsapp-sandbox.mjs",
+    "start:admin:local": "node scripts/run-local-admin.mjs",
+    "setup:admin:identity": "node scripts/setup-local-admin-identity.mjs",
+    "setup:admin:runtime": "node scripts/setup-local-admin-runtime.mjs",
+    "contract:admin": "node scripts/check-admin-contract.mjs",
+    "test:admin:browser": "node scripts/test-admin-browser.mjs",
+    "test:admin-api": "npm --prefix venda-admin-api test"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.0",

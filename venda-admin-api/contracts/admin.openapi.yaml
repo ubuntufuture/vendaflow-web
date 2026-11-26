@@ -1,0 +1,445 @@
+openapi: 3.0.3
+info:
+  title: Venda Flow AI — API do console interno
+  version: 0.1.0
+paths:
+  /health:
+    get:
+      security: []
+      operationId: adminHealth
+      responses:
+        "200":
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                type: object
+  /ready:
+    get:
+      security: []
+      operationId: adminReady
+      responses:
+        "200":
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                type: object
+        "400": &a1
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "401": &a2
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "403": &a3
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404": &a4
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "409": &a5
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "413": &a6
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500": &a7
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "503": &a8
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /v1/me:
+    get:
+      security: &a9
+        - adminSession: []
+      operationId: adminMe
+      responses:
+        "200":
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - user
+                  - csrfToken
+                  - mfaExpiresAt
+                properties:
+                  user:
+                    type: object
+                    required:
+                      - id
+                      - role
+                    properties:
+                      id: &a13
+                        type: string
+                        format: uuid
+                      role:
+                        type: string
+                        enum:
+                          - platform_admin
+                          - billing_admin
+                          - support_viewer
+                  csrfToken: &a10
+                    type: string
+                  mfaExpiresAt:
+                    type: string
+                    format: date-time
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "500": *a7
+        "503": *a8
+  /v1/plans:
+    get:
+      security: *a9
+      operationId: adminListPlans
+      responses:
+        "200":
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Plan"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "500": *a7
+        "503": *a8
+    post:
+      security: *a9
+      parameters:
+        - &a11
+          name: X-CSRF-Token
+          in: header
+          required: true
+          schema: *a10
+        - &a12
+          name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+            minLength: 16
+            maxLength: 128
+      operationId: adminCreatePlan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PlanInput"
+      responses:
+        "201":
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Plan"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "500": *a7
+        "503": *a8
+  /v1/plans/{id}/publish:
+    post:
+      security: *a9
+      operationId: adminpublishPlan
+      parameters:
+        - *a11
+        - *a12
+        - name: id
+          in: path
+          required: true
+          schema: *a13
+        - name: If-Match
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "201":
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Plan"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "500": *a7
+        "503": *a8
+  /v1/plans/{id}/retire:
+    post:
+      security: *a9
+      operationId: adminretirePlan
+      parameters:
+        - *a11
+        - *a12
+        - name: id
+          in: path
+          required: true
+          schema: *a13
+        - name: If-Match
+          in: header
+          required: true
+          schema:
+            type: string
+            pattern: ^[1-9][0-9]*$
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "201":
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Plan"
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "500": *a7
+        "503": *a8
+  /v1/auth/login:
+    get:
+      security: []
+      operationId: adminAuthlogin
+      responses:
+        "302":
+          description: Redirecionamento OIDC interno com cookie restrito
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "500": *a7
+        "503": *a8
+  /v1/auth/callback:
+    get:
+      security: []
+      operationId: adminAuthcallback
+      responses:
+        "302":
+          description: Redirecionamento OIDC interno com cookie restrito
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "500": *a7
+        "503": *a8
+  /v1/auth/logout:
+    post:
+      security: *a9
+      operationId: adminLogout
+      parameters:
+        - *a11
+      responses:
+        "201":
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                type: object
+        "400": *a1
+        "401": *a2
+        "403": *a3
+        "404": *a4
+        "409": *a5
+        "413": *a6
+        "500": *a7
+        "503": *a8
+  /v1/openapi.json:
+    get:
+      security: []
+      operationId: adminOpenApi
+      responses:
+        "200":
+          description: Resultado do console interno
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    adminSession:
+      type: apiKey
+      in: cookie
+      name: __Host-venda_admin_session
+  schemas:
+    PlanInput:
+      type: object
+      additionalProperties: false
+      required:
+        - code
+        - name
+        - amountCents
+        - frequency
+        - frequencyType
+        - features
+        - limits
+      properties:
+        code: &a14
+          type: string
+          pattern: ^[a-z][a-z0-9_-]{1,47}$
+        name: &a15
+          type: string
+          minLength: 1
+          maxLength: 80
+        amountCents: &a16
+          type: integer
+          minimum: 1
+          maximum: 9000000000000
+        frequency: &a17
+          type: integer
+          minimum: 1
+          maximum: 365
+        frequencyType: &a18
+          type: string
+          enum:
+            - days
+            - months
+        features: &a19
+          type: array
+          maxItems: 8
+          uniqueItems: true
+          items:
+            type: string
+            enum:
+              - crm
+              - whatsapp
+              - ai
+              - automations
+              - reports
+        limits: &a20
+          type: object
+          additionalProperties:
+            type: integer
+            minimum: 0
+            maximum: 9000000000000
+          maxProperties: 16
+    Plan:
+      type: object
+      required:
+        - code
+        - name
+        - amountCents
+        - frequency
+        - frequencyType
+        - features
+        - limits
+        - id
+        - version
+        - revision
+        - currency
+        - status
+        - createdAt
+      properties:
+        code: *a14
+        name: *a15
+        amountCents: *a16
+        frequency: *a17
+        frequencyType: *a18
+        features: *a19
+        limits: *a20
+        id: *a13
+        version:
+          type: integer
+          minimum: 1
+        revision:
+          type: integer
+          minimum: 1
+        currency:
+          type: string
+          enum:
+            - BRL
+        status:
+          type: string
+          enum:
+            - draft
+            - published
+            - retired
+        createdAt:
+          type: string
+          format: date-time
+        publishedAt:
+          type: string
+          format: date-time
+          nullable: true
+    Error:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: object
+          required:
+            - code
+            - message
+            - requestId
+          properties:
+            code: *a10
+            message: *a10
+            requestId: *a13

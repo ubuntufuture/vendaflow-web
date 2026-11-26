@@ -1,0 +1,21 @@
+{
+  "executedAt": "2026-11-25T19:27:59.341Z",
+  "fixture": "DEMO_ONLY: PostgreSQL real isolado e Keycloak real em realm temporário; nenhum dado no ambiente persistente do usuário",
+  "realOidcExecuted": true,
+  "suiteMode": "oidc_smoke",
+  "postgresVersion": "PostgreSQL 18.7 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+  "outcomes": [
+    {
+      "name": "API prepara fluxo OIDC real antes da navegação",
+      "status": "PASS"
+    },
+    {
+      "name": "login real Keycloak sem simulador de protocolo",
+      "status": "PASS"
+    }
+  ],
+  "screenshots": [],
+  "passed": true,
+  "externalProviderSandboxExecuted": false,
+  "productionDeployed": false
+}

@@ -1,12 +1,18 @@
 # Venda Flow AI
 
+## Atualização de implementação — 26/11/2026
+
+O [relatório atual](docs/finalizacao/RELATORIO.md) e o [catálogo das APIs](docs/finalizacao/catalogo-apis.md) incluem privacidade, histórico operacional e console administrativo separado com catálogo versionado. O console local usa a porta 3401; a aplicação cliente, 3400. Veja [configuração e acesso interno](venda-admin-api/README.md).
+
+A implementação permanece em andamento. WhatsApp ponta a ponta, assinatura/reconciliação/entitlements, IA/RAG, e-mail, privacidade completa e operação produtiva ainda têm pendências explícitas. Não há planos, preços ou dados comerciais fictícios na aplicação persistente.
+
 ## Estado atual — núcleo local real
 
 Aplicação Next.js em `venda-web`, API NestJS em `venda-api` e worker TypeScript em `venda-workers`. Contatos, oportunidades, tarefas, conhecimento textual e automações internas persistem em PostgreSQL com isolamento por organização. Login com Keycloak real; menu claro, Inter e marca Venda Flow AI. Não há seeds comerciais no launcher real.
 
 - [Executar localmente](docs/operacao-real/EXECUCAO-LOCAL.md)
 - [Cobertura funcional e pendências](docs/operacao-real/FUNCIONALIDADES.md)
-- [Catálogo das 43 operações de API](docs/operacao-real/APIS.md)
+- [Catálogo atual das APIs cliente e interna](docs/finalizacao/catalogo-apis.md)
 - [Configuração e validação Mercado Pago sandbox](docs/operacao-real/MERCADO-PAGO-SANDBOX.md)
 
 Em 25/11/2026, o acesso de leitura ao Mercado Pago foi validado com credenciais de uma conta de teste brasileira. Isso ainda não implementa checkout, cobrança recorrente, webhook ou entitlements. A plataforma completa e a liberação de produção continuam pendentes; os relatórios anteriores registram os testes e limites de cada etapa.
