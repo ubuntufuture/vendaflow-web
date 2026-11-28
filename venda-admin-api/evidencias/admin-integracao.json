@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-11-26T21:29:54.141Z",
+  "executedAt": "2026-11-28T12:01:28.407Z",
   "fixture": "DEMO_ONLY PostgreSQL isolado e protocolo OIDC assinado",
   "realInteractiveMfaExecuted": false,
   "outcomes": [
@@ -9,6 +9,10 @@
     },
     {
       "name": "plano nasce em rascunho; chave de intenção evita duas versões e suporte não altera preço",
+      "status": "PASS"
+    },
+    {
+      "name": "planos TESTE ficam separados do catálogo público e o ambiente é imutável",
       "status": "PASS"
     },
     {

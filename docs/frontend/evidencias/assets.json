@@ -1,13 +1,8 @@
 [
   {
-    "file": "venda-web/.next/static/AvRo6UPWuWY-toMrygtNd/_buildManifest.js",
-    "bytes": 862,
-    "gzipBytes": 295
-  },
-  {
-    "file": "venda-web/.next/static/AvRo6UPWuWY-toMrygtNd/_ssgManifest.js",
-    "bytes": 80,
-    "gzipBytes": 64
+    "file": "venda-web/.next/static/chunks/137-df4fb5e3b89979c1.js",
+    "bytes": 14384,
+    "gzipBytes": 5513
   },
   {
     "file": "venda-web/.next/static/chunks/158-c78c0040ad8e4ae1.js",
@@ -35,69 +30,69 @@
     "gzipBytes": 3247
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(auth)/cadastro/page-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(auth)/cadastro/page-cc0d1b94b71bc6c6.js",
+    "bytes": 191,
+    "gzipBytes": 167
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(auth)/entrar/page-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(auth)/entrar/page-cc0d1b94b71bc6c6.js",
+    "bytes": 191,
+    "gzipBytes": 167
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(auth)/layout-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(auth)/layout-f203d5c59234244d.js",
+    "bytes": 257,
+    "gzipBytes": 190
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(auth)/recuperar-acesso/page-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(auth)/recuperar-acesso/page-cc0d1b94b71bc6c6.js",
+    "bytes": 191,
+    "gzipBytes": 167
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(public)/layout-8ccb0d47dab39a78.js",
-    "bytes": 759,
-    "gzipBytes": 502
+    "file": "venda-web/.next/static/chunks/app/(public)/layout-5d8cbad080cb3abc.js",
+    "bytes": 807,
+    "gzipBytes": 511
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(public)/page-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(public)/page-f203d5c59234244d.js",
+    "bytes": 257,
+    "gzipBytes": 190
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(public)/planos/page-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(public)/planos/page-f203d5c59234244d.js",
+    "bytes": 257,
+    "gzipBytes": 190
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(public)/[legal]/page-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(public)/[legal]/page-f203d5c59234244d.js",
+    "bytes": 257,
+    "gzipBytes": 190
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(workspace)/app/loading-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(workspace)/app/loading-f203d5c59234244d.js",
+    "bytes": 257,
+    "gzipBytes": 190
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(workspace)/app/o/[organizationId]/[[...section]]/page-55aa81a753ee8924.js",
-    "bytes": 3649,
-    "gzipBytes": 1610
+    "file": "venda-web/.next/static/chunks/app/(workspace)/app/o/[organizationId]/[[...section]]/page-8b1a69870a603275.js",
+    "bytes": 63769,
+    "gzipBytes": 16192
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(workspace)/app/page-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(workspace)/app/page-f203d5c59234244d.js",
+    "bytes": 257,
+    "gzipBytes": 190
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(workspace)/app/[...section]/page-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/(workspace)/app/[...section]/page-f203d5c59234244d.js",
+    "bytes": 257,
+    "gzipBytes": 190
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(workspace)/configurar/page-62a7813daf145542.js",
-    "bytes": 3129,
-    "gzipBytes": 1430
+    "file": "venda-web/.next/static/chunks/app/(workspace)/configurar/page-7d1da0bd4f06aa9d.js",
+    "bytes": 3207,
+    "gzipBytes": 1442
   },
   {
     "file": "venda-web/.next/static/chunks/app/(workspace)/error-2a6f5c5f03bc7ac9.js",
@@ -105,39 +100,44 @@
     "gzipBytes": 462
   },
   {
-    "file": "venda-web/.next/static/chunks/app/(workspace)/layout-8ccb0d47dab39a78.js",
-    "bytes": 759,
-    "gzipBytes": 502
+    "file": "venda-web/.next/static/chunks/app/(workspace)/layout-5d8cbad080cb3abc.js",
+    "bytes": 807,
+    "gzipBytes": 511
   },
   {
-    "file": "venda-web/.next/static/chunks/app/auth/callback/route-b0ef6ed691e65554.js",
-    "bytes": 154,
-    "gzipBytes": 140
+    "file": "venda-web/.next/static/chunks/app/auth/callback/route-80a464655389feec.js",
+    "bytes": 158,
+    "gzipBytes": 142
   },
   {
-    "file": "venda-web/.next/static/chunks/app/layout-08451d45288ac8b0.js",
-    "bytes": 10697,
-    "gzipBytes": 3951
+    "file": "venda-web/.next/static/chunks/app/layout-53b0c6576fb42d13.js",
+    "bytes": 10754,
+    "gzipBytes": 3963
   },
   {
-    "file": "venda-web/.next/static/chunks/app/not-found-bb0713c1c3bb1f44.js",
-    "bytes": 221,
-    "gzipBytes": 189
+    "file": "venda-web/.next/static/chunks/app/not-found-f203d5c59234244d.js",
+    "bytes": 257,
+    "gzipBytes": 190
   },
   {
-    "file": "venda-web/.next/static/chunks/app/v1/auth/[action]/route-b0ef6ed691e65554.js",
-    "bytes": 154,
-    "gzipBytes": 140
+    "file": "venda-web/.next/static/chunks/app/v1/auth/[action]/route-80a464655389feec.js",
+    "bytes": 158,
+    "gzipBytes": 142
   },
   {
-    "file": "venda-web/.next/static/chunks/app/_global-error/page-b0ef6ed691e65554.js",
-    "bytes": 154,
-    "gzipBytes": 140
+    "file": "venda-web/.next/static/chunks/app/v1/privacy/export/[id]/route-80a464655389feec.js",
+    "bytes": 158,
+    "gzipBytes": 142
   },
   {
-    "file": "venda-web/.next/static/chunks/app/_not-found/page-b0ef6ed691e65554.js",
-    "bytes": 154,
-    "gzipBytes": 140
+    "file": "venda-web/.next/static/chunks/app/_global-error/page-80a464655389feec.js",
+    "bytes": 158,
+    "gzipBytes": 142
+  },
+  {
+    "file": "venda-web/.next/static/chunks/app/_not-found/page-80a464655389feec.js",
+    "bytes": 158,
+    "gzipBytes": 142
   },
   {
     "file": "venda-web/.next/static/chunks/c7879cf7-2bab98c1418a0145.js",
@@ -160,14 +160,14 @@
     "gzipBytes": 222
   },
   {
-    "file": "venda-web/.next/static/chunks/next/dist/client/components/builtin/app-error-b0ef6ed691e65554.js",
-    "bytes": 154,
-    "gzipBytes": 140
+    "file": "venda-web/.next/static/chunks/next/dist/client/components/builtin/app-error-80a464655389feec.js",
+    "bytes": 158,
+    "gzipBytes": 142
   },
   {
-    "file": "venda-web/.next/static/chunks/next/dist/client/components/builtin/forbidden-b0ef6ed691e65554.js",
-    "bytes": 154,
-    "gzipBytes": 140
+    "file": "venda-web/.next/static/chunks/next/dist/client/components/builtin/forbidden-80a464655389feec.js",
+    "bytes": 158,
+    "gzipBytes": 142
   },
   {
     "file": "venda-web/.next/static/chunks/next/dist/client/components/builtin/global-error-c63bbeeb277f2fbf.js",
@@ -175,9 +175,9 @@
     "gzipBytes": 160
   },
   {
-    "file": "venda-web/.next/static/chunks/next/dist/client/components/builtin/unauthorized-b0ef6ed691e65554.js",
-    "bytes": 154,
-    "gzipBytes": 140
+    "file": "venda-web/.next/static/chunks/next/dist/client/components/builtin/unauthorized-80a464655389feec.js",
+    "bytes": 158,
+    "gzipBytes": 142
   },
   {
     "file": "venda-web/.next/static/chunks/polyfills-42372ed130431b0a.js",
@@ -185,18 +185,28 @@
     "gzipBytes": 39627
   },
   {
-    "file": "venda-web/.next/static/chunks/webpack-016e2160a21c686c.js",
-    "bytes": 3403,
+    "file": "venda-web/.next/static/chunks/webpack-dbf71f815d92e0b2.js",
+    "bytes": 3404,
     "gzipBytes": 1740
   },
   {
-    "file": "venda-web/.next/static/css/419a052b4fa15e95.css",
-    "bytes": 25847,
-    "gzipBytes": 5630
+    "file": "venda-web/.next/static/css/24b5941f92802177.css",
+    "bytes": 43580,
+    "gzipBytes": 8662
   },
   {
     "file": "venda-web/.next/static/media/6c596dfcddeca1e9-s.p.woff2",
     "bytes": 48256,
     "gzipBytes": 48254
+  },
+  {
+    "file": "venda-web/.next/static/topc-Aw42pNu0p0QE3aEv/_buildManifest.js",
+    "bytes": 900,
+    "gzipBytes": 295
+  },
+  {
+    "file": "venda-web/.next/static/topc-Aw42pNu0p0QE3aEv/_ssgManifest.js",
+    "bytes": 80,
+    "gzipBytes": 64
   }
 ]

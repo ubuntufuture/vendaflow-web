@@ -129,6 +129,8 @@ try {
   const port = await freePort();
   const config = loadConfig({
     NODE_ENV: "test",
+    BILLING_ENVIRONMENT: "test",
+    BILLING_ENABLED: "false",
     PORT: String(port),
     DATABASE_URL: fixture.databaseUrl,
     API_ORIGIN: base,
@@ -140,6 +142,10 @@ try {
     FLOW_ENCRYPTION_KEY: randomBytes(32).toString("hex"),
     CSRF_KEY: randomBytes(32).toString("hex"),
   });
+  // DEMO_ONLY catalog in this disposable cluster; never copied to the persistent app.
+  const catalogActor=(await fixture.control.query("INSERT INTO venda_admin.users(issuer,subject,role) VALUES('https://demo-only.invalid','DEMO_ONLY-browser-billing','platform_admin') RETURNING id")).rows[0];
+  const billingPlan=(await fixture.control.query("INSERT INTO venda_admin.plan_versions(code,version,name,amount_cents,frequency,frequency_type,features,limits,created_by,environment) VALUES('teste-demo-browser',1,'TESTE DEMO_ONLY navegador',1000,1,'months','[\"crm\"]','{}',$1,'test') RETURNING id",[catalogActor.id])).rows[0];
+  await fixture.control.query("UPDATE venda_admin.plan_versions SET status='published',revision=2,published_at=clock_timestamp() WHERE id=$1",[billingPlan.id]);
   runtime = await createApp(config, new Database(config), line => apiDiagnostics.push(JSON.parse(line)));
   await runtime.app.listen(port, "127.0.0.1");
   process.chdir(root);
@@ -371,6 +377,25 @@ try {
   await page.getByRole('cell',{name:'Em análise',exact:true}).waitFor();
   const exportResponse=await page.request.get(base+(await page.getByRole('link',{name:/^Exportar dados/}).getAttribute('href')));
   record('exportação BFF exige sessão e entrega somente dados autorizados',exportResponse.ok()&&exportResponse.headers()['cache-control']==='private, no-store'&&(await exportResponse.json()).contact.name==='DEMO_ONLY contato revisado');
+  await goto(page,orgA+'/faturamento');
+  record('faturamento lê plano TESTE do banco',await page.getByRole('cell',{name:/TESTE DEMO_ONLY navegador/}).isVisible());
+  record('checkout sem configuração permanece desabilitado',await page.getByRole('button',{name:'Preparar checkout',exact:true}).isDisabled());
+  config.billingEnabled=true;await page.getByRole('button',{name:'Atualizar situação',exact:true}).click();
+  await page.getByRole('combobox',{name:/^Plano/}).selectOption(billingPlan.id);
+  await page.getByRole('textbox',{name:/^E-mail do pagador/}).fill('DEMO_ONLY@testuser.com');
+  await page.getByRole('checkbox',{name:/Conferi o plano/}).check();
+  await page.getByRole('button',{name:'Preparar checkout',exact:true}).click();
+  await page.getByRole('heading',{name:'Preparando checkout',exact:true}).waitFor();
+  record('UI registra intenção durável sem pagamento fictício',(await fixture.control.query('SELECT id FROM venda.billing_subscriptions WHERE organization_id=$1',[orgA.split('/').at(-1)])).rowCount===1);
+  await page.getByRole('checkbox',{name:/Solicito o cancelamento/}).check();await page.getByRole('button',{name:'Solicitar cancelamento',exact:true}).click();
+  await page.getByRole('heading',{name:'Cancelamento em processamento',exact:true}).waitFor();
+  const billingPassword=randomBytes(32).toString('hex');await fixture.control.query(`CREATE ROLE venda_browser_billing LOGIN NOSUPERUSER NOBYPASSRLS PASSWORD '${billingPassword}'`);await fixture.control.query('GRANT venda_billing_worker TO venda_browser_billing');
+  const billingUrl=new URL(fixture.databaseUrl);billingUrl.username='venda_browser_billing';billingUrl.password=billingPassword;
+  const {createRequire}=await import('node:module');const pg=createRequire(path.join(root,'venda-api/package.json'))('pg');const billingPool=new pg.Pool({connectionString:billingUrl.href,max:1});
+  const {processBillingOnce}=await import(pathToFileURL(path.join(root,'venda-workers/build/billing/processor.js')).href);let externalBillingCalls=0;const neverCall=async()=>{externalBillingCalls++;throw new Error('DEMO_ONLY: nenhuma chamada externa esperada');};
+  try{for(let i=0;i<3;i++)await processBillingOnce(billingPool,{create:neverCall,get:neverCall,cancel:neverCall},'test');}finally{await billingPool.end();}
+  await page.getByRole('button',{name:'Atualizar situação',exact:true}).click();await page.getByRole('heading',{name:'Assinatura cancelada',exact:true}).waitFor();
+  record('UI só confirma cancelamento após worker; zero chamada externa',externalBillingCalls===0);config.billingEnabled=false;
   record(
     "onboarding confirmou organização no PostgreSQL",
     !!(

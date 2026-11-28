@@ -37,6 +37,8 @@ import { FoundationService } from "./foundation.js";
 import { CommerceService } from "./commerce.js";
 import { commerceControllers } from "./commerce.controller.js";
 import {PrivacyController} from './privacy.controller.js';
+import {BillingController} from './billing/billing.controller.js';
+import {BillingService} from './billing/billing.js';
 import {PrivacyService} from './privacy.js';
 import {
   CreateMembershipDto,
@@ -203,12 +205,13 @@ export async function createApp(
   const auth = new AuthService(config, db, new OidcClient(config));
   const service = new FoundationService(auth);
   @Module({
-    controllers: [FoundationController,...commerceControllers,PrivacyController],
+    controllers: [FoundationController,...commerceControllers,PrivacyController,BillingController],
     providers: [
       { provide: AuthService, useValue: auth },
       { provide: FoundationService, useValue: service },
       { provide: CommerceService, useValue: new CommerceService(auth) },
       { provide: PrivacyService, useValue: new PrivacyService(auth) },
+      { provide: BillingService, useValue: new BillingService(auth) },
       TenantPolicyGuard,
       { provide: APP_GUARD, useClass: SessionGuard },
     ],

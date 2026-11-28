@@ -51,7 +51,10 @@
     "setup:admin:runtime": "node scripts/setup-local-admin-runtime.mjs",
     "contract:admin": "node scripts/check-admin-contract.mjs",
     "test:admin:browser": "node scripts/test-admin-browser.mjs",
-    "test:admin-api": "npm --prefix venda-admin-api test"
+    "test:admin-api": "npm --prefix venda-admin-api test",
+    "setup:billing:local": "node scripts/setup-local-billing.mjs",
+    "setup:test-plans": "node scripts/setup-local-test-plans.mjs --apply",
+    "test:billing": "npm --prefix venda-workers run test:billing"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.0",

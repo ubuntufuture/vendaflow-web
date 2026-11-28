@@ -169,6 +169,11 @@ export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
         PlanInput: {
+            /**
+             * @default production
+             * @enum {string}
+             */
+            environment: "test" | "production";
             code: string;
             name: string;
             amountCents: number;
@@ -181,6 +186,11 @@ export interface components {
             };
         };
         Plan: {
+            /**
+             * @default production
+             * @enum {string}
+             */
+            environment: "test" | "production";
             code: string;
             name: string;
             amountCents: number;

@@ -79,7 +79,7 @@ export class Database {
     try {
       return await this.tx({}, async (client) => {
         const role = await client.query<{ safe: boolean }>(
-          "SELECT NOT rolsuper AND NOT rolbypassrls AND NOT pg_has_role(current_user,'venda_owner','MEMBER') AND NOT pg_has_role(current_user,'venda_authorizer','MEMBER') AND NOT pg_has_role(current_user,'venda_bootstrap','MEMBER') AND NOT pg_has_role(current_user,'venda_identity','MEMBER') AND NOT pg_has_role(current_user,'venda_worker','MEMBER') AND NOT pg_has_role(current_user,'venda_automation_executor','MEMBER') AND NOT pg_has_role(current_user,'venda_admin_api','MEMBER') AND NOT pg_has_role(current_user,'venda_admin_identity','MEMBER') AND NOT pg_has_role(current_user,'venda_admin_authorizer','MEMBER') AS safe FROM pg_roles WHERE rolname=current_user",
+          "SELECT NOT rolsuper AND NOT rolbypassrls AND NOT pg_has_role(current_user,'venda_owner','MEMBER') AND NOT pg_has_role(current_user,'venda_authorizer','MEMBER') AND NOT pg_has_role(current_user,'venda_bootstrap','MEMBER') AND NOT pg_has_role(current_user,'venda_identity','MEMBER') AND NOT pg_has_role(current_user,'venda_worker','MEMBER') AND NOT pg_has_role(current_user,'venda_automation_executor','MEMBER') AND NOT pg_has_role(current_user,'venda_billing_worker','MEMBER') AND NOT pg_has_role(current_user,'venda_billing_executor','MEMBER') AND NOT pg_has_role(current_user,'venda_admin_api','MEMBER') AND NOT pg_has_role(current_user,'venda_admin_identity','MEMBER') AND NOT pg_has_role(current_user,'venda_admin_authorizer','MEMBER') AS safe FROM pg_roles WHERE rolname=current_user",
         );
         const rls = await client.query<{ count: string; safe: boolean }>(
           "SELECT count(*)::text, bool_and(c.relrowsecurity AND c.relforcerowsecurity AND pg_get_userbyid(c.relowner)<>current_user) AS safe FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='venda' AND c.relkind='r'",
@@ -87,7 +87,7 @@ export class Database {
         return (
           role.rows[0]?.safe === true &&
           rls.rows[0]?.safe === true &&
-          Number(rls.rows[0].count) === 19
+          Number(rls.rows[0].count) === 22
         );
       });
     } catch {

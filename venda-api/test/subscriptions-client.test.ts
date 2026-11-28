@@ -2,7 +2,7 @@ import{describe,it}from'node:test';import assert from'node:assert/strict';import
 // DEMO_ONLY fixtures. Never imported by the runtime or used as a price catalog.
 const options={environment:'test' as const,accessToken:'TEST-DEMO-ONLY-CREDENTIAL',returnUrl:'https://app.example.test/faturamento/retorno'};
 const offer={reference:'DEMO_ONLY-local-reference',reason:'DEMO_ONLY cenário de contrato',payerEmail:'DEMO_ONLY@testuser.com',amountCents:12345,frequency:1,frequencyType:'months' as const};
-const subscription={id:'DEMO_ONLY-provider-id',external_reference:offer.reference,collector_id:1,status:'pending',last_modified:'2026-11-25T10:00:00Z',init_point:'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_id=DEMO_ONLY'};
+const subscription={auto_recurring:{currency_id:'BRL',transaction_amount:123.45,frequency:1,frequency_type:'months'},id:'DEMO_ONLY-provider-id',external_reference:offer.reference,collector_id:1,status:'pending',last_modified:'2026-11-25T10:00:00Z',init_point:'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_id=DEMO_ONLY-provider-id'};
 const response=(data:unknown,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json'}});
 const transport=(fn:(url:string,init:RequestInit)=>Promise<Response>)=>((url:Parameters<typeof fetch>[0],init:RequestInit)=>fn(String(url),init))as typeof fetch;
 describe('DEMO_ONLY — assinaturas recorrentes Mercado Pago',()=>{

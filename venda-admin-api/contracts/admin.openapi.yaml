@@ -341,27 +341,33 @@ components:
         - features
         - limits
       properties:
-        code: &a14
+        environment: &a14
+          type: string
+          enum:
+            - test
+            - production
+          default: production
+        code: &a15
           type: string
           pattern: ^[a-z][a-z0-9_-]{1,47}$
-        name: &a15
+        name: &a16
           type: string
           minLength: 1
           maxLength: 80
-        amountCents: &a16
+        amountCents: &a17
           type: integer
           minimum: 1
           maximum: 9000000000000
-        frequency: &a17
+        frequency: &a18
           type: integer
           minimum: 1
           maximum: 365
-        frequencyType: &a18
+        frequencyType: &a19
           type: string
           enum:
             - days
             - months
-        features: &a19
+        features: &a20
           type: array
           maxItems: 8
           uniqueItems: true
@@ -373,7 +379,7 @@ components:
               - ai
               - automations
               - reports
-        limits: &a20
+        limits: &a21
           type: object
           additionalProperties:
             type: integer
@@ -397,13 +403,14 @@ components:
         - status
         - createdAt
       properties:
-        code: *a14
-        name: *a15
-        amountCents: *a16
-        frequency: *a17
-        frequencyType: *a18
-        features: *a19
-        limits: *a20
+        environment: *a14
+        code: *a15
+        name: *a16
+        amountCents: *a17
+        frequency: *a18
+        frequencyType: *a19
+        features: *a20
+        limits: *a21
         id: *a13
         version:
           type: integer

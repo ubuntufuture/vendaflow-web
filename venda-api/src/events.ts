@@ -1,5 +1,6 @@
 import type { PoolClient } from "pg";
 export type DomainAction =
+  | "billing.checkout.requested" | "billing.cancel.requested" | "billing.reconcile.requested"
   | "organization.created"
   | "organization.updated"
   | "membership.created"

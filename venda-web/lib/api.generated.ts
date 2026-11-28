@@ -527,6 +527,86 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/v1/billing/plans": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["billingPlans"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/billing/status": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["billingStatus"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/billing/checkout": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["billingCheckout"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/billing/subscriptions/{id}/cancel": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["billingcancel"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/billing/subscriptions/{id}/reconcile": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["billingreconcile"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/v1/plans": {
         parameters: {
             query?: never;
@@ -849,6 +929,80 @@ export interface components {
                 opportunitiesCreated: number;
                 tasksCreated: number;
             }[];
+        };
+        BillingPlan: {
+            /** Format: uuid */
+            id: string;
+            name: string;
+            code: string;
+            version: number;
+            /** @enum {string} */
+            environment: "test" | "production";
+            amountCents: number;
+            /** @enum {string} */
+            currency: "BRL";
+            frequency: number;
+            /** @enum {string} */
+            frequencyType: "days" | "months";
+            features: string[];
+            limits: {
+                [key: string]: number;
+            };
+        };
+        BillingSubscription: {
+            /** Format: uuid */
+            id: string;
+            /** Format: uuid */
+            planId: string;
+            /** @enum {string} */
+            environment: "test" | "production";
+            /** @enum {string} */
+            state: "creating" | "pending_authorization" | "authorized" | "paused" | "cancellation_pending" | "cancelled" | "requires_review" | "failed";
+            /** Format: uri */
+            checkoutUrl: string | null;
+            /** Format: date-time */
+            updatedAt: string;
+        };
+        BillingStatus: {
+            /** @enum {string} */
+            environment: "test" | "production";
+            checkoutAvailable: boolean;
+            /** @enum {string} */
+            reason: "ready" | "provider_configuration_pending";
+            subscription: {
+                /** Format: uuid */
+                id: string;
+                /** Format: uuid */
+                planId: string;
+                /** @enum {string} */
+                environment: "test" | "production";
+                /** @enum {string} */
+                state: "creating" | "pending_authorization" | "authorized" | "paused" | "cancellation_pending" | "cancelled" | "requires_review" | "failed";
+                /** Format: uri */
+                checkoutUrl: string | null;
+                /** Format: date-time */
+                updatedAt: string;
+            } | null;
+            paymentVerified: boolean;
+            entitlements: {
+                /** @enum {string} */
+                status: "unverified" | "active" | "inactive" | "revoked";
+                features: ("crm" | "whatsapp" | "ai" | "automations" | "reports")[];
+            };
+        };
+        BillingIntent: {
+            /** Format: uuid */
+            subscriptionId: string;
+            /** Format: uuid */
+            commandId: string;
+            /** @enum {boolean} */
+            accepted: true;
+        };
+        BillingCheckoutInput: {
+            /** Format: uuid */
+            planId: string;
+            /** Format: email */
+            payerEmail: string;
         };
         PublicPlan: {
             /** Format: uuid */
@@ -6007,6 +6161,413 @@ export interface operations {
             };
             /** @description Erro uniforme */
             504: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    billingPlans: {
+        parameters: {
+            query: {
+                organizationId: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        data: components["schemas"]["BillingPlan"][];
+                    };
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    billingStatus: {
+        parameters: {
+            query: {
+                organizationId: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BillingStatus"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    billingCheckout: {
+        parameters: {
+            query: {
+                organizationId: string;
+            };
+            header: {
+                "X-CSRF-Token": string;
+                "Idempotency-Key": string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["BillingCheckoutInput"];
+            };
+        };
+        responses: {
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            202: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BillingIntent"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    billingcancel: {
+        parameters: {
+            query: {
+                organizationId: string;
+            };
+            header: {
+                "X-CSRF-Token": string;
+                "Idempotency-Key": string;
+            };
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": Record<string, never>;
+            };
+        };
+        responses: {
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            202: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BillingIntent"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    billingreconcile: {
+        parameters: {
+            query: {
+                organizationId: string;
+            };
+            header: {
+                "X-CSRF-Token": string;
+                "Idempotency-Key": string;
+            };
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": Record<string, never>;
+            };
+        };
+        responses: {
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            202: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BillingIntent"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Estado confirmado no backend; autorização de assinatura não comprova recebimento. */
+            503: {
                 headers: {
                     [name: string]: unknown;
                 };

@@ -1624,6 +1624,201 @@ paths:
         "500": *a27
         "503": *a28
         "504": *a29
+  /v1/billing/plans:
+    get:
+      operationId: billingPlans
+      security: *a17
+      parameters:
+        - &a41
+          name: organizationId
+          in: query
+          required: true
+          schema: &a50
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/BillingPlan"
+        "400": &a42
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "401": &a43
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "403": &a44
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404": &a45
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "409": &a46
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "503": &a47
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /v1/billing/status:
+    get:
+      operationId: billingStatus
+      security: *a17
+      parameters:
+        - *a41
+      responses:
+        "200":
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BillingStatus"
+        "400": *a42
+        "401": *a43
+        "403": *a44
+        "404": *a45
+        "409": *a46
+        "503": *a47
+  /v1/billing/checkout:
+    post:
+      operationId: billingCheckout
+      security: *a17
+      parameters:
+        - *a41
+        - &a48
+          name: X-CSRF-Token
+          in: header
+          required: true
+          schema:
+            type: string
+        - &a49
+          name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+            minLength: 16
+            maxLength: 128
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BillingCheckoutInput"
+      responses:
+        "202":
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BillingIntent"
+        "400": *a42
+        "401": *a43
+        "403": *a44
+        "404": *a45
+        "409": *a46
+        "503": *a47
+  /v1/billing/subscriptions/{id}/cancel:
+    post:
+      operationId: billingcancel
+      security: *a17
+      parameters:
+        - *a41
+        - *a48
+        - *a49
+        - name: id
+          in: path
+          required: true
+          schema: *a50
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "202":
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BillingIntent"
+        "400": *a42
+        "401": *a43
+        "403": *a44
+        "404": *a45
+        "409": *a46
+        "503": *a47
+  /v1/billing/subscriptions/{id}/reconcile:
+    post:
+      operationId: billingreconcile
+      security: *a17
+      parameters:
+        - *a41
+        - *a48
+        - *a49
+        - name: id
+          in: path
+          required: true
+          schema: *a50
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        "202":
+          description: Estado confirmado no backend; autorização de assinatura não
+            comprova recebimento.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BillingIntent"
+        "400": *a42
+        "401": *a43
+        "403": *a44
+        "404": *a45
+        "409": *a46
+        "503": *a47
   /v1/plans:
     get:
       operationId: publicPlans
@@ -1660,12 +1855,12 @@ paths:
   /v1/consents:
     get:
       security: *a17
-      parameters: &a50
-        - &a41
+      parameters: &a60
+        - &a51
           name: organizationId
           in: query
           required: true
-          schema: &a52
+          schema: &a62
             type: string
             format: uuid
       operationId: listConsentRecord
@@ -1684,49 +1879,49 @@ paths:
                     maxItems: 100
                     items:
                       $ref: "#/components/schemas/ConsentRecord"
-        "400": &a42
+        "400": &a52
           description: Resultado autorizado da organização
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-        "401": &a43
+        "401": &a53
           description: Resultado autorizado da organização
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-        "403": &a44
+        "403": &a54
           description: Resultado autorizado da organização
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-        "404": &a45
+        "404": &a55
           description: Resultado autorizado da organização
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-        "409": &a46
+        "409": &a56
           description: Resultado autorizado da organização
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-        "413": &a47
+        "413": &a57
           description: Resultado autorizado da organização
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-        "500": &a48
+        "500": &a58
           description: Resultado autorizado da organização
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-        "503": &a49
+        "503": &a59
           description: Resultado autorizado da organização
           content:
             application/json:
@@ -1734,8 +1929,8 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       security: *a17
-      parameters: &a51
-        - *a41
+      parameters: &a61
+        - *a51
         - name: X-CSRF-Token
           in: header
           required: true
@@ -1765,18 +1960,18 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ConsentRecord"
-        "400": *a42
-        "401": *a43
-        "403": *a44
-        "404": *a45
-        "409": *a46
-        "413": *a47
-        "500": *a48
-        "503": *a49
+        "400": *a52
+        "401": *a53
+        "403": *a54
+        "404": *a55
+        "409": *a56
+        "413": *a57
+        "500": *a58
+        "503": *a59
   /v1/privacy/requests:
     get:
       security: *a17
-      parameters: *a50
+      parameters: *a60
       operationId: listPrivacyRequest
       responses:
         "200":
@@ -1793,17 +1988,17 @@ paths:
                     maxItems: 100
                     items:
                       $ref: "#/components/schemas/PrivacyRequest"
-        "400": *a42
-        "401": *a43
-        "403": *a44
-        "404": *a45
-        "409": *a46
-        "413": *a47
-        "500": *a48
-        "503": *a49
+        "400": *a52
+        "401": *a53
+        "403": *a54
+        "404": *a55
+        "409": *a56
+        "413": *a57
+        "500": *a58
+        "503": *a59
     post:
       security: *a17
-      parameters: *a51
+      parameters: *a61
       operationId: createPrivacyRequest
       requestBody:
         required: true
@@ -1818,23 +2013,23 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/PrivacyRequest"
-        "400": *a42
-        "401": *a43
-        "403": *a44
-        "404": *a45
-        "409": *a46
-        "413": *a47
-        "500": *a48
-        "503": *a49
+        "400": *a52
+        "401": *a53
+        "403": *a54
+        "404": *a55
+        "409": *a56
+        "413": *a57
+        "500": *a58
+        "503": *a59
   /v1/privacy/requests/{id}/export:
     get:
       security: *a17
       parameters:
-        - *a41
+        - *a51
         - name: id
           in: path
           required: true
-          schema: *a52
+          schema: *a62
       operationId: exportPrivacyRequest
       responses:
         "200":
@@ -1872,14 +2067,14 @@ paths:
                     type: array
                     items:
                       $ref: "#/components/schemas/ConsentRecord"
-        "400": *a42
-        "401": *a43
-        "403": *a44
-        "404": *a45
-        "409": *a46
-        "413": *a47
-        "500": *a48
-        "503": *a49
+        "400": *a52
+        "401": *a53
+        "403": *a54
+        "404": *a55
+        "409": *a56
+        "413": *a57
+        "500": *a58
+        "503": *a59
 components:
   securitySchemes:
     session:
@@ -1905,7 +2100,7 @@ components:
               type: string
             message:
               type: string
-            requestId: &a53
+            requestId: &a63
               type: string
               format: uuid
     Organization:
@@ -1919,7 +2114,7 @@ components:
         - currency
         - createdAt
       properties:
-        id: *a53
+        id: *a63
         name:
           type: string
           minLength: 1
@@ -1935,7 +2130,7 @@ components:
           type: string
           enum:
             - BRL
-        createdAt: &a54
+        createdAt: &a64
           type: string
           format: date-time
     Membership:
@@ -1949,10 +2144,10 @@ components:
         - active
         - createdAt
       properties:
-        id: *a53
-        organizationId: *a53
-        userId: *a53
-        role: &a55
+        id: *a63
+        organizationId: *a63
+        userId: *a63
+        role: &a65
           type: string
           enum:
             - owner
@@ -1963,7 +2158,7 @@ components:
             - billing
         active:
           type: boolean
-        createdAt: *a54
+        createdAt: *a64
     CreateOrganization:
       type: object
       additionalProperties: false
@@ -1997,14 +2192,14 @@ components:
         - userId
         - role
       properties:
-        userId: *a53
-        role: *a55
+        userId: *a63
+        role: *a65
     UpdateMembership:
       type: object
       additionalProperties: false
       minProperties: 1
       properties:
-        role: *a55
+        role: *a65
         active:
           type: boolean
     Me:
@@ -2021,10 +2216,10 @@ components:
           required:
             - id
           properties:
-            id: *a53
+            id: *a63
         csrfToken:
           type: string
-        sessionExpiresAt: *a54
+        sessionExpiresAt: *a64
     Organizations:
       type: object
       additionalProperties: false
@@ -2062,16 +2257,16 @@ components:
       additionalProperties: false
       required:
         - name
-      properties: &a56
-        name: &a57
+      properties: &a66
+        name: &a67
           type: string
           minLength: 1
           maxLength: 120
-        phone: &a58
+        phone: &a68
           type: string
           pattern: ^\+[1-9][0-9]{7,14}$
           nullable: true
-        email: &a59
+        email: &a69
           type: string
           format: email
           maxLength: 254
@@ -2080,7 +2275,7 @@ components:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a56
+      properties: *a66
     Contact:
       type: object
       additionalProperties: false
@@ -2095,9 +2290,9 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        name: *a57
-        phone: *a58
-        email: *a59
+        name: *a67
+        phone: *a68
+        email: *a69
         createdAt:
           type: string
           format: date-time
@@ -2115,16 +2310,16 @@ components:
       required:
         - title
         - stage
-      properties: &a60
-        title: &a61
+      properties: &a70
+        title: &a71
           type: string
           minLength: 1
           maxLength: 160
-        contactId: &a62
+        contactId: &a72
           type: string
           format: uuid
           nullable: true
-        stage: &a63
+        stage: &a73
           type: string
           enum:
             - new
@@ -2132,7 +2327,7 @@ components:
             - proposal
             - won
             - lost
-        amountCents: &a64
+        amountCents: &a74
           type: integer
           minimum: 0
           maximum: 9000000000000
@@ -2141,7 +2336,7 @@ components:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a60
+      properties: *a70
     Opportunity:
       type: object
       additionalProperties: false
@@ -2157,10 +2352,10 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        title: *a61
-        contactId: *a62
-        stage: *a63
-        amountCents: *a64
+        title: *a71
+        contactId: *a72
+        stage: *a73
+        amountCents: *a74
         createdAt:
           type: string
           format: date-time
@@ -2181,30 +2376,30 @@ components:
       additionalProperties: false
       required:
         - title
-      properties: &a65
-        title: &a66
+      properties: &a75
+        title: &a76
           type: string
           minLength: 1
           maxLength: 160
-        contactId: &a67
+        contactId: &a77
           type: string
           format: uuid
           nullable: true
-        opportunityId: &a68
+        opportunityId: &a78
           type: string
           format: uuid
           nullable: true
-        dueAt: &a69
+        dueAt: &a79
           type: string
           format: date-time
           nullable: true
-        completed: &a70
+        completed: &a80
           type: boolean
     TaskPatch:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a65
+      properties: *a75
     Task:
       type: object
       additionalProperties: false
@@ -2219,11 +2414,11 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        title: *a66
-        contactId: *a67
-        opportunityId: *a68
-        dueAt: *a69
-        completed: *a70
+        title: *a76
+        contactId: *a77
+        opportunityId: *a78
+        dueAt: *a79
+        completed: *a80
         createdAt:
           type: string
           format: date-time
@@ -2241,12 +2436,12 @@ components:
       required:
         - title
         - content
-      properties: &a71
-        title: &a72
+      properties: &a81
+        title: &a82
           type: string
           minLength: 1
           maxLength: 160
-        content: &a73
+        content: &a83
           type: string
           minLength: 1
           maxLength: 12000
@@ -2254,7 +2449,7 @@ components:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a71
+      properties: *a81
     KnowledgeEntry:
       type: object
       additionalProperties: false
@@ -2270,8 +2465,8 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        title: *a72
-        content: *a73
+        title: *a82
+        content: *a83
         createdAt:
           type: string
           format: date-time
@@ -2290,17 +2485,17 @@ components:
         - name
         - trigger
         - taskTitle
-      properties: &a74
-        name: &a75
+      properties: &a84
+        name: &a85
           type: string
           minLength: 1
           maxLength: 120
-        trigger: &a76
+        trigger: &a86
           type: string
           enum:
             - opportunity.won
             - task.created
-        taskTitle: &a77
+        taskTitle: &a87
           type: string
           minLength: 1
           maxLength: 160
@@ -2308,7 +2503,7 @@ components:
       type: object
       additionalProperties: false
       minProperties: 1
-      properties: *a74
+      properties: *a84
     Workflow:
       type: object
       additionalProperties: false
@@ -2325,9 +2520,9 @@ components:
       properties:
         id: *a16
         organizationId: *a16
-        name: *a75
-        trigger: *a76
-        taskTitle: *a77
+        name: *a85
+        trigger: *a86
+        taskTitle: *a87
         createdAt:
           type: string
           format: date-time
@@ -2426,6 +2621,166 @@ components:
               tasksCreated:
                 type: integer
                 minimum: 0
+    BillingPlan:
+      type: object
+      required:
+        - id
+        - name
+        - code
+        - version
+        - environment
+        - amountCents
+        - currency
+        - frequency
+        - frequencyType
+        - features
+        - limits
+      properties:
+        id: *a50
+        name:
+          type: string
+        code:
+          type: string
+        version:
+          type: integer
+        environment:
+          type: string
+          enum:
+            - test
+            - production
+        amountCents:
+          type: integer
+        currency:
+          type: string
+          enum:
+            - BRL
+        frequency:
+          type: integer
+        frequencyType:
+          type: string
+          enum:
+            - days
+            - months
+        features:
+          type: array
+          items:
+            type: string
+        limits:
+          type: object
+          additionalProperties:
+            type: integer
+    BillingSubscription:
+      type: object
+      required: &a88
+        - id
+        - planId
+        - environment
+        - state
+        - checkoutUrl
+        - updatedAt
+      properties: &a89
+        id: *a50
+        planId: *a50
+        environment:
+          type: string
+          enum:
+            - test
+            - production
+        state:
+          type: string
+          enum:
+            - creating
+            - pending_authorization
+            - authorized
+            - paused
+            - cancellation_pending
+            - cancelled
+            - requires_review
+            - failed
+        checkoutUrl:
+          type: string
+          format: uri
+          nullable: true
+        updatedAt:
+          type: string
+          format: date-time
+    BillingStatus:
+      type: object
+      required:
+        - environment
+        - checkoutAvailable
+        - reason
+        - subscription
+        - paymentVerified
+        - entitlements
+      properties:
+        environment:
+          type: string
+          enum:
+            - test
+            - production
+        checkoutAvailable:
+          type: boolean
+        reason:
+          type: string
+          enum:
+            - ready
+            - provider_configuration_pending
+        subscription:
+          type: object
+          required: *a88
+          properties: *a89
+          nullable: true
+        paymentVerified:
+          type: boolean
+        entitlements:
+          type: object
+          required:
+            - status
+            - features
+          properties:
+            status:
+              type: string
+              enum:
+                - unverified
+                - active
+                - inactive
+                - revoked
+            features:
+              type: array
+              items:
+                type: string
+                enum:
+                  - crm
+                  - whatsapp
+                  - ai
+                  - automations
+                  - reports
+    BillingIntent:
+      type: object
+      required:
+        - subscriptionId
+        - commandId
+        - accepted
+      properties:
+        subscriptionId: *a50
+        commandId: *a50
+        accepted:
+          type: boolean
+          enum:
+            - true
+    BillingCheckoutInput:
+      type: object
+      additionalProperties: false
+      required:
+        - planId
+        - payerEmail
+      properties:
+        planId: *a50
+        payerEmail:
+          type: string
+          format: email
+          maxLength: 254
     PublicPlan:
       type: object
       additionalProperties: false
@@ -2495,34 +2850,34 @@ components:
         - noticeVersion
         - sourceReference
       properties:
-        contactId: *a52
-        purpose: &a78
+        contactId: *a62
+        purpose: &a90
           type: string
           enum:
             - service
             - marketing
-        channel: &a79
+        channel: &a91
           type: string
           enum:
             - whatsapp
             - email
-        status: &a80
+        status: &a92
           type: string
           enum:
             - granted
             - revoked
-        lawfulBasis: &a81
+        lawfulBasis: &a93
           type: string
           enum:
             - consent
             - contract
             - legal_obligation
             - legitimate_interest
-        noticeVersion: &a82
+        noticeVersion: &a94
           type: string
           minLength: 1
           maxLength: 64
-        sourceReference: &a83
+        sourceReference: &a95
           type: string
           minLength: 1
           maxLength: 240
@@ -2542,16 +2897,16 @@ components:
         - recordedAt
         - actorId
       properties:
-        contactId: *a52
-        purpose: *a78
-        channel: *a79
-        status: *a80
-        lawfulBasis: *a81
-        noticeVersion: *a82
-        sourceReference: *a83
-        id: *a52
-        organizationId: *a52
-        actorId: *a52
+        contactId: *a62
+        purpose: *a90
+        channel: *a91
+        status: *a92
+        lawfulBasis: *a93
+        noticeVersion: *a94
+        sourceReference: *a95
+        id: *a62
+        organizationId: *a62
+        actorId: *a62
         recordedAt:
           type: string
           format: date-time
@@ -2563,14 +2918,14 @@ components:
         - kind
         - sourceReference
       properties:
-        contactId: *a52
-        kind: &a84
+        contactId: *a62
+        kind: &a96
           type: string
           enum:
             - access
             - export
             - erasure
-        sourceReference: &a85
+        sourceReference: &a97
           type: string
           minLength: 1
           maxLength: 240
@@ -2586,11 +2941,11 @@ components:
         - status
         - createdAt
       properties:
-        contactId: *a52
-        kind: *a84
-        sourceReference: *a85
-        id: *a52
-        organizationId: *a52
+        contactId: *a62
+        kind: *a96
+        sourceReference: *a97
+        id: *a62
+        organizationId: *a62
         status:
           type: string
           enum:

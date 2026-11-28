@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-11-28T12:17:37.269Z",
+  "provider": "Mercado Pago",
+  "country": "BR",
+  "accountAuthenticated": true,
+  "testAccountMarker": true,
+  "modeSource": "user_confirmed_test_credentials",
+  "operations": "read_only",
+  "credentialValuesRecorded": false,
+  "chargesCreated": 0,
+  "subscriptionsCreated": 0,
+  "subscriptionCreationValidated": false
+}

@@ -1,0 +1,38 @@
+{
+  "executedAt": "2026-11-28T12:00:03.844Z",
+  "classification": "TESTE — autorizado pelo usuário em 28/11/2026",
+  "scope": "Somente venda_flow_local em loopback",
+  "operatorOrigin": "local_test_setup",
+  "productionCatalogVisible": false,
+  "paymentsCreated": 0,
+  "sessionsCreated": 0,
+  "outcomes": [
+    {
+      "code": "teste-essencial",
+      "name": "TESTE — Essencial",
+      "amountCents": 1000,
+      "currency": "BRL",
+      "environment": "test",
+      "periodicity": "monthly",
+      "result": "created"
+    },
+    {
+      "code": "teste-equipe",
+      "name": "TESTE — Equipe",
+      "amountCents": 2000,
+      "currency": "BRL",
+      "environment": "test",
+      "periodicity": "monthly",
+      "result": "created"
+    },
+    {
+      "code": "teste-completo",
+      "name": "TESTE — Completo",
+      "amountCents": 3000,
+      "currency": "BRL",
+      "environment": "test",
+      "periodicity": "monthly",
+      "result": "created"
+    }
+  ]
+}

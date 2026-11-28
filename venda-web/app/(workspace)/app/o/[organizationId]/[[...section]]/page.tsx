@@ -27,6 +27,7 @@ import { BrandIcon } from "../../../../../../components/brand-icon";
 import { CommerceRoute } from "../../../../../../components/commerce-route";
 import { AutomationWizard } from "../../../../../../components/automation-wizard.client";
 import {PrivacyRoute} from '../../../../../../components/privacy-route';
+import {BillingRoute} from '../../../../../../components/billing-route';
 export default async function OrganizationPage({
   params,
   searchParams,
@@ -101,6 +102,8 @@ export default async function OrganizationPage({
         {slug.startsWith("configuracoes") && <SettingsTabs base={base} slug={slug}/>}
         {hidden ? (
           <Fault status={403} />
+        ) : slug==='faturamento' ? (
+          <BillingRoute organizationId={id}/>
         ) : slug==='configuracoes/privacidade' ? (
           <PrivacyRoute organizationId={id} timezone={org.timezone}/>
         ) : slug==='automacoes/nova' ? (

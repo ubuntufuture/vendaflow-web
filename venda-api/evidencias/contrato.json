@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-11-26T21:27:07.009Z",
+  "executedAt": "2026-11-28T11:59:10.406Z",
   "openapi": "3.0.3",
   "version": "0.2.0",
   "valid": true,
@@ -36,6 +36,11 @@
     "/v1/workflows/{id}/activate",
     "/v1/workflows/{id}/pause",
     "/v1/workflows/{id}/executions",
+    "/v1/billing/plans",
+    "/v1/billing/status",
+    "/v1/billing/checkout",
+    "/v1/billing/subscriptions/{id}/cancel",
+    "/v1/billing/subscriptions/{id}/reconcile",
     "/v1/plans",
     "/v1/consents",
     "/v1/privacy/requests",

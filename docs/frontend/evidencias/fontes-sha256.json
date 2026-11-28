@@ -1,7 +1,7 @@
 [
   {
     "file": "venda-web/.env.example",
-    "sha256": "53a547c03498267b9972474993b8e528903f550dabe78169be274a211ec83a4b"
+    "sha256": "3cc46c3fc0d27332b0fb98ff57be3ce9216f2063273f240c7dfd785635571569"
   },
   {
     "file": "venda-web/app/(auth)/cadastro/page.tsx",
@@ -13,7 +13,7 @@
   },
   {
     "file": "venda-web/app/(auth)/layout.tsx",
-    "sha256": "1ff636072e97daa9a717e26a881d52e2f490b2eea1527b336d6936e9761c7de1"
+    "sha256": "103210a17979a006d5e04df52d3f921fc471357cf093a76a4ad8f30c22a0e591"
   },
   {
     "file": "venda-web/app/(auth)/recuperar-acesso/page.tsx",
@@ -25,11 +25,11 @@
   },
   {
     "file": "venda-web/app/(public)/page.tsx",
-    "sha256": "75d8ae5014b9fb449fd7276439c218b1abe76392a094a1fddd8a26409a860372"
+    "sha256": "49a4e37319c217bddfd689ec47b0c1f352fa049d5011ff445825bd80e3a7047c"
   },
   {
     "file": "venda-web/app/(public)/planos/page.tsx",
-    "sha256": "44882e69736652288373f7d0248ce00be93d56e8de9265f8f2abf2c1c83d019c"
+    "sha256": "7f4ed296d5a21baff0b4c5b11197facd488db21c23a07847ab7c0ed9ad7c6ac3"
   },
   {
     "file": "venda-web/app/(public)/[legal]/page.tsx",
@@ -41,7 +41,7 @@
   },
   {
     "file": "venda-web/app/(workspace)/app/o/[organizationId]/[[...section]]/page.tsx",
-    "sha256": "35c05d950a957008e717aea8a128281d6cdbca746c681f7490696a8304abc0dd"
+    "sha256": "1240d8f19e45b4c7e3bbaacd63bdd6036459fe685f1a45806e167459a63d3e53"
   },
   {
     "file": "venda-web/app/(workspace)/app/page.tsx",
@@ -53,7 +53,7 @@
   },
   {
     "file": "venda-web/app/(workspace)/configurar/page.tsx",
-    "sha256": "609f477781760d481b94ad293fa7c47f9545520060db0062c39f5604c849f5f6"
+    "sha256": "4f29ca12787e0455bb8bcd50b0396b672d09b8602845d945a12fd3d99d8f4d24"
   },
   {
     "file": "venda-web/app/(workspace)/error.tsx",
@@ -72,16 +72,36 @@
     "sha256": "d965d3bab07072e629c71798038030839a10b30121ab68606217c6136c184274"
   },
   {
+    "file": "venda-web/app/billing-actions.ts",
+    "sha256": "b9fb3a0239286ae979179cf292899802914e7f9c5076c8131ba15929831ba83b"
+  },
+  {
+    "file": "venda-web/app/commerce-actions.ts",
+    "sha256": "4571423a8df135d964d343d09419098e1f317d3bcbbf2a65fe6440b7c0f45164"
+  },
+  {
     "file": "venda-web/app/layout.tsx",
-    "sha256": "6bc2801b32884a84f0072e4d48d05d43a063ace0b418dfb8654c35fb41c674e7"
+    "sha256": "f91db344564dbd2511ec7bfe5cae34b3c7ced4815ceead67457c0b917f1b1080"
   },
   {
     "file": "venda-web/app/not-found.tsx",
     "sha256": "b9aa2e43651c1a3a0497039034e075721f61a4164c8a8c7ab6b031d7e811774a"
   },
   {
+    "file": "venda-web/app/privacy-actions.ts",
+    "sha256": "c12516871868216a989d1537263fa37544f9ef1958cf6500f7cc44c5a21c0133"
+  },
+  {
+    "file": "venda-web/app/stitch.css",
+    "sha256": "e827fadacd766f16416b523dbf92a42924d35def95d662b585db29a99cbdd228"
+  },
+  {
     "file": "venda-web/app/v1/auth/[action]/route.ts",
-    "sha256": "7a59b396ce2299ac81da9b3a2f8e3bd8a15c1e1e29a2f2942eb33b9ad164c38b"
+    "sha256": "1bc4d551b7f0b96243b3bf424f1e480576a3fdcabff0db9e925862a036083635"
+  },
+  {
+    "file": "venda-web/app/v1/privacy/export/[id]/route.ts",
+    "sha256": "e82fa6c01d9c3c09a366513f3efa7e4b99db9f95f07c76995a7ba10c4ccf660d"
   },
   {
     "file": "venda-web/app/web.css",
@@ -92,12 +112,52 @@
     "sha256": "a7d03fdc48c97908905bf147d93dbf84d2a9625d83059da98a55689433683691"
   },
   {
+    "file": "venda-web/components/automation-wizard.client.tsx",
+    "sha256": "9079dbc115586a76793bd69fbca13a3a0509f463e2181848d88dec30d4b51b60"
+  },
+  {
+    "file": "venda-web/components/billing-route.tsx",
+    "sha256": "eca773a5142cd9d659ebbd4afcd30ae209b9a3dcfee4f311615efb9028299aff"
+  },
+  {
+    "file": "venda-web/components/billing-screen.client.tsx",
+    "sha256": "58423d4393c22a03afbbc14928d431f3d3c36ce694b4110e2709f1b8484223e1"
+  },
+  {
+    "file": "venda-web/components/brand-icon.tsx",
+    "sha256": "b338c4dd261ce767c5cafc0ece5cbc3a6b8f2e1b23fedbbdc94dddb7abd37835"
+  },
+  {
+    "file": "venda-web/components/commerce-route.tsx",
+    "sha256": "a3169ae0debe1770fef27cf21a739e8cf69eefaf2568810baf1cab8fccc3a360"
+  },
+  {
+    "file": "venda-web/components/commerce-screen.client.tsx",
+    "sha256": "e083ff6e2ba8c82000eef7b10fed3661f9ffd16775b3668dbcfa2f5524d442c6"
+  },
+  {
+    "file": "venda-web/components/commercial-history.tsx",
+    "sha256": "fe999f86b1701d9d12cc3fa1f0713d03640da853e487daed7503942d1850cbe9"
+  },
+  {
     "file": "venda-web/components/organization-form.client.tsx",
-    "sha256": "7f17faf5f463b146a6a605b7427c2db7e2ffd00cb2ab0a6b314c5e797e955de0"
+    "sha256": "9f30bf80aa99b93b0f72f81aa7cc5b6efcbb76146fcb84819ce87da97a2b3fa4"
+  },
+  {
+    "file": "venda-web/components/privacy-route.tsx",
+    "sha256": "2450c9a45320edb1f73aeabaea457fbc2cb083d2d69f8cf385746593332e89d2"
+  },
+  {
+    "file": "venda-web/components/privacy-screen.client.tsx",
+    "sha256": "bd0a50514dbc5c0db67e50e9bbc36657ddffbab54ea66e36c53b686e262ae313"
   },
   {
     "file": "venda-web/components/responsive-menu.client.tsx",
     "sha256": "775c47422070417e1169de514fa4e8a9f4f639adf4f57eac0b70f82702325d78"
+  },
+  {
+    "file": "venda-web/components/stitch-screens.client.tsx",
+    "sha256": "9056d0488fb3a727c77e2847dc9b0a61245c8ee4786f8cbcecac639f7fff1278"
   },
   {
     "file": "venda-web/components/theme.client.tsx",
@@ -105,7 +165,7 @@
   },
   {
     "file": "venda-web/components/ui.tsx",
-    "sha256": "6e32ba6fd5e0a9d259bfa8d581689c1f906c40401a0ed820a79449067f781e68"
+    "sha256": "a4914fe7f754548bae3e90b14d7d6bd4bab77733faef4dc85cf6c4e22bc439d1"
   },
   {
     "file": "venda-web/components/vitals.client.tsx",
@@ -113,19 +173,31 @@
   },
   {
     "file": "venda-web/lib/api.generated.ts",
-    "sha256": "8ab0bb01e01738f2e0b24203d6e3769ba34d35eb935d02aed1dcd088c7305bee"
+    "sha256": "0d59be35c86c8e3e41637941eb75c2bb5fc2deca72ff985b13e48d4f9e0f43b4"
   },
   {
     "file": "venda-web/lib/api.server.ts",
     "sha256": "394adf109811c32149be1b11b31838a4dfa69a5158472271ed8b810b44c9de32"
   },
   {
+    "file": "venda-web/lib/commerce.server.ts",
+    "sha256": "f930a883b4797511a51486fdbc21158495237d9878bd74483a5b7e87281a8ce9"
+  },
+  {
+    "file": "venda-web/lib/commerce.ts",
+    "sha256": "d565cee722690624cbbb3c92046274adfd6c6dd3dbff4258c8df4441a10b1d33"
+  },
+  {
     "file": "venda-web/lib/modules.ts",
     "sha256": "5fd436ee6898332974c6cce48431e6ac540179230601fdfe9a45220635235681"
   },
   {
+    "file": "venda-web/lib/review.ts",
+    "sha256": "3ed3dfebc5a727fb2af035c30e86fa077c90c2bc288079338e343ee0aace61b2"
+  },
+  {
     "file": "venda-web/lib/security.ts",
-    "sha256": "89d5c96ee575e87c9ef585d5adb17af9db2cdd4ca95e4508845c4f7315659243"
+    "sha256": "e32f32c52af936519b6db5ae5766c28d1d08d8a03bcde285ab99555b12ed89dc"
   },
   {
     "file": "venda-web/lib/transport.ts",
@@ -148,6 +220,10 @@
     "sha256": "dc1f464d29b0b0e2ba9a2289affab138b428fb64b7b6f0ac13e93d71c7ce27d1"
   },
   {
+    "file": "venda-web/public/brand/venda-flow-symbol.png",
+    "sha256": "ecbf38d3862c34fc5c805bb06b2e36833324cf80e8c37a796994002342fc7941"
+  },
+  {
     "file": "venda-web/README.md",
     "sha256": "c2daf6b152f83cb3b7621635f6a05569cd363fd3d64b079a8890fe4f0da48034"
   },
@@ -156,12 +232,20 @@
     "sha256": "3d60598f7c1a8c7615ef84625e9235aa7d8cfa76dbb78bc5dfedc2b95b29cf62"
   },
   {
+    "file": "venda-web/stories/Stitch.stories.tsx",
+    "sha256": "109c5d3cd237824b88134965b01174ed3a269ebbac4a841fadeb9e5510935e35"
+  },
+  {
+    "file": "venda-web/test/keycloak-adapter.mjs",
+    "sha256": "c01de733677438ff025b73ca7fb11a8cb0dd1086c895573150a524dc68fe7db7"
+  },
+  {
     "file": "venda-web/test/postgres-adapter.mjs",
-    "sha256": "d32f33e269db6f11dae07fcc61cfb841a5074e679ea2b79257baa47410caf4ff"
+    "sha256": "4d1a48e8a5668905327e598ea2a28cb2fe9d71ec3a4cc52f62285601507ee0b1"
   },
   {
     "file": "venda-web/test/security.test.ts",
-    "sha256": "501bd56e09994188af28e85367180065c8cb29eaad8951f880178d48e9fe8d85"
+    "sha256": "a3711b8e57e27bae435aaaf5a30ddc30a21ff8fce91d6014f8bf4d3a5abb619f"
   },
   {
     "file": "venda-web/test/transport.test.ts",
@@ -177,7 +261,7 @@
   },
   {
     "file": "scripts/test-web-browser.mjs",
-    "sha256": "406b25269296cb81a2111545b615aca55b5c235b03116c735693b339515cb55b"
+    "sha256": "747aede74f6bf89d315faf1cfb5627f003ebb8adc5be467fcd0817baacf0a7b4"
   },
   {
     "file": "scripts/measure-web.mjs",
@@ -185,7 +269,7 @@
   },
   {
     "file": "scripts/test-web-storybook.mjs",
-    "sha256": "7cb488eb52a2d9371304b83da3991bac16e8f209de313c41cc7a2c693eb71a2c"
+    "sha256": "2dc65062f54953c00ef8d7088704cf1c16e99430d531a6a9ea30716f2c1d4832"
   },
   {
     "file": "scripts/verify-web.mjs",
@@ -193,7 +277,7 @@
   },
   {
     "file": "scripts/check-web-contract.mjs",
-    "sha256": "7713782e13189dd8d6ade9f5d0d30518f63e170f8e65172c4c2c0564058a915a"
+    "sha256": "869fb53715c09e8bbbace78016d82de0e499df3dc532c3c181e409937d45b221"
   },
   {
     "file": "scripts/smoke-web.mjs",
@@ -205,7 +289,7 @@
   },
   {
     "file": "branding/tokens.json",
-    "sha256": "c9a9e023dd5977c90ebd393c2276f96f4bdc5ca9a49d49297ae85d79d44b1efb"
+    "sha256": "af4f4ae02da136f8a618d23b11b481993a6435dbae3c31e3a012776aaf3f972c"
   },
   {
     "file": "branding/brandboard.png",

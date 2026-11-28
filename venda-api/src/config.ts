@@ -17,6 +17,8 @@ export interface Config {
   sessionSeconds: number;
   idleSeconds: number;
   oidcTimeout: number;
+  billingEnvironment: 'test'|'production';
+  billingEnabled: boolean;
   otlpEndpoint?: string;
   otlpMetricsEndpoint?: string;
 }
@@ -101,8 +103,11 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
     if (!Number.isInteger(n) || n < min || n > max) return fail();
     return n;
   };
+  const billingEnvironment=env.BILLING_ENVIRONMENT??'production';
+  if(!['test','production'].includes(billingEnvironment)||(nodeEnv==='production'&&billingEnvironment==='test')||(env.BILLING_ENABLED!==undefined&&!['true','false'].includes(env.BILLING_ENABLED)))return fail();
   const result: Config = {
     nodeEnv: nodeEnv as Config["nodeEnv"],
+    billingEnvironment:billingEnvironment as Config['billingEnvironment'],billingEnabled:env.BILLING_ENABLED==='true',
     localDevelopment,
     port: integer("PORT", 3201, 0, 65535),
     databaseUrl,

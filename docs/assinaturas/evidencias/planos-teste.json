@@ -1,0 +1,23 @@
+{
+  "executedAt": "2026-11-28T12:14:21.938Z",
+  "classification": "TESTE — autorizado pelo usuário em 28/11/2026",
+  "scope": "Somente venda_flow_local em loopback",
+  "operatorOrigin": "local_test_setup",
+  "productionCatalogVisible": false,
+  "paymentsCreated": 0,
+  "sessionsCreated": 0,
+  "outcomes": [
+    {
+      "code": "teste-essencial",
+      "result": "preserved_existing_versions"
+    },
+    {
+      "code": "teste-equipe",
+      "result": "preserved_existing_versions"
+    },
+    {
+      "code": "teste-completo",
+      "result": "preserved_existing_versions"
+    }
+  ]
+}

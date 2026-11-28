@@ -1,5 +1,11 @@
 # Venda Flow AI
 
+## Atualização de implementação — 28/11/2026
+
+Três planos TESTE foram cadastrados no PostgreSQL local por autorização do usuário: Essencial (R$ 10/mês), Equipe (R$ 20/mês) e Completo (R$ 30/mês). Podem ser alterados por novas versões no console admin, porta 3401, sem aparecer no catálogo público de produção. Não foram criadas assinaturas ou cobranças.
+
+A API e o worker agora processam intenções duráveis de faturamento. O checkout externo permanece desativado porque ainda não existe ambiente HTTPS autorizado. Webhooks, recebimentos comprovados e entitlements completos continuam pendentes. Veja o [relatório desta entrega](docs/assinaturas/RELATORIO.md) e o [catálogo atualizado das APIs](docs/assinaturas/catalogo-apis.md). As seções datadas abaixo são históricas.
+
 ## Atualização de implementação — 26/11/2026
 
 O [relatório atual](docs/finalizacao/RELATORIO.md) e o [catálogo das APIs](docs/finalizacao/catalogo-apis.md) incluem privacidade, histórico operacional e console administrativo separado com catálogo versionado. O console local usa a porta 3401; a aplicação cliente, 3400. Veja [configuração e acesso interno](venda-admin-api/README.md).

@@ -21,6 +21,8 @@ if(!await runtime.db.ready()) throw new Error('Banco real indisponível ou RLS i
 await runtime.app.listen(3201,'127.0.0.1');
 const workerEnv=JSON.parse(fs.readFileSync(path.join(directory,'worker.json'),'utf8'));
 const worker=spawn(process.execPath,[path.join(root,'venda-workers/build/main.js')],{cwd:root,env:{PATH:process.env.PATH,SystemRoot:process.env.SystemRoot,TEMP:process.env.TEMP,...workerEnv},windowsHide:true,stdio:['ignore','inherit','inherit']});
+const billingFile=path.join(directory,'billing-worker.json');let billingWorker;
+if(fs.existsSync(billingFile)){const billing=JSON.parse(fs.readFileSync(billingFile,'utf8'));if(billing.enabled===true){billingWorker=spawn(process.execPath,[path.join(root,'venda-workers/build/billing/main.js')],{cwd:root,env:{OS:process.env.OS,PATH:process.env.PATH,SystemRoot:process.env.SystemRoot,TEMP:process.env.TEMP,...billing.env},windowsHide:true,stdio:['ignore','inherit','inherit']});}else console.log('Checkout sandbox aguarda URL HTTPS real de retorno; catálogo local continua disponível.');}
 process.env.NODE_ENV='production';
 const {default:next}=await import('next');
 const web=next({dev:false,dir:path.join(root,'venda-web'),hostname:'127.0.0.1',port:3400});
@@ -28,6 +30,6 @@ await web.prepare();
 const server=createServer(web.getRequestHandler());
 await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(3400,'127.0.0.1',resolve);});
 let closing=false;
-async function close(){if(closing)return;closing=true;worker.kill('SIGTERM');server.closeAllConnections();await new Promise(r=>server.close(r));await web.close();await runtime.close();console.log('Aplicação encerrada. Dados persistentes preservados.');}
+async function close(){if(closing)return;closing=true;worker.kill('SIGTERM');billingWorker?.kill('SIGTERM');server.closeAllConnections();await new Promise(r=>server.close(r));await web.close();await runtime.close();console.log('Aplicação encerrada. Dados persistentes preservados.');}
 process.once('SIGINT',()=>void close());process.once('SIGTERM',()=>void close());
 console.log('Venda Flow AI: http://127.0.0.1:3400 — PostgreSQL persistente e Keycloak real; sem dados de exemplo e sem login simulado.');

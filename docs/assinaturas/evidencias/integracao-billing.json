@@ -1,0 +1,44 @@
+{
+  "executedAt": "2026-11-28T12:08:00.554Z",
+  "classification": "DEMO_ONLY",
+  "database": "PostgreSQL real isolado",
+  "provider": "Transporte HTTP de teste, sem cobranças externas",
+  "outcomes": [
+    {
+      "name": "catálogo por ambiente, papéis, CSRF e isolamento A/B em todos os seletores",
+      "status": "PASS"
+    },
+    {
+      "name": "comando transacional e idempotente gera apenas um checkout; autorização não libera recursos",
+      "status": "PASS"
+    },
+    {
+      "name": "timeout de criação fica em análise e nunca repete POST automaticamente",
+      "status": "PASS"
+    },
+    {
+      "name": "cancelamento antes do envio é local; depois do envio exige confirmação do gateway",
+      "status": "PASS"
+    },
+    {
+      "name": "lease expirada não repete criação e cancelamento incerto não vira sucesso fictício",
+      "status": "PASS"
+    },
+    {
+      "name": "divergência do preço no provedor impede exibição do checkout",
+      "status": "PASS"
+    },
+    {
+      "name": "cancelamento com timeout usa consulta posterior sem repetir a escrita externa",
+      "status": "PASS"
+    },
+    {
+      "name": "ambiente é preservado por FK e outro administrador pode recuperar cancelamento revogado",
+      "status": "PASS"
+    },
+    {
+      "name": "revogação de membership interrompe o comando ainda não enviado",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import {BillingProviderError}from'./mercado-pago.js';
 export interface RecurringOffer {reference:string;reason:string;payerEmail:string;amountCents:number;frequency:number;frequencyType:'months'|'days';}
-export interface ProviderSubscription {id:string;reference:string;status:'pending'|'authorized'|'paused'|'cancelled';checkoutUrl:string|null;updatedAt:string;nextPaymentAt:string|null;}
+export interface ProviderSubscription {id:string;reference:string;status:'pending'|'authorized'|'paused'|'cancelled';checkoutUrl:string|null;updatedAt:string;nextPaymentAt:string|null;amountCents:number;frequency:number;frequencyType:'days'|'months';currency:'BRL';}
 export interface RecurringGatewayPort {
  create(offer:RecurringOffer,key:string):Promise<ProviderSubscription>;
  get(id:string,expectedReference:string):Promise<ProviderSubscription>;
@@ -37,14 +37,20 @@ export class MercadoPagoRecurringClient implements RecurringGatewayPort {
   if(!identifier(data.id)||data.external_reference!==reference||data.collector_id!==this.#collector||!['pending','authorized','paused','cancelled'].includes(String(data.status))||!instant(data.last_modified))throw new BillingProviderError('invalid_response');
   let checkoutUrl:string|null=null;
   if(data.init_point!==undefined&&data.init_point!==null){if(typeof data.init_point!=='string')throw new BillingProviderError('invalid_response');let url:URL;try{url=new URL(data.init_point);}catch{throw new BillingProviderError('invalid_response');}if(url.protocol!=='https:'||!['www.mercadopago.com.br','www.mercadopago.com'].includes(url.hostname)||url.username||url.password||url.port||url.pathname!=='/subscriptions/checkout')throw new BillingProviderError('invalid_response');checkoutUrl=url.href;}
+  if(checkoutUrl){const checkout=new URL(checkoutUrl);if(checkout.hash||checkout.searchParams.getAll('preapproval_id').length!==1||checkout.searchParams.get('preapproval_id')!==data.id)throw new BillingProviderError('invalid_response');}
   if(data.next_payment_date!==undefined&&data.next_payment_date!==null&&!instant(data.next_payment_date))throw new BillingProviderError('invalid_response');
-  return{id:data.id,reference,status:data.status as ProviderSubscription['status'],checkoutUrl,updatedAt:data.last_modified,nextPaymentAt:typeof data.next_payment_date==='string'?data.next_payment_date:null};
+  const terms=data.auto_recurring;
+  if(!object(terms)||terms.currency_id!=='BRL'||!Number.isInteger(terms.frequency)||Number(terms.frequency)<1||Number(terms.frequency)>365||!['days','months'].includes(String(terms.frequency_type))||!['number','string'].includes(typeof terms.transaction_amount)||!/^\d+(?:\.\d{1,2})?$/.test(String(terms.transaction_amount)))throw new BillingProviderError('invalid_response');
+  const amountCents=Math.round(Number(terms.transaction_amount)*100);
+  if(!Number.isSafeInteger(amountCents)||amountCents<1||amountCents>9000000000000)throw new BillingProviderError('invalid_response');
+  return{id:data.id,reference,status:data.status as ProviderSubscription['status'],checkoutUrl,updatedAt:data.last_modified,nextPaymentAt:typeof data.next_payment_date==='string'?data.next_payment_date:null,amountCents,frequency:Number(terms.frequency),frequencyType:terms.frequency_type as 'days'|'months',currency:'BRL'};
  }
  async create(offer:RecurringOffer,key:string){
   if(!identifier(offer.reference)||!identifier(key)||key.length<16||!offer.reason.trim()||offer.reason.length>120||!Number.isSafeInteger(offer.amountCents)||offer.amountCents<1||offer.amountCents>9000000000000||!Number.isInteger(offer.frequency)||offer.frequency<1||offer.frequency>365||!['months','days'].includes(offer.frequencyType)||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(offer.payerEmail)||offer.payerEmail.length>254)throw new Error('Oferta de assinatura inválida; valores omitidos.');
   if(this.environment==='test'&&!/@testuser\.com$/i.test(offer.payerEmail))throw new Error('Use um comprador de teste do Mercado Pago neste ambiente.');
   await this.account();
-  return this.view(await this.call('POST','/preapproval',{reason:offer.reason,external_reference:offer.reference,payer_email:offer.payerEmail,status:'pending',back_url:this.returnUrl,auto_recurring:{frequency:offer.frequency,frequency_type:offer.frequencyType,transaction_amount:offer.amountCents/100,currency_id:'BRL'}},key),offer.reference);
+  const created=this.view(await this.call('POST','/preapproval',{reason:offer.reason,external_reference:offer.reference,payer_email:offer.payerEmail,status:'pending',back_url:this.returnUrl,auto_recurring:{frequency:offer.frequency,frequency_type:offer.frequencyType,transaction_amount:offer.amountCents/100,currency_id:'BRL'}},key),offer.reference);
+  if(created.amountCents!==offer.amountCents||created.frequency!==offer.frequency||created.frequencyType!==offer.frequencyType)throw new BillingProviderError('invalid_response');return created;
  }
  async get(id:string,expectedReference:string){if(!identifier(id)||!identifier(expectedReference))throw new Error('Identificador inválido.');await this.account();return this.view(await this.call('GET','/preapproval/'+encodeURIComponent(id)),expectedReference);}
  async cancel(id:string,expectedReference:string,key:string){if(!identifier(key)||key.length<16)throw new Error('Intenção de cancelamento inválida.');const before=await this.get(id,expectedReference);if(before.status==='cancelled')return before;return this.view(await this.call('PUT','/preapproval/'+encodeURIComponent(id),{status:'cancelled'},key),expectedReference);}

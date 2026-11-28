@@ -3,6 +3,7 @@ import YAML from 'yaml';
 import {preservesFoundation} from './backward-compat.mjs';
 import {privacyContract} from './privacy-contract.mjs';
 import {catalogContract} from './catalog-contract.mjs';
+import {billingContract} from './billing-contract.mjs';
 const base = YAML.parse(fs.readFileSync('contracts/foundation.openapi.yaml','utf8'));
 const security = base.paths['/v1/me'].get.security;
 const str = (maxLength=120) => ({type:'string',minLength:1,maxLength});
@@ -50,6 +51,7 @@ commercial.components.schemas.Workflow.properties.status.enum=['draft','active',
 for(const operation of ['activate','pause']) commercial.paths[`/v1/workflows/{id}/${operation}`]={post:{operationId:`${operation}Workflow`,security,parameters:[org,{name:'id',in:'path',required:true,schema:id},...requestHeaders,{name:'If-Match',in:'header',required:true,schema:{type:'string',pattern:'^[1-9][0-9]*$'}}],requestBody:{required:false,content:{'application/json':{schema:{type:'object',additionalProperties:false}}}},responses:{201:response({$ref:'#/components/schemas/Workflow'}),...errors}}};
 commercial.paths['/v1/workflows/{id}/executions']={get:{operationId:'workflowExecutions',security,parameters:[org,{name:'id',in:'path',required:true,schema:id}],responses:{200:response({type:'object',required:['data'],properties:{data:{type:'array',items:{type:'object',required:['id','taskId','createdAt'],properties:{id,taskId:id,createdAt:{type:'string',format:'date-time'}}}}}}),...errors}}};
 const combined={...base,info:{...commercial.info,title:'Venda Flow AI — API'},paths:{...structuredClone(base.paths),...commercial.paths},components:{...base.components,schemas:{...base.components.schemas,...commercial.components.schemas}}};
+const billing=billingContract(security);Object.assign(combined.paths,billing.paths);Object.assign(combined.components.schemas,billing.schemas);
 const catalog=catalogContract();
 // Reuse the established uniform error schema rather than inventing new responses.
 for(const code of ['400','503'])catalog.path.get.responses[code]={description:'Falha uniforme',content:{'application/json':{schema:{$ref:'#/components/schemas/Error'}}}};

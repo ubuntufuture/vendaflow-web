@@ -1,6 +1,7 @@
 // DEMO_ONLY. Dedicated PostgreSQL and signed protocol IdP; never loaded by the app.
 import{before,after,describe,it}from'node:test';import assert from'node:assert/strict';import{randomBytes,randomUUID}from'node:crypto';import fs from'node:fs';import{fileURLToPath}from'node:url';
 import{postgresFixture,freePort}from'../../venda-api/dist/test/postgres.js';import{idpFixture}from'../../venda-api/dist/test/idp.js';
+import pg from'pg';
 import{createAdminApp}from'../build/app.js';import{loadAdminConfig}from'../build/config.js';
 process.env.NODE_ENV='test';let postgres,idp,customer,runtime,base,config;const outcomes=[];
 async function login(mode='admin-valid'){
@@ -31,6 +32,15 @@ describe('DEMO_ONLY — fronteira admin e catálogo de planos com PostgreSQL rea
   await assert.rejects(()=>runtime.db.pool.query('SELECT * FROM venda.contacts'),/permission denied/);
   await assert.rejects(()=>postgres.control.query('UPDATE venda_admin.audit SET action=$1',['plan.created']),/Append only/);
   assert.equal((await request('/v1/plans',admin,'GET',undefined,{'X-Organization-Id':randomUUID()})).status,400);
+ });
+ test('planos TESTE ficam separados do catálogo público e o ambiente é imutável',async()=>{
+  const admin=await login();const input={code:'teste-contrato',name:'TESTE contrato de plano',amountCents:1000,frequency:1,frequencyType:'months',features:['crm'],limits:{contacts:100},environment:'test'};
+  assert.equal((await request('/v1/plans',admin,'POST',{...input,code:'sem-prefixo'})).status,400);
+  assert.equal((await request('/v1/plans',admin,'POST',{...input,environment:'production'})).status,400);
+  const created=await request('/v1/plans',admin,'POST',input);assert.equal(created.status,201,JSON.stringify(created.body));assert.equal(created.body.environment,'test');
+  const published=await request('/v1/plans/'+created.body.id+'/publish',admin,'POST',{}, {'If-Match':'1'});assert.equal(published.status,201);
+  const customerDb=new pg.Client({connectionString:postgres.databaseUrl});await customerDb.connect();try{assert.equal((await customerDb.query('SELECT id FROM venda_admin.plan_versions WHERE id=$1',[created.body.id])).rowCount,0);}finally{await customerDb.end();}
+  await assert.rejects(()=>postgres.control.query("UPDATE venda_admin.plan_versions SET environment='production' WHERE id=$1",[created.body.id]),/Immutable plan/);
  });
  test('MFA precisa ser recente para gravar e revogação interna vale no próximo uso',async()=>{
   const admin=await login();await postgres.control.query("UPDATE venda_admin.sessions SET mfa_at=clock_timestamp()-interval '6 minutes',expires_at=clock_timestamp()+interval '8 minutes' WHERE user_id=$1",[admin.user.id]);

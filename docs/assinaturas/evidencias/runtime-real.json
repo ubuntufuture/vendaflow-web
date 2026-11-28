@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-11-28T12:22:29.720Z",
+  "environment": "Local persistente, PostgreSQL real em D:, Keycloak real; não é produção",
+  "database": {
+    "functionPermissions": {
+      "public_execute": 0
+    },
+    "migrations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "counts": {
+      "customer_users": 0,
+      "contacts": 0,
+      "plans": 3,
+      "test_plans": 3,
+      "subscriptions": 0,
+      "internal_users": 1,
+      "active_internal_sessions": 0
+    },
+    "roles": [
+      {
+        "rolname": "venda_app_local",
+        "rolsuper": false,
+        "rolbypassrls": false
+      },
+      {
+        "rolname": "venda_worker_local",
+        "rolsuper": false,
+        "rolbypassrls": false
+      },
+      {
+        "rolname": "venda_admin_local",
+        "rolsuper": false,
+        "rolbypassrls": false
+      },
+      {
+        "rolname": "venda_billing_worker_local",
+        "rolsuper": false,
+        "rolbypassrls": false
+      }
+    ],
+    "rls": [
+      {
+        "schema": "venda_admin",
+        "tables": 6,
+        "force_rls": true
+      },
+      {
+        "schema": "venda",
+        "tables": 22,
+        "force_rls": true
+      }
+    ]
+  },
+  "endpoints": [
+    {
+      "url": "http://127.0.0.1:3201/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3202/ready",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3400/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3400/planos",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3401/entrar",
+      "status": 200
+    }
+  ],
+  "credentialsRecorded": false
+}

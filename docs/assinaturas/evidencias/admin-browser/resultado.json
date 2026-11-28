@@ -1,0 +1,87 @@
+{
+  "executedAt": "2026-11-28T12:16:41.864Z",
+  "classification": "DEMO_ONLY",
+  "realPostgreSQL": true,
+  "realInteractiveMfaExecuted": false,
+  "identity": "Protocolo OIDC assinado de teste, sem credenciais reais",
+  "checks": [
+    {
+      "name": "Console de teste iniciado",
+      "status": "PASS"
+    },
+    {
+      "name": "Acessibilidade automática: DEMO_ONLY-login-desktop",
+      "status": "PASS"
+    },
+    {
+      "name": "Estado vazio sem preço inventado",
+      "status": "PASS"
+    },
+    {
+      "name": "Acessibilidade automática: DEMO_ONLY-planos-vazio",
+      "status": "PASS"
+    },
+    {
+      "name": "Acessibilidade automática: DEMO_ONLY-plano-formulario",
+      "status": "PASS"
+    },
+    {
+      "name": "Erro preserva os campos preenchidos",
+      "status": "PASS"
+    },
+    {
+      "name": "Acessibilidade automática: DEMO_ONLY-mfa-expirado",
+      "status": "PASS"
+    },
+    {
+      "name": "Cadastro persiste valor exato em PostgreSQL",
+      "status": "PASS"
+    },
+    {
+      "name": "Publicação confirma estado do backend",
+      "status": "PASS"
+    },
+    {
+      "name": "Acessibilidade automática: DEMO_ONLY-plano-publicado",
+      "status": "PASS"
+    },
+    {
+      "name": "Acessibilidade automática: DEMO_ONLY-planos-mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout mobile não estoura viewport",
+      "status": "PASS"
+    },
+    {
+      "name": "Logout revoga acesso administrativo",
+      "status": "PASS"
+    }
+  ],
+  "a11y": [
+    {
+      "screen": "DEMO_ONLY-login-desktop",
+      "violations": []
+    },
+    {
+      "screen": "DEMO_ONLY-planos-vazio",
+      "violations": []
+    },
+    {
+      "screen": "DEMO_ONLY-plano-formulario",
+      "violations": []
+    },
+    {
+      "screen": "DEMO_ONLY-mfa-expirado",
+      "violations": []
+    },
+    {
+      "screen": "DEMO_ONLY-plano-publicado",
+      "violations": []
+    },
+    {
+      "screen": "DEMO_ONLY-planos-mobile",
+      "violations": []
+    }
+  ]
+}
